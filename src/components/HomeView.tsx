@@ -190,7 +190,7 @@ export const HomeView: React.FC = () => {
                   </div>
                   <div className="truncate">
                     <div className="text-xs font-bold text-slate-900 dark:text-white truncate">
-                      {t(`tool_${tool.id.replace('-', '_')}_name`)}
+                      {t(`tool_${tool.id.replace(/-/g, '_')}_name`)}
                     </div>
                     <div className="text-[10px] text-amber-800 dark:text-amber-300 font-medium truncate">
                       ★ {t('btn_pinned', 'Pinned')}
@@ -238,10 +238,10 @@ export const HomeView: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="text-sm font-bold text-slate-900 dark:text-white group-hover:text-emerald-700 dark:group-hover:text-emerald-400 transition-colors">
-                    {t(`tool_${tool.id.replace('-', '_')}_name`)}
+                    {t(`tool_${tool.id.replace(/-/g, '_')}_name`)}
                   </h3>
                   <p className="text-xs text-slate-600 dark:text-slate-300 mt-1 line-clamp-2">
-                    {t(`tool_${tool.id.replace('-', '_')}_desc`)}
+                    {t(`tool_${tool.id.replace(/-/g, '_')}_desc`)}
                   </p>
                 </div>
               </button>

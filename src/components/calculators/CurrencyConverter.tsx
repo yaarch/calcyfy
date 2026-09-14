@@ -16,11 +16,33 @@ import {
   Award,
 } from 'lucide-react';
 
-export const CurrencyConverter: React.FC = () => {
+interface CurrencyConverterProps {
+  tool?: any;
+}
+
+export const CurrencyConverter: React.FC<CurrencyConverterProps> = ({ tool }) => {
   const { addHistory, lang } = useApp();
 
   // Mode: 'single' | 'matrix' | 'fee-calculator' | 'gold-silver'
-  const [activeTab, setActiveTab] = useState<'single' | 'matrix' | 'fee-calculator' | 'gold-silver'>('single');
+  const initialTab = useMemo(() => {
+    const id = (tool?.id || '').toLowerCase();
+    if (id.includes('gold') || id.includes('silver') || id.includes('platinum') || id.includes('metal')) {
+      return 'gold-silver';
+    }
+    if (id.includes('matrix') || id.includes('multi')) {
+      return 'matrix';
+    }
+    if (id.includes('spread') || id.includes('bank-fee') || id.includes('fee')) {
+      return 'fee-calculator';
+    }
+    return 'single';
+  }, [tool?.id]);
+
+  const [activeTab, setActiveTab] = useState<'single' | 'matrix' | 'fee-calculator' | 'gold-silver'>(initialTab);
+
+  useEffect(() => {
+    setActiveTab(initialTab);
+  }, [initialTab]);
 
   // Single converter state
   const [amount, setAmount] = useState<string>('100');

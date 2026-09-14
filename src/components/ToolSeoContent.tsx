@@ -37,6 +37,25 @@ export const ToolSeoContent: React.FC<ToolSeoContentProps> = ({
             },
           ],
         };
+      case 'currency':
+        return {
+          intro: `The ${toolName} provides up-to-the-minute conversions and valuation tools across global fiat currencies (USD, EUR, GBP, SAR, AED, JPY), major cryptocurrencies (Bitcoin, Ethereum, Solana), and precious bullion metals (Gold, Silver, Platinum).`,
+          formula: 'Exchange computations are calculated using international standard mid-market exchange rates and live financial market pricing feeds.',
+          faqs: [
+            {
+              q: `Are the exchange rates in the ${toolName} live?`,
+              a: 'Yes! When connected to the internet, rates synchronize with global central bank feeds and live market liquidity providers.',
+            },
+            {
+              q: 'How are crypto and precious metal prices calculated?',
+              a: 'Crypto metrics utilize 24h market liquidity and staking APY compounding formulas, while gold and silver valuations use per-gram and per-troy-ounce spot market rates across 24k, 21k, 18k, and 925 sterling grades.',
+            },
+            {
+              q: 'Can I calculate bank markup or credit card FX foreign transaction fees?',
+              a: 'Yes, our currency tools include dedicated spread and markup modules so you can see exactly how much extra your bank charges compared to the mid-market rate.',
+            },
+          ],
+        };
       case 'health':
         return {
           intro: `The ${toolName} is designed to help you track vital health metrics, body composition, and nutritional requirements. Maintaining awareness of your physiological benchmarks is an essential pillar of long-term wellness and fitness success.`,

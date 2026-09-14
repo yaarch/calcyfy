@@ -107,8 +107,9 @@ export const AllToolsView: React.FC<AllToolsViewProps> = ({ initialCategory }) =
     if (!searchQuery.trim()) return matchesCategory;
 
     const q = searchQuery.toLowerCase().trim();
-    const name = t(`tool_${tool.id.replace('-', '_')}_name`).toLowerCase();
-    const desc = t(`tool_${tool.id.replace('-', '_')}_desc`).toLowerCase();
+    const toolKey = tool.id.replace(/-/g, '_');
+    const name = t(`tool_${toolKey}_name`).toLowerCase();
+    const desc = t(`tool_${toolKey}_desc`).toLowerCase();
 
     const matchesSearch =
       name.includes(q) ||
@@ -219,10 +220,10 @@ export const AllToolsView: React.FC<AllToolsViewProps> = ({ initialCategory }) =
 
                   <div>
                     <h3 className="text-sm font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
-                      {t(`tool_${tool.id.replace('-', '_')}_name`)}
+                      {t(`tool_${tool.id.replace(/-/g, '_')}_name`)}
                     </h3>
                     <p className="text-xs text-slate-500 dark:text-slate-400 mt-1 line-clamp-2">
-                      {t(`tool_${tool.id.replace('-', '_')}_desc`)}
+                      {t(`tool_${tool.id.replace(/-/g, '_')}_desc`)}
                     </p>
                   </div>
                 </div>

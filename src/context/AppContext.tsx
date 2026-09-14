@@ -141,10 +141,36 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   };
 
   const t = (key: string, defaultText?: string): string => {
+    if (!key) return defaultText || '';
+    const normalizedKey = key.replace(/-/g, '_');
     const dict = TRANSLATIONS[lang] || TRANSLATIONS.en;
+    
+    // Check in current language
     if (dict[key]) return dict[key];
+    if (dict[normalizedKey]) return dict[normalizedKey];
+    
+    // Fallback to English
     if (TRANSLATIONS.en[key]) return TRANSLATIONS.en[key];
-    return defaultText || key;
+    if (TRANSLATIONS.en[normalizedKey]) return TRANSLATIONS.en[normalizedKey];
+    
+    // Return defaultText if provided
+    if (defaultText) return defaultText;
+
+    // Automatic fallback for missing tool translation keys to avoid showing raw keys
+    if (key.startsWith('tool_') && key.endsWith('_name')) {
+      const slug = key.replace(/^tool_/, '').replace(/_name$/, '').replace(/[-_]/g, ' ');
+      return slug.replace(/\b\w/g, (c) => c.toUpperCase()) + (slug.includes('calc') || slug.includes('converter') ? '' : ' Calculator');
+    }
+    if (key.startsWith('tool_') && key.endsWith('_desc')) {
+      const slug = key.replace(/^tool_/, '').replace(/_desc$/, '').replace(/[-_]/g, ' ');
+      return `Free and fast online calculator for ${slug}.`;
+    }
+    if (key.startsWith('cat_')) {
+      const slug = key.replace(/^cat_/, '').replace(/[-_]/g, ' ');
+      return slug.replace(/\b\w/g, (c) => c.toUpperCase());
+    }
+
+    return key;
   };
 
   const addHistory = (toolId: ToolId, summary: string, result: string) => {
@@ -175,16 +201,18 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     const q = searchQuery.toLowerCase().trim();
 
     // Search across tool name and description in current language
-    const name = t(`tool_${tool.id.replace('-', '_')}_name`).toLowerCase();
-    const desc = t(`tool_${tool.id.replace('-', '_')}_desc`).toLowerCase();
-    const catName = t(`cat_${tool.categoryId.replace('-', '_')}`).toLowerCase();
+    const toolKey = tool.id.replace(/-/g, '_');
+    const catKey = tool.categoryId.replace(/-/g, '_');
+    const name = t(`tool_${toolKey}_name`).toLowerCase();
+    const desc = t(`tool_${toolKey}_desc`).toLowerCase();
+    const catName = t(`cat_${catKey}`).toLowerCase();
 
     // Check slug and id
     if (tool.id.toLowerCase().includes(q) || tool.slug.toLowerCase().includes(q)) return true;
     if (name.includes(q) || desc.includes(q) || catName.includes(q)) return true;
 
     // Check english fallbacks for international keyword matches
-    const enName = (TRANSLATIONS.en[`tool_${tool.id.replace('-', '_')}_name`] || '').toLowerCase();
+    const enName = (TRANSLATIONS.en[`tool_${toolKey}_name`] || '').toLowerCase();
     if (enName.includes(q)) return true;
 
     return false;

@@ -134,9 +134,9 @@ export const ToolPage: React.FC<ToolPageProps> = ({ tool: toolProp, toolId }) =>
   }
 
   const category = CATEGORIES.find((c) => c.id === tool.categoryId);
-  const toolName = t(`tool_${tool.id.replace('-', '_')}_name`);
-  const toolDesc = t(`tool_${tool.id.replace('-', '_')}_desc`);
-  const categoryName = category ? t(`cat_${category.id.replace('-', '_')}`) : 'Calculator';
+  const toolName = t(`tool_${tool.id.replace(/-/g, '_')}_name`);
+  const toolDesc = t(`tool_${tool.id.replace(/-/g, '_')}_desc`);
+  const categoryName = category ? t(`cat_${category.id.replace(/-/g, '_')}`) : 'Calculator';
 
   const relatedTools = TOOLS.filter(
     (tItem) => tItem.categoryId === tool.categoryId && tItem.id !== tool.id
@@ -199,6 +199,10 @@ export const ToolPage: React.FC<ToolPageProps> = ({ tool: toolProp, toolId }) =>
       case 'unit-converter':
         return <UnitConverter tool={tool} />;
       case 'currency':
+      case 'currency-converter-live':
+      case 'gold-price-per-gram-ounce':
+      case 'silver-price-per-ounce':
+      case 'platinum-metal-price':
         return <CurrencyConverter tool={tool} />;
       case 'gpa':
         return <GpaCalculator tool={tool} />;
