@@ -92,7 +92,8 @@ export const Header: React.FC<{ onOpenHistory?: () => void }> = ({ onOpenHistory
                 <button
                   type="button"
                   onClick={() => setSearchQuery('')}
-                  className="absolute inset-y-0 end-0 pe-3 flex items-center text-slate-400 hover:text-slate-600"
+                  className="absolute inset-y-0 end-0 pe-3 flex items-center text-slate-500 hover:text-slate-700 dark:hover:text-slate-200 min-w-[36px] justify-center cursor-pointer"
+                  aria-label={t('btn_clear', 'Clear search query')}
                 >
                   <X className="w-4 h-4" />
                 </button>

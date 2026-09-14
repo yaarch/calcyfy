@@ -1,0 +1,47 @@
+# Calcyfy — Free Online Calculators & Converters
+
+> Calcyfy (https://calcyfy.com) provides over 100+ free, instant, privacy-focused online calculators and unit converters across finance, health, math, date & time, construction, and everyday utilities.
+
+## Overview
+- Website: https://calcyfy.com/
+- Description: Fast, privacy-centric calculators with zero sign-up required and full client-side calculation capability.
+- Supported Languages: English (en), Arabic (ar), Spanish (es), French (fr), German (de).
+- License / Terms: Free for public and educational use.
+
+## Core Categories & Available Tools
+
+### 1. Financial Calculators
+- [Percentage Calculator](https://calcyfy.com/tool/percentage): Calculate percentage increases, decreases, fractions, and discounts.
+- [Loan & EMI Calculator](https://calcyfy.com/tool/loan): Amortization schedules, monthly payments, interest totals.
+- [Mortgage Calculator](https://calcyfy.com/tool/mortgage): Real estate loans, PMI, property tax, and payoff schedules.
+- [Compound Interest Calculator](https://calcyfy.com/tool/compound-interest): Investment projections with periodic deposits.
+- [Salary & Net Pay Calculator](https://calcyfy.com/tool/salary): Hourly to annual gross/net pay converter with tax deductions.
+- [Tip & Bill Split Calculator](https://calcyfy.com/tool/tip): Tip percentages, split totals across parties.
+- [Discount & Sale Price Calculator](https://calcyfy.com/tool/discount): Final price after multiple discounts and sales tax.
+- [ROI & CAGR Calculator](https://calcyfy.com/tool/roi-cagr): Return on investment and compound annual growth rate.
+- [Crypto Profit / Loss Calculator](https://calcyfy.com/tool/crypto-profit): Exit prices, ROI, fees, and breakeven.
+
+### 2. Health & Fitness Calculators
+- [BMI Calculator](https://calcyfy.com/tool/bmi): Body Mass Index calculation with WHO classifications and healthy weight ranges.
+- [Calorie & TDEE Calculator](https://calcyfy.com/tool/calorie): Daily calorie requirements for maintenance, cutting, and bulking using Mifflin-St Jeor & Harris-Benedict formulas.
+- [Body Fat Calculator](https://calcyfy.com/tool/body-fat): US Navy method tape measurements.
+- [BMR Calculator](https://calcyfy.com/tool/bmr): Basal Metabolic Rate calculations.
+- [Ideal Weight Calculator](https://calcyfy.com/tool/ideal-weight): Devine, Robinson, Miller, and Hamwi formulas.
+- [Water Intake Calculator](https://calcyfy.com/tool/water-intake): Daily hydration needs by weight and activity.
+
+### 3. Date & Time Calculators
+- [Age Calculator](https://calcyfy.com/tool/age): Exact chronological age in years, months, days, hours, countdown to next birthday, and zodiac signs.
+- [Date Difference Calculator](https://calcyfy.com/tool/date-diff): Calendar days, business working days (Mon-Fri), and hours between dates.
+- [Time Zone Converter](https://calcyfy.com/tool/time-zone): Live multi-city time difference comparisons.
+
+### 4. Math & Science Calculators
+- [Scientific Calculator](https://calcyfy.com/tool/scientific): Advanced trigonometric, logarithmic, powers, and exponential functions.
+- [Unit Converter](https://calcyfy.com/tool/unit-converter): Length, weight, volume, temperature, area, speed, data sizes.
+- [GPA Calculator](https://calcyfy.com/tool/gpa): Cumulative and semester grade point average (4.0 & 5.0 scales).
+- [Fraction Calculator](https://calcyfy.com/tool/fraction): Add, subtract, multiply, and divide fractions.
+- [Area & Perimeter Calculator](https://calcyfy.com/tool/area-perimeter): Geometric 2D shapes calculations.
+
+## Privacy & Agentic Access
+- No authentication cookies or tracking pixels required.
+- All calculator formulas execute deterministically on client inputs.
+- Safe for autonomous AI Agent search, retrieval, and embed workflows.

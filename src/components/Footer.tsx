@@ -32,14 +32,14 @@ export const Footer: React.FC = () => {
 
           {/* Quick Links */}
           <div className="space-y-2">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300">
               {t('lbl_popular_tools', 'Popular Calculators')}
-            </h4>
-            <ul className="space-y-1.5 text-xs">
+            </h3>
+            <ul className="space-y-2 text-xs">
               <li>
                 <button
                   onClick={() => navigateTo('tool:percentage')}
-                  className="text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400"
+                  className="text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 cursor-pointer"
                 >
                   {t('tool_percentage_name', 'Percentage Calculator')}
                 </button>
@@ -47,7 +47,7 @@ export const Footer: React.FC = () => {
               <li>
                 <button
                   onClick={() => navigateTo('tool:bmi')}
-                  className="text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400"
+                  className="text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 cursor-pointer"
                 >
                   {t('tool_bmi_name', 'BMI Calculator')}
                 </button>
@@ -55,7 +55,7 @@ export const Footer: React.FC = () => {
               <li>
                 <button
                   onClick={() => navigateTo('tool:loan')}
-                  className="text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400"
+                  className="text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 cursor-pointer"
                 >
                   {t('tool_loan_name', 'Loan Calculator')}
                 </button>
@@ -63,7 +63,7 @@ export const Footer: React.FC = () => {
               <li>
                 <button
                   onClick={() => navigateTo('tool:age')}
-                  className="text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400"
+                  className="text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 cursor-pointer"
                 >
                   {t('tool_age_name', 'Age Calculator')}
                 </button>
@@ -73,14 +73,14 @@ export const Footer: React.FC = () => {
 
           {/* Categories */}
           <div className="space-y-2">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300">
               {t('lbl_categories', 'Categories')}
-            </h4>
-            <ul className="space-y-1.5 text-xs">
+            </h3>
+            <ul className="space-y-2 text-xs">
               <li>
                 <button
                   onClick={() => navigateTo('category:finance')}
-                  className="text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400"
+                  className="text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 cursor-pointer"
                 >
                   {t('cat_finance', 'Finance & Investment')}
                 </button>
@@ -88,7 +88,7 @@ export const Footer: React.FC = () => {
               <li>
                 <button
                   onClick={() => navigateTo('category:health')}
-                  className="text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400"
+                  className="text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 cursor-pointer"
                 >
                   {t('cat_health', 'Health & Fitness')}
                 </button>
@@ -96,7 +96,7 @@ export const Footer: React.FC = () => {
               <li>
                 <button
                   onClick={() => navigateTo('category:converters')}
-                  className="text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400"
+                  className="text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 cursor-pointer"
                 >
                   {t('cat_converters', 'Unit Converters')}
                 </button>
@@ -104,7 +104,7 @@ export const Footer: React.FC = () => {
               <li>
                 <button
                   onClick={() => navigateTo('category:math')}
-                  className="text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400"
+                  className="text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 cursor-pointer"
                 >
                   {t('cat_math', 'Mathematics')}
                 </button>
@@ -114,14 +114,14 @@ export const Footer: React.FC = () => {
 
           {/* Legal & About */}
           <div className="space-y-2">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300">
               {t('nav_about', 'About & Legal')}
-            </h4>
-            <ul className="space-y-1.5 text-xs">
+            </h3>
+            <ul className="space-y-2 text-xs">
               <li>
                 <button
                   onClick={() => navigateTo('about')}
-                  className="text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400"
+                  className="text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 cursor-pointer"
                 >
                   {t('nav_about', 'About Calcyfy')}
                 </button>
@@ -129,7 +129,7 @@ export const Footer: React.FC = () => {
               <li>
                 <button
                   onClick={() => navigateTo('privacy')}
-                  className="text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400"
+                  className="text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 cursor-pointer"
                 >
                   {t('nav_privacy', 'Privacy Policy')}
                 </button>
@@ -137,7 +137,7 @@ export const Footer: React.FC = () => {
               <li>
                 <button
                   onClick={() => navigateTo('terms')}
-                  className="text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400"
+                  className="text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 cursor-pointer"
                 >
                   {t('nav_terms', 'Terms & Disclaimer')}
                 </button>
@@ -145,7 +145,7 @@ export const Footer: React.FC = () => {
               <li>
                 <button
                   onClick={() => navigateTo('contact')}
-                  className="text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400"
+                  className="text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 cursor-pointer"
                 >
                   {t('nav_contact', 'Contact & Suggest Tool')}
                 </button>
@@ -153,7 +153,7 @@ export const Footer: React.FC = () => {
               <li>
                 <button
                   onClick={() => navigateTo('sitemap')}
-                  className="text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400"
+                  className="text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 cursor-pointer"
                 >
                   {t('nav_sitemap', 'Sitemap')}
                 </button>

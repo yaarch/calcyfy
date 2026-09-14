@@ -3,18 +3,48 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import { AppProvider, useApp } from './context/AppContext';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { HistoryDrawer } from './components/HistoryDrawer';
 import { HomeView } from './components/HomeView';
-import { AllToolsView } from './components/AllToolsView';
-import { ToolPage } from './components/ToolPage';
-import { AboutPage, PrivacyPage, TermsPage, ContactPage, SitemapPage, NotFoundPage } from './components/StaticPages';
 import { CategoryId } from './types';
 import { TOOLS } from './data/tools';
 import { CATEGORIES } from './data/categories';
+
+// Lazy load secondary views to minimize initial JavaScript payload
+const AllToolsView = React.lazy(() =>
+  import('./components/AllToolsView').then((m) => ({ default: m.AllToolsView }))
+);
+const ToolPage = React.lazy(() =>
+  import('./components/ToolPage').then((m) => ({ default: m.ToolPage }))
+);
+const AboutPage = React.lazy(() =>
+  import('./components/StaticPages').then((m) => ({ default: m.AboutPage }))
+);
+const PrivacyPage = React.lazy(() =>
+  import('./components/StaticPages').then((m) => ({ default: m.PrivacyPage }))
+);
+const TermsPage = React.lazy(() =>
+  import('./components/StaticPages').then((m) => ({ default: m.TermsPage }))
+);
+const ContactPage = React.lazy(() =>
+  import('./components/StaticPages').then((m) => ({ default: m.ContactPage }))
+);
+const SitemapPage = React.lazy(() =>
+  import('./components/StaticPages').then((m) => ({ default: m.SitemapPage }))
+);
+const NotFoundPage = React.lazy(() =>
+  import('./components/StaticPages').then((m) => ({ default: m.NotFoundPage }))
+);
+
+const ViewLoadingSkeleton: React.FC = () => (
+  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 animate-pulse space-y-6">
+    <div className="h-8 bg-slate-200 dark:bg-slate-800 rounded-xl w-1/4"></div>
+    <div className="h-64 bg-slate-100 dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800"></div>
+  </div>
+);
 
 const MainRouter: React.FC = () => {
   const { currentView, t, lang } = useApp();
@@ -168,7 +198,9 @@ const MainRouter: React.FC = () => {
     <div className="min-h-screen flex flex-col bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 transition-colors selection:bg-emerald-500 selection:text-white">
       <Header onOpenHistory={() => setHistoryOpen(true)} />
       <main className="flex-1">
-        {renderView()}
+        <Suspense fallback={<ViewLoadingSkeleton />}>
+          {renderView()}
+        </Suspense>
       </main>
       <Footer />
       <HistoryDrawer isOpen={historyOpen} onClose={() => setHistoryOpen(false)} />

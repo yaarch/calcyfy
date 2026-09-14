@@ -21,33 +21,96 @@ import { NotFoundPage } from './StaticPages';
 import { executePrint } from '../utils/printHelper';
 import { ToolSeoContent } from './ToolSeoContent';
 
-// Specific Calculators
-import { PercentageCalculator } from './calculators/PercentageCalculator';
-import { BmiCalculator } from './calculators/BmiCalculator';
-import { AgeCalculator } from './calculators/AgeCalculator';
-import { LoanCalculator } from './calculators/LoanCalculator';
-import { MortgageCalculator } from './calculators/MortgageCalculator';
-import { CompoundInterestCalculator } from './calculators/CompoundInterestCalculator';
-import { TipCalculator } from './calculators/TipCalculator';
-import { DiscountCalculator } from './calculators/DiscountCalculator';
-import { UnitConverter } from './calculators/UnitConverter';
-import { CurrencyConverter } from './calculators/CurrencyConverter';
-import { GpaCalculator } from './calculators/GpaCalculator';
-import { CalorieCalculator } from './calculators/CalorieCalculator';
-import { TaxCalculator } from './calculators/TaxCalculator';
-import { SalaryCalculator } from './calculators/SalaryCalculator';
-import { ScientificCalculator } from './calculators/ScientificCalculator';
-import { DateDiffCalculator } from './calculators/DateDiffCalculator';
-import { WordCountCalculator } from './calculators/WordCountCalculator';
-import { PasswordGenerator } from './calculators/PasswordGenerator';
-import { RoiCagrCalculator } from './calculators/RoiCagrCalculator';
-import { CryptoProfitCalculator } from './calculators/CryptoProfitCalculator';
-import { TimeZoneCalculator } from './calculators/TimeZoneCalculator';
-import { FuelCostCalculator } from './calculators/FuelCostCalculator';
-import { BodyFatCalculator } from './calculators/BodyFatCalculator';
-import { AspectRatioCalculator } from './calculators/AspectRatioCalculator';
-import { CarbonFootprintCalculator } from './calculators/CarbonFootprintCalculator';
-import { SuiteCalculators } from './calculators/SuiteCalculators';
+// Lazy Loaded Calculators for Peak Performance & Instant First Load
+const PercentageCalculator = React.lazy(() =>
+  import('./calculators/PercentageCalculator').then((m) => ({ default: m.PercentageCalculator }))
+);
+const BmiCalculator = React.lazy(() =>
+  import('./calculators/BmiCalculator').then((m) => ({ default: m.BmiCalculator }))
+);
+const AgeCalculator = React.lazy(() =>
+  import('./calculators/AgeCalculator').then((m) => ({ default: m.AgeCalculator }))
+);
+const LoanCalculator = React.lazy(() =>
+  import('./calculators/LoanCalculator').then((m) => ({ default: m.LoanCalculator }))
+);
+const MortgageCalculator = React.lazy(() =>
+  import('./calculators/MortgageCalculator').then((m) => ({ default: m.MortgageCalculator }))
+);
+const CompoundInterestCalculator = React.lazy(() =>
+  import('./calculators/CompoundInterestCalculator').then((m) => ({ default: m.CompoundInterestCalculator }))
+);
+const TipCalculator = React.lazy(() =>
+  import('./calculators/TipCalculator').then((m) => ({ default: m.TipCalculator }))
+);
+const DiscountCalculator = React.lazy(() =>
+  import('./calculators/DiscountCalculator').then((m) => ({ default: m.DiscountCalculator }))
+);
+const UnitConverter = React.lazy(() =>
+  import('./calculators/UnitConverter').then((m) => ({ default: m.UnitConverter }))
+);
+const CurrencyConverter = React.lazy(() =>
+  import('./calculators/CurrencyConverter').then((m) => ({ default: m.CurrencyConverter }))
+);
+const GpaCalculator = React.lazy(() =>
+  import('./calculators/GpaCalculator').then((m) => ({ default: m.GpaCalculator }))
+);
+const CalorieCalculator = React.lazy(() =>
+  import('./calculators/CalorieCalculator').then((m) => ({ default: m.CalorieCalculator }))
+);
+const TaxCalculator = React.lazy(() =>
+  import('./calculators/TaxCalculator').then((m) => ({ default: m.TaxCalculator }))
+);
+const SalaryCalculator = React.lazy(() =>
+  import('./calculators/SalaryCalculator').then((m) => ({ default: m.SalaryCalculator }))
+);
+const ScientificCalculator = React.lazy(() =>
+  import('./calculators/ScientificCalculator').then((m) => ({ default: m.ScientificCalculator }))
+);
+const DateDiffCalculator = React.lazy(() =>
+  import('./calculators/DateDiffCalculator').then((m) => ({ default: m.DateDiffCalculator }))
+);
+const WordCountCalculator = React.lazy(() =>
+  import('./calculators/WordCountCalculator').then((m) => ({ default: m.WordCountCalculator }))
+);
+const PasswordGenerator = React.lazy(() =>
+  import('./calculators/PasswordGenerator').then((m) => ({ default: m.PasswordGenerator }))
+);
+const RoiCagrCalculator = React.lazy(() =>
+  import('./calculators/RoiCagrCalculator').then((m) => ({ default: m.RoiCagrCalculator }))
+);
+const CryptoProfitCalculator = React.lazy(() =>
+  import('./calculators/CryptoProfitCalculator').then((m) => ({ default: m.CryptoProfitCalculator }))
+);
+const TimeZoneCalculator = React.lazy(() =>
+  import('./calculators/TimeZoneCalculator').then((m) => ({ default: m.TimeZoneCalculator }))
+);
+const FuelCostCalculator = React.lazy(() =>
+  import('./calculators/FuelCostCalculator').then((m) => ({ default: m.FuelCostCalculator }))
+);
+const BodyFatCalculator = React.lazy(() =>
+  import('./calculators/BodyFatCalculator').then((m) => ({ default: m.BodyFatCalculator }))
+);
+const AspectRatioCalculator = React.lazy(() =>
+  import('./calculators/AspectRatioCalculator').then((m) => ({ default: m.AspectRatioCalculator }))
+);
+const CarbonFootprintCalculator = React.lazy(() =>
+  import('./calculators/CarbonFootprintCalculator').then((m) => ({ default: m.CarbonFootprintCalculator }))
+);
+const SuiteCalculators = React.lazy(() =>
+  import('./calculators/SuiteCalculators').then((m) => ({ default: m.SuiteCalculators }))
+);
+
+const CalculatorSkeleton: React.FC = () => (
+  <div className="bg-white dark:bg-slate-900 p-6 md:p-8 rounded-2xl border border-slate-200 dark:border-slate-800 animate-pulse space-y-6">
+    <div className="h-6 bg-slate-200 dark:bg-slate-800 rounded-lg w-1/3"></div>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="h-12 bg-slate-100 dark:bg-slate-800/60 rounded-xl"></div>
+      <div className="h-12 bg-slate-100 dark:bg-slate-800/60 rounded-xl"></div>
+    </div>
+    <div className="h-28 bg-emerald-50/50 dark:bg-emerald-950/20 rounded-2xl"></div>
+  </div>
+);
 
 interface ToolPageProps {
   tool?: Tool;
@@ -293,41 +356,43 @@ export const ToolPage: React.FC<ToolPageProps> = ({ tool: toolProp, toolId }) =>
       </div>
 
       {/* Main Interactive Tool Container */}
-      <div id="tool-calculator-container" className="space-y-4">
-        {renderCalculator()}
+      <div id="tool-calculator-container" className="space-y-4 min-h-[300px]">
+        <React.Suspense fallback={<CalculatorSkeleton />}>
+          {renderCalculator()}
+        </React.Suspense>
       </div>
 
       {/* Explanatory Educational Sections */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6">
         {/* How to use */}
-        <div className="p-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-3">
+        <section className="p-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-3">
           <div className="flex items-center gap-2 text-slate-900 dark:text-white font-bold text-sm">
             <BookOpen className="w-4 h-4 text-emerald-500" />
-            <h3>{t('lbl_how_to_use', 'How to Use This Calculator')}</h3>
+            <h2 className="text-sm font-bold">{t('lbl_how_to_use', 'How to Use This Calculator')}</h2>
           </div>
           <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
             {t('why_simple_desc', 'Enter your known parameters into the labeled inputs. The calculation engine computes results in real-time as you type, offering instant feedback and copyable summary metrics.')}
           </p>
-          <ul className="text-xs text-slate-500 dark:text-slate-400 space-y-1.5 list-disc ps-4">
+          <ul className="text-xs text-slate-600 dark:text-slate-400 space-y-1.5 list-disc ps-4">
             <li>{t('why_fast_desc', 'Inputs update instantly with no page reloads.')}</li>
             <li>{t('why_global_desc', 'Use the unit toggle to switch between Metric and Imperial where applicable.')}</li>
             <li>{t('why_math_desc', 'Click the "Copy" button to copy formatted answers to your clipboard.')}</li>
           </ul>
-        </div>
+        </section>
 
         {/* Mathematical Rigor */}
-        <div className="p-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-3">
+        <section className="p-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-3">
           <div className="flex items-center gap-2 text-slate-900 dark:text-white font-bold text-sm">
             <Lightbulb className="w-4 h-4 text-emerald-500" />
-            <h3>{t('lbl_accuracy_title', 'Accuracy & Mathematical Standard')}</h3>
+            <h2 className="text-sm font-bold">{t('lbl_accuracy_title', 'Accuracy & Mathematical Standard')}</h2>
           </div>
           <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
             {t('about_principle_1', 'All calculations are verified against official standards (such as the World Health Organization BMI thresholds and standard compound amortization formulas).')}
           </p>
-          <p className="text-xs text-slate-500 dark:text-slate-400">
+          <p className="text-xs text-slate-600 dark:text-slate-400">
             {t('why_privacy_desc', 'Calculations are executed client-side inside your browser for maximum privacy and zero data leakage.')}
           </p>
-        </div>
+        </section>
       </div>
 
       {/* Professional SEO Editorial & FAQ Guide */}
@@ -340,16 +405,16 @@ export const ToolPage: React.FC<ToolPageProps> = ({ tool: toolProp, toolId }) =>
 
       {/* Related Tools */}
       {relatedTools.length > 0 && (
-        <div className="space-y-4 pt-6 border-t border-slate-200 dark:border-slate-800 no-print">
-          <h3 className="text-base font-bold text-slate-900 dark:text-white">
+        <section className="space-y-4 pt-6 border-t border-slate-200 dark:border-slate-800 no-print">
+          <h2 className="text-base font-bold text-slate-900 dark:text-white">
             {t('lbl_more_in_category', 'More in this category')}
-          </h3>
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {relatedTools.map((rel) => (
               <button
                 key={rel.id}
                 onClick={() => navigateTo(`tool:${rel.id}`)}
-                className="p-4 bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-800/80 rounded-xl border border-slate-200 dark:border-slate-800 text-start space-y-1 transition-all group"
+                className="p-4 bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-800/80 rounded-xl border border-slate-200 dark:border-slate-800 text-start space-y-1 transition-all group cursor-pointer"
               >
                 <div className="text-xs font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400">
                   {t(`tool_${rel.id.replace('-', '_')}_name`)}
@@ -360,7 +425,7 @@ export const ToolPage: React.FC<ToolPageProps> = ({ tool: toolProp, toolId }) =>
               </button>
             ))}
           </div>
-        </div>
+        </section>
       )}
 
       {/* Embed Modal Popover */}

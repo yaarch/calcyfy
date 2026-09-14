@@ -174,7 +174,7 @@ export const HomeView: React.FC = () => {
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
           <div className="flex items-center gap-2 text-amber-600 dark:text-amber-400 font-bold text-sm">
             <Sparkles className="w-4 h-4 fill-amber-500 text-amber-500" />
-            <h3>{t('lbl_favorites', 'Your Pinned Calculators')}</h3>
+            <h2 className="text-sm font-bold text-amber-900 dark:text-amber-300">{t('lbl_favorites', 'Your Pinned Calculators')}</h2>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
             {favoritedTools.map((tool) => {
@@ -183,7 +183,7 @@ export const HomeView: React.FC = () => {
                 <button
                   key={tool.id}
                   onClick={() => navigateTo(`tool:${tool.id}`)}
-                  className="p-3 bg-amber-50/60 dark:bg-amber-950/20 hover:bg-amber-100/80 dark:hover:bg-amber-950/40 border border-amber-200/80 dark:border-amber-800/60 rounded-xl flex items-center gap-3 text-start transition-all"
+                  className="p-3 bg-amber-50/60 dark:bg-amber-950/20 hover:bg-amber-100/80 dark:hover:bg-amber-950/40 border border-amber-200/80 dark:border-amber-800/60 rounded-xl flex items-center gap-3 text-start transition-all cursor-pointer"
                 >
                   <div className="p-2 bg-amber-500 text-white rounded-lg shadow-xs">
                     <IconComp className="w-4 h-4" />
@@ -192,7 +192,7 @@ export const HomeView: React.FC = () => {
                     <div className="text-xs font-bold text-slate-900 dark:text-white truncate">
                       {t(`tool_${tool.id.replace('-', '_')}_name`)}
                     </div>
-                    <div className="text-[10px] text-amber-700 dark:text-amber-400 font-medium truncate">
+                    <div className="text-[10px] text-amber-800 dark:text-amber-300 font-medium truncate">
                       ★ {t('btn_pinned', 'Pinned')}
                     </div>
                   </div>
