@@ -23,6 +23,19 @@ interface UniversalToolEngineProps {
   tool?: Tool;
 }
 
+// Safely parse YYYY-MM-DD into a local Date without UTC offset shifts
+function parseDateSafe(dateStr: string): Date | null {
+  if (!dateStr) return null;
+  const parts = dateStr.split('-');
+  if (parts.length !== 3) return null;
+  const y = parseInt(parts[0], 10);
+  const m = parseInt(parts[1], 10) - 1;
+  const d = parseInt(parts[2], 10);
+  if (isNaN(y) || isNaN(m) || isNaN(d)) return null;
+  const dt = new Date(y, m, d);
+  return isNaN(dt.getTime()) ? null : dt;
+}
+
 export const UniversalToolEngine: React.FC<UniversalToolEngineProps> = ({ toolId, tool }) => {
   const { t, addHistory, isRTL, lang } = useApp();
   const [copied, setCopied] = useState(false);
@@ -641,9 +654,9 @@ export const UniversalToolEngine: React.FC<UniversalToolEngineProps> = ({ toolId
 
       // Age & Chronological Age
       if (id.includes('age') && !id.includes('dog')) {
-        const birth = new Date(date1);
-        const target = new Date(date2);
-        if (isNaN(birth.getTime()) || isNaN(target.getTime())) {
+        const birth = parseDateSafe(date1);
+        const target = parseDateSafe(date2);
+        if (!birth || !target) {
           return { type: 'fields', fields: [], primaryLabel: 'Age', primaryResult: 'Invalid Date' };
         }
         let years = target.getFullYear() - birth.getFullYear();
@@ -660,27 +673,33 @@ export const UniversalToolEngine: React.FC<UniversalToolEngineProps> = ({ toolId
         }
         const diffMs = Math.max(0, target.getTime() - birth.getTime());
         const totalDays = Math.floor(diffMs / 86400000);
-        const totalHours = Math.floor(diffMs / 3600000);
+        const totalHours = totalDays * 24;
         const totalSecs = Math.floor(diffMs / 1000);
+        const decimalYears = (years + months / 12 + days / 365.2425).toFixed(2);
 
-        // Next Birthday
-        const nextBday = new Date(target.getFullYear(), birth.getMonth(), birth.getDate());
-        if (nextBday < target) nextBday.setFullYear(target.getFullYear() + 1);
+        // Next Birthday calculation
+        let nextBdayYear = target.getFullYear();
+        let nextBday = new Date(nextBdayYear, birth.getMonth(), birth.getDate());
+        if (nextBday < target) {
+          nextBdayYear += 1;
+          nextBday = new Date(nextBdayYear, birth.getMonth(), birth.getDate());
+        }
         const daysToBday = Math.ceil((nextBday.getTime() - target.getTime()) / 86400000);
+        const nextAge = nextBdayYear - birth.getFullYear();
 
         return {
           type: 'fields',
           fields: [
-            { label: 'Birth Date', value: date1, setter: setDate1, type: 'date' },
-            { label: 'Target / Today Date', value: date2, setter: setDate2, type: 'date' },
+            { label: 'Birth Date (تاريخ الميلاد)', value: date1, setter: setDate1, type: 'date' },
+            { label: 'Target / Today Date (حتى تاريخ)', value: date2, setter: setDate2, type: 'date' },
           ],
-          primaryLabel: 'Exact Age',
-          primaryResult: `${years} Years, ${months} Months, ${days} Days`,
+          primaryLabel: 'Exact Chronological Age (العمر الدقيق)',
+          primaryResult: `${years} Years, ${months} Months, ${days} Days (${years} سنة و ${months} أشهر و ${days} يوم)`,
           secondary: [
-            { label: 'Total Lived Days', value: `${totalDays.toLocaleString()} Days` },
-            { label: 'Total Hours Lived', value: `${totalHours.toLocaleString()} Hours` },
-            { label: 'Total Seconds Lived', value: `${totalSecs.toLocaleString()} Sec` },
-            { label: 'Next Birthday Countdown', value: `${daysToBday} Days Remaining` },
+            { label: 'Decimal Years (بالسنوات العشرية)', value: `${decimalYears} Years (${decimalYears} سنة)` },
+            { label: 'Total Days Lived (إجمالي الأيام)', value: `${totalDays.toLocaleString()} Days` },
+            { label: 'Total Hours (إجمالي الساعات)', value: `${totalHours.toLocaleString()} Hours` },
+            { label: 'Next Birthday (يوم الميلاد القادم)', value: `${daysToBday} Days Remaining (Turning ${nextAge})` },
           ],
           formula: 'Age = Target Date - Birth Date (Exact Calendar Adjustment)',
         };
@@ -688,25 +707,27 @@ export const UniversalToolEngine: React.FC<UniversalToolEngineProps> = ({ toolId
 
       // Birthday Day of Week
       if (id.includes('birthday') || id.includes('born')) {
-        const birth = new Date(date1);
+        const birth = parseDateSafe(date1) || new Date(date1);
         const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-        const dayName = isNaN(birth.getTime()) ? 'Invalid Date' : dayNames[birth.getDay()];
+        const dayNamesAr = ['الأحد', 'الاثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة', 'السبت'];
+        const dayIdx = birth.getDay();
+        const dayName = isNaN(birth.getTime()) ? 'Invalid Date' : `${dayNames[dayIdx]} (${dayNamesAr[dayIdx]})`;
         
         // Zodiac
         const m = birth.getMonth() + 1;
         const d = birth.getDate();
-        let zodiac = 'Capricorn';
-        if ((m === 1 && d >= 20) || (m === 2 && d <= 18)) zodiac = 'Aquarius';
-        else if ((m === 2 && d >= 19) || (m === 3 && d <= 20)) zodiac = 'Pisces';
-        else if ((m === 3 && d >= 21) || (m === 4 && d <= 19)) zodiac = 'Aries';
-        else if ((m === 4 && d >= 20) || (m === 5 && d <= 20)) zodiac = 'Taurus';
-        else if ((m === 5 && d >= 21) || (m === 6 && d <= 20)) zodiac = 'Gemini';
-        else if ((m === 6 && d >= 21) || (m === 7 && d <= 22)) zodiac = 'Cancer';
-        else if ((m === 7 && d >= 23) || (m === 8 && d <= 22)) zodiac = 'Leo';
-        else if ((m === 8 && d >= 23) || (m === 9 && d <= 22)) zodiac = 'Virgo';
-        else if ((m === 9 && d >= 23) || (m === 10 && d <= 22)) zodiac = 'Libra';
-        else if ((m === 10 && d >= 23) || (m === 11 && d <= 21)) zodiac = 'Scorpio';
-        else if ((m === 11 && d >= 22) || (m === 12 && d <= 21)) zodiac = 'Sagittarius';
+        let zodiac = 'Capricorn (الجدي)';
+        if ((m === 1 && d >= 20) || (m === 2 && d <= 18)) zodiac = 'Aquarius (الدلو)';
+        else if ((m === 2 && d >= 19) || (m === 3 && d <= 20)) zodiac = 'Pisces (الحوت)';
+        else if ((m === 3 && d >= 21) || (m === 4 && d <= 19)) zodiac = 'Aries (الحمل)';
+        else if ((m === 4 && d >= 20) || (m === 5 && d <= 20)) zodiac = 'Taurus (الثور)';
+        else if ((m === 5 && d >= 21) || (m === 6 && d <= 20)) zodiac = 'Gemini (الجوزاء)';
+        else if ((m === 6 && d >= 21) || (m === 7 && d <= 22)) zodiac = 'Cancer (السرطان)';
+        else if ((m === 7 && d >= 23) || (m === 8 && d <= 22)) zodiac = 'Leo (الأسد)';
+        else if ((m === 8 && d >= 23) || (m === 9 && d <= 22)) zodiac = 'Virgo (العذراء)';
+        else if ((m === 9 && d >= 23) || (m === 10 && d <= 22)) zodiac = 'Libra (الميزان)';
+        else if ((m === 10 && d >= 23) || (m === 11 && d <= 21)) zodiac = 'Scorpio (العقرب)';
+        else if ((m === 11 && d >= 22) || (m === 12 && d <= 21)) zodiac = 'Sagittarius (القوس)';
 
         return {
           type: 'fields',
@@ -723,8 +744,24 @@ export const UniversalToolEngine: React.FC<UniversalToolEngineProps> = ({ toolId
 
       // Date Difference
       if (id.includes('date-diff') || id.includes('difference')) {
-        const d1 = new Date(date1);
-        const d2 = new Date(date2);
+        const d1 = parseDateSafe(date1) || new Date(date1);
+        const d2 = parseDateSafe(date2) || new Date(date2);
+        const earlier = d1 <= d2 ? d1 : d2;
+        const later = d1 <= d2 ? d2 : d1;
+        
+        let diffYears = later.getFullYear() - earlier.getFullYear();
+        let diffMonths = later.getMonth() - earlier.getMonth();
+        let diffDays = later.getDate() - earlier.getDate();
+        if (diffDays < 0) {
+          diffMonths--;
+          const prevMonthDays = new Date(later.getFullYear(), later.getMonth(), 0).getDate();
+          diffDays += prevMonthDays;
+        }
+        if (diffMonths < 0) {
+          diffYears--;
+          diffMonths += 12;
+        }
+
         const diffMs = Math.abs(d2.getTime() - d1.getTime());
         const totalDays = Math.floor(diffMs / 86400000);
 
@@ -747,14 +784,15 @@ export const UniversalToolEngine: React.FC<UniversalToolEngineProps> = ({ toolId
             { label: 'Start Date', value: date1, setter: setDate1, type: 'date' },
             { label: 'End Date', value: date2, setter: setDate2, type: 'date' },
           ],
-          primaryLabel: 'Total Calendar Days',
-          primaryResult: `${totalDays} Days`,
+          primaryLabel: 'Total Difference (الفرق الإجمالي)',
+          primaryResult: `${diffYears} Years, ${diffMonths} Months, ${diffDays} Days (${diffYears} سنة و ${diffMonths} أشهر و ${diffDays} يوم)`,
           secondary: [
+            { label: 'Total Calendar Days', value: `${totalDays} Days` },
             { label: 'Business Working Days (Mon-Fri)', value: `${bizDays} Days` },
             { label: 'Weeks & Days', value: `${weeks} Weeks, ${remDays} Days` },
             { label: 'Total Hours', value: `${(totalDays * 24).toLocaleString()} Hours` },
           ],
-          formula: 'Days = Math.abs(End Date - Start Date) / 86,400,000 ms',
+          formula: 'Exact Calendar Duration (Years, Months, Days) + Total Days',
         };
       }
 
