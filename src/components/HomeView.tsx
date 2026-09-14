@@ -155,12 +155,12 @@ export const HomeView: React.FC = () => {
 
           {/* Quick Filter Tags */}
           <div className="flex flex-wrap items-center justify-center gap-2 mt-4 text-xs">
-            <span className="text-slate-400 font-medium">{t('hero_search_hints', 'Try:')}</span>
+            <span className="text-slate-600 dark:text-slate-400 font-semibold">{t('hero_search_hints', 'Try:')}</span>
             {quickSearchTags.map((tag, idx) => (
               <button
                 key={idx}
                 onClick={() => setSearchQuery(tag.query)}
-                className="px-2.5 py-1 bg-slate-100 hover:bg-emerald-50 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 rounded-lg transition-colors"
+                className="px-2.5 py-1 bg-slate-100 hover:bg-emerald-50 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 hover:text-emerald-700 dark:hover:text-emerald-400 rounded-lg transition-colors cursor-pointer"
               >
                 {tag.label}
               </button>
@@ -210,13 +210,13 @@ export const HomeView: React.FC = () => {
             <h2 className="text-2xl font-black text-slate-900 dark:text-white tracking-tight">
               {t('lbl_popular_tools', 'Most Popular Calculators')}
             </h2>
-            <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+            <p className="text-xs text-slate-600 dark:text-slate-300 mt-0.5">
               {t('popular_tools_desc', 'Everyday tools used by thousands of professionals, students, and families.')}
             </p>
           </div>
           <button
             onClick={() => navigateTo('tools')}
-            className="text-xs font-bold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1"
+            className="text-xs font-bold text-emerald-700 dark:text-emerald-400 hover:underline flex items-center gap-1 cursor-pointer"
           >
             <span>{t('lbl_view_all', 'View All')}</span>
             <ArrowRight className={`w-3.5 h-3.5 ${isRTL ? 'rotate-180' : ''}`} />
@@ -231,16 +231,16 @@ export const HomeView: React.FC = () => {
                 key={tool.id}
                 id={`popular-card-${tool.id}`}
                 onClick={() => navigateTo(`tool:${tool.id}`)}
-                className="group p-5 bg-white dark:bg-slate-900 hover:bg-slate-50/80 dark:hover:bg-slate-800/60 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-emerald-500/50 dark:hover:border-emerald-500/50 text-start space-y-3 transition-all shadow-xs hover:shadow-md"
+                className="group p-5 bg-white dark:bg-slate-900 hover:bg-slate-50/80 dark:hover:bg-slate-800/60 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-emerald-500/50 dark:hover:border-emerald-500/50 text-start space-y-3 transition-all shadow-xs hover:shadow-md cursor-pointer"
               >
                 <div className="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center group-hover:scale-105 transition-transform">
                   <IconComponent className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="text-sm font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+                  <h3 className="text-sm font-bold text-slate-900 dark:text-white group-hover:text-emerald-700 dark:group-hover:text-emerald-400 transition-colors">
                     {t(`tool_${tool.id.replace('-', '_')}_name`)}
                   </h3>
-                  <p className="text-xs text-slate-500 dark:text-slate-400 mt-1 line-clamp-2">
+                  <p className="text-xs text-slate-600 dark:text-slate-300 mt-1 line-clamp-2">
                     {t(`tool_${tool.id.replace('-', '_')}_desc`)}
                   </p>
                 </div>
@@ -256,7 +256,7 @@ export const HomeView: React.FC = () => {
           <h2 className="text-2xl font-black text-slate-900 dark:text-white tracking-tight">
             {t('lbl_categories', 'Explore by Category')}
           </h2>
-          <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+          <p className="text-xs text-slate-600 dark:text-slate-300 mt-0.5">
             {t('categories_desc', 'Organized directories covering finances, health, conversion, and general math.')}
           </p>
         </div>
@@ -268,17 +268,17 @@ export const HomeView: React.FC = () => {
               <button
                 key={cat.id}
                 onClick={() => navigateTo(`category:${cat.id}`)}
-                className="p-5 bg-white dark:bg-slate-900 hover:bg-emerald-50/40 dark:hover:bg-slate-800/60 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-emerald-300 dark:hover:border-emerald-700 text-start space-y-2 transition-all group"
+                className="p-5 bg-white dark:bg-slate-900 hover:bg-emerald-50/40 dark:hover:bg-slate-800/60 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-emerald-300 dark:hover:border-emerald-700 text-start space-y-2 transition-all group cursor-pointer"
               >
                 <div className="flex items-center justify-between">
-                  <span className="text-xs font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400">
+                  <span className="text-xs font-bold text-slate-900 dark:text-white group-hover:text-emerald-700 dark:group-hover:text-emerald-400">
                     {t(`cat_${cat.id.replace('-', '_')}`)}
                   </span>
-                  <span className="text-[11px] px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded-md font-mono text-slate-500">
+                  <span className="text-[11px] px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded-md font-mono text-slate-700 dark:text-slate-300 font-semibold">
                     {count} {t('lbl_tools_count', 'tools')}
                   </span>
                 </div>
-                <p className="text-xs text-slate-500 dark:text-slate-400 line-clamp-2">
+                <p className="text-xs text-slate-600 dark:text-slate-300 line-clamp-2">
                   {t(`cat_${cat.id.replace('-', '_')}_desc`)}
                 </p>
               </button>
@@ -294,7 +294,7 @@ export const HomeView: React.FC = () => {
             <h2 className="text-2xl md:text-3xl font-black text-slate-900 dark:text-white">
               {t('why_title', 'Why Calcyfy?')}
             </h2>
-            <p className="text-xs md:text-sm text-slate-500 dark:text-slate-400">
+            <p className="text-xs md:text-sm text-slate-600 dark:text-slate-300">
               {t('why_desc', 'Built from first principles for people who need exact answers without friction.')}
             </p>
           </div>
@@ -307,7 +307,7 @@ export const HomeView: React.FC = () => {
               <h3 className="text-sm font-bold text-slate-900 dark:text-white">
                 {t('why_fast_title', 'Instant Answers')}
               </h3>
-              <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+              <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
                 {t('why_fast_desc', 'No loading spinners or sluggish calculations. Every number updates in real-time as you type.')}
               </p>
             </div>
@@ -319,7 +319,7 @@ export const HomeView: React.FC = () => {
               <h3 className="text-sm font-bold text-slate-900 dark:text-white">
                 {t('why_privacy_title', 'Guaranteed Privacy')}
               </h3>
-              <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+              <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
                 {t('why_privacy_desc', 'Zero server-side transmission. Your data stays entirely contained in your local browser session.')}
               </p>
             </div>
@@ -331,7 +331,7 @@ export const HomeView: React.FC = () => {
               <h3 className="text-sm font-bold text-slate-900 dark:text-white">
                 {t('why_global_title', 'Global i18n & RTL')}
               </h3>
-              <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+              <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
                 {t('why_global_desc', 'Complete bidirectional RTL support for Arabic along with English, Spanish, French, and German.')}
               </p>
             </div>
@@ -343,7 +343,7 @@ export const HomeView: React.FC = () => {
               <h3 className="text-sm font-bold text-slate-900 dark:text-white">
                 {t('why_math_title', 'Mathematical Rigor')}
               </h3>
-              <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+              <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
                 {t('why_math_desc', 'Grounded in recognized financial, medical, and scientific equations with explicit formulas shown.')}
               </p>
             </div>
