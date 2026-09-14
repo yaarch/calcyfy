@@ -1,0 +1,7 @@
+{
+  "name": "Calcyfy",
+  "description": "Free tools. Simple answers. Fast, accurate online calculators, converters, and utilities.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

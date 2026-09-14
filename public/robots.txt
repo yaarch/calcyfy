@@ -1,0 +1,5 @@
+# CALCYFY Robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://calcyfy.com/sitemap.xml
