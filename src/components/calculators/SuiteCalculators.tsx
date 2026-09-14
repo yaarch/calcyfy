@@ -213,30 +213,107 @@ export const SuiteCalculators: React.FC<SuiteCalculatorsProps> = ({ toolId, tool
     case 'ideal-weight': {
       const hCm = parseFloat(val1) || 175;
       const hInches = hCm / 2.54;
-      const inchesOver5Ft = Math.max(0, hInches - 60);
+      const inchesOver5Ft = hInches - 60;
+      const isMale = optionSelect !== 'female';
       
-      // Devine Formula
-      const devine = optionSelect === 'male' ? 50 + 2.3 * inchesOver5Ft : 45.5 + 2.3 * inchesOver5Ft;
+      // Clinical Formulas
+      // Devine (1974)
+      const devine = isMale ? 50.0 + 2.3 * inchesOver5Ft : 45.5 + 2.3 * inchesOver5Ft;
+      // Robinson (1983)
+      const robinson = isMale ? 52.0 + 1.9 * inchesOver5Ft : 49.0 + 1.7 * inchesOver5Ft;
+      // Miller (1983)
+      const miller = isMale ? 56.2 + 1.41 * inchesOver5Ft : 53.1 + 1.36 * inchesOver5Ft;
+      // Hamwi (1964)
+      const hamwi = isMale ? 48.0 + 2.7 * inchesOver5Ft : 45.5 + 2.2 * inchesOver5Ft;
+      // WHO Healthy BMI Range (18.5 - 24.9)
+      const hM = hCm / 100;
+      const bmiMin = 18.5 * (hM * hM);
+      const bmiMax = 24.9 * (hM * hM);
+
+      const devineKg = Math.max(30, devine);
+      const devineLbs = devineKg * 2.20462;
 
       return (
         <div className="space-y-6">
-          <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-4">
+          <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-5">
             <div className="flex gap-2">
-              <button onClick={() => setOptionSelect('male')} className={`px-4 py-2 text-xs font-bold rounded-xl ${optionSelect === 'male' ? 'bg-emerald-600 text-white' : 'bg-slate-100 dark:bg-slate-800'}`}>{t('bf_male', 'Male')}</button>
-              <button onClick={() => setOptionSelect('female')} className={`px-4 py-2 text-xs font-bold rounded-xl ${optionSelect === 'female' ? 'bg-emerald-600 text-white' : 'bg-slate-100 dark:bg-slate-800'}`}>{t('bf_female', 'Female')}</button>
+              <button
+                type="button"
+                onClick={() => setOptionSelect('male')}
+                className={`px-4 py-2 text-xs font-bold rounded-xl transition-all cursor-pointer ${
+                  isMale ? 'bg-emerald-600 text-white shadow-xs' : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300'
+                }`}
+              >
+                {t('bf_male', 'Male')}
+              </button>
+              <button
+                type="button"
+                onClick={() => setOptionSelect('female')}
+                className={`px-4 py-2 text-xs font-bold rounded-xl transition-all cursor-pointer ${
+                  !isMale ? 'bg-emerald-600 text-white shadow-xs' : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300'
+                }`}
+              >
+                {t('bf_female', 'Female')}
+              </button>
             </div>
             <div>
-              <label className="block text-xs font-semibold uppercase text-slate-500 mb-1">{t('iw_height', 'Height (cm)')}</label>
-              <input type="number" value={val1} onChange={(e) => setVal1(e.target.value)} className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border rounded-xl font-mono text-base" />
+              <label className="block text-xs font-semibold uppercase text-slate-600 dark:text-slate-400 mb-1">
+                {t('iw_height', 'Height (cm)')}
+              </label>
+              <input
+                type="number"
+                value={val1}
+                onChange={(e) => setVal1(e.target.value)}
+                placeholder="175"
+                className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl font-mono text-base text-slate-900 dark:text-white focus:ring-2 focus:ring-emerald-500"
+              />
             </div>
-            <div className="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-xl flex items-center justify-between">
+
+            {/* Primary Ideal Weight Hero Result */}
+            <div className="p-4 bg-emerald-50/60 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800 rounded-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
               <div>
-                <span className="text-xs font-semibold text-emerald-600 uppercase">{t('iw_ideal', 'Ideal Weight (Devine Formula)')}</span>
-                <div className="text-2xl font-black font-mono text-emerald-600 dark:text-emerald-400 mt-1">{devine.toFixed(1)} kg ({(devine * 2.20462).toFixed(1)} lbs)</div>
+                <span className="text-xs font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider">
+                  {t('iw_ideal', 'Ideal Weight (Devine Formula)')}
+                </span>
+                <div className="text-3xl font-black font-mono text-emerald-600 dark:text-emerald-400 mt-0.5">
+                  {devineKg.toFixed(1)} kg <span className="text-base font-semibold text-slate-600 dark:text-slate-400">({devineLbs.toFixed(1)} lbs)</span>
+                </div>
+                <div className="text-xs text-slate-600 dark:text-slate-400 mt-1">
+                  Healthy WHO BMI Range (18.5 - 24.9): <strong className="text-slate-900 dark:text-white">{bmiMin.toFixed(1)} kg - {bmiMax.toFixed(1)} kg</strong>
+                </div>
               </div>
-              <button onClick={() => copyResult(`Ideal Weight: ${devine.toFixed(1)} kg`)} className="px-4 py-2 bg-emerald-600 text-white text-xs font-semibold rounded-xl flex items-center gap-1">
+              <button
+                type="button"
+                onClick={() => copyResult(`Ideal Weight: ${devineKg.toFixed(1)} kg (${devineLbs.toFixed(1)} lbs)`)}
+                className="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl flex items-center gap-1.5 transition-colors cursor-pointer shrink-0"
+              >
                 {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />} {copied ? t('btn_copied', 'Copied!') : t('btn_copy', 'Copy')}
               </button>
+            </div>
+
+            {/* Multi-Formula Comparison Grid */}
+            <div className="space-y-2 pt-2 border-t border-slate-100 dark:border-slate-800">
+              <span className="text-xs font-bold text-slate-700 dark:text-slate-300">
+                Recognized Medical & Clinical Formulas:
+              </span>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
+                <div className="p-3 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-100 dark:border-slate-800">
+                  <div className="text-[11px] text-slate-500 dark:text-slate-400 font-semibold">Devine (1974)</div>
+                  <div className="text-sm font-bold font-mono text-slate-900 dark:text-white mt-1">{Math.max(30, devine).toFixed(1)} kg</div>
+                </div>
+                <div className="p-3 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-100 dark:border-slate-800">
+                  <div className="text-[11px] text-slate-500 dark:text-slate-400 font-semibold">Robinson (1983)</div>
+                  <div className="text-sm font-bold font-mono text-slate-900 dark:text-white mt-1">{Math.max(30, robinson).toFixed(1)} kg</div>
+                </div>
+                <div className="p-3 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-100 dark:border-slate-800">
+                  <div className="text-[11px] text-slate-500 dark:text-slate-400 font-semibold">Miller (1983)</div>
+                  <div className="text-sm font-bold font-mono text-slate-900 dark:text-white mt-1">{Math.max(30, miller).toFixed(1)} kg</div>
+                </div>
+                <div className="p-3 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-100 dark:border-slate-800">
+                  <div className="text-[11px] text-slate-500 dark:text-slate-400 font-semibold">Hamwi (1964)</div>
+                  <div className="text-sm font-bold font-mono text-slate-900 dark:text-white mt-1">{Math.max(30, hamwi).toFixed(1)} kg</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -246,28 +323,59 @@ export const SuiteCalculators: React.FC<SuiteCalculatorsProps> = ({ toolId, tool
     case 'water-intake': {
       const weightKg = parseFloat(val1) || 70;
       const activityMins = parseFloat(val2) || 30;
+      // Clinical standard: ~33ml per kg baseline + 350ml per 30 mins workout
       const baseWaterL = (weightKg * 0.033) + (activityMins / 30) * 0.35;
+      const totalOz = baseWaterL * 33.814;
+      const glassesCount = Math.round(baseWaterL * 4); // 250ml glasses
+      const bottlesCount = (baseWaterL / 0.5).toFixed(1); // 500ml bottles
 
       return (
         <div className="space-y-6">
           <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-xs font-semibold uppercase text-slate-500 mb-1">{t('wi_weight', 'Body Weight (kg)')}</label>
-                <input type="number" value={val1} onChange={(e) => setVal1(e.target.value)} className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border rounded-xl font-mono text-base" />
+                <label className="block text-xs font-semibold uppercase text-slate-600 dark:text-slate-400 mb-1">
+                  {t('wi_weight', 'Body Weight (kg)')}
+                </label>
+                <input
+                  type="number"
+                  value={val1}
+                  onChange={(e) => setVal1(e.target.value)}
+                  placeholder="70"
+                  className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl font-mono text-base text-slate-900 dark:text-white focus:ring-2 focus:ring-emerald-500"
+                />
               </div>
               <div>
-                <label className="block text-xs font-semibold uppercase text-slate-500 mb-1">{t('wi_activity', 'Daily Exercise (Minutes)')}</label>
-                <input type="number" value={val2} onChange={(e) => setVal2(e.target.value)} className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border rounded-xl font-mono text-base" />
+                <label className="block text-xs font-semibold uppercase text-slate-600 dark:text-slate-400 mb-1">
+                  {t('wi_activity', 'Daily Exercise (Minutes)')}
+                </label>
+                <input
+                  type="number"
+                  value={val2}
+                  onChange={(e) => setVal2(e.target.value)}
+                  placeholder="30"
+                  className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl font-mono text-base text-slate-900 dark:text-white focus:ring-2 focus:ring-emerald-500"
+                />
               </div>
             </div>
-            <div className="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-xl flex items-center justify-between">
+
+            <div className="p-4 bg-sky-50/60 dark:bg-sky-950/30 border border-sky-200 dark:border-sky-800 rounded-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
               <div>
-                <span className="text-xs font-semibold text-emerald-600 uppercase">{t('wi_rec', 'Recommended Daily Water Intake')}</span>
-                <div className="text-3xl font-black font-mono text-emerald-600 dark:text-emerald-400 mt-1">💧 {baseWaterL.toFixed(2)} Liters / day</div>
-                <div className="text-xs text-slate-500 mt-1">~{Math.round(baseWaterL * 4)} Glasses (250ml)</div>
+                <span className="text-xs font-bold text-sky-700 dark:text-sky-400 uppercase tracking-wider">
+                  {t('wi_rec', 'Recommended Daily Water Intake')}
+                </span>
+                <div className="text-3xl font-black font-mono text-sky-600 dark:text-sky-400 mt-1">
+                  💧 {baseWaterL.toFixed(2)} Liters <span className="text-base font-semibold text-slate-600 dark:text-slate-400">({totalOz.toFixed(0)} fl oz)</span>
+                </div>
+                <div className="text-xs text-slate-600 dark:text-slate-300 mt-1">
+                  Equivalent to ~<strong>{glassesCount}</strong> glasses (250 ml) or <strong>{bottlesCount}</strong> standard water bottles (500 ml).
+                </div>
               </div>
-              <button onClick={() => copyResult(`Water Intake: ${baseWaterL.toFixed(2)} L`)} className="px-4 py-2 bg-emerald-600 text-white text-xs font-semibold rounded-xl flex items-center gap-1">
+              <button
+                type="button"
+                onClick={() => copyResult(`Recommended Water Intake: ${baseWaterL.toFixed(2)} L/day (${totalOz.toFixed(0)} fl oz)`)}
+                className="px-4 py-2 bg-sky-600 hover:bg-sky-700 text-white text-xs font-bold rounded-xl flex items-center gap-1.5 transition-colors cursor-pointer shrink-0"
+              >
                 {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />} {copied ? t('btn_copied', 'Copied!') : t('btn_copy', 'Copy')}
               </button>
             </div>
@@ -278,31 +386,77 @@ export const SuiteCalculators: React.FC<SuiteCalculatorsProps> = ({ toolId, tool
 
     case 'target-heart-rate': {
       const ageNum = parseFloat(val1) || 25;
-      const maxHr = 220 - ageNum;
-      const fatBurnMin = Math.round(maxHr * 0.6);
-      const fatBurnMax = Math.round(maxHr * 0.7);
-      const cardioMin = Math.round(maxHr * 0.7);
-      const cardioMax = Math.round(maxHr * 0.85);
+      const maxHr = Math.max(120, 220 - ageNum);
+      
+      // Standard 5 Heart Rate Training Zones
+      const zones = [
+        { name: 'Zone 1: Active Recovery', pct: '50% - 60%', min: Math.round(maxHr * 0.50), max: Math.round(maxHr * 0.60), desc: 'Light warm-up, active recovery, and gentle walking.' },
+        { name: 'Zone 2: Fat Burn & Base', pct: '60% - 70%', min: Math.round(maxHr * 0.60), max: Math.round(maxHr * 0.70), desc: 'Optimal fat oxidation and building aerobic base.' },
+        { name: 'Zone 3: Aerobic / Cardio', pct: '70% - 80%', min: Math.round(maxHr * 0.70), max: Math.round(maxHr * 0.80), desc: 'Cardiovascular endurance and stamina improvement.' },
+        { name: 'Zone 4: Anaerobic Threshold', pct: '80% - 90%', min: Math.round(maxHr * 0.80), max: Math.round(maxHr * 0.90), desc: 'High-intensity threshold and lactate management.' },
+        { name: 'Zone 5: VO2 Max / Redline', pct: '90% - 100%', min: Math.round(maxHr * 0.90), max: maxHr, desc: 'Maximum performance sprinting and interval training.' },
+      ];
 
       return (
         <div className="space-y-6">
           <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-4">
             <div>
-              <label className="block text-xs font-semibold uppercase text-slate-500 mb-1">{t('hr_age', 'Your Age (Years)')}</label>
-              <input type="number" value={val1} onChange={(e) => setVal1(e.target.value)} className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border rounded-xl font-mono text-base" />
+              <label className="block text-xs font-semibold uppercase text-slate-600 dark:text-slate-400 mb-1">
+                {t('hr_age', 'Your Age (Years)')}
+              </label>
+              <input
+                type="number"
+                value={val1}
+                onChange={(e) => setVal1(e.target.value)}
+                placeholder="25"
+                className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl font-mono text-base text-slate-900 dark:text-white focus:ring-2 focus:ring-emerald-500"
+              />
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
-              <div className="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-xl">
-                <span className="text-xs font-semibold uppercase text-slate-500">{t('hr_max', 'Max Heart Rate')}</span>
-                <div className="text-2xl font-black font-mono text-rose-500 mt-1">{maxHr} BPM</div>
+
+            <div className="p-4 bg-rose-50/60 dark:bg-rose-950/30 border border-rose-200 dark:border-rose-800 rounded-xl flex items-center justify-between">
+              <div>
+                <span className="text-xs font-bold text-rose-700 dark:text-rose-400 uppercase tracking-wider">
+                  {t('hr_max', 'Estimated Maximum Heart Rate (HRmax)')}
+                </span>
+                <div className="text-3xl font-black font-mono text-rose-600 dark:text-rose-400 mt-1">
+                  {maxHr} BPM
+                </div>
+                <div className="text-xs text-slate-600 dark:text-slate-300 mt-0.5">
+                  Calculated using Haskell & Fox Formula: 220 - Age
+                </div>
               </div>
-              <div className="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-xl">
-                <span className="text-xs font-semibold uppercase text-slate-500">{t('hr_fat_burn', 'Fat Burn Zone (60-70%)')}</span>
-                <div className="text-xl font-bold font-mono text-emerald-600 dark:text-emerald-400 mt-1">{fatBurnMin} - {fatBurnMax} BPM</div>
-              </div>
-              <div className="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-xl">
-                <span className="text-xs font-semibold uppercase text-slate-500">{t('hr_cardio', 'Cardio / Aerobic (70-85%)')}</span>
-                <div className="text-xl font-bold font-mono text-slate-900 dark:text-white mt-1">{cardioMin} - {cardioMax} BPM</div>
+              <button
+                type="button"
+                onClick={() => copyResult(`Max Heart Rate: ${maxHr} BPM`)}
+                className="px-4 py-2 bg-rose-600 hover:bg-rose-700 text-white text-xs font-bold rounded-xl flex items-center gap-1.5 transition-colors cursor-pointer shrink-0"
+              >
+                {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />} {copied ? t('btn_copied', 'Copied!') : t('btn_copy', 'Copy')}
+              </button>
+            </div>
+
+            {/* 5 Training Zones */}
+            <div className="space-y-2 pt-2 border-t border-slate-100 dark:border-slate-800">
+              <span className="text-xs font-bold text-slate-700 dark:text-slate-300">
+                5 Cardio & Athletic Training Zones:
+              </span>
+              <div className="space-y-2">
+                {zones.map((z, idx) => (
+                  <div
+                    key={idx}
+                    className="p-3 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-2"
+                  >
+                    <div>
+                      <div className="text-xs font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                        <span>{z.name}</span>
+                        <span className="px-2 py-0.5 bg-slate-200 dark:bg-slate-700 text-[10px] rounded-md font-mono">{z.pct}</span>
+                      </div>
+                      <div className="text-[11px] text-slate-600 dark:text-slate-400 mt-0.5">{z.desc}</div>
+                    </div>
+                    <div className="text-sm font-black font-mono text-emerald-700 dark:text-emerald-400 shrink-0">
+                      {z.min} - {z.max} BPM
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -314,41 +468,121 @@ export const SuiteCalculators: React.FC<SuiteCalculatorsProps> = ({ toolId, tool
       const wKg = parseFloat(val1) || 75;
       const hCm = parseFloat(val2) || 178;
       const ageYears = parseFloat(val3) || 30;
+      const isMale = optionSelect !== 'female';
       
-      // Mifflin-St Jeor Equation
-      const bmrVal = optionSelect === 'male'
+      // Clinical standard: Mifflin-St Jeor Equation
+      const bmrVal = isMale
         ? (10 * wKg) + (6.25 * hCm) - (5 * ageYears) + 5
         : (10 * wKg) + (6.25 * hCm) - (5 * ageYears) - 161;
+
+      // Activity levels
+      const activities = [
+        { label: 'Sedentary (Little or no exercise)', mult: 1.2, cal: Math.round(bmrVal * 1.2) },
+        { label: 'Light Exercise (1-3 days/week)', mult: 1.375, cal: Math.round(bmrVal * 1.375) },
+        { label: 'Moderate Exercise (3-5 days/week)', mult: 1.55, cal: Math.round(bmrVal * 1.55) },
+        { label: 'Heavy Exercise (6-7 days/week)', mult: 1.725, cal: Math.round(bmrVal * 1.725) },
+        { label: 'Athlete / Physical Job (2x/day)', mult: 1.9, cal: Math.round(bmrVal * 1.9) },
+      ];
 
       return (
         <div className="space-y-6">
           <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-4">
             <div className="flex gap-2">
-              <button onClick={() => setOptionSelect('male')} className={`px-4 py-2 text-xs font-bold rounded-xl ${optionSelect === 'male' ? 'bg-emerald-600 text-white' : 'bg-slate-100 dark:bg-slate-800'}`}>{t('bf_male', 'Male')}</button>
-              <button onClick={() => setOptionSelect('female')} className={`px-4 py-2 text-xs font-bold rounded-xl ${optionSelect === 'female' ? 'bg-emerald-600 text-white' : 'bg-slate-100 dark:bg-slate-800'}`}>{t('bf_female', 'Female')}</button>
+              <button
+                type="button"
+                onClick={() => setOptionSelect('male')}
+                className={`px-4 py-2 text-xs font-bold rounded-xl transition-all cursor-pointer ${
+                  isMale ? 'bg-emerald-600 text-white shadow-xs' : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300'
+                }`}
+              >
+                {t('bf_male', 'Male')}
+              </button>
+              <button
+                type="button"
+                onClick={() => setOptionSelect('female')}
+                className={`px-4 py-2 text-xs font-bold rounded-xl transition-all cursor-pointer ${
+                  !isMale ? 'bg-emerald-600 text-white shadow-xs' : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300'
+                }`}
+              >
+                {t('bf_female', 'Female')}
+              </button>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div>
-                <label className="block text-xs font-semibold uppercase text-slate-500 mb-1">{t('wi_weight', 'Weight (kg)')}</label>
-                <input type="number" value={val1} onChange={(e) => setVal1(e.target.value)} className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border rounded-xl font-mono text-base" />
+                <label className="block text-xs font-semibold uppercase text-slate-600 dark:text-slate-400 mb-1">
+                  {t('wi_weight', 'Weight (kg)')}
+                </label>
+                <input
+                  type="number"
+                  value={val1}
+                  onChange={(e) => setVal1(e.target.value)}
+                  placeholder="75"
+                  className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl font-mono text-base text-slate-900 dark:text-white focus:ring-2 focus:ring-emerald-500"
+                />
               </div>
               <div>
-                <label className="block text-xs font-semibold uppercase text-slate-500 mb-1">{t('iw_height', 'Height (cm)')}</label>
-                <input type="number" value={val2} onChange={(e) => setVal2(e.target.value)} className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border rounded-xl font-mono text-base" />
+                <label className="block text-xs font-semibold uppercase text-slate-600 dark:text-slate-400 mb-1">
+                  {t('iw_height', 'Height (cm)')}
+                </label>
+                <input
+                  type="number"
+                  value={val2}
+                  onChange={(e) => setVal2(e.target.value)}
+                  placeholder="178"
+                  className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl font-mono text-base text-slate-900 dark:text-white focus:ring-2 focus:ring-emerald-500"
+                />
               </div>
               <div>
-                <label className="block text-xs font-semibold uppercase text-slate-500 mb-1">{t('hr_age', 'Age (Years)')}</label>
-                <input type="number" value={val3} onChange={(e) => setVal3(e.target.value)} className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border rounded-xl font-mono text-base" />
+                <label className="block text-xs font-semibold uppercase text-slate-600 dark:text-slate-400 mb-1">
+                  {t('hr_age', 'Age (Years)')}
+                </label>
+                <input
+                  type="number"
+                  value={val3}
+                  onChange={(e) => setVal3(e.target.value)}
+                  placeholder="30"
+                  className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl font-mono text-base text-slate-900 dark:text-white focus:ring-2 focus:ring-emerald-500"
+                />
               </div>
             </div>
-            <div className="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-xl flex items-center justify-between">
+
+            <div className="p-4 bg-emerald-50/60 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800 rounded-xl flex items-center justify-between">
               <div>
-                <span className="text-xs font-semibold text-emerald-600 uppercase">{t('bmr_result', 'Basal Metabolic Rate (BMR)')}</span>
-                <div className="text-3xl font-black font-mono text-emerald-600 dark:text-emerald-400 mt-1">{Math.round(bmrVal)} kcal / day</div>
+                <span className="text-xs font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider">
+                  {t('bmr_result', 'Basal Metabolic Rate (BMR)')}
+                </span>
+                <div className="text-3xl font-black font-mono text-emerald-600 dark:text-emerald-400 mt-1">
+                  {Math.round(bmrVal)} kcal / day
+                </div>
+                <div className="text-xs text-slate-600 dark:text-slate-300 mt-0.5">
+                  Calories burned at complete rest to maintain vital life functions.
+                </div>
               </div>
-              <button onClick={() => copyResult(`BMR: ${Math.round(bmrVal)} kcal`)} className="px-4 py-2 bg-emerald-600 text-white text-xs font-semibold rounded-xl flex items-center gap-1">
+              <button
+                type="button"
+                onClick={() => copyResult(`BMR: ${Math.round(bmrVal)} kcal/day`)}
+                className="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl flex items-center gap-1.5 transition-colors cursor-pointer shrink-0"
+              >
                 {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />} {copied ? t('btn_copied', 'Copied!') : t('btn_copy', 'Copy')}
               </button>
+            </div>
+
+            {/* Daily TDEE Calories by Activity Level */}
+            <div className="space-y-2 pt-2 border-t border-slate-100 dark:border-slate-800">
+              <span className="text-xs font-bold text-slate-700 dark:text-slate-300">
+                Daily Maintenance Calories (TDEE) by Activity Level:
+              </span>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                {activities.map((act, i) => (
+                  <div
+                    key={i}
+                    className="p-3 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs"
+                  >
+                    <span className="text-slate-700 dark:text-slate-300 font-medium">{act.label}</span>
+                    <span className="font-bold font-mono text-emerald-700 dark:text-emerald-400 text-sm">{act.cal} kcal</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -1299,30 +1533,80 @@ export const SuiteCalculators: React.FC<SuiteCalculatorsProps> = ({ toolId, tool
     case 'calorie-deficit': {
       const maintenance = parseFloat(val1) || 2200;
       const deficitGoal = parseFloat(val2) || 500;
-      const targetDailyCal = Math.max(1000, maintenance - deficitGoal);
-      const weeklyWeightLossKg = (deficitGoal * 7) / 7700;
+      const safeDeficit = Math.min(1000, Math.max(100, deficitGoal));
+      const targetDailyCal = Math.max(1200, maintenance - safeDeficit);
+      
+      // 1kg of fat ≈ 7700 kcal, 1 lb of fat ≈ 3500 kcal
+      const weeklyWeightLossKg = (safeDeficit * 7) / 7700;
+      const weeklyWeightLossLbs = (safeDeficit * 7) / 3500;
+      const monthlyWeightLossKg = weeklyWeightLossKg * 4.33;
+      const monthlyWeightLossLbs = weeklyWeightLossLbs * 4.33;
+
+      const deficitPace = safeDeficit <= 300 ? 'Mild & Sustainable' : safeDeficit <= 600 ? 'Moderate & Recommended' : 'Aggressive (Supervised)';
 
       return (
         <div className="space-y-6">
           <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-xs font-semibold uppercase text-slate-500 mb-1">Maintenance Calories (kcal)</label>
-                <input type="number" value={val1} onChange={(e) => setVal1(e.target.value)} className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border rounded-xl font-mono text-base" />
+                <label className="block text-xs font-semibold uppercase text-slate-600 dark:text-slate-400 mb-1">
+                  Maintenance Calories (TDEE kcal/day)
+                </label>
+                <input
+                  type="number"
+                  value={val1}
+                  onChange={(e) => setVal1(e.target.value)}
+                  placeholder="2200"
+                  className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl font-mono text-base text-slate-900 dark:text-white focus:ring-2 focus:ring-emerald-500"
+                />
               </div>
               <div>
-                <label className="block text-xs font-semibold uppercase text-slate-500 mb-1">Target Calorie Deficit (kcal)</label>
-                <input type="number" value={val2} onChange={(e) => setVal2(e.target.value)} className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border rounded-xl font-mono text-base" />
+                <label className="block text-xs font-semibold uppercase text-slate-600 dark:text-slate-400 mb-1">
+                  Daily Calorie Deficit (kcal)
+                </label>
+                <input
+                  type="number"
+                  value={val2}
+                  onChange={(e) => setVal2(e.target.value)}
+                  placeholder="500"
+                  className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl font-mono text-base text-slate-900 dark:text-white focus:ring-2 focus:ring-emerald-500"
+                />
               </div>
             </div>
-            <div className="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-xl grid grid-cols-2 gap-4 text-center">
+
+            <div className="p-4 bg-emerald-50/60 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800 rounded-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
               <div>
-                <span className="text-xs font-semibold text-emerald-600 uppercase">Target Intake</span>
-                <div className="text-2xl font-black font-mono text-emerald-600 dark:text-emerald-400 mt-1">{Math.round(targetDailyCal)} kcal/day</div>
+                <span className="text-xs font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider">
+                  Target Daily Intake ({deficitPace})
+                </span>
+                <div className="text-3xl font-black font-mono text-emerald-600 dark:text-emerald-400 mt-1">
+                  {Math.round(targetDailyCal)} kcal / day
+                </div>
+                <div className="text-xs text-slate-600 dark:text-slate-300 mt-1">
+                  Saves <strong>{safeDeficit * 7} kcal/week</strong> below maintenance.
+                </div>
               </div>
-              <div>
-                <span className="text-xs font-semibold text-slate-500 uppercase">Est. Fat Loss</span>
-                <div className="text-2xl font-black font-mono text-slate-900 dark:text-white mt-1">~{weeklyWeightLossKg.toFixed(2)} kg / week</div>
+              <button
+                type="button"
+                onClick={() => copyResult(`Calorie Target: ${Math.round(targetDailyCal)} kcal/day (Deficit: ${safeDeficit} kcal)`)}
+                className="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl flex items-center gap-1.5 transition-colors cursor-pointer shrink-0"
+              >
+                {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />} {copied ? t('btn_copied', 'Copied!') : t('btn_copy', 'Copy')}
+              </button>
+            </div>
+
+            <div className="grid grid-cols-2 gap-3 text-center pt-2 border-t border-slate-100 dark:border-slate-800">
+              <div className="p-3 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-100 dark:border-slate-800">
+                <span className="text-xs font-semibold text-slate-500 uppercase">Weekly Projected Fat Loss</span>
+                <div className="text-lg font-black font-mono text-emerald-700 dark:text-emerald-400 mt-1">
+                  ~{weeklyWeightLossKg.toFixed(2)} kg <span className="text-xs font-normal">({weeklyWeightLossLbs.toFixed(2)} lbs)</span>
+                </div>
+              </div>
+              <div className="p-3 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-100 dark:border-slate-800">
+                <span className="text-xs font-semibold text-slate-500 uppercase">Monthly Projected Fat Loss</span>
+                <div className="text-lg font-black font-mono text-emerald-700 dark:text-emerald-400 mt-1">
+                  ~{monthlyWeightLossKg.toFixed(1)} kg <span className="text-xs font-normal">({monthlyWeightLossLbs.toFixed(1)} lbs)</span>
+                </div>
               </div>
             </div>
           </div>
@@ -1332,29 +1616,79 @@ export const SuiteCalculators: React.FC<SuiteCalculatorsProps> = ({ toolId, tool
 
     case 'macro-split': {
       const totalCalories = parseFloat(val1) || 2000;
-      const proteinGrams = (totalCalories * 0.3) / 4;
-      const carbGrams = (totalCalories * 0.4) / 4;
-      const fatGrams = (totalCalories * 0.3) / 9;
+      
+      // Preset ratios (Protein % / Carb % / Fat %)
+      const splitType = optionSelect || 'balanced';
+      let pPct = 0.30, cPct = 0.40, fPct = 0.30;
+      if (splitType === 'high-protein') { pPct = 0.40; cPct = 0.35; fPct = 0.25; }
+      else if (splitType === 'keto') { pPct = 0.25; cPct = 0.05; fPct = 0.70; }
+      else if (splitType === 'endurance') { pPct = 0.20; cPct = 0.60; fPct = 0.20; }
+
+      const proteinGrams = (totalCalories * pPct) / 4;
+      const carbGrams = (totalCalories * cPct) / 4;
+      const fatGrams = (totalCalories * fPct) / 9;
 
       return (
         <div className="space-y-6">
           <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-4">
             <div>
-              <label className="block text-xs font-semibold uppercase text-slate-500 mb-1">Daily Calorie Target (kcal)</label>
-              <input type="number" value={val1} onChange={(e) => setVal1(e.target.value)} className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border rounded-xl font-mono text-base" />
+              <label className="block text-xs font-semibold uppercase text-slate-600 dark:text-slate-400 mb-1">
+                Daily Calorie Target (kcal)
+              </label>
+              <input
+                type="number"
+                value={val1}
+                onChange={(e) => setVal1(e.target.value)}
+                placeholder="2000"
+                className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl font-mono text-base text-slate-900 dark:text-white focus:ring-2 focus:ring-emerald-500"
+              />
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
-              <div className="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-xl">
-                <span className="text-xs font-semibold uppercase text-emerald-600">Protein (30%)</span>
-                <div className="text-2xl font-black font-mono text-emerald-600 dark:text-emerald-400 mt-1">{Math.round(proteinGrams)}g</div>
+
+            {/* Diet Pattern Selection */}
+            <div className="space-y-1">
+              <span className="text-xs font-bold text-slate-700 dark:text-slate-300">Dietary Protocol:</span>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                {[
+                  { id: 'balanced', label: 'Balanced (30/40/30)' },
+                  { id: 'high-protein', label: 'High Protein (40/35/25)' },
+                  { id: 'keto', label: 'Keto / Low-Carb (25/5/70)' },
+                  { id: 'endurance', label: 'High Carb (20/60/20)' },
+                ].map((d) => (
+                  <button
+                    key={d.id}
+                    type="button"
+                    onClick={() => setOptionSelect(d.id)}
+                    className={`px-3 py-2 text-xs font-bold rounded-xl transition-all cursor-pointer ${
+                      splitType === d.id ? 'bg-emerald-600 text-white shadow-xs' : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300'
+                    }`}
+                  >
+                    {d.label}
+                  </button>
+                ))}
               </div>
-              <div className="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-xl">
-                <span className="text-xs font-semibold uppercase text-slate-500">Carbs (40%)</span>
-                <div className="text-2xl font-black font-mono text-slate-900 dark:text-white mt-1">{Math.round(carbGrams)}g</div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-center pt-2">
+              <div className="p-4 bg-emerald-50/60 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800 rounded-xl">
+                <span className="text-xs font-bold uppercase text-emerald-700 dark:text-emerald-400">Protein ({Math.round(pPct * 100)}%)</span>
+                <div className="text-3xl font-black font-mono text-emerald-600 dark:text-emerald-400 mt-1">
+                  {Math.round(proteinGrams)}g
+                </div>
+                <div className="text-xs text-slate-500 mt-0.5">{Math.round(totalCalories * pPct)} kcal (4 kcal/g)</div>
               </div>
-              <div className="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-xl">
-                <span className="text-xs font-semibold uppercase text-slate-500">Fats (30%)</span>
-                <div className="text-2xl font-black font-mono text-slate-900 dark:text-white mt-1">{Math.round(fatGrams)}g</div>
+              <div className="p-4 bg-amber-50/60 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl">
+                <span className="text-xs font-bold uppercase text-amber-700 dark:text-amber-400">Carbohydrates ({Math.round(cPct * 100)}%)</span>
+                <div className="text-3xl font-black font-mono text-amber-600 dark:text-amber-400 mt-1">
+                  {Math.round(carbGrams)}g
+                </div>
+                <div className="text-xs text-slate-500 mt-0.5">{Math.round(totalCalories * cPct)} kcal (4 kcal/g)</div>
+              </div>
+              <div className="p-4 bg-purple-50/60 dark:bg-purple-950/30 border border-purple-200 dark:border-purple-800 rounded-xl">
+                <span className="text-xs font-bold uppercase text-purple-700 dark:text-purple-400">Healthy Fats ({Math.round(fPct * 100)}%)</span>
+                <div className="text-3xl font-black font-mono text-purple-600 dark:text-purple-400 mt-1">
+                  {Math.round(fatGrams)}g
+                </div>
+                <div className="text-xs text-slate-500 mt-0.5">{Math.round(totalCalories * fPct)} kcal (9 kcal/g)</div>
               </div>
             </div>
           </div>
@@ -1364,31 +1698,89 @@ export const SuiteCalculators: React.FC<SuiteCalculatorsProps> = ({ toolId, tool
 
     case 'one-rep-max': {
       const weightLifted = parseFloat(val1) || 100;
-      const repsDone = parseFloat(val2) || 5;
+      const repsDone = Math.min(30, Math.max(1, parseFloat(val2) || 5));
+      
       // Epley Formula: 1RM = w * (1 + r/30)
-      const oneRm = weightLifted * (1 + repsDone / 30);
+      const epley1Rm = repsDone === 1 ? weightLifted : weightLifted * (1 + repsDone / 30);
+      // Brzycki Formula: 1RM = w / (1.0278 - 0.0278 * r)
+      const brzycki1Rm = repsDone === 1 ? weightLifted : weightLifted / (1.0278 - 0.0278 * repsDone);
+      const avg1Rm = (epley1Rm + brzycki1Rm) / 2;
+
+      // 1RM - 10RM percentage breakdown
+      const repPercentages = [
+        { reps: '1 Rep (100%)', weight: Math.round(avg1Rm) },
+        { reps: '2 Reps (95%)', weight: Math.round(avg1Rm * 0.95) },
+        { reps: '4 Reps (90%)', weight: Math.round(avg1Rm * 0.90) },
+        { reps: '6 Reps (85%)', weight: Math.round(avg1Rm * 0.85) },
+        { reps: '8 Reps (80%)', weight: Math.round(avg1Rm * 0.80) },
+        { reps: '10 Reps (75%)', weight: Math.round(avg1Rm * 0.75) },
+        { reps: '12 Reps (70%)', weight: Math.round(avg1Rm * 0.70) },
+      ];
 
       return (
         <div className="space-y-6">
           <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-xs font-semibold uppercase text-slate-500 mb-1">Weight Lifted (kg / lbs)</label>
-                <input type="number" value={val1} onChange={(e) => setVal1(e.target.value)} className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border rounded-xl font-mono text-base" />
+                <label className="block text-xs font-semibold uppercase text-slate-600 dark:text-slate-400 mb-1">
+                  Weight Lifted (kg / lbs)
+                </label>
+                <input
+                  type="number"
+                  value={val1}
+                  onChange={(e) => setVal1(e.target.value)}
+                  placeholder="100"
+                  className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl font-mono text-base text-slate-900 dark:text-white focus:ring-2 focus:ring-emerald-500"
+                />
               </div>
               <div>
-                <label className="block text-xs font-semibold uppercase text-slate-500 mb-1">Repetitions Completed</label>
-                <input type="number" value={val2} onChange={(e) => setVal2(e.target.value)} className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border rounded-xl font-mono text-base" />
+                <label className="block text-xs font-semibold uppercase text-slate-600 dark:text-slate-400 mb-1">
+                  Repetitions Completed (1-30)
+                </label>
+                <input
+                  type="number"
+                  value={val2}
+                  onChange={(e) => setVal2(e.target.value)}
+                  placeholder="5"
+                  className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl font-mono text-base text-slate-900 dark:text-white focus:ring-2 focus:ring-emerald-500"
+                />
               </div>
             </div>
-            <div className="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-xl flex items-center justify-between">
+
+            <div className="p-4 bg-emerald-50/60 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800 rounded-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
               <div>
-                <span className="text-xs font-semibold text-emerald-600 uppercase">Estimated 1-Rep Max (1RM)</span>
-                <div className="text-3xl font-black font-mono text-emerald-600 dark:text-emerald-400 mt-1">{Math.round(oneRm)} kg / lbs</div>
+                <span className="text-xs font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider">
+                  Estimated 1-Rep Max (1RM)
+                </span>
+                <div className="text-3xl font-black font-mono text-emerald-600 dark:text-emerald-400 mt-1">
+                  {Math.round(avg1Rm)} kg / lbs
+                </div>
+                <div className="text-xs text-slate-600 dark:text-slate-300 mt-1">
+                  Epley Formula: {Math.round(epley1Rm)} | Brzycki: {Math.round(brzycki1Rm)}
+                </div>
               </div>
-              <button onClick={() => copyResult(`1RM: ${Math.round(oneRm)}`)} className="px-4 py-2 bg-emerald-600 text-white text-xs font-semibold rounded-xl flex items-center gap-1">
+              <button
+                type="button"
+                onClick={() => copyResult(`1RM Estimate: ${Math.round(avg1Rm)} kg/lbs`)}
+                className="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl flex items-center gap-1.5 transition-colors cursor-pointer shrink-0"
+              >
                 {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />} {copied ? t('btn_copied', 'Copied!') : t('btn_copy', 'Copy')}
               </button>
+            </div>
+
+            {/* Rep-Max Table */}
+            <div className="space-y-2 pt-2 border-t border-slate-100 dark:border-slate-800">
+              <span className="text-xs font-bold text-slate-700 dark:text-slate-300">
+                Working Load Percentage Table:
+              </span>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center text-xs">
+                {repPercentages.map((rp, idx) => (
+                  <div key={idx} className="p-2.5 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-100 dark:border-slate-800">
+                    <div className="text-slate-500 font-medium">{rp.reps}</div>
+                    <div className="text-sm font-bold font-mono text-slate-900 dark:text-white mt-0.5">{rp.weight} kg/lbs</div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -1402,27 +1794,96 @@ export const SuiteCalculators: React.FC<SuiteCalculatorsProps> = ({ toolId, tool
       const paceMin = Math.floor(pacePerKm);
       const paceSec = Math.round((pacePerKm - paceMin) * 60);
 
+      const pacePerMile = pacePerKm * 1.60934;
+      const paceMileMin = Math.floor(pacePerMile);
+      const paceMileSec = Math.round((pacePerMile - paceMileMin) * 60);
+
+      // Speed km/h & mph
+      const speedKmh = durationMins > 0 ? (distKm / (durationMins / 60)) : 0;
+      const speedMph = speedKmh * 0.621371;
+
+      // Race split estimates
+      const formatTime = (totalMins: number) => {
+        const h = Math.floor(totalMins / 60);
+        const m = Math.floor(totalMins % 60);
+        const s = Math.round((totalMins % 1) * 60);
+        return h > 0 ? `${h}h ${m}m ${s}s` : `${m}m ${s}s`;
+      };
+
+      const raceSplits = [
+        { name: '5K Race', dist: 5, time: formatTime(pacePerKm * 5) },
+        { name: '10K Race', dist: 10, time: formatTime(pacePerKm * 10) },
+        { name: 'Half Marathon (21.1 km)', dist: 21.0975, time: formatTime(pacePerKm * 21.0975) },
+        { name: 'Full Marathon (42.2 km)', dist: 42.195, time: formatTime(pacePerKm * 42.195) },
+      ];
+
       return (
         <div className="space-y-6">
           <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-xs font-semibold uppercase text-slate-500 mb-1">Distance (km)</label>
-                <input type="number" value={val1} onChange={(e) => setVal1(e.target.value)} className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border rounded-xl font-mono text-base" />
+                <label className="block text-xs font-semibold uppercase text-slate-600 dark:text-slate-400 mb-1">
+                  Distance (km)
+                </label>
+                <input
+                  type="number"
+                  value={val1}
+                  onChange={(e) => setVal1(e.target.value)}
+                  placeholder="10"
+                  className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl font-mono text-base text-slate-900 dark:text-white focus:ring-2 focus:ring-emerald-500"
+                />
               </div>
               <div>
-                <label className="block text-xs font-semibold uppercase text-slate-500 mb-1">Total Time (Minutes)</label>
-                <input type="number" value={val2} onChange={(e) => setVal2(e.target.value)} className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border rounded-xl font-mono text-base" />
+                <label className="block text-xs font-semibold uppercase text-slate-600 dark:text-slate-400 mb-1">
+                  Total Time (Minutes)
+                </label>
+                <input
+                  type="number"
+                  value={val2}
+                  onChange={(e) => setVal2(e.target.value)}
+                  placeholder="50"
+                  className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl font-mono text-base text-slate-900 dark:text-white focus:ring-2 focus:ring-emerald-500"
+                />
               </div>
             </div>
-            <div className="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-xl flex items-center justify-between">
+
+            <div className="p-4 bg-emerald-50/60 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800 rounded-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
               <div>
-                <span className="text-xs font-semibold text-emerald-600 uppercase">Average Running Pace</span>
-                <div className="text-3xl font-black font-mono text-emerald-600 dark:text-emerald-400 mt-1">{paceMin}:{String(paceSec).padStart(2, '0')} / km</div>
+                <span className="text-xs font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider">
+                  Average Running Pace
+                </span>
+                <div className="text-3xl font-black font-mono text-emerald-600 dark:text-emerald-400 mt-1">
+                  {paceMin}:{String(paceSec).padStart(2, '0')} <span className="text-base font-semibold">/ km</span>
+                  <span className="text-base font-semibold text-slate-600 dark:text-slate-400 ml-2">
+                    ({paceMileMin}:{String(paceMileSec).padStart(2, '0')} / mile)
+                  </span>
+                </div>
+                <div className="text-xs text-slate-600 dark:text-slate-300 mt-1">
+                  Speed: <strong>{speedKmh.toFixed(1)} km/h</strong> ({speedMph.toFixed(1)} mph)
+                </div>
               </div>
-              <button onClick={() => copyResult(`Pace: ${paceMin}:${String(paceSec).padStart(2, '0')}/km`)} className="px-4 py-2 bg-emerald-600 text-white text-xs font-semibold rounded-xl flex items-center gap-1">
+              <button
+                type="button"
+                onClick={() => copyResult(`Running Pace: ${paceMin}:${String(paceSec).padStart(2, '0')}/km (${speedKmh.toFixed(1)} km/h)`)}
+                className="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl flex items-center gap-1.5 transition-colors cursor-pointer shrink-0"
+              >
                 {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />} {copied ? t('btn_copied', 'Copied!') : t('btn_copy', 'Copy')}
               </button>
+            </div>
+
+            {/* Projected Race Times */}
+            <div className="space-y-2 pt-2 border-t border-slate-100 dark:border-slate-800">
+              <span className="text-xs font-bold text-slate-700 dark:text-slate-300">
+                Projected Race Finish Times at Current Pace:
+              </span>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center text-xs">
+                {raceSplits.map((rs, idx) => (
+                  <div key={idx} className="p-3 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-100 dark:border-slate-800">
+                    <div className="text-slate-500 font-semibold">{rs.name}</div>
+                    <div className="text-sm font-bold font-mono text-emerald-700 dark:text-emerald-400 mt-1">{rs.time}</div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -1614,40 +2075,91 @@ export const SuiteCalculators: React.FC<SuiteCalculatorsProps> = ({ toolId, tool
 
     case 'ovulation-date': {
       const cycleLen = parseInt(val1) || 28;
+      const safeCycleLen = Math.max(20, Math.min(45, cycleLen));
       const lastPeriodStr = val2 || '2026-09-01';
       const lastDate = new Date(lastPeriodStr);
       const validDate = isNaN(lastDate.getTime()) ? new Date() : lastDate;
       
+      // Ovulation occurs approximately (cycleLen - 14) days after LMP
       const ovulationDate = new Date(validDate);
-      ovulationDate.setDate(ovulationDate.getDate() + (cycleLen - 14));
+      ovulationDate.setDate(ovulationDate.getDate() + (safeCycleLen - 14));
       
+      // Fertile window: 5 days prior to ovulation through 1 day post-ovulation (6 days total)
       const fertileStart = new Date(ovulationDate);
       fertileStart.setDate(fertileStart.getDate() - 5);
       
       const fertileEnd = new Date(ovulationDate);
       fertileEnd.setDate(fertileEnd.getDate() + 1);
 
+      // Next period expected
+      const nextPeriod = new Date(validDate);
+      nextPeriod.setDate(nextPeriod.getDate() + safeCycleLen);
+
+      // Format dates
+      const formatDate = (d: Date) => d.toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
+
       return (
         <div className="space-y-6">
           <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-xs font-semibold uppercase text-slate-500 mb-1">First Day of Last Period</label>
-                <input type="date" value={val2 || '2026-09-01'} onChange={(e) => setVal2(e.target.value)} className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border rounded-xl font-mono text-base" />
+                <label className="block text-xs font-semibold uppercase text-slate-600 dark:text-slate-400 mb-1">
+                  First Day of Last Period (LMP)
+                </label>
+                <input
+                  type="date"
+                  value={val2 || '2026-09-01'}
+                  onChange={(e) => setVal2(e.target.value)}
+                  className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl font-mono text-base text-slate-900 dark:text-white focus:ring-2 focus:ring-emerald-500"
+                />
               </div>
               <div>
-                <label className="block text-xs font-semibold uppercase text-slate-500 mb-1">Average Cycle Length (Days)</label>
-                <input type="number" value={val1} onChange={(e) => setVal1(e.target.value)} className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border rounded-xl font-mono text-base" />
+                <label className="block text-xs font-semibold uppercase text-slate-600 dark:text-slate-400 mb-1">
+                  Average Menstrual Cycle Length (20-45 Days)
+                </label>
+                <input
+                  type="number"
+                  value={val1}
+                  onChange={(e) => setVal1(e.target.value)}
+                  placeholder="28"
+                  className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl font-mono text-base text-slate-900 dark:text-white focus:ring-2 focus:ring-emerald-500"
+                />
               </div>
             </div>
-            <div className="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-xl grid grid-cols-2 gap-4 text-center">
+
+            <div className="p-4 bg-emerald-50/60 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800 rounded-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
               <div>
-                <span className="text-xs font-semibold text-emerald-600 uppercase">Estimated Ovulation Date</span>
-                <div className="text-xl font-black font-mono text-emerald-600 dark:text-emerald-400 mt-1">{ovulationDate.toLocaleDateString()}</div>
+                <span className="text-xs font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider">
+                  Estimated Ovulation Day
+                </span>
+                <div className="text-2xl sm:text-3xl font-black font-mono text-emerald-600 dark:text-emerald-400 mt-1">
+                  ✨ {formatDate(ovulationDate)}
+                </div>
+                <div className="text-xs text-slate-600 dark:text-slate-300 mt-1">
+                  Peak fertility window: <strong>{formatDate(fertileStart)}</strong> to <strong>{formatDate(fertileEnd)}</strong>
+                </div>
               </div>
-              <div>
-                <span className="text-xs font-semibold text-slate-500 uppercase">Peak Fertile Window</span>
-                <div className="text-sm font-bold font-mono text-slate-900 dark:text-white mt-1">{fertileStart.toLocaleDateString()} - {fertileEnd.toLocaleDateString()}</div>
+              <button
+                type="button"
+                onClick={() => copyResult(`Ovulation Date: ${formatDate(ovulationDate)}, Fertile Window: ${formatDate(fertileStart)} - ${formatDate(fertileEnd)}`)}
+                className="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl flex items-center gap-1.5 transition-colors cursor-pointer shrink-0"
+              >
+                {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />} {copied ? t('btn_copied', 'Copied!') : t('btn_copy', 'Copy')}
+              </button>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-center pt-2 border-t border-slate-100 dark:border-slate-800">
+              <div className="p-3 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-100 dark:border-slate-800">
+                <span className="text-xs font-semibold text-slate-500 uppercase">Most Fertile Conception Days</span>
+                <div className="text-sm font-bold font-mono text-slate-900 dark:text-white mt-1">
+                  {formatDate(fertileStart)} – {formatDate(ovulationDate)}
+                </div>
+              </div>
+              <div className="p-3 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-100 dark:border-slate-800">
+                <span className="text-xs font-semibold text-slate-500 uppercase">Next Expected Period</span>
+                <div className="text-sm font-bold font-mono text-slate-900 dark:text-white mt-1">
+                  {formatDate(nextPeriod)}
+                </div>
               </div>
             </div>
           </div>
@@ -1660,25 +2172,75 @@ export const SuiteCalculators: React.FC<SuiteCalculatorsProps> = ({ toolId, tool
       const lastDate = new Date(lastPeriodStr);
       const validDate = isNaN(lastDate.getTime()) ? new Date() : lastDate;
       
-      // Naegele's rule: +280 days
+      // Naegele's rule: +280 days (40 weeks) from LMP
       const dueDate = new Date(validDate);
       dueDate.setDate(dueDate.getDate() + 280);
+
+      // Conception date estimated (LMP + 14 days)
+      const conceptionEst = new Date(validDate);
+      conceptionEst.setDate(conceptionEst.getDate() + 14);
+
+      // Trimester milestones
+      const trim1End = new Date(validDate); trim1End.setDate(trim1End.getDate() + 91); // End of week 13
+      const trim2End = new Date(validDate); trim2End.setDate(trim2End.getDate() + 189); // End of week 27
+
+      const formatDate = (d: Date) => d.toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
 
       return (
         <div className="space-y-6">
           <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-4">
             <div>
-              <label className="block text-xs font-semibold uppercase text-slate-500 mb-1">First Day of Last Menstrual Period</label>
-              <input type="date" value={val1 || '2026-09-01'} onChange={(e) => setVal1(e.target.value)} className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border rounded-xl font-mono text-base" />
+              <label className="block text-xs font-semibold uppercase text-slate-600 dark:text-slate-400 mb-1">
+                First Day of Last Menstrual Period (LMP)
+              </label>
+              <input
+                type="date"
+                value={val1 || '2026-09-01'}
+                onChange={(e) => setVal1(e.target.value)}
+                className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl font-mono text-base text-slate-900 dark:text-white focus:ring-2 focus:ring-emerald-500"
+              />
             </div>
-            <div className="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-xl flex items-center justify-between">
+
+            <div className="p-4 bg-emerald-50/60 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800 rounded-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
               <div>
-                <span className="text-xs font-semibold text-emerald-600 uppercase">Estimated Delivery Due Date</span>
-                <div className="text-3xl font-black font-mono text-emerald-600 dark:text-emerald-400 mt-1">👶 {dueDate.toLocaleDateString(undefined, { dateStyle: 'full' })}</div>
+                <span className="text-xs font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider">
+                  Estimated Delivery Due Date (EDD)
+                </span>
+                <div className="text-2xl sm:text-3xl font-black font-mono text-emerald-600 dark:text-emerald-400 mt-1">
+                  👶 {dueDate.toLocaleDateString(undefined, { dateStyle: 'full' })}
+                </div>
+                <div className="text-xs text-slate-600 dark:text-slate-300 mt-1">
+                  Calculated using clinical Naegele's rule (40 weeks / 280 days).
+                </div>
               </div>
-              <button onClick={() => copyResult(`Due Date: ${dueDate.toLocaleDateString()}`)} className="px-4 py-2 bg-emerald-600 text-white text-xs font-semibold rounded-xl flex items-center gap-1">
+              <button
+                type="button"
+                onClick={() => copyResult(`Due Date: ${dueDate.toLocaleDateString(undefined, { dateStyle: 'full' })}`)}
+                className="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl flex items-center gap-1.5 transition-colors cursor-pointer shrink-0"
+              >
                 {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />} {copied ? t('btn_copied', 'Copied!') : t('btn_copy', 'Copy')}
               </button>
+            </div>
+
+            {/* Trimester Timelines */}
+            <div className="space-y-2 pt-2 border-t border-slate-100 dark:border-slate-800">
+              <span className="text-xs font-bold text-slate-700 dark:text-slate-300">
+                Pregnancy Milestones & Trimester Breakdown:
+              </span>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 text-center text-xs">
+                <div className="p-3 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-100 dark:border-slate-800">
+                  <span className="text-slate-500 font-semibold">1st Trimester (Weeks 1-13)</span>
+                  <div className="text-xs font-bold font-mono text-slate-800 dark:text-slate-200 mt-1">Ends: {formatDate(trim1End)}</div>
+                </div>
+                <div className="p-3 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-100 dark:border-slate-800">
+                  <span className="text-slate-500 font-semibold">2nd Trimester (Weeks 14-27)</span>
+                  <div className="text-xs font-bold font-mono text-slate-800 dark:text-slate-200 mt-1">Ends: {formatDate(trim2End)}</div>
+                </div>
+                <div className="p-3 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-100 dark:border-slate-800">
+                  <span className="text-slate-500 font-semibold">3rd Trimester (Weeks 28-40)</span>
+                  <div className="text-xs font-bold font-mono text-emerald-700 dark:text-emerald-400 mt-1">Due: {formatDate(dueDate)}</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1689,44 +2251,111 @@ export const SuiteCalculators: React.FC<SuiteCalculatorsProps> = ({ toolId, tool
       const drinksCount = parseFloat(val1) || 2;
       const weightKg = parseFloat(val2) || 75;
       const hoursSince = parseFloat(val3) || 2;
+      const isMale = (optionSelect || 'male') === 'male';
       
       // Widmark formula: BAC = (A / (r * W)) * 100 - (beta * t)
+      // Standard drink = 14 grams pure ethanol
       const gramsAlcohol = drinksCount * 14;
-      const r = optionSelect === 'female' ? 0.55 : 0.68;
+      const r = isMale ? 0.68 : 0.55; // Gender body water constant
       const weightGrams = weightKg * 1000;
-      const bac = Math.max(0, ((gramsAlcohol / (weightGrams * r)) * 100) - (0.015 * hoursSince));
+      const eliminationRatePerHour = 0.015; // Average liver ethanol metabolic rate
+      
+      const rawBac = ((gramsAlcohol / (weightGrams * r)) * 100) - (eliminationRatePerHour * hoursSince);
+      const bac = Math.max(0, rawBac);
+      
+      // Hours to reach 0.00% BAC
+      const hoursToSober = bac > 0 ? (bac / eliminationRatePerHour) : 0;
+      const isOverLimit = bac >= 0.08;
 
       return (
         <div className="space-y-6">
           <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-4">
-            <div className="flex gap-2 mb-2">
-              <button onClick={() => setOptionSelect('male')} className={`px-4 py-2 text-xs font-bold rounded-xl ${optionSelect === 'male' ? 'bg-emerald-600 text-white' : 'bg-slate-100 dark:bg-slate-800'}`}>Male</button>
-              <button onClick={() => setOptionSelect('female')} className={`px-4 py-2 text-xs font-bold rounded-xl ${optionSelect === 'female' ? 'bg-emerald-600 text-white' : 'bg-slate-100 dark:bg-slate-800'}`}>Female</button>
+            {/* Sex Selector */}
+            <div className="flex gap-2">
+              <button
+                type="button"
+                onClick={() => setOptionSelect('male')}
+                className={`px-4 py-2 text-xs font-bold rounded-xl transition-all cursor-pointer ${
+                  isMale ? 'bg-emerald-600 text-white shadow-xs' : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300'
+                }`}
+              >
+                Male (r = 0.68)
+              </button>
+              <button
+                type="button"
+                onClick={() => setOptionSelect('female')}
+                className={`px-4 py-2 text-xs font-bold rounded-xl transition-all cursor-pointer ${
+                  !isMale ? 'bg-emerald-600 text-white shadow-xs' : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300'
+                }`}
+              >
+                Female (r = 0.55)
+              </button>
             </div>
+
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div>
-                <label className="block text-xs font-semibold uppercase text-slate-500 mb-1">Standard Drinks (14g pure alcohol)</label>
-                <input type="number" value={val1} onChange={(e) => setVal1(e.target.value)} className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border rounded-xl font-mono text-base" />
+                <label className="block text-xs font-semibold uppercase text-slate-600 dark:text-slate-400 mb-1">
+                  Standard Drinks (14g pure alcohol)
+                </label>
+                <input
+                  type="number"
+                  value={val1}
+                  onChange={(e) => setVal1(e.target.value)}
+                  placeholder="2"
+                  className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl font-mono text-base text-slate-900 dark:text-white focus:ring-2 focus:ring-emerald-500"
+                />
               </div>
               <div>
-                <label className="block text-xs font-semibold uppercase text-slate-500 mb-1">Body Weight (kg)</label>
-                <input type="number" value={val2} onChange={(e) => setVal2(e.target.value)} className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border rounded-xl font-mono text-base" />
+                <label className="block text-xs font-semibold uppercase text-slate-600 dark:text-slate-400 mb-1">
+                  Body Weight (kg)
+                </label>
+                <input
+                  type="number"
+                  value={val2}
+                  onChange={(e) => setVal2(e.target.value)}
+                  placeholder="75"
+                  className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl font-mono text-base text-slate-900 dark:text-white focus:ring-2 focus:ring-emerald-500"
+                />
               </div>
               <div>
-                <label className="block text-xs font-semibold uppercase text-slate-500 mb-1">Hours Since First Drink</label>
-                <input type="number" value={val3} onChange={(e) => setVal3(e.target.value)} className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border rounded-xl font-mono text-base" />
+                <label className="block text-xs font-semibold uppercase text-slate-600 dark:text-slate-400 mb-1">
+                  Hours Since First Drink
+                </label>
+                <input
+                  type="number"
+                  value={val3}
+                  onChange={(e) => setVal3(e.target.value)}
+                  placeholder="2"
+                  className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl font-mono text-base text-slate-900 dark:text-white focus:ring-2 focus:ring-emerald-500"
+                />
               </div>
             </div>
-            <div className="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-xl flex items-center justify-between">
+
+            <div className={`p-4 rounded-xl border flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 ${
+              isOverLimit ? 'bg-rose-50/60 dark:bg-rose-950/30 border-rose-200 dark:border-rose-800' : 'bg-emerald-50/60 dark:bg-emerald-950/30 border-emerald-200 dark:border-emerald-800'
+            }`}>
               <div>
-                <span className="text-xs font-semibold text-emerald-600 uppercase">Estimated BAC Level</span>
-                <div className={`text-3xl font-black font-mono mt-1 ${bac > 0.08 ? 'text-rose-500' : 'text-emerald-600 dark:text-emerald-400'}`}>
-                  {bac.toFixed(3)}% {bac >= 0.08 ? '(Above Driving Limit)' : '(Below Limit)'}
+                <span className={`text-xs font-bold uppercase tracking-wider ${isOverLimit ? 'text-rose-600 dark:text-rose-400' : 'text-emerald-700 dark:text-emerald-400'}`}>
+                  Estimated Blood Alcohol Concentration (Widmark)
+                </span>
+                <div className={`text-3xl font-black font-mono mt-1 ${isOverLimit ? 'text-rose-600 dark:text-rose-400' : 'text-emerald-600 dark:text-emerald-400'}`}>
+                  {bac.toFixed(3)}% {isOverLimit ? '⚠️ (Exceeds Legal Limit)' : '✅ (Within Limit)'}
+                </div>
+                <div className="text-xs text-slate-600 dark:text-slate-300 mt-1">
+                  Estimated time until 0.00% BAC: <strong>~{hoursToSober.toFixed(1)} hours</strong> (at 0.015%/hr).
                 </div>
               </div>
-              <button onClick={() => copyResult(`BAC: ${bac.toFixed(3)}%`)} className="px-4 py-2 bg-emerald-600 text-white text-xs font-semibold rounded-xl flex items-center gap-1">
+              <button
+                type="button"
+                onClick={() => copyResult(`Estimated BAC: ${bac.toFixed(3)}% (Sober in ~${hoursToSober.toFixed(1)} hrs)`)}
+                className="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl flex items-center gap-1.5 transition-colors cursor-pointer shrink-0"
+              >
                 {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />} {copied ? t('btn_copied', 'Copied!') : t('btn_copy', 'Copy')}
               </button>
+            </div>
+
+            <div className="p-3 bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-800/40 rounded-xl text-xs text-amber-800 dark:text-amber-300">
+              ⚠️ <em>Disclaimer: This calculator provides theoretical Widmark estimates only. Actual BAC varies by food intake, metabolism, and health factors. Never drink and drive.</em>
             </div>
           </div>
         </div>
@@ -1740,12 +2369,17 @@ export const SuiteCalculators: React.FC<SuiteCalculatorsProps> = ({ toolId, tool
       const getAlarms = (h: number, m: number) => {
         const base = new Date();
         base.setHours(h, m, 0, 0);
-        // 90 min cycles: 4 cycles = 6h, 5 cycles = 7.5h, 6 cycles = 9h (+14 min to fall asleep)
-        const times = [4, 5, 6].map(cycles => {
-          const d = new Date(base.getTime() + (cycles * 90 + 14) * 60 * 1000);
-          return d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-        });
-        return times;
+        // 90 min cycles: 3 cycles = 4.5h, 4 cycles = 6h, 5 cycles = 7.5h, 6 cycles = 9h (+14 min to fall asleep)
+        const times = [
+          { cycles: 3, hrs: 4.5, time: new Date(base.getTime() + (3 * 90 + 14) * 60 * 1000) },
+          { cycles: 4, hrs: 6.0, time: new Date(base.getTime() + (4 * 90 + 14) * 60 * 1000) },
+          { cycles: 5, hrs: 7.5, time: new Date(base.getTime() + (5 * 90 + 14) * 60 * 1000), recommended: true },
+          { cycles: 6, hrs: 9.0, time: new Date(base.getTime() + (6 * 90 + 14) * 60 * 1000) },
+        ];
+        return times.map(t => ({
+          ...t,
+          formatted: t.time.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+        }));
       };
 
       const alarms = getAlarms(bedtimeHour, bedtimeMin);
@@ -1755,29 +2389,51 @@ export const SuiteCalculators: React.FC<SuiteCalculatorsProps> = ({ toolId, tool
           <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-xs font-semibold uppercase text-slate-500 mb-1">Target Bedtime Hour (0-23)</label>
-                <input type="number" value={val1} onChange={(e) => setVal1(e.target.value)} className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border rounded-xl font-mono text-base" />
+                <label className="block text-xs font-semibold uppercase text-slate-600 dark:text-slate-400 mb-1">
+                  Target Bedtime Hour (0 - 23)
+                </label>
+                <input
+                  type="number"
+                  value={val1}
+                  onChange={(e) => setVal1(e.target.value)}
+                  placeholder="23"
+                  className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl font-mono text-base text-slate-900 dark:text-white focus:ring-2 focus:ring-emerald-500"
+                />
               </div>
               <div>
-                <label className="block text-xs font-semibold uppercase text-slate-500 mb-1">Target Bedtime Minute (0-59)</label>
-                <input type="number" value={val2} onChange={(e) => setVal2(e.target.value)} className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border rounded-xl font-mono text-base" />
+                <label className="block text-xs font-semibold uppercase text-slate-600 dark:text-slate-400 mb-1">
+                  Target Bedtime Minute (0 - 59)
+                </label>
+                <input
+                  type="number"
+                  value={val2}
+                  onChange={(e) => setVal2(e.target.value)}
+                  placeholder="0"
+                  className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl font-mono text-base text-slate-900 dark:text-white focus:ring-2 focus:ring-emerald-500"
+                />
               </div>
             </div>
-            <div className="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-xl space-y-2">
-              <span className="text-xs font-semibold text-emerald-600 uppercase">Optimal Wake-up Times (90-Min Sleep Cycles)</span>
-              <div className="grid grid-cols-3 gap-3 text-center mt-2">
-                <div className="p-3 bg-white dark:bg-slate-900 border rounded-xl">
-                  <div className="text-xs text-slate-500">4 Cycles (6 hrs)</div>
-                  <div className="text-lg font-bold font-mono text-emerald-600 mt-1">{alarms[0]}</div>
-                </div>
-                <div className="p-3 bg-white dark:bg-slate-900 border border-emerald-500 rounded-xl">
-                  <div className="text-xs text-emerald-600 font-bold">5 Cycles (7.5 hrs) ⭐</div>
-                  <div className="text-lg font-bold font-mono text-emerald-600 mt-1">{alarms[1]}</div>
-                </div>
-                <div className="p-3 bg-white dark:bg-slate-900 border rounded-xl">
-                  <div className="text-xs text-slate-500">6 Cycles (9 hrs)</div>
-                  <div className="text-lg font-bold font-mono text-emerald-600 mt-1">{alarms[2]}</div>
-                </div>
+
+            <div className="p-4 bg-emerald-50/60 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800 rounded-xl">
+              <span className="text-xs font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider">
+                Optimal Wake-up Times (Natural 90-Min REM Sleep Cycles + 14m Sleep Latency)
+              </span>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 text-center mt-3">
+                {alarms.map((a, idx) => (
+                  <div
+                    key={idx}
+                    className={`p-3 rounded-xl border transition-all ${
+                      a.recommended
+                        ? 'bg-emerald-600 text-white border-emerald-600 shadow-sm'
+                        : 'bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200'
+                    }`}
+                  >
+                    <div className={`text-xs font-semibold ${a.recommended ? 'text-emerald-100' : 'text-slate-500 dark:text-slate-400'}`}>
+                      {a.cycles} Cycles ({a.hrs}h) {a.recommended && '⭐'}
+                    </div>
+                    <div className="text-xl font-black font-mono mt-1">{a.formatted}</div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
