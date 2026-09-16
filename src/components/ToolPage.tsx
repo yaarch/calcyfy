@@ -20,6 +20,8 @@ import {
 import { NotFoundPage } from './StaticPages';
 import { executePrint } from '../utils/printHelper';
 import { ToolSeoContent } from './ToolSeoContent';
+import { AppLink } from './common/AppLink';
+import { getToolName, getToolDescription } from '../utils/toolMetadata';
 
 // Lazy Loaded Calculators for Peak Performance & Instant First Load
 const PercentageCalculator = React.lazy(() =>
@@ -118,7 +120,17 @@ interface ToolPageProps {
 }
 
 export const ToolPage: React.FC<ToolPageProps> = ({ tool: toolProp, toolId }) => {
-  const { t, navigateTo, isRTL, lang, isFavorite, toggleFavorite } = useApp();
+  const {
+    t,
+    navigateTo,
+    isRTL,
+    lang,
+    isFavorite,
+    toggleFavorite,
+    getHomeUrl,
+    getCategoryUrl,
+    getToolUrl,
+  } = useApp();
   const [copiedShare, setCopiedShare] = useState(false);
   const [isPrinting, setIsPrinting] = useState(false);
   const [showEmbedModal, setShowEmbedModal] = useState(false);
@@ -134,8 +146,8 @@ export const ToolPage: React.FC<ToolPageProps> = ({ tool: toolProp, toolId }) =>
   }
 
   const category = CATEGORIES.find((c) => c.id === tool.categoryId);
-  const toolName = t(`tool_${tool.id.replace(/-/g, '_')}_name`);
-  const toolDesc = t(`tool_${tool.id.replace(/-/g, '_')}_desc`);
+  const toolName = getToolName(tool, lang, t);
+  const toolDesc = getToolDescription(tool, lang, t);
   const categoryName = category ? t(`cat_${category.id.replace(/-/g, '_')}`) : 'Calculator';
 
   const relatedTools = TOOLS.filter(
@@ -269,28 +281,28 @@ export const ToolPage: React.FC<ToolPageProps> = ({ tool: toolProp, toolId }) =>
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
       {/* Breadcrumbs */}
       <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-400 no-print">
-        <button
-          onClick={() => navigateTo('home')}
+        <AppLink
+          href={getHomeUrl()}
           className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
         >
           {t('nav_home', 'Home')}
-        </button>
+        </AppLink>
         <ChevronRight className={`w-3 h-3 text-slate-400 ${isRTL ? 'rotate-180' : ''}`} />
-        <button
-          onClick={() => navigateTo('tools')}
+        <AppLink
+          href={`/${lang}/tools`}
           className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
         >
           {t('nav_all_tools', 'All Tools')}
-        </button>
+        </AppLink>
         {category && (
           <>
             <ChevronRight className={`w-3 h-3 text-slate-400 ${isRTL ? 'rotate-180' : ''}`} />
-            <button
-              onClick={() => navigateTo(`category:${category.id}`)}
+            <AppLink
+              href={getCategoryUrl(category.slug)}
               className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
             >
               {categoryName}
-            </button>
+            </AppLink>
           </>
         )}
         <ChevronRight className={`w-3 h-3 text-slate-400 ${isRTL ? 'rotate-180' : ''}`} />
@@ -415,10 +427,10 @@ export const ToolPage: React.FC<ToolPageProps> = ({ tool: toolProp, toolId }) =>
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {relatedTools.map((rel) => (
-              <button
+              <AppLink
                 key={rel.id}
-                onClick={() => navigateTo(`tool:${rel.id}`)}
-                className="p-4 bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-800/80 rounded-xl border border-slate-200 dark:border-slate-800 text-start space-y-1 transition-all group cursor-pointer"
+                href={getToolUrl(rel)}
+                className="p-4 bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-800/80 rounded-xl border border-slate-200 dark:border-slate-800 text-start space-y-1 transition-all group cursor-pointer block"
               >
                 <div className="text-xs font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400">
                   {t(`tool_${rel.id.replace('-', '_')}_name`)}
@@ -426,7 +438,7 @@ export const ToolPage: React.FC<ToolPageProps> = ({ tool: toolProp, toolId }) =>
                 <div className="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-2">
                   {t(`tool_${rel.id.replace('-', '_')}_desc`)}
                 </div>
-              </button>
+              </AppLink>
             ))}
           </div>
         </section>
@@ -457,12 +469,12 @@ export const ToolPage: React.FC<ToolPageProps> = ({ tool: toolProp, toolId }) =>
               <textarea
                 readOnly
                 rows={4}
-                value={`<iframe src="${window.location.origin}/#tool:${tool.id}" width="100%" height="520" frameborder="0" style="border: 1px solid #e2e8f0; border-radius: 12px;" title="${toolName}"></iframe>`}
+                value={`<iframe src="https://calcyfy.com/${lang}/${tool.slug}" width="100%" height="520" frameborder="0" style="border: 1px solid #e2e8f0; border-radius: 12px;" title="${toolName}"></iframe>`}
                 className="w-full p-3 bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 rounded-xl font-mono text-xs text-slate-800 dark:text-slate-200 resize-none focus:outline-hidden"
               />
               <button
                 onClick={() => {
-                  const code = `<iframe src="${window.location.origin}/#tool:${tool.id}" width="100%" height="520" frameborder="0" style="border: 1px solid #e2e8f0; border-radius: 12px;" title="${toolName}"></iframe>`;
+                  const code = `<iframe src="https://calcyfy.com/${lang}/${tool.slug}" width="100%" height="520" frameborder="0" style="border: 1px solid #e2e8f0; border-radius: 12px;" title="${toolName}"></iframe>`;
                   navigator.clipboard.writeText(code);
                   setCopiedEmbed(true);
                   setTimeout(() => setCopiedEmbed(false), 2000);

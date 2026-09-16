@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useApp } from '../context/AppContext';
 import { Language } from '../types';
+import { AppLink } from './common/AppLink';
 import {
   Calculator,
   Search,
@@ -21,8 +22,22 @@ const LANGUAGES: { code: Language; label: string; flag: string }[] = [
 ];
 
 export const Header: React.FC<{ onOpenHistory?: () => void }> = ({ onOpenHistory }) => {
-  const { lang, setLang, isDark, toggleTheme, t, navigateTo, searchQuery, setSearchQuery, isRTL } =
-    useApp();
+  const {
+    lang,
+    setLang,
+    isDark,
+    toggleTheme,
+    t,
+    getHomeUrl,
+    getPageUrl,
+    getToolUrl,
+    getCategoryUrl,
+    route,
+    searchQuery,
+    setSearchQuery,
+    isRTL,
+  } = useApp();
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [langDropdownOpen, setLangDropdownOpen] = useState(false);
   const langDropdownRef = useRef<HTMLDivElement>(null);
@@ -38,9 +53,20 @@ export const Header: React.FC<{ onOpenHistory?: () => void }> = ({ onOpenHistory
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  const handleNav = (view: string) => {
-    navigateTo(view);
-    setMobileMenuOpen(false);
+  const getLanguageUrl = (targetLang: Language): string => {
+    if (route.view === 'tool' && route.toolSlug) {
+      return getToolUrl(route.toolSlug, targetLang);
+    }
+    if (route.view === 'category' && route.categorySlug) {
+      return getCategoryUrl(route.categorySlug, targetLang);
+    }
+    if (route.view === 'tools') {
+      return `/${targetLang}/tools`;
+    }
+    if (route.staticPage) {
+      return getPageUrl(route.staticPage, targetLang);
+    }
+    return getHomeUrl(targetLang);
   };
 
   const handleLanguageSelect = (code: Language) => {
@@ -54,10 +80,11 @@ export const Header: React.FC<{ onOpenHistory?: () => void }> = ({ onOpenHistory
         <div className="flex items-center justify-between h-16 gap-4">
           {/* Logo & Brand */}
           <div className="flex items-center gap-3">
-            <button
+            <AppLink
               id="header-logo-btn"
-              onClick={() => handleNav('home')}
+              href={getHomeUrl()}
               className="flex items-center gap-2.5 text-left group focus:outline-hidden"
+              title="Calcyfy Home"
             >
               <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-500 flex items-center justify-center text-white shadow-md shadow-emerald-500/20 group-hover:scale-105 transition-transform">
                 <Calculator className="w-5 h-5" />
@@ -71,7 +98,7 @@ export const Header: React.FC<{ onOpenHistory?: () => void }> = ({ onOpenHistory
                   {t('brand_tagline', 'Free tools. Simple answers.')}
                 </span>
               </div>
-            </button>
+            </AppLink>
           </div>
 
           {/* Search Bar (Desktop) */}
@@ -85,7 +112,7 @@ export const Header: React.FC<{ onOpenHistory?: () => void }> = ({ onOpenHistory
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder={t('search_placeholder', 'Search 100+ calculators, converters...')}
+                placeholder={t('search_placeholder', 'Search 500+ calculators, converters...')}
                 className="w-full ps-10 pe-4 py-2 bg-slate-100 dark:bg-slate-800 border-none rounded-xl text-xs sm:text-sm text-slate-900 dark:text-white placeholder-slate-400 focus:ring-2 focus:ring-emerald-500 transition-all"
               />
               {searchQuery && (
@@ -102,23 +129,23 @@ export const Header: React.FC<{ onOpenHistory?: () => void }> = ({ onOpenHistory
           </div>
 
           {/* Navigation Links (Desktop) */}
-          <div className="hidden lg:flex items-center gap-2">
-            <button
+          <nav aria-label="Main Navigation" className="hidden lg:flex items-center gap-2">
+            <AppLink
               id="header-nav-all-tools"
-              onClick={() => handleNav('tools')}
+              href={`/${lang}/tools`}
               className="px-3 py-2 text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
             >
               {t('nav_all_tools', 'All Tools')}
-            </button>
+            </AppLink>
 
-            <button
+            <AppLink
               id="header-nav-about"
-              onClick={() => handleNav('about')}
+              href={getPageUrl('about')}
               className="px-3 py-2 text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
             >
               {t('nav_about', 'About')}
-            </button>
-          </div>
+            </AppLink>
+          </nav>
 
           {/* Utilities: History, Theme, Language */}
           <div className="flex items-center gap-1.5 sm:gap-2">
@@ -166,8 +193,10 @@ export const Header: React.FC<{ onOpenHistory?: () => void }> = ({ onOpenHistory
                   }`}
                 >
                   {LANGUAGES.map((item) => (
-                    <button
+                    <AppLink
                       key={item.code}
+                      href={getLanguageUrl(item.code)}
+                      hreflang={item.code}
                       onClick={() => handleLanguageSelect(item.code)}
                       className={`w-full flex items-center justify-between px-4 py-2 text-xs font-semibold transition-colors ${
                         lang === item.code
@@ -180,7 +209,7 @@ export const Header: React.FC<{ onOpenHistory?: () => void }> = ({ onOpenHistory
                         <span>{item.label}</span>
                       </span>
                       {lang === item.code && <span className="text-emerald-500 font-bold">✓</span>}
-                    </button>
+                    </AppLink>
                   ))}
                 </div>
               )}
@@ -198,72 +227,52 @@ export const Header: React.FC<{ onOpenHistory?: () => void }> = ({ onOpenHistory
           </div>
         </div>
 
-        {/* Mobile Search Bar (Visible only on mobile) */}
-        <div className="md:hidden pb-3">
-          <div className="relative w-full">
-            <div className="absolute inset-y-0 start-0 ps-3.5 flex items-center pointer-events-none text-slate-400">
-              <Search className="w-4 h-4" />
-            </div>
-            <input
-              id="header-mobile-search-input"
-              type="text"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder={t('search_placeholder', 'Search calculators...')}
-              className="w-full ps-10 pe-4 py-2 bg-slate-100 dark:bg-slate-800 border-none rounded-xl text-xs text-slate-900 dark:text-white placeholder-slate-400 focus:ring-2 focus:ring-emerald-500"
-            />
-          </div>
-        </div>
-
-        {/* Mobile Dropdown Menu */}
+        {/* Mobile Search & Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden py-3 border-t border-slate-200 dark:border-slate-800 space-y-2">
-            <div className="space-y-1">
-              <button
-                onClick={() => handleNav('home')}
-                className="w-full text-start px-3 py-2 rounded-lg text-sm font-semibold text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800"
+          <div className="lg:hidden border-t border-slate-200 dark:border-slate-800 py-4 space-y-4">
+            <div className="relative w-full">
+              <div className="absolute inset-y-0 start-0 ps-3 flex items-center pointer-events-none text-slate-400">
+                <Search className="w-4 h-4" />
+              </div>
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder={t('search_placeholder', 'Search calculators...')}
+                className="w-full ps-9 pe-4 py-2 bg-slate-100 dark:bg-slate-800 border-none rounded-xl text-xs text-slate-900 dark:text-white placeholder-slate-400 focus:ring-2 focus:ring-emerald-500"
+              />
+            </div>
+
+            <nav className="flex flex-col space-y-1">
+              <AppLink
+                href={getHomeUrl()}
+                onClick={() => setMobileMenuOpen(false)}
+                className="px-3 py-2 text-xs font-semibold text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg"
               >
                 {t('nav_home', 'Home')}
-              </button>
-              <button
-                onClick={() => handleNav('tools')}
-                className="w-full text-start px-3 py-2 rounded-lg text-sm font-semibold text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800"
+              </AppLink>
+              <AppLink
+                href={`/${lang}/tools`}
+                onClick={() => setMobileMenuOpen(false)}
+                className="px-3 py-2 text-xs font-semibold text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg"
               >
                 {t('nav_all_tools', 'All Tools')}
-              </button>
-              <button
-                onClick={() => handleNav('about')}
-                className="w-full text-start px-3 py-2 rounded-lg text-sm font-semibold text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800"
+              </AppLink>
+              <AppLink
+                href={getPageUrl('about')}
+                onClick={() => setMobileMenuOpen(false)}
+                className="px-3 py-2 text-xs font-semibold text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg"
               >
                 {t('nav_about', 'About')}
-              </button>
-            </div>
-
-            {/* Mobile Language Selector */}
-            <div className="pt-2 border-t border-slate-200 dark:border-slate-800">
-              <div className="text-[11px] font-bold uppercase tracking-wider text-slate-400 px-3 mb-1.5">
-                {t('language_select', 'Select Language')}
-              </div>
-              <div className="grid grid-cols-3 gap-1.5 px-2">
-                {LANGUAGES.map((item) => (
-                  <button
-                    key={item.code}
-                    onClick={() => {
-                      setLang(item.code);
-                      setMobileMenuOpen(false);
-                    }}
-                    className={`px-2.5 py-1.5 rounded-lg text-xs font-semibold flex items-center justify-center gap-1.5 ${
-                      lang === item.code
-                        ? 'bg-emerald-600 text-white'
-                        : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300'
-                    }`}
-                  >
-                    <span>{item.flag}</span>
-                    <span>{item.label}</span>
-                  </button>
-                ))}
-              </div>
-            </div>
+              </AppLink>
+              <AppLink
+                href={getPageUrl('contact')}
+                onClick={() => setMobileMenuOpen(false)}
+                className="px-3 py-2 text-xs font-semibold text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg"
+              >
+                {t('nav_contact', 'Contact')}
+              </AppLink>
+            </nav>
           </div>
         )}
       </div>

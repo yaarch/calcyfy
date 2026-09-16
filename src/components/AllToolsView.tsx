@@ -3,6 +3,7 @@ import { useApp } from '../context/AppContext';
 import { CATEGORIES } from '../data/categories';
 import { TOOLS } from '../data/tools';
 import { CategoryId } from '../types';
+import { AppLink } from './common/AppLink';
 import {
   Search,
   Percent,
@@ -96,10 +97,17 @@ interface AllToolsViewProps {
 }
 
 export const AllToolsView: React.FC<AllToolsViewProps> = ({ initialCategory }) => {
-  const { t, navigateTo, searchQuery, setSearchQuery, isRTL } = useApp();
+  const { t, searchQuery, setSearchQuery, isRTL, getToolUrl, getCategoryUrl, lang } = useApp();
   const [selectedCat, setSelectedCat] = useState<CategoryId | 'all'>(
     initialCategory || 'all'
   );
+
+  // Sync selectedCat if initialCategory prop changes
+  React.useEffect(() => {
+    if (initialCategory) {
+      setSelectedCat(initialCategory);
+    }
+  }, [initialCategory]);
 
   const filteredTools = TOOLS.filter((tool) => {
     const matchesCategory = selectedCat === 'all' || tool.categoryId === selectedCat;
@@ -136,7 +144,8 @@ export const AllToolsView: React.FC<AllToolsViewProps> = ({ initialCategory }) =
       <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4">
         {/* Category Tabs */}
         <div className="flex overflow-x-auto pb-2 md:pb-0 gap-2 scrollbar-none">
-          <button
+          <AppLink
+            href={`/${lang}/tools`}
             onClick={() => setSelectedCat('all')}
             className={`px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition-all ${
               selectedCat === 'all'
@@ -145,12 +154,13 @@ export const AllToolsView: React.FC<AllToolsViewProps> = ({ initialCategory }) =
             }`}
           >
             {t('lbl_all_tools_tab', 'All Tools')} ({TOOLS.length})
-          </button>
+          </AppLink>
           {CATEGORIES.map((cat) => {
             const count = TOOLS.filter((tItem) => tItem.categoryId === cat.id).length;
             return (
-              <button
+              <AppLink
                 key={cat.id}
+                href={getCategoryUrl(cat.slug)}
                 onClick={() => setSelectedCat(cat.id)}
                 className={`px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition-all ${
                   selectedCat === cat.id
@@ -159,7 +169,7 @@ export const AllToolsView: React.FC<AllToolsViewProps> = ({ initialCategory }) =
                 }`}
               >
                 {t(`cat_${cat.id.replace('-', '_')}`)} ({count})
-              </button>
+              </AppLink>
             );
           })}
         </div>
@@ -201,10 +211,10 @@ export const AllToolsView: React.FC<AllToolsViewProps> = ({ initialCategory }) =
             const IconComponent = ICON_MAP[tool.iconName] || Percent;
             const cat = CATEGORIES.find((c) => c.id === tool.categoryId);
             return (
-              <button
+              <AppLink
                 key={tool.id}
-                onClick={() => navigateTo(`tool:${tool.id}`)}
-                className="group p-5 bg-white dark:bg-slate-900 hover:bg-slate-50/80 dark:hover:bg-slate-800/60 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-emerald-500/50 text-start flex flex-col justify-between transition-all shadow-xs hover:shadow-md"
+                href={getToolUrl(tool)}
+                className="group p-5 bg-white dark:bg-slate-900 hover:bg-slate-50/80 dark:hover:bg-slate-800/60 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-emerald-500/50 text-start flex flex-col justify-between transition-all shadow-xs hover:shadow-md cursor-pointer block"
               >
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
@@ -232,7 +242,7 @@ export const AllToolsView: React.FC<AllToolsViewProps> = ({ initialCategory }) =
                   <span>{t('lbl_open_tool', 'Open Calculator')}</span>
                   <ArrowRight className={`w-3.5 h-3.5 ${isRTL ? 'rotate-180' : ''}`} />
                 </div>
-              </button>
+              </AppLink>
             );
           })}
         </div>

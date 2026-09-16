@@ -42,3 +42,38 @@ export interface HistoryItem {
 
 export type Tool = ToolDef;
 export type Category = CategoryDef;
+
+export interface HreflangLink {
+  lang: string;
+  href: string;
+}
+
+export interface SeoMetadata {
+  title: string;
+  metaDescription: string;
+  keywords: string;
+  canonical: string;
+  hreflang: HreflangLink[];
+  ogTitle: string;
+  ogDescription: string;
+  ogUrl: string;
+  ogType: string;
+  ogLocale: string;
+  twitterTitle: string;
+  twitterDescription: string;
+  structuredData?: Record<string, any>[];
+}
+
+export type ViewType = 'home' | 'tools' | 'category' | 'tool' | 'about' | 'privacy' | 'terms' | 'contact' | 'sitemap' | 'not-found';
+
+export interface RouteInfo {
+  view: ViewType;
+  lang: Language;
+  toolId?: string;
+  toolSlug?: string;
+  categoryId?: CategoryId;
+  categorySlug?: string;
+  staticPage?: string;
+  path: string;
+}
+

@@ -12,6 +12,16 @@ import { HomeView } from './components/HomeView';
 import { CategoryId } from './types';
 import { TOOLS } from './data/tools';
 import { CATEGORIES } from './data/categories';
+import {
+  findTool,
+  findCategory,
+  generateHomeSeo,
+  generateToolsDirectorySeo,
+  generateCategorySeo,
+  generateToolSeo,
+  generateStaticPageSeo,
+  applySeoToDocument,
+} from './utils/seoEngine';
 
 // Lazy load secondary views to minimize initial JavaScript payload
 const AllToolsView = React.lazy(() =>
@@ -47,147 +57,81 @@ const ViewLoadingSkeleton: React.FC = () => (
 );
 
 const MainRouter: React.FC = () => {
-  const { currentView, t, lang } = useApp();
+  const { route, lang, t } = useApp();
   const [historyOpen, setHistoryOpen] = useState(false);
 
-  // SEO Optimization & Title/Meta tag synchronization
+  // SEO & Document Metadata Engine Synchronization
   useEffect(() => {
-    let title = 'Calcyfy';
-    let description = 'Free online calculators, converters, and tools.';
-    let keywords = 'calculator, converter, percentage calculator, bmi calculator, mortgage calculator, loan calculator, unit converter, calorie calculator';
-
-    if (currentView === '' || currentView === 'home') {
-      title = t('site_title') || 'CALCYFY — Free Everyday Calculators & Tools';
-      description = t('hero_description') || 'Free, instant, and privacy-focused online calculators and unit converters for finance, health, math, and everyday decisions.';
-      keywords = 'calculator, converter, percentage calculator, bmi calculator, mortgage calculator, loan calculator, unit converter, calorie calculator, free online tools, حاسبة, محول, حاسبة النسبة المئوية, حاسبة كتلة الجسم';
-    } else if (currentView === 'tools') {
-      title = `${t('nav_all_tools', 'All Tools')} — Calcyfy`;
-      description = t('sitemap_desc') || 'Explore all free online tools, converters, and calculators organized by category.';
-      keywords = 'all tools, complete calculators directory, conversion tools, finance calculators, math tools, health converters, جميع الأدوات, حاسبات ومحولات';
-    } else if (currentView.startsWith('category:')) {
-      const catId = currentView.replace('category:', '');
-      const category = CATEGORIES.find((c) => c.id === catId);
-      if (category) {
-        const catName = t(`cat_${category.id.replace('-', '_')}`);
-        const catDesc = t(`cat_${category.id.replace('-', '_')}_desc`);
-        title = `${catName} — Calcyfy`;
-        description = `${catName} calculators and conversion tools. ${catDesc}`;
-        keywords = `${catName}, ${catName} calculator, ${catName} tools, free ${catName} converters, حاسبة ${catName}, أدوات ${catName}`;
-      }
-    } else if (currentView.startsWith('tool:')) {
-      const toolId = currentView.replace('tool:', '');
-      const tool = TOOLS.find((item) => item.id === toolId || item.slug === toolId);
-      if (tool) {
-        const toolName = t(`tool_${tool.id.replace('-', '_')}_name`);
-        const toolDesc = t(`tool_${tool.id.replace('-', '_')}_desc`);
-        title = `${toolName} — Calcyfy`;
-        description = toolDesc;
-
-        // Generate extensive relevant keywords for the current tool dynamically in both languages
-        const category = CATEGORIES.find((c) => c.id === tool.categoryId);
-        const catName = category ? t(`cat_${category.id.replace('-', '_')}`) : '';
-        const enName = (TOOLS.find((tItem) => tItem.id === tool.id)?.id || '').replace('-', ' ');
-
-        const words = [
-          toolName,
-          `${toolName} calculator`,
-          `online ${toolName}`,
-          `free ${toolName}`,
-          `calculate ${toolName}`,
-          `how to calculate ${toolName}`,
-          toolId,
-          enName,
-          catName,
-          `حاسبة ${toolName}`,
-          `طريقة حساب ${toolName}`,
-          `حساب ${toolName} اون لاين`,
-          `أداة ${toolName}`,
-        ];
-        keywords = words.filter(Boolean).join(', ');
-      }
-    } else if (['about', 'privacy', 'terms', 'contact', 'sitemap'].includes(currentView)) {
-      const pageNames: Record<string, string> = {
-        about: 'About Us',
-        privacy: 'Privacy Policy',
-        terms: 'Terms of Service',
-        contact: 'Contact Us',
-        sitemap: 'Sitemap',
-      };
-      const translatedName = t(`nav_${currentView}`, pageNames[currentView]);
-      title = `${translatedName} — Calcyfy`;
-      description = `${translatedName} page. Calcyfy - Free online tools. Simple answers.`;
-      keywords = `${translatedName}, Calcyfy ${translatedName}, Calcyfy, about, contact, privacy, sitemap`;
-    }
-
-    // Apply title
-    document.title = title;
-
-    // Apply meta tags dynamically
-    const applyMeta = (selector: string, attr: string, val: string) => {
-      try {
-        let el = document.querySelector(selector);
-        if (!el) {
-          el = document.createElement('meta');
-          if (selector.startsWith('meta[property=')) {
-            const prop = selector.match(/property="([^"]+)"/)?.[1];
-            if (prop) el.setAttribute('property', prop);
-          } else {
-            const name = selector.match(/name="([^"]+)"/)?.[1];
-            if (name) el.setAttribute('name', name);
-          }
-          document.head.appendChild(el);
+    try {
+      if (route.view === 'home') {
+        const seo = generateHomeSeo(lang, t);
+        applySeoToDocument(seo);
+      } else if (route.view === 'tools') {
+        const seo = generateToolsDirectorySeo(lang, t);
+        applySeoToDocument(seo);
+      } else if (route.view === 'category' && (route.categoryId || route.categorySlug)) {
+        const category = findCategory(route.categoryId || route.categorySlug || '');
+        if (category) {
+          const seo = generateCategorySeo(category, lang, t);
+          applySeoToDocument(seo);
         }
-        el.setAttribute(attr, val);
-      } catch (e) {
-        console.error('SEO Dynamic Meta Error:', e);
+      } else if (route.view === 'tool' && (route.toolId || route.toolSlug)) {
+        const tool = findTool(route.toolId || route.toolSlug || '');
+        if (tool) {
+          const seo = generateToolSeo(tool, lang, t);
+          applySeoToDocument(seo);
+        }
+      } else if (['about', 'privacy', 'terms', 'contact', 'sitemap'].includes(route.view) || route.staticPage) {
+        const pageKey = route.staticPage || route.view;
+        const seo = generateStaticPageSeo(pageKey, lang, t);
+        applySeoToDocument(seo);
+      } else if (route.view === 'not-found') {
+        document.title = `404 — ${t('page_not_found', 'Page Not Found')} | Calcyfy`;
       }
-    };
+    } catch (e) {
+      console.error('SEO Generation Error:', e);
+    }
+  }, [route, lang, t]);
 
-    applyMeta('meta[name="description"]', 'content', description);
-    applyMeta('meta[name="keywords"]', 'content', keywords);
-    applyMeta('meta[property="og:title"]', 'content', title);
-    applyMeta('meta[property="og:description"]', 'content', description);
-    applyMeta('meta[name="twitter:title"]', 'content', title);
-    applyMeta('meta[name="twitter:description"]', 'content', description);
-  }, [currentView, lang, t]);
-
-  // Parse view from routing
+  // Parse view from routing state
   const renderView = () => {
-    if (currentView === '' || currentView === 'home') {
+    if (route.view === 'home') {
       return <HomeView />;
     }
 
-    if (currentView === 'tools') {
+    if (route.view === 'tools') {
       return <AllToolsView />;
     }
 
-    if (currentView.startsWith('category:')) {
-      const catId = currentView.replace('category:', '') as CategoryId;
+    if (route.view === 'category') {
+      const category = findCategory(route.categoryId || route.categorySlug || '');
+      const catId = (category ? category.id : route.categoryId) as CategoryId;
       return <AllToolsView initialCategory={catId} />;
     }
 
-    if (currentView.startsWith('tool:')) {
-      const toolId = currentView.replace('tool:', '');
-      return <ToolPage toolId={toolId} />;
+    if (route.view === 'tool') {
+      const tool = findTool(route.toolId || route.toolSlug || '');
+      const targetId = tool ? tool.id : (route.toolId || route.toolSlug || '');
+      return <ToolPage toolId={targetId} />;
     }
 
-    if (currentView === 'about') {
+    if (route.view === 'about' || route.staticPage === 'about') {
       return <AboutPage />;
     }
 
-    if (currentView === 'privacy') {
+    if (route.view === 'privacy' || route.staticPage === 'privacy') {
       return <PrivacyPage />;
     }
 
-    if (currentView === 'terms') {
+    if (route.view === 'terms' || route.staticPage === 'terms') {
       return <TermsPage />;
     }
 
-    if (currentView === 'contact') {
+    if (route.view === 'contact' || route.staticPage === 'contact') {
       return <ContactPage />;
     }
 
-    if (currentView === 'sitemap') {
+    if (route.view === 'sitemap' || route.staticPage === 'sitemap') {
       return <SitemapPage />;
     }
 

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useApp } from '../context/AppContext';
 import { CATEGORIES } from '../data/categories';
 import { TOOLS } from '../data/tools';
+import { AppLink } from './common/AppLink';
 import {
   Search,
   Percent,
@@ -96,7 +97,17 @@ const ICON_MAP: Record<string, any> = {
 };
 
 export const HomeView: React.FC = () => {
-  const { t, navigateTo, searchQuery, setSearchQuery, isRTL, favorites } = useApp();
+  const {
+    t,
+    navigateTo,
+    searchQuery,
+    setSearchQuery,
+    isRTL,
+    favorites,
+    lang,
+    getToolUrl,
+    getCategoryUrl,
+  } = useApp();
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
 
   const favoritedTools = TOOLS.filter((item) => favorites.includes(item.id));
@@ -180,10 +191,10 @@ export const HomeView: React.FC = () => {
             {favoritedTools.map((tool) => {
               const IconComp = ICON_MAP[tool.iconName] || Calculator;
               return (
-                <button
+                <AppLink
                   key={tool.id}
-                  onClick={() => navigateTo(`tool:${tool.id}`)}
-                  className="p-3 bg-amber-50/60 dark:bg-amber-950/20 hover:bg-amber-100/80 dark:hover:bg-amber-950/40 border border-amber-200/80 dark:border-amber-800/60 rounded-xl flex items-center gap-3 text-start transition-all cursor-pointer"
+                  href={getToolUrl(tool)}
+                  className="p-3 bg-amber-50/60 dark:bg-amber-950/20 hover:bg-amber-100/80 dark:hover:bg-amber-950/40 border border-amber-200/80 dark:border-amber-800/60 rounded-xl flex items-center gap-3 text-start transition-all cursor-pointer block"
                 >
                   <div className="p-2 bg-amber-500 text-white rounded-lg shadow-xs">
                     <IconComp className="w-4 h-4" />
@@ -196,7 +207,7 @@ export const HomeView: React.FC = () => {
                       ★ {t('btn_pinned', 'Pinned')}
                     </div>
                   </div>
-                </button>
+                </AppLink>
               );
             })}
           </div>
@@ -214,24 +225,24 @@ export const HomeView: React.FC = () => {
               {t('popular_tools_desc', 'Everyday tools used by thousands of professionals, students, and families.')}
             </p>
           </div>
-          <button
-            onClick={() => navigateTo('tools')}
+          <AppLink
+            href={`/${lang}/tools`}
             className="text-xs font-bold text-emerald-700 dark:text-emerald-400 hover:underline flex items-center gap-1 cursor-pointer"
           >
             <span>{t('lbl_view_all', 'View All')}</span>
             <ArrowRight className={`w-3.5 h-3.5 ${isRTL ? 'rotate-180' : ''}`} />
-          </button>
+          </AppLink>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {popularTools.map((tool) => {
             const IconComponent = ICON_MAP[tool.iconName] || Percent;
             return (
-              <button
+              <AppLink
                 key={tool.id}
                 id={`popular-card-${tool.id}`}
-                onClick={() => navigateTo(`tool:${tool.id}`)}
-                className="group p-5 bg-white dark:bg-slate-900 hover:bg-slate-50/80 dark:hover:bg-slate-800/60 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-emerald-500/50 dark:hover:border-emerald-500/50 text-start space-y-3 transition-all shadow-xs hover:shadow-md cursor-pointer"
+                href={getToolUrl(tool)}
+                className="group p-5 bg-white dark:bg-slate-900 hover:bg-slate-50/80 dark:hover:bg-slate-800/60 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-emerald-500/50 dark:hover:border-emerald-500/50 text-start space-y-3 transition-all shadow-xs hover:shadow-md cursor-pointer block"
               >
                 <div className="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center group-hover:scale-105 transition-transform">
                   <IconComponent className="w-5 h-5" />
@@ -244,7 +255,7 @@ export const HomeView: React.FC = () => {
                     {t(`tool_${tool.id.replace(/-/g, '_')}_desc`)}
                   </p>
                 </div>
-              </button>
+              </AppLink>
             );
           })}
         </div>
@@ -265,10 +276,10 @@ export const HomeView: React.FC = () => {
           {CATEGORIES.map((cat) => {
             const count = TOOLS.filter((toolItem) => toolItem.categoryId === cat.id).length;
             return (
-              <button
+              <AppLink
                 key={cat.id}
-                onClick={() => navigateTo(`category:${cat.id}`)}
-                className="p-5 bg-white dark:bg-slate-900 hover:bg-emerald-50/40 dark:hover:bg-slate-800/60 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-emerald-300 dark:hover:border-emerald-700 text-start space-y-2 transition-all group cursor-pointer"
+                href={getCategoryUrl(cat.slug)}
+                className="p-5 bg-white dark:bg-slate-900 hover:bg-emerald-50/40 dark:hover:bg-slate-800/60 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-emerald-300 dark:hover:border-emerald-700 text-start space-y-2 transition-all group cursor-pointer block"
               >
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-bold text-slate-900 dark:text-white group-hover:text-emerald-700 dark:group-hover:text-emerald-400">
@@ -281,7 +292,7 @@ export const HomeView: React.FC = () => {
                 <p className="text-xs text-slate-600 dark:text-slate-300 line-clamp-2">
                   {t(`cat_${cat.id.replace('-', '_')}_desc`)}
                 </p>
-              </button>
+              </AppLink>
             );
           })}
         </div>

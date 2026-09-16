@@ -1,6 +1,9 @@
 import React from 'react';
-import { BookOpen, HelpCircle, Lightbulb, Calculator, CheckCircle2 } from 'lucide-react';
-import { Tool } from '../types';
+import { BookOpen, HelpCircle, Lightbulb, Calculator, CheckCircle2, ArrowRight, AlertTriangle, Layers } from 'lucide-react';
+import { Tool, Language } from '../types';
+import { getToolContentDetails } from '../utils/toolContentEngine';
+import { AppLink } from './common/AppLink';
+import { useApp } from '../context/AppContext';
 
 interface ToolSeoContentProps {
   tool: Tool;
@@ -12,209 +15,194 @@ interface ToolSeoContentProps {
 export const ToolSeoContent: React.FC<ToolSeoContentProps> = ({
   tool,
   toolName,
-  toolDesc,
   categoryName,
 }) => {
-  // Generate tailored content based on category and tool id
-  const getCategoryDetails = () => {
-    switch (tool.categoryId) {
-      case 'finance':
-        return {
-          intro: `The ${toolName} is an advanced financial calculation utility engineered to provide precise estimates for budgeting, investments, loans, and wealth planning. Whether you are managing personal finances or evaluating business expenses, accurate financial planning helps prevent costly mistakes and optimizes cash flow.`,
-          formula: 'Calculations utilize standard compounding interest, amortization schedules, and present/future value formulas used by global financial institutions.',
-          faqs: [
-            {
-              q: `How accurate is the ${toolName}?`,
-              a: 'Our engine uses rigorous financial math equations identical to banking standards. Results are calculated instantly in real-time.',
-            },
-            {
-              q: 'Is my financial data secure?',
-              a: 'Yes! All calculations run entirely inside your browser (client-side). No financial inputs or personal data are ever transmitted to external servers.',
-            },
-            {
-              q: 'Can I use this for professional financial planning?',
-              a: 'Yes, this tool provides precise mathematical estimations suitable for preliminary budgeting, loan comparisons, and investment forecasting.',
-            },
-          ],
-        };
-      case 'currency':
-        return {
-          intro: `The ${toolName} provides up-to-the-minute conversions and valuation tools across global fiat currencies (USD, EUR, GBP, SAR, AED, JPY), major cryptocurrencies (Bitcoin, Ethereum, Solana), and precious bullion metals (Gold, Silver, Platinum).`,
-          formula: 'Exchange computations are calculated using international standard mid-market exchange rates and live financial market pricing feeds.',
-          faqs: [
-            {
-              q: `Are the exchange rates in the ${toolName} live?`,
-              a: 'Yes! When connected to the internet, rates synchronize with global central bank feeds and live market liquidity providers.',
-            },
-            {
-              q: 'How are crypto and precious metal prices calculated?',
-              a: 'Crypto metrics utilize 24h market liquidity and staking APY compounding formulas, while gold and silver valuations use per-gram and per-troy-ounce spot market rates across 24k, 21k, 18k, and 925 sterling grades.',
-            },
-            {
-              q: 'Can I calculate bank markup or credit card FX foreign transaction fees?',
-              a: 'Yes, our currency tools include dedicated spread and markup modules so you can see exactly how much extra your bank charges compared to the mid-market rate.',
-            },
-          ],
-        };
-      case 'health':
-        return {
-          intro: `The ${toolName} is designed to help you track vital health metrics, body composition, and nutritional requirements. Maintaining awareness of your physiological benchmarks is an essential pillar of long-term wellness and fitness success.`,
-          formula: 'Formulas are grounded in peer-reviewed clinical research, including the Mifflin-St Jeor equation, WHO body mass guidelines, and established metabolic standards.',
-          faqs: [
-            {
-              q: `What does the ${toolName} measure?`,
-              a: 'It evaluates specific biometric inputs against clinical health benchmarks to give you immediate actionable health feedback.',
-            },
-            {
-              q: 'Should I consult a physician based on these results?',
-              a: 'Calcyfy calculators provide educational estimates. Always consult a certified healthcare professional before making major diet or fitness changes.',
-            },
-            {
-              q: 'Are these formulas tailored for both men and women?',
-              a: 'Yes, our health engines factor in biological variables such as age, gender, height, weight, and activity levels where applicable.',
-            },
-          ],
-        };
-      case 'math':
-        return {
-          intro: `The ${toolName} provides instant, error-free mathematical computations for students, engineers, educators, and everyday problem-solvers. Complex mathematical operations are simplified into clean, responsive inputs with transparent formulas.`,
-          formula: 'Grounded in fundamental arithmetic, algebraic identities, and statistical principles.',
-          faqs: [
-            {
-              q: `How do I use the ${toolName}?`,
-              a: 'Simply enter your numbers into the designated fields. Results update instantly as you type with zero page reloads.',
-            },
-            {
-              q: 'Are intermediate calculation steps shown?',
-              a: 'Yes, each calculation breakdown includes the formula and step-by-step logic for educational and verification purposes.',
-            },
-          ],
-        };
-      case 'date':
-        return {
-          intro: `The ${toolName} simplifies complex calendar math, time zone conversions, and chronological intervals. Perfect for project planning, event countdowns, and historical age tracking.`,
-          formula: 'Calculations account for Gregorian calendar leap years, exact month lengths, and standard UTC/GMT offset intervals.',
-          faqs: [
-            {
-              q: 'Does this account for leap years?',
-              a: 'Yes, our date engines fully account for Gregorian leap year rules (divisible by 4, not 100 unless also divisible by 400).',
-            },
-            {
-              q: 'Can I calculate business workdays?',
-              a: 'Yes, dedicated work day calculators automatically exclude weekends (Saturdays and Sundays) for accurate scheduling.',
-            },
-          ],
-        };
-      case 'converters':
-        return {
-          intro: `The ${toolName} provides lightning-fast and precise unit conversions across metric, imperial, and international standard dimensions. Eliminate conversion errors with instant multi-unit outputs.`,
-          formula: 'Conversions use NIST-traceable conversion factors and precise dimensional multiplier ratios.',
-          faqs: [
-            {
-              q: `How do I convert between units using the ${toolName}?`,
-              a: 'Select your source unit and target unit, enter your value, and view converted results across all related units instantly.',
-            },
-            {
-              q: 'Are conversion ratios exact?',
-              a: 'Yes, we use standard international conversion constants to ensure maximum scientific and engineering precision.',
-            },
-          ],
-        };
-      default:
-        return {
-          intro: `The ${toolName} is a 100% free, fast, and user-friendly online utility part of Calcyfy's ${categoryName} suite. Designed for instant answers and maximum productivity without sign-up friction.`,
-          formula: 'Engineered using verified algorithmic models and standardized calculation methodologies.',
-          faqs: [
-            {
-              q: `Is the ${toolName} completely free?`,
-              a: 'Yes, all Calcyfy tools are 100% free with no subscriptions, paywalls, or registrations required.',
-            },
-            {
-              q: 'Can I share or embed this tool?',
-              a: 'Yes! Click the Share button to copy a shareable link with your custom inputs, or use the Embed Widget feature to add this calculator to your own website or blog.',
-            },
-          ],
-        };
-    }
-  };
-
-  const details = getCategoryDetails();
+  const { lang, getToolUrl } = useApp();
+  const details = getToolContentDetails(tool, lang);
 
   return (
     <div className="space-y-8 pt-8 border-t border-slate-200 dark:border-slate-800">
-      {/* Comprehensive SEO Editorial Section */}
-      <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 sm:p-8 space-y-6 shadow-xs">
+      {/* Comprehensive SEO Editorial & Knowledge Section */}
+      <article className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 sm:p-8 space-y-8 shadow-xs">
+        {/* Section Header */}
         <div className="flex items-center gap-3">
           <div className="p-2.5 bg-emerald-50 dark:bg-emerald-950/60 rounded-xl text-emerald-600 dark:text-emerald-400">
             <Calculator className="w-6 h-6" />
           </div>
           <div>
-            <h2 className="text-xl font-black text-slate-900 dark:text-white tracking-tight">
+            <h2 className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">
               About the {toolName}
             </h2>
-            <p className="text-xs text-slate-500 dark:text-slate-400">
-              Comprehensive guide, methodology, and formula breakdown
+            <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400">
+              Complete calculation guide, methodology, and formula breakdown
             </p>
           </div>
         </div>
 
+        {/* Introduction & What It Calculates */}
         <div className="prose dark:prose-invert max-w-none text-sm text-slate-600 dark:text-slate-300 space-y-4 leading-relaxed">
-          <p>{details.intro}</p>
-          
-          <h3 className="text-base font-bold text-slate-900 dark:text-white pt-2 flex items-center gap-2">
-            <Lightbulb className="w-4 h-4 text-emerald-500" />
-            Calculation Formula & Methodology
-          </h3>
-          <p>{details.formula}</p>
-
-          <div className="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700/80 space-y-2">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
+          <p className="text-base text-slate-700 dark:text-slate-200 font-medium">
+            {details.intro}
+          </p>
+          <div className="p-4 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700/80">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white mb-1.5 flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-emerald-500" />
-              Key Benefits of Using Calcyfy {toolName}
-            </h4>
-            <ul className="text-xs text-slate-600 dark:text-slate-400 space-y-1 list-disc ps-4">
-              <li>Instant real-time calculations as you type with zero lag.</li>
-              <li>100% private and secure client-side execution in your browser.</li>
-              <li>Mobile-friendly responsive design optimized for phones, tablets, and desktops.</li>
-              <li>Free shareable link generator and website embed widget support.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      {/* FAQ Section */}
-      <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 sm:p-8 space-y-6 shadow-xs">
-        <div className="flex items-center gap-3">
-          <div className="p-2.5 bg-emerald-50 dark:bg-emerald-950/60 rounded-xl text-emerald-600 dark:text-emerald-400">
-            <HelpCircle className="w-6 h-6" />
-          </div>
-          <div>
-            <h2 className="text-xl font-black text-slate-900 dark:text-white tracking-tight">
-              Frequently Asked Questions (FAQ)
-            </h2>
-            <p className="text-xs text-slate-500 dark:text-slate-400">
-              Common questions regarding accuracy, usage, and formulas
+              What This Calculator Calculates
+            </h3>
+            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+              {details.whatItCalculates}
             </p>
           </div>
         </div>
 
-        <div className="space-y-4">
-          {details.faqs.map((faq, idx) => (
-            <div
-              key={idx}
-              className="p-4 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700/80 space-y-1.5"
-            >
-              <h3 className="text-sm font-bold text-slate-900 dark:text-white flex items-center gap-2">
-                <span className="text-emerald-600 dark:text-emerald-400 font-mono text-xs">Q{idx + 1}.</span>
-                {faq.q}
-              </h3>
-              <p className="text-xs text-slate-600 dark:text-slate-300 ps-5 leading-relaxed">
-                {faq.a}
-              </p>
+        {/* Formula & Mathematical Methodology */}
+        {details.formula && (
+          <div className="space-y-3">
+            <h3 className="text-base font-bold text-slate-900 dark:text-white flex items-center gap-2">
+              <Lightbulb className="w-4 h-4 text-emerald-500" />
+              Formula & Methodology
+            </h3>
+            <div className="p-4 bg-emerald-50/50 dark:bg-emerald-950/20 rounded-xl border border-emerald-200 dark:border-emerald-800/60 font-mono text-xs sm:text-sm text-emerald-900 dark:text-emerald-200">
+              <code>{details.formula}</code>
             </div>
-          ))}
-        </div>
-      </div>
+            {details.unitsAndConversions && (
+              <p className="text-xs text-slate-500 dark:text-slate-400">
+                <span className="font-semibold text-slate-700 dark:text-slate-300">Units & Standards: </span>
+                {details.unitsAndConversions}
+              </p>
+            )}
+          </div>
+        )}
+
+        {/* Explanation of Important Inputs */}
+        {details.inputs && details.inputs.length > 0 && (
+          <div className="space-y-3">
+            <h3 className="text-base font-bold text-slate-900 dark:text-white flex items-center gap-2">
+              <Layers className="w-4 h-4 text-emerald-500" />
+              Key Inputs Explained
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              {details.inputs.map((inp, idx) => (
+                <div key={idx} className="p-3.5 bg-slate-50 dark:bg-slate-800/40 rounded-xl border border-slate-200 dark:border-slate-700/60 space-y-1">
+                  <div className="flex items-center justify-between text-xs font-bold text-slate-900 dark:text-white">
+                    <span>{inp.name}</span>
+                    {inp.unit && (
+                      <span className="px-1.5 py-0.5 text-[10px] bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded">
+                        {inp.unit}
+                      </span>
+                    )}
+                  </div>
+                  <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                    {inp.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Practical Worked Example */}
+        {details.workedExample && (
+          <div className="space-y-3">
+            <h3 className="text-base font-bold text-slate-900 dark:text-white flex items-center gap-2">
+              <BookOpen className="w-4 h-4 text-emerald-500" />
+              Worked Calculation Example
+            </h3>
+            <div className="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700/80 space-y-3">
+              <p className="text-xs sm:text-sm font-semibold text-slate-800 dark:text-slate-200">
+                {details.workedExample.scenario}
+              </p>
+              <ol className="text-xs text-slate-600 dark:text-slate-300 space-y-1.5 list-decimal ps-4">
+                {details.workedExample.stepByStep.map((step, sIdx) => (
+                  <li key={sIdx}>{step}</li>
+                ))}
+              </ol>
+              <div className="pt-2 border-t border-slate-200 dark:border-slate-700 text-xs font-bold text-emerald-700 dark:text-emerald-300">
+                Result: {details.workedExample.result}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Technical Limitations & Assumptions */}
+        {details.limitations && (
+          <div className="p-3.5 bg-amber-50/60 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-800/60 rounded-xl flex items-start gap-2.5 text-xs text-amber-900 dark:text-amber-300">
+            <AlertTriangle className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
+            <div>
+              <span className="font-bold">Assumptions & Limitations: </span>
+              {details.limitations}
+            </div>
+          </div>
+        )}
+
+        {/* Frequently Asked Questions */}
+        {details.faqs && details.faqs.length > 0 && (
+          <div className="space-y-4 pt-2">
+            <div className="flex items-center gap-2">
+              <HelpCircle className="w-5 h-5 text-emerald-500" />
+              <h3 className="text-lg font-bold text-slate-900 dark:text-white">
+                Frequently Asked Questions
+              </h3>
+            </div>
+            <div className="space-y-3">
+              {details.faqs.map((faq, idx) => (
+                <div
+                  key={idx}
+                  className="p-4 bg-slate-50 dark:bg-slate-800/40 rounded-xl border border-slate-200 dark:border-slate-800 space-y-1.5"
+                >
+                  <h4 className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white">
+                    {faq.question}
+                  </h4>
+                  <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                    {faq.answer}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+      </article>
+
+      {/* Genuinely Related Tools with Semantic HTML5 Links */}
+      {details.relatedTools && details.relatedTools.length > 0 && (
+        <section className="space-y-4 pt-4">
+          <div className="flex items-center justify-between">
+            <h3 className="text-lg font-bold text-slate-900 dark:text-white">
+              Related {categoryName} Calculators
+            </h3>
+            <AppLink
+              href={`/${lang}/category/${tool.categoryId}`}
+              className="text-xs font-semibold text-emerald-600 dark:text-emerald-400 hover:underline inline-flex items-center gap-1"
+            >
+              <span>View All</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </AppLink>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+            {details.relatedTools.map((relTool) => (
+              <AppLink
+                key={relTool.id}
+                href={getToolUrl(relTool.slug)}
+                className="group p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-emerald-500/50 hover:shadow-xs transition-all flex flex-col justify-between"
+              >
+                <div>
+                  <h4 className="text-xs font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+                    {relTool.slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}
+                  </h4>
+                  <p className="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-2 mt-1">
+                    Free online calculator for {relTool.slug.replace(/-/g, ' ')}.
+                  </p>
+                </div>
+                <div className="mt-3 pt-2 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-[11px] text-emerald-600 dark:text-emerald-400 font-semibold">
+                  <span>Open Tool</span>
+                  <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
+                </div>
+              </AppLink>
+            ))}
+          </div>
+        </section>
+      )}
     </div>
   );
 };

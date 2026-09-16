@@ -3,9 +3,10 @@ import { useApp } from '../context/AppContext';
 import { TOOLS } from '../data/tools';
 import { CATEGORIES } from '../data/categories';
 import { Sparkles, Send, CheckCircle2, Zap, Lock, Heart } from 'lucide-react';
+import { AppLink } from './common/AppLink';
 
 export const AboutPage: React.FC = () => {
-  const { t, navigateTo } = useApp();
+  const { t, lang } = useApp();
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12 space-y-10">
@@ -65,12 +66,12 @@ export const AboutPage: React.FC = () => {
         <p className="text-emerald-100 text-sm max-w-lg mx-auto">
           {t('hero_subtitle', 'Start calculating loans, mortgages, BMI, unit measurements, and currency exchanges now.')}
         </p>
-        <button
-          onClick={() => navigateTo('tools')}
-          className="px-6 py-3 bg-white text-emerald-800 font-bold text-sm rounded-xl hover:bg-emerald-50 transition-colors shadow-md"
+        <AppLink
+          href={`/${lang}/tools`}
+          className="px-6 py-3 bg-white text-emerald-800 font-bold text-sm rounded-xl hover:bg-emerald-50 transition-colors shadow-md inline-block"
         >
           {t('nav_all_tools', 'Browse All Calculators')}
-        </button>
+        </AppLink>
       </div>
     </div>
   );
@@ -239,7 +240,7 @@ export const ContactPage: React.FC = () => {
 };
 
 export const SitemapPage: React.FC = () => {
-  const { t, navigateTo } = useApp();
+  const { t, getToolUrl, getCategoryUrl } = useApp();
   const [search, setSearch] = useState('');
 
   const filteredTools = TOOLS.filter((tool) => {
@@ -276,9 +277,12 @@ export const SitemapPage: React.FC = () => {
           return (
             <div key={cat.id} className="p-5 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-3">
               <div className="flex items-center justify-between pb-2 border-b border-slate-100 dark:border-slate-800">
-                <h3 className="font-bold text-sm text-slate-900 dark:text-white capitalize">
+                <AppLink
+                  href={getCategoryUrl(cat.slug)}
+                  className="font-bold text-sm text-slate-900 dark:text-white capitalize hover:text-emerald-600 dark:hover:text-emerald-400"
+                >
                   {t(`cat_${cat.id}`, cat.id)}
-                </h3>
+                </AppLink>
                 <span className="text-xs px-2 py-0.5 bg-slate-100 dark:bg-slate-800 text-slate-500 rounded-full font-mono">
                   {catTools.length}
                 </span>
@@ -286,12 +290,12 @@ export const SitemapPage: React.FC = () => {
               <ul className="space-y-1.5 text-xs">
                 {catTools.map((tool) => (
                   <li key={tool.id}>
-                    <button
-                      onClick={() => navigateTo(`tool:${tool.id}`)}
-                      className="text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 hover:underline transition-colors text-start"
+                    <AppLink
+                      href={getToolUrl(tool)}
+                      className="text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 hover:underline transition-colors text-start block"
                     >
                       • {t(`tool_${tool.id.replace(/-/g, '_')}_name`, tool.slug)}
-                    </button>
+                    </AppLink>
                   </li>
                 ))}
               </ul>
@@ -304,7 +308,7 @@ export const SitemapPage: React.FC = () => {
 };
 
 export const NotFoundPage: React.FC = () => {
-  const { t, navigateTo } = useApp();
+  const { t, getHomeUrl } = useApp();
 
   return (
     <div className="min-h-[60vh] flex flex-col items-center justify-center text-center px-4 space-y-4">
@@ -315,12 +319,12 @@ export const NotFoundPage: React.FC = () => {
       <p className="text-sm text-slate-500 dark:text-slate-400 max-w-sm">
         {t('err_404_desc', 'The tool or calculator you are looking for might have been relocated or is currently in development.')}
       </p>
-      <button
-        onClick={() => navigateTo('home')}
-        className="mt-4 px-6 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs rounded-xl shadow-xs transition-colors"
+      <AppLink
+        href={getHomeUrl()}
+        className="mt-4 px-6 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs rounded-xl shadow-xs transition-colors inline-block"
       >
         {t('err_404_btn', 'Return to Home Directory')}
-      </button>
+      </AppLink>
     </div>
   );
 };
