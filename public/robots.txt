@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://calcyfy.com/sitemap.xml
+Sitemap: https://calcyfy.pages.dev/sitemap.xml

@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
-    <loc>https://calcyfy.com/sitemap-en.xml</loc>
+    <loc>https://calcyfy.pages.dev/sitemap-en.xml</loc>
     <lastmod>2026-09-16</lastmod>
   </sitemap>
   <sitemap>
-    <loc>https://calcyfy.com/sitemap-ar.xml</loc>
+    <loc>https://calcyfy.pages.dev/sitemap-ar.xml</loc>
     <lastmod>2026-09-16</lastmod>
   </sitemap>
   <sitemap>
-    <loc>https://calcyfy.com/sitemap-es.xml</loc>
+    <loc>https://calcyfy.pages.dev/sitemap-es.xml</loc>
     <lastmod>2026-09-16</lastmod>
   </sitemap>
   <sitemap>
-    <loc>https://calcyfy.com/sitemap-fr.xml</loc>
+    <loc>https://calcyfy.pages.dev/sitemap-fr.xml</loc>
     <lastmod>2026-09-16</lastmod>
   </sitemap>
   <sitemap>
-    <loc>https://calcyfy.com/sitemap-de.xml</loc>
+    <loc>https://calcyfy.pages.dev/sitemap-de.xml</loc>
     <lastmod>2026-09-16</lastmod>
   </sitemap>
 </sitemapindex>

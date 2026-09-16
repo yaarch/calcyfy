@@ -3,7 +3,7 @@ import { TOOLS } from '../data/tools';
 import { CATEGORIES } from '../data/categories';
 import { getToolName, getToolDescription, isRawTranslationKey } from './toolMetadata';
 
-export const SITE_BASE_URL = 'https://calcyfy.com';
+export const SITE_BASE_URL = 'https://calcyfy.pages.dev';
 export const SUPPORTED_LANGUAGES: Language[] = ['en', 'ar', 'es', 'fr', 'de'];
 export const DEFAULT_LANGUAGE: Language = 'en';
 
