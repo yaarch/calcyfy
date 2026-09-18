@@ -1,0 +1,2102 @@
+[
+  {
+    "id": "percentage",
+    "name": "percentage"
+  },
+  {
+    "id": "bmi",
+    "name": "bmi"
+  },
+  {
+    "id": "age",
+    "name": "age"
+  },
+  {
+    "id": "loan",
+    "name": "loan"
+  },
+  {
+    "id": "mortgage",
+    "name": "mortgage"
+  },
+  {
+    "id": "compound-interest",
+    "name": "compound-interest"
+  },
+  {
+    "id": "tip",
+    "name": "tip"
+  },
+  {
+    "id": "discount",
+    "name": "discount"
+  },
+  {
+    "id": "unit-converter",
+    "name": "unit-converter"
+  },
+  {
+    "id": "currency",
+    "name": "currency"
+  },
+  {
+    "id": "gpa",
+    "name": "gpa"
+  },
+  {
+    "id": "calorie",
+    "name": "calorie"
+  },
+  {
+    "id": "tax",
+    "name": "tax"
+  },
+  {
+    "id": "salary",
+    "name": "salary"
+  },
+  {
+    "id": "scientific",
+    "name": "scientific"
+  },
+  {
+    "id": "date-diff",
+    "name": "date-diff"
+  },
+  {
+    "id": "word-count",
+    "name": "word-count"
+  },
+  {
+    "id": "password",
+    "name": "password"
+  },
+  {
+    "id": "roi-cagr",
+    "name": "roi-cagr"
+  },
+  {
+    "id": "crypto-profit",
+    "name": "crypto-profit"
+  },
+  {
+    "id": "time-zone",
+    "name": "time-zone"
+  },
+  {
+    "id": "fuel-cost",
+    "name": "fuel-cost"
+  },
+  {
+    "id": "body-fat",
+    "name": "body-fat"
+  },
+  {
+    "id": "aspect-ratio",
+    "name": "aspect-ratio"
+  },
+  {
+    "id": "carbon-footprint",
+    "name": "carbon-footprint"
+  },
+  {
+    "id": "simple-interest",
+    "name": "simple-interest"
+  },
+  {
+    "id": "auto-loan",
+    "name": "auto-loan"
+  },
+  {
+    "id": "savings-goal",
+    "name": "savings-goal"
+  },
+  {
+    "id": "markup",
+    "name": "markup"
+  },
+  {
+    "id": "ideal-weight",
+    "name": "ideal-weight"
+  },
+  {
+    "id": "water-intake",
+    "name": "water-intake"
+  },
+  {
+    "id": "target-heart-rate",
+    "name": "target-heart-rate"
+  },
+  {
+    "id": "bmr",
+    "name": "bmr"
+  },
+  {
+    "id": "fraction",
+    "name": "fraction"
+  },
+  {
+    "id": "ratio",
+    "name": "ratio"
+  },
+  {
+    "id": "area-perimeter",
+    "name": "area-perimeter"
+  },
+  {
+    "id": "volume",
+    "name": "volume"
+  },
+  {
+    "id": "random-number",
+    "name": "random-number"
+  },
+  {
+    "id": "prime-checker",
+    "name": "prime-checker"
+  },
+  {
+    "id": "pythagoras",
+    "name": "pythagoras"
+  },
+  {
+    "id": "binary-hex",
+    "name": "binary-hex"
+  },
+  {
+    "id": "temperature",
+    "name": "temperature"
+  },
+  {
+    "id": "speed-distance",
+    "name": "speed-distance"
+  },
+  {
+    "id": "data-size",
+    "name": "data-size"
+  },
+  {
+    "id": "chronometer-timer",
+    "name": "chronometer-timer"
+  },
+  {
+    "id": "work-shift-hours",
+    "name": "work-shift-hours"
+  },
+  {
+    "id": "case-converter",
+    "name": "case-converter"
+  },
+  {
+    "id": "json-formatter",
+    "name": "json-formatter"
+  },
+  {
+    "id": "base64-encode",
+    "name": "base64-encode"
+  },
+  {
+    "id": "url-encoder",
+    "name": "url-encoder"
+  },
+  {
+    "id": "net-worth",
+    "name": "net-worth"
+  },
+  {
+    "id": "debt-payoff",
+    "name": "debt-payoff"
+  },
+  {
+    "id": "break-even",
+    "name": "break-even"
+  },
+  {
+    "id": "compound-monthly",
+    "name": "compound-monthly"
+  },
+  {
+    "id": "dividend-yield",
+    "name": "dividend-yield"
+  },
+  {
+    "id": "inflation-impact",
+    "name": "inflation-impact"
+  },
+  {
+    "id": "freelance-rate",
+    "name": "freelance-rate"
+  },
+  {
+    "id": "rental-yield",
+    "name": "rental-yield"
+  },
+  {
+    "id": "vat-tax",
+    "name": "vat-tax"
+  },
+  {
+    "id": "tip-split",
+    "name": "tip-split"
+  },
+  {
+    "id": "calorie-deficit",
+    "name": "calorie-deficit"
+  },
+  {
+    "id": "macro-split",
+    "name": "macro-split"
+  },
+  {
+    "id": "ovulation-date",
+    "name": "ovulation-date"
+  },
+  {
+    "id": "due-date",
+    "name": "due-date"
+  },
+  {
+    "id": "one-rep-max",
+    "name": "one-rep-max"
+  },
+  {
+    "id": "pace-runner",
+    "name": "pace-runner"
+  },
+  {
+    "id": "blood-alcohol",
+    "name": "blood-alcohol"
+  },
+  {
+    "id": "sleep-cycle",
+    "name": "sleep-cycle"
+  },
+  {
+    "id": "percentage-change",
+    "name": "percentage-change"
+  },
+  {
+    "id": "slope-line",
+    "name": "slope-line"
+  },
+  {
+    "id": "exponent-power",
+    "name": "exponent-power"
+  },
+  {
+    "id": "logarithm",
+    "name": "logarithm"
+  },
+  {
+    "id": "factorial",
+    "name": "factorial"
+  },
+  {
+    "id": "standard-deviation",
+    "name": "standard-deviation"
+  },
+  {
+    "id": "matrix-mult",
+    "name": "matrix-mult"
+  },
+  {
+    "id": "quadratic-solver",
+    "name": "quadratic-solver"
+  },
+  {
+    "id": "combination-permutation",
+    "name": "combination-permutation"
+  },
+  {
+    "id": "roman-numeral",
+    "name": "roman-numeral"
+  },
+  {
+    "id": "color-hex-rgb",
+    "name": "color-hex-rgb"
+  },
+  {
+    "id": "px-rem",
+    "name": "px-rem"
+  },
+  {
+    "id": "pressure-unit",
+    "name": "pressure-unit"
+  },
+  {
+    "id": "energy-power",
+    "name": "energy-power"
+  },
+  {
+    "id": "angle-unit",
+    "name": "angle-unit"
+  },
+  {
+    "id": "force-unit",
+    "name": "force-unit"
+  },
+  {
+    "id": "torque-unit",
+    "name": "torque-unit"
+  },
+  {
+    "id": "cooking-converter",
+    "name": "cooking-converter"
+  },
+  {
+    "id": "age-dog-cat",
+    "name": "age-dog-cat"
+  },
+  {
+    "id": "electricity-cost",
+    "name": "electricity-cost"
+  },
+  {
+    "id": "shoe-size",
+    "name": "shoe-size"
+  },
+  {
+    "id": "ring-size",
+    "name": "ring-size"
+  },
+  {
+    "id": "tire-size",
+    "name": "tire-size"
+  },
+  {
+    "id": "word-frequency",
+    "name": "word-frequency"
+  },
+  {
+    "id": "lorem-ipsum",
+    "name": "lorem-ipsum"
+  },
+  {
+    "id": "slug-generator",
+    "name": "slug-generator"
+  },
+  {
+    "id": "markdown-preview",
+    "name": "markdown-preview"
+  },
+  {
+    "id": "diff-checker",
+    "name": "diff-checker"
+  },
+  {
+    "id": "hash-generator",
+    "name": "hash-generator"
+  },
+  {
+    "id": "uuid-generator",
+    "name": "uuid-generator"
+  },
+  {
+    "id": "html-entity",
+    "name": "html-entity"
+  },
+  {
+    "id": "cron-parser",
+    "name": "cron-parser"
+  },
+  {
+    "id": "roi-calculator",
+    "name": "roi-calculator"
+  },
+  {
+    "id": "cagr-calculator",
+    "name": "cagr-calculator"
+  },
+  {
+    "id": "payback-period",
+    "name": "payback-period"
+  },
+  {
+    "id": "loan-refinance",
+    "name": "loan-refinance"
+  },
+  {
+    "id": "vat-reverse",
+    "name": "vat-reverse"
+  },
+  {
+    "id": "salary-hourly",
+    "name": "salary-hourly"
+  },
+  {
+    "id": "freelance-rate-calc",
+    "name": "freelance-rate-calc"
+  },
+  {
+    "id": "break-even-point",
+    "name": "break-even-point"
+  },
+  {
+    "id": "commission-calc",
+    "name": "commission-calc"
+  },
+  {
+    "id": "appreciation-calc",
+    "name": "appreciation-calc"
+  },
+  {
+    "id": "depreciation-straight",
+    "name": "depreciation-straight"
+  },
+  {
+    "id": "stock-dividend-yield",
+    "name": "stock-dividend-yield"
+  },
+  {
+    "id": "rental-property-yield",
+    "name": "rental-property-yield"
+  },
+  {
+    "id": "cap-rate",
+    "name": "cap-rate"
+  },
+  {
+    "id": "mortgage-payoff",
+    "name": "mortgage-payoff"
+  },
+  {
+    "id": "college-savings",
+    "name": "college-savings"
+  },
+  {
+    "id": "401k-retirement",
+    "name": "401k-retirement"
+  },
+  {
+    "id": "debt-snowball",
+    "name": "debt-snowball"
+  },
+  {
+    "id": "inflation-future",
+    "name": "inflation-future"
+  },
+  {
+    "id": "currency-crypto",
+    "name": "currency-crypto"
+  },
+  {
+    "id": "water-fasting",
+    "name": "water-fasting"
+  },
+  {
+    "id": "protein-intake",
+    "name": "protein-intake"
+  },
+  {
+    "id": "creatine-dosing",
+    "name": "creatine-dosing"
+  },
+  {
+    "id": "caffeine-halflife",
+    "name": "caffeine-halflife"
+  },
+  {
+    "id": "steps-to-calories",
+    "name": "steps-to-calories"
+  },
+  {
+    "id": "running-pace-split",
+    "name": "running-pace-split"
+  },
+  {
+    "id": "bench-press-max",
+    "name": "bench-press-max"
+  },
+  {
+    "id": "tdee-advanced",
+    "name": "tdee-advanced"
+  },
+  {
+    "id": "keto-macros",
+    "name": "keto-macros"
+  },
+  {
+    "id": "intermittent-fasting",
+    "name": "intermittent-fasting"
+  },
+  {
+    "id": "lean-body-mass",
+    "name": "lean-body-mass"
+  },
+  {
+    "id": "body-frame-size",
+    "name": "body-frame-size"
+  },
+  {
+    "id": "glycemic-load",
+    "name": "glycemic-load"
+  },
+  {
+    "id": "sleep-debt",
+    "name": "sleep-debt"
+  },
+  {
+    "id": "menstrual-cycle",
+    "name": "menstrual-cycle"
+  },
+  {
+    "id": "combinatorics-ncr",
+    "name": "combinatorics-ncr"
+  },
+  {
+    "id": "matrix-determinant",
+    "name": "matrix-determinant"
+  },
+  {
+    "id": "circle-properties",
+    "name": "circle-properties"
+  },
+  {
+    "id": "triangle-solver",
+    "name": "triangle-solver"
+  },
+  {
+    "id": "vector-magnitude",
+    "name": "vector-magnitude"
+  },
+  {
+    "id": "standard-deviation-calc",
+    "name": "standard-deviation-calc"
+  },
+  {
+    "id": "percentile-calc",
+    "name": "percentile-calc"
+  },
+  {
+    "id": "fraction-to-percent",
+    "name": "fraction-to-percent"
+  },
+  {
+    "id": "modulo-calc",
+    "name": "modulo-calc"
+  },
+  {
+    "id": "binary-addition",
+    "name": "binary-addition"
+  },
+  {
+    "id": "hex-calculator",
+    "name": "hex-calculator"
+  },
+  {
+    "id": "geometric-series",
+    "name": "geometric-series"
+  },
+  {
+    "id": "arithmetic-series",
+    "name": "arithmetic-series"
+  },
+  {
+    "id": "root-mean-square",
+    "name": "root-mean-square"
+  },
+  {
+    "id": "percentage-of-total",
+    "name": "percentage-of-total"
+  },
+  {
+    "id": "fuel-consumption",
+    "name": "fuel-consumption"
+  },
+  {
+    "id": "car-depreciation",
+    "name": "car-depreciation"
+  },
+  {
+    "id": "ev-charging-time",
+    "name": "ev-charging-time"
+  },
+  {
+    "id": "concrete-volume",
+    "name": "concrete-volume"
+  },
+  {
+    "id": "paint-coverage",
+    "name": "paint-coverage"
+  },
+  {
+    "id": "flooring-tile",
+    "name": "flooring-tile"
+  },
+  {
+    "id": "wallpaper-rolls",
+    "name": "wallpaper-rolls"
+  },
+  {
+    "id": "mulch-topsoil",
+    "name": "mulch-topsoil"
+  },
+  {
+    "id": "air-conditioner-btu",
+    "name": "air-conditioner-btu"
+  },
+  {
+    "id": "solar-panel-payback",
+    "name": "solar-panel-payback"
+  },
+  {
+    "id": "stair-stringer",
+    "name": "stair-stringer"
+  },
+  {
+    "id": "roof-pitch-slope",
+    "name": "roof-pitch-slope"
+  },
+  {
+    "id": "resistor-color",
+    "name": "resistor-color"
+  },
+  {
+    "id": "ohms-law",
+    "name": "ohms-law"
+  },
+  {
+    "id": "capacitor-energy",
+    "name": "capacitor-energy"
+  },
+  {
+    "id": "velocity-acceleration",
+    "name": "velocity-acceleration"
+  },
+  {
+    "id": "kinetic-energy",
+    "name": "kinetic-energy"
+  },
+  {
+    "id": "gravitational-force",
+    "name": "gravitational-force"
+  },
+  {
+    "id": "density-mass-volume",
+    "name": "density-mass-volume"
+  },
+  {
+    "id": "torque-calculator",
+    "name": "torque-calculator"
+  },
+  {
+    "id": "ideal-gas-law",
+    "name": "ideal-gas-law"
+  },
+  {
+    "id": "molarity-calc",
+    "name": "molarity-calc"
+  },
+  {
+    "id": "ph-poh-calculator",
+    "name": "ph-poh-calculator"
+  },
+  {
+    "id": "half-life-decay",
+    "name": "half-life-decay"
+  },
+  {
+    "id": "sound-db-distance",
+    "name": "sound-db-distance"
+  },
+  {
+    "id": "time-duration-between",
+    "name": "time-duration-between"
+  },
+  {
+    "id": "date-add-subtract",
+    "name": "date-add-subtract"
+  },
+  {
+    "id": "time-zone-converter",
+    "name": "time-zone-converter"
+  },
+  {
+    "id": "leap-year-checker",
+    "name": "leap-year-checker"
+  },
+  {
+    "id": "work-days-count",
+    "name": "work-days-count"
+  },
+  {
+    "id": "pomodoro-timer",
+    "name": "pomodoro-timer"
+  },
+  {
+    "id": "reading-time",
+    "name": "reading-time"
+  },
+  {
+    "id": "typing-speed-wpm",
+    "name": "typing-speed-wpm"
+  },
+  {
+    "id": "screen-dpi-ppi",
+    "name": "screen-dpi-ppi"
+  },
+  {
+    "id": "aspect-ratio-resize",
+    "name": "aspect-ratio-resize"
+  },
+  {
+    "id": "css-flexbox-gap",
+    "name": "css-flexbox-gap"
+  },
+  {
+    "id": "css-box-shadow",
+    "name": "css-box-shadow"
+  },
+  {
+    "id": "jwt-decoder",
+    "name": "jwt-decoder"
+  },
+  {
+    "id": "url-parser",
+    "name": "url-parser"
+  },
+  {
+    "id": "regex-tester",
+    "name": "regex-tester"
+  },
+  {
+    "id": "json-minify",
+    "name": "json-minify"
+  },
+  {
+    "id": "csv-to-json",
+    "name": "csv-to-json"
+  },
+  {
+    "id": "ip-subnet-calc",
+    "name": "ip-subnet-calc"
+  },
+  {
+    "id": "bandwidth-download",
+    "name": "bandwidth-download"
+  },
+  {
+    "id": "color-contrast-ratio",
+    "name": "color-contrast-ratio"
+  },
+  {
+    "id": "chmod-permissions",
+    "name": "chmod-permissions"
+  },
+  {
+    "id": "sql-formatter",
+    "name": "sql-formatter"
+  },
+  {
+    "id": "text-scrambler",
+    "name": "text-scrambler"
+  },
+  {
+    "id": "password-entropy",
+    "name": "password-entropy"
+  },
+  {
+    "id": "number-to-words",
+    "name": "number-to-words"
+  },
+  {
+    "id": "irr-calculator",
+    "name": "irr-calculator"
+  },
+  {
+    "id": "npv-calculator",
+    "name": "npv-calculator"
+  },
+  {
+    "id": "ebitda-calculator",
+    "name": "ebitda-calculator"
+  },
+  {
+    "id": "gross-margin-calculator",
+    "name": "gross-margin-calculator"
+  },
+  {
+    "id": "operating-margin-calculator",
+    "name": "operating-margin-calculator"
+  },
+  {
+    "id": "dscr-calculator",
+    "name": "dscr-calculator"
+  },
+  {
+    "id": "loan-amortization-schedule",
+    "name": "loan-amortization-schedule"
+  },
+  {
+    "id": "balloon-payment-loan",
+    "name": "balloon-payment-loan"
+  },
+  {
+    "id": "heloc-payment-calc",
+    "name": "heloc-payment-calc"
+  },
+  {
+    "id": "arm-mortgage-calc",
+    "name": "arm-mortgage-calc"
+  },
+  {
+    "id": "jumbo-mortgage-calc",
+    "name": "jumbo-mortgage-calc"
+  },
+  {
+    "id": "pmi-calculator",
+    "name": "pmi-calculator"
+  },
+  {
+    "id": "closing-costs-calc",
+    "name": "closing-costs-calc"
+  },
+  {
+    "id": "fha-loan-calc",
+    "name": "fha-loan-calc"
+  },
+  {
+    "id": "va-loan-calc",
+    "name": "va-loan-calc"
+  },
+  {
+    "id": "rule-of-72",
+    "name": "rule-of-72"
+  },
+  {
+    "id": "bond-yield-to-maturity",
+    "name": "bond-yield-to-maturity"
+  },
+  {
+    "id": "cd-ladder-calculator",
+    "name": "cd-ladder-calculator"
+  },
+  {
+    "id": "treasury-bill-yield",
+    "name": "treasury-bill-yield"
+  },
+  {
+    "id": "crypto-staking-rewards",
+    "name": "crypto-staking-rewards"
+  },
+  {
+    "id": "stock-beta-volatility",
+    "name": "stock-beta-volatility"
+  },
+  {
+    "id": "sharpe-ratio-calc",
+    "name": "sharpe-ratio-calc"
+  },
+  {
+    "id": "options-black-scholes",
+    "name": "options-black-scholes"
+  },
+  {
+    "id": "saas-mrr-arr-calc",
+    "name": "saas-mrr-arr-calc"
+  },
+  {
+    "id": "cac-ltv-ratio",
+    "name": "cac-ltv-ratio"
+  },
+  {
+    "id": "burn-rate-runway",
+    "name": "burn-rate-runway"
+  },
+  {
+    "id": "inventory-turnover",
+    "name": "inventory-turnover"
+  },
+  {
+    "id": "working-capital-ratio",
+    "name": "working-capital-ratio"
+  },
+  {
+    "id": "quick-ratio-acid-test",
+    "name": "quick-ratio-acid-test"
+  },
+  {
+    "id": "roce-calculator",
+    "name": "roce-calculator"
+  },
+  {
+    "id": "roe-calculator",
+    "name": "roe-calculator"
+  },
+  {
+    "id": "roa-calculator",
+    "name": "roa-calculator"
+  },
+  {
+    "id": "per-share-earnings",
+    "name": "per-share-earnings"
+  },
+  {
+    "id": "pe-ratio-valuation",
+    "name": "pe-ratio-valuation"
+  },
+  {
+    "id": "pb-ratio-valuation",
+    "name": "pb-ratio-valuation"
+  },
+  {
+    "id": "ps-ratio-valuation",
+    "name": "ps-ratio-valuation"
+  },
+  {
+    "id": "ev-ebitda-multiple",
+    "name": "ev-ebitda-multiple"
+  },
+  {
+    "id": "wacc-calculator",
+    "name": "wacc-calculator"
+  },
+  {
+    "id": "free-cash-flow-fcf",
+    "name": "free-cash-flow-fcf"
+  },
+  {
+    "id": "stock-split-calculator",
+    "name": "stock-split-calculator"
+  },
+  {
+    "id": "vo2-max-calculator",
+    "name": "vo2-max-calculator"
+  },
+  {
+    "id": "heart-rate-reserve",
+    "name": "heart-rate-reserve"
+  },
+  {
+    "id": "maximum-heart-rate",
+    "name": "maximum-heart-rate"
+  },
+  {
+    "id": "blood-pressure-cat",
+    "name": "blood-pressure-cat"
+  },
+  {
+    "id": "blood-sugar-a1c",
+    "name": "blood-sugar-a1c"
+  },
+  {
+    "id": "cholesterol-ratio",
+    "name": "cholesterol-ratio"
+  },
+  {
+    "id": "kidney-gfr-calculator",
+    "name": "kidney-gfr-calculator"
+  },
+  {
+    "id": "creatinine-clearance",
+    "name": "creatinine-clearance"
+  },
+  {
+    "id": "mean-arterial-pressure",
+    "name": "mean-arterial-pressure"
+  },
+  {
+    "id": "body-surface-area",
+    "name": "body-surface-area"
+  },
+  {
+    "id": "dosage-by-weight",
+    "name": "dosage-by-weight"
+  },
+  {
+    "id": "iv-drip-rate",
+    "name": "iv-drip-rate"
+  },
+  {
+    "id": "fluid-maintenance",
+    "name": "fluid-maintenance"
+  },
+  {
+    "id": "insulin-carb-ratio",
+    "name": "insulin-carb-ratio"
+  },
+  {
+    "id": "calories-burned-swimming",
+    "name": "calories-burned-swimming"
+  },
+  {
+    "id": "calories-burned-cycling",
+    "name": "calories-burned-cycling"
+  },
+  {
+    "id": "calories-burned-jump-rope",
+    "name": "calories-burned-jump-rope"
+  },
+  {
+    "id": "calories-burned-walking",
+    "name": "calories-burned-walking"
+  },
+  {
+    "id": "calories-burned-weightlifting",
+    "name": "calories-burned-weightlifting"
+  },
+  {
+    "id": "fat-free-mass-index",
+    "name": "fat-free-mass-index"
+  },
+  {
+    "id": "wilks-score-powerlifting",
+    "name": "wilks-score-powerlifting"
+  },
+  {
+    "id": "ipf-points-calculator",
+    "name": "ipf-points-calculator"
+  },
+  {
+    "id": "run-race-time-predictor",
+    "name": "run-race-time-predictor"
+  },
+  {
+    "id": "swim-pace-swolf",
+    "name": "swim-pace-swolf"
+  },
+  {
+    "id": "sweat-rate-hydration",
+    "name": "sweat-rate-hydration"
+  },
+  {
+    "id": "macronutrient-keto-highcarb",
+    "name": "macronutrient-keto-highcarb"
+  },
+  {
+    "id": "glycemic-index-lookup",
+    "name": "glycemic-index-lookup"
+  },
+  {
+    "id": "water-intake-by-activity",
+    "name": "water-intake-by-activity"
+  },
+  {
+    "id": "alcohol-elimination-time",
+    "name": "alcohol-elimination-time"
+  },
+  {
+    "id": "smoking-pack-years",
+    "name": "smoking-pack-years"
+  },
+  {
+    "id": "pregnancy-weight-gain",
+    "name": "pregnancy-weight-gain"
+  },
+  {
+    "id": "fetal-weight-percentile",
+    "name": "fetal-weight-percentile"
+  },
+  {
+    "id": "ovulation-luteal-phase",
+    "name": "ovulation-luteal-phase"
+  },
+  {
+    "id": "breastfeeding-calorie-need",
+    "name": "breastfeeding-calorie-need"
+  },
+  {
+    "id": "baby-formula-feeding",
+    "name": "baby-formula-feeding"
+  },
+  {
+    "id": "pediatric-growth-percentile",
+    "name": "pediatric-growth-percentile"
+  },
+  {
+    "id": "target-height-midparental",
+    "name": "target-height-midparental"
+  },
+  {
+    "id": "ergometer-concept2-pace",
+    "name": "ergometer-concept2-pace"
+  },
+  {
+    "id": "treadmill-grade-equivalent",
+    "name": "treadmill-grade-equivalent"
+  },
+  {
+    "id": "vertical-jump-power",
+    "name": "vertical-jump-power"
+  },
+  {
+    "id": "grip-strength-norm",
+    "name": "grip-strength-norm"
+  },
+  {
+    "id": "flexibility-sit-reach",
+    "name": "flexibility-sit-reach"
+  },
+  {
+    "id": "resting-heart-rate-norm",
+    "name": "resting-heart-rate-norm"
+  },
+  {
+    "id": "metabolic-equivalent-met",
+    "name": "metabolic-equivalent-met"
+  },
+  {
+    "id": "chest-to-waist-ratio",
+    "name": "chest-to-waist-ratio"
+  },
+  {
+    "id": "cylinder-volume-surface",
+    "name": "cylinder-volume-surface"
+  },
+  {
+    "id": "sphere-volume-surface",
+    "name": "sphere-volume-surface"
+  },
+  {
+    "id": "cone-volume-slant",
+    "name": "cone-volume-slant"
+  },
+  {
+    "id": "pyramid-volume-area",
+    "name": "pyramid-volume-area"
+  },
+  {
+    "id": "ellipsoid-volume",
+    "name": "ellipsoid-volume"
+  },
+  {
+    "id": "trapezoid-area-perimeter",
+    "name": "trapezoid-area-perimeter"
+  },
+  {
+    "id": "rhombus-area-side",
+    "name": "rhombus-area-side"
+  },
+  {
+    "id": "parallelogram-calculator",
+    "name": "parallelogram-calculator"
+  },
+  {
+    "id": "polygon-interior-angles",
+    "name": "polygon-interior-angles"
+  },
+  {
+    "id": "arc-length-sector-area",
+    "name": "arc-length-sector-area"
+  },
+  {
+    "id": "distance-3d-points",
+    "name": "distance-3d-points"
+  },
+  {
+    "id": "midpoint-3d-calculator",
+    "name": "midpoint-3d-calculator"
+  },
+  {
+    "id": "slope-intercept-equation",
+    "name": "slope-intercept-equation"
+  },
+  {
+    "id": "line-perpendicular-parallel",
+    "name": "line-perpendicular-parallel"
+  },
+  {
+    "id": "cross-product-vectors",
+    "name": "cross-product-vectors"
+  },
+  {
+    "id": "dot-product-vectors",
+    "name": "dot-product-vectors"
+  },
+  {
+    "id": "unit-vector-calculator",
+    "name": "unit-vector-calculator"
+  },
+  {
+    "id": "matrix-inverse-calc",
+    "name": "matrix-inverse-calc"
+  },
+  {
+    "id": "matrix-transpose-calc",
+    "name": "matrix-transpose-calc"
+  },
+  {
+    "id": "eigenvalues-2x2",
+    "name": "eigenvalues-2x2"
+  },
+  {
+    "id": "system-linear-2vars",
+    "name": "system-linear-2vars"
+  },
+  {
+    "id": "system-linear-3vars",
+    "name": "system-linear-3vars"
+  },
+  {
+    "id": "cubic-equation-solver",
+    "name": "cubic-equation-solver"
+  },
+  {
+    "id": "quartic-equation-solver",
+    "name": "quartic-equation-solver"
+  },
+  {
+    "id": "binomial-distribution-calc",
+    "name": "binomial-distribution-calc"
+  },
+  {
+    "id": "normal-distribution-zscore",
+    "name": "normal-distribution-zscore"
+  },
+  {
+    "id": "poisson-distribution-calc",
+    "name": "poisson-distribution-calc"
+  },
+  {
+    "id": "confidence-interval-mean",
+    "name": "confidence-interval-mean"
+  },
+  {
+    "id": "t-test-one-sample",
+    "name": "t-test-one-sample"
+  },
+  {
+    "id": "chi-square-goodness",
+    "name": "chi-square-goodness"
+  },
+  {
+    "id": "covariance-sample-pop",
+    "name": "covariance-sample-pop"
+  },
+  {
+    "id": "pearson-correlation-r",
+    "name": "pearson-correlation-r"
+  },
+  {
+    "id": "linear-regression-line",
+    "name": "linear-regression-line"
+  },
+  {
+    "id": "bayes-theorem-calc",
+    "name": "bayes-theorem-calc"
+  },
+  {
+    "id": "hypergeometric-dist",
+    "name": "hypergeometric-dist"
+  },
+  {
+    "id": "geometric-distribution",
+    "name": "geometric-distribution"
+  },
+  {
+    "id": "exponential-decay-growth",
+    "name": "exponential-decay-growth"
+  },
+  {
+    "id": "half-life-radioactive",
+    "name": "half-life-radioactive"
+  },
+  {
+    "id": "prime-factorization-tree",
+    "name": "prime-factorization-tree"
+  },
+  {
+    "id": "gcd-lcm-multiple-numbers",
+    "name": "gcd-lcm-multiple-numbers"
+  },
+  {
+    "id": "golden-ratio-calculator",
+    "name": "golden-ratio-calculator"
+  },
+  {
+    "id": "fibonacci-sequence-generator",
+    "name": "fibonacci-sequence-generator"
+  },
+  {
+    "id": "bernoulli-trials-calc",
+    "name": "bernoulli-trials-calc"
+  },
+  {
+    "id": "p-value-from-zscore",
+    "name": "p-value-from-zscore"
+  },
+  {
+    "id": "skewness-kurtosis-calc",
+    "name": "skewness-kurtosis-calc"
+  },
+  {
+    "id": "centripetal-force-calc",
+    "name": "centripetal-force-calc"
+  },
+  {
+    "id": "projectile-motion-calc",
+    "name": "projectile-motion-calc"
+  },
+  {
+    "id": "work-energy-theorem",
+    "name": "work-energy-theorem"
+  },
+  {
+    "id": "potential-energy-grav",
+    "name": "potential-energy-grav"
+  },
+  {
+    "id": "momentum-impulse-calc",
+    "name": "momentum-impulse-calc"
+  },
+  {
+    "id": "elastic-collision-1d",
+    "name": "elastic-collision-1d"
+  },
+  {
+    "id": "friction-force-coefficient",
+    "name": "friction-force-coefficient"
+  },
+  {
+    "id": "hookes-law-spring",
+    "name": "hookes-law-spring"
+  },
+  {
+    "id": "simple-pendulum-period",
+    "name": "simple-pendulum-period"
+  },
+  {
+    "id": "sound-speed-temperature",
+    "name": "sound-speed-temperature"
+  },
+  {
+    "id": "doppler-effect-frequency",
+    "name": "doppler-effect-frequency"
+  },
+  {
+    "id": "snells-law-refraction",
+    "name": "snells-law-refraction"
+  },
+  {
+    "id": "lens-maker-equation",
+    "name": "lens-maker-equation"
+  },
+  {
+    "id": "photon-energy-wavelength",
+    "name": "photon-energy-wavelength"
+  },
+  {
+    "id": "de-broglie-wavelength",
+    "name": "de-broglie-wavelength"
+  },
+  {
+    "id": "stefan-boltzmann-radiation",
+    "name": "stefan-boltzmann-radiation"
+  },
+  {
+    "id": "coulombs-law-electrostatics",
+    "name": "coulombs-law-electrostatics"
+  },
+  {
+    "id": "electric-field-intensity",
+    "name": "electric-field-intensity"
+  },
+  {
+    "id": "rc-circuit-time-constant",
+    "name": "rc-circuit-time-constant"
+  },
+  {
+    "id": "rlc-resonant-frequency",
+    "name": "rlc-resonant-frequency"
+  },
+  {
+    "id": "voltage-divider-circuit",
+    "name": "voltage-divider-circuit"
+  },
+  {
+    "id": "current-divider-circuit",
+    "name": "current-divider-circuit"
+  },
+  {
+    "id": "led-resistor-calculator",
+    "name": "led-resistor-calculator"
+  },
+  {
+    "id": "wheatstone-bridge-balance",
+    "name": "wheatstone-bridge-balance"
+  },
+  {
+    "id": "inductance-solenoid",
+    "name": "inductance-solenoid"
+  },
+  {
+    "id": "transformer-turns-ratio",
+    "name": "transformer-turns-ratio"
+  },
+  {
+    "id": "dbm-to-watts-converter",
+    "name": "dbm-to-watts-converter"
+  },
+  {
+    "id": "wire-gauge-ampacity-awg",
+    "name": "wire-gauge-ampacity-awg"
+  },
+  {
+    "id": "voltage-drop-cable-length",
+    "name": "voltage-drop-cable-length"
+  },
+  {
+    "id": "bode-plot-cutoff-freq",
+    "name": "bode-plot-cutoff-freq"
+  },
+  {
+    "id": "gas-density-molar-mass",
+    "name": "gas-density-molar-mass"
+  },
+  {
+    "id": "boyles-law-pressure-vol",
+    "name": "boyles-law-pressure-vol"
+  },
+  {
+    "id": "charles-law-temp-vol",
+    "name": "charles-law-temp-vol"
+  },
+  {
+    "id": "gay-lussac-law-pressure",
+    "name": "gay-lussac-law-pressure"
+  },
+  {
+    "id": "combined-gas-law",
+    "name": "combined-gas-law"
+  },
+  {
+    "id": "stoichiometry-mole-calc",
+    "name": "stoichiometry-mole-calc"
+  },
+  {
+    "id": "empirical-formula-calc",
+    "name": "empirical-formula-calc"
+  },
+  {
+    "id": "solution-dilution-c1v1",
+    "name": "solution-dilution-c1v1"
+  },
+  {
+    "id": "beer-lambert-absorbance",
+    "name": "beer-lambert-absorbance"
+  },
+  {
+    "id": "nernst-equation-cell-pot",
+    "name": "nernst-equation-cell-pot"
+  },
+  {
+    "id": "arrhenius-equation-rate",
+    "name": "arrhenius-equation-rate"
+  },
+  {
+    "id": "boiling-point-elevation",
+    "name": "boiling-point-elevation"
+  },
+  {
+    "id": "freezing-point-depression",
+    "name": "freezing-point-depression"
+  },
+  {
+    "id": "osmotic-pressure-calc",
+    "name": "osmotic-pressure-calc"
+  },
+  {
+    "id": "heat-capacity-specific",
+    "name": "heat-capacity-specific"
+  },
+  {
+    "id": "gravel-aggregate-tons",
+    "name": "gravel-aggregate-tons"
+  },
+  {
+    "id": "asphalt-tonnage-paving",
+    "name": "asphalt-tonnage-paving"
+  },
+  {
+    "id": "brick-calculator-wall",
+    "name": "brick-calculator-wall"
+  },
+  {
+    "id": "cinder-block-wall-count",
+    "name": "cinder-block-wall-count"
+  },
+  {
+    "id": "drywall-sheets-calculator",
+    "name": "drywall-sheets-calculator"
+  },
+  {
+    "id": "framing-studs-calculator",
+    "name": "framing-studs-calculator"
+  },
+  {
+    "id": "decking-boards-calculator",
+    "name": "decking-boards-calculator"
+  },
+  {
+    "id": "joist-span-calculator",
+    "name": "joist-span-calculator"
+  },
+  {
+    "id": "rafter-length-calculator",
+    "name": "rafter-length-calculator"
+  },
+  {
+    "id": "rebar-calculator-concrete",
+    "name": "rebar-calculator-concrete"
+  },
+  {
+    "id": "dirt-excavation-cubic-yards",
+    "name": "dirt-excavation-cubic-yards"
+  },
+  {
+    "id": "sand-base-calculator",
+    "name": "sand-base-calculator"
+  },
+  {
+    "id": "insulation-r-value-calc",
+    "name": "insulation-r-value-calc"
+  },
+  {
+    "id": "attic-ventilation-sqft",
+    "name": "attic-ventilation-sqft"
+  },
+  {
+    "id": "grass-seed-lawn-coverage",
+    "name": "grass-seed-lawn-coverage"
+  },
+  {
+    "id": "fertilizer-application-lbs",
+    "name": "fertilizer-application-lbs"
+  },
+  {
+    "id": "water-tank-capacity-gal",
+    "name": "water-tank-capacity-gal"
+  },
+  {
+    "id": "pipe-flow-rate-gpm",
+    "name": "pipe-flow-rate-gpm"
+  },
+  {
+    "id": "pump-head-pressure-feet",
+    "name": "pump-head-pressure-feet"
+  },
+  {
+    "id": "gutter-downspout-size",
+    "name": "gutter-downspout-size"
+  },
+  {
+    "id": "tile-grout-calculator",
+    "name": "tile-grout-calculator"
+  },
+  {
+    "id": "carpet-square-yards",
+    "name": "carpet-square-yards"
+  },
+  {
+    "id": "hardwood-flooring-boxes",
+    "name": "hardwood-flooring-boxes"
+  },
+  {
+    "id": "baseboard-trim-linear-feet",
+    "name": "baseboard-trim-linear-feet"
+  },
+  {
+    "id": "picket-fence-calculator",
+    "name": "picket-fence-calculator"
+  },
+  {
+    "id": "retaining-wall-blocks",
+    "name": "retaining-wall-blocks"
+  },
+  {
+    "id": "pool-volume-gallons",
+    "name": "pool-volume-gallons"
+  },
+  {
+    "id": "pool-chemical-dosing",
+    "name": "pool-chemical-dosing"
+  },
+  {
+    "id": "generator-wattage-calculator",
+    "name": "generator-wattage-calculator"
+  },
+  {
+    "id": "appliance-energy-kWh",
+    "name": "appliance-energy-kWh"
+  },
+  {
+    "id": "solar-inverter-sizing",
+    "name": "solar-inverter-sizing"
+  },
+  {
+    "id": "battery-bank-ah-capacity",
+    "name": "battery-bank-ah-capacity"
+  },
+  {
+    "id": "tree-height-clinometer",
+    "name": "tree-height-clinometer"
+  },
+  {
+    "id": "stair-baluster-spacing",
+    "name": "stair-baluster-spacing"
+  },
+  {
+    "id": "countertop-square-feet",
+    "name": "countertop-square-feet"
+  },
+  {
+    "id": "unix-timestamp-converter",
+    "name": "unix-timestamp-converter"
+  },
+  {
+    "id": "iso8601-date-formatter",
+    "name": "iso8601-date-formatter"
+  },
+  {
+    "id": "week-number-of-year",
+    "name": "week-number-of-year"
+  },
+  {
+    "id": "day-number-of-year",
+    "name": "day-number-of-year"
+  },
+  {
+    "id": "age-in-days-hours-seconds",
+    "name": "age-in-days-hours-seconds"
+  },
+  {
+    "id": "birthday-day-of-week",
+    "name": "birthday-day-of-week"
+  },
+  {
+    "id": "time-card-calculator",
+    "name": "time-card-calculator"
+  },
+  {
+    "id": "meeting-planner-timezones",
+    "name": "meeting-planner-timezones"
+  },
+  {
+    "id": "flight-duration-timezone",
+    "name": "flight-duration-timezone"
+  },
+  {
+    "id": "sunrise-sunset-times",
+    "name": "sunrise-sunset-times"
+  },
+  {
+    "id": "moon-phase-calendar",
+    "name": "moon-phase-calendar"
+  },
+  {
+    "id": "equinox-solstice-dates",
+    "name": "equinox-solstice-dates"
+  },
+  {
+    "id": "chronological-age-test",
+    "name": "chronological-age-test"
+  },
+  {
+    "id": "future-date-calculator",
+    "name": "future-date-calculator"
+  },
+  {
+    "id": "past-date-calculator",
+    "name": "past-date-calculator"
+  },
+  {
+    "id": "business-days-add-days",
+    "name": "business-days-add-days"
+  },
+  {
+    "id": "time-addition-subtraction",
+    "name": "time-addition-subtraction"
+  },
+  {
+    "id": "pace-per-kilometer-mile",
+    "name": "pace-per-kilometer-mile"
+  },
+  {
+    "id": "chronometer-lap-split",
+    "name": "chronometer-lap-split"
+  },
+  {
+    "id": "count-down-timer-days",
+    "name": "count-down-timer-days"
+  },
+  {
+    "id": "time-unit-converter",
+    "name": "time-unit-converter"
+  },
+  {
+    "id": "utc-offset-calculator",
+    "name": "utc-offset-calculator"
+  },
+  {
+    "id": "daylight-saving-changes",
+    "name": "daylight-saving-changes"
+  },
+  {
+    "id": "biorhythm-cycle-calc",
+    "name": "biorhythm-cycle-calc"
+  },
+  {
+    "id": "dog-years-real-calculator",
+    "name": "dog-years-real-calculator"
+  },
+  {
+    "id": "currency-converter-live",
+    "name": "currency-converter-live"
+  },
+  {
+    "id": "crypto-profit-loss-calc",
+    "name": "crypto-profit-loss-calc"
+  },
+  {
+    "id": "crypto-dca-calculator",
+    "name": "crypto-dca-calculator"
+  },
+  {
+    "id": "crypto-impermanent-loss",
+    "name": "crypto-impermanent-loss"
+  },
+  {
+    "id": "bitcoin-mining-profit",
+    "name": "bitcoin-mining-profit"
+  },
+  {
+    "id": "ethereum-gas-fee-converter",
+    "name": "ethereum-gas-fee-converter"
+  },
+  {
+    "id": "sats-to-bitcoin-usd",
+    "name": "sats-to-bitcoin-usd"
+  },
+  {
+    "id": "crypto-market-cap-rank",
+    "name": "crypto-market-cap-rank"
+  },
+  {
+    "id": "gold-price-per-gram-ounce",
+    "name": "gold-price-per-gram-ounce"
+  },
+  {
+    "id": "silver-price-per-ounce",
+    "name": "silver-price-per-ounce"
+  },
+  {
+    "id": "platinum-metal-price",
+    "name": "platinum-metal-price"
+  },
+  {
+    "id": "forex-pip-value-calculator",
+    "name": "forex-pip-value-calculator"
+  },
+  {
+    "id": "forex-position-size-risk",
+    "name": "forex-position-size-risk"
+  },
+  {
+    "id": "forex-margin-calculator",
+    "name": "forex-margin-calculator"
+  },
+  {
+    "id": "forex-pivot-points-calc",
+    "name": "forex-pivot-points-calc"
+  },
+  {
+    "id": "zakat-calculator-islamic",
+    "name": "zakat-calculator-islamic"
+  },
+  {
+    "id": "currency-inflation-purchasing",
+    "name": "currency-inflation-purchasing"
+  },
+  {
+    "id": "salary-tax-take-home",
+    "name": "salary-tax-take-home"
+  },
+  {
+    "id": "sales-tax-by-state-country",
+    "name": "sales-tax-by-state-country"
+  },
+  {
+    "id": "travel-budget-daily-expense",
+    "name": "travel-budget-daily-expense"
+  },
+  {
+    "id": "ipv6-subnet-calculator",
+    "name": "ipv6-subnet-calculator"
+  },
+  {
+    "id": "mac-address-formatter",
+    "name": "mac-address-formatter"
+  },
+  {
+    "id": "dns-record-explainer",
+    "name": "dns-record-explainer"
+  },
+  {
+    "id": "ping-latency-jitter-calc",
+    "name": "ping-latency-jitter-calc"
+  },
+  {
+    "id": "raid-calculator-storage",
+    "name": "raid-calculator-storage"
+  },
+  {
+    "id": "ip-range-to-cidr",
+    "name": "ip-range-to-cidr"
+  },
+  {
+    "id": "base32-encoder-decoder",
+    "name": "base32-encoder-decoder"
+  },
+  {
+    "id": "binary-to-text-ascii",
+    "name": "binary-to-text-ascii"
+  },
+  {
+    "id": "hex-to-ascii-string",
+    "name": "hex-to-ascii-string"
+  },
+  {
+    "id": "html-color-code-picker",
+    "name": "html-color-code-picker"
+  },
+  {
+    "id": "css-gradient-generator",
+    "name": "css-gradient-generator"
+  },
+  {
+    "id": "css-border-radius-preview",
+    "name": "css-border-radius-preview"
+  },
+  {
+    "id": "css-grid-template-calc",
+    "name": "css-grid-template-calc"
+  },
+  {
+    "id": "css-clamp-font-size",
+    "name": "css-clamp-font-size"
+  },
+  {
+    "id": "js-object-to-json",
+    "name": "js-object-to-json"
+  },
+  {
+    "id": "xml-to-json-converter",
+    "name": "xml-to-json-converter"
+  },
+  {
+    "id": "yaml-to-json-converter",
+    "name": "yaml-to-json-converter"
+  },
+  {
+    "id": "url-slug-cleaner",
+    "name": "url-slug-cleaner"
+  },
+  {
+    "id": "htpasswd-generator",
+    "name": "htpasswd-generator"
+  },
+  {
+    "id": "sha1-hash-generator",
+    "name": "sha1-hash-generator"
+  },
+  {
+    "id": "sha512-hash-generator",
+    "name": "sha512-hash-generator"
+  },
+  {
+    "id": "crc32-checksum-calculator",
+    "name": "crc32-checksum-calculator"
+  },
+  {
+    "id": "hmac-generator-sha256",
+    "name": "hmac-generator-sha256"
+  },
+  {
+    "id": "user-agent-string-parser",
+    "name": "user-agent-string-parser"
+  },
+  {
+    "id": "http-status-code-lookup",
+    "name": "http-status-code-lookup"
+  },
+  {
+    "id": "port-number-lookup",
+    "name": "port-number-lookup"
+  },
+  {
+    "id": "cron-generator-builder",
+    "name": "cron-generator-builder"
+  },
+  {
+    "id": "regex-cheatsheet-tester",
+    "name": "regex-cheatsheet-tester"
+  },
+  {
+    "id": "meta-tag-generator-seo",
+    "name": "meta-tag-generator-seo"
+  },
+  {
+    "id": "robots-txt-generator",
+    "name": "robots-txt-generator"
+  },
+  {
+    "id": "character-count-no-spaces",
+    "name": "character-count-no-spaces"
+  },
+  {
+    "id": "sentence-count-reading",
+    "name": "sentence-count-reading"
+  },
+  {
+    "id": "flesch-kincaid-readability",
+    "name": "flesch-kincaid-readability"
+  },
+  {
+    "id": "keyword-density-checker",
+    "name": "keyword-density-checker"
+  },
+  {
+    "id": "title-tag-length-checker",
+    "name": "title-tag-length-checker"
+  },
+  {
+    "id": "meta-description-length",
+    "name": "meta-description-length"
+  },
+  {
+    "id": "case-converter-camel-snake",
+    "name": "case-converter-camel-snake"
+  },
+  {
+    "id": "text-reverser-string",
+    "name": "text-reverser-string"
+  },
+  {
+    "id": "remove-duplicate-lines",
+    "name": "remove-duplicate-lines"
+  },
+  {
+    "id": "remove-extra-spaces",
+    "name": "remove-extra-spaces"
+  },
+  {
+    "id": "add-prefix-suffix-lines",
+    "name": "add-prefix-suffix-lines"
+  },
+  {
+    "id": "text-alphabetizer-sort",
+    "name": "text-alphabetizer-sort"
+  },
+  {
+    "id": "word-scramble-unscramble",
+    "name": "word-scramble-unscramble"
+  },
+  {
+    "id": "morse-code-translator",
+    "name": "morse-code-translator"
+  },
+  {
+    "id": "binary-translator-text",
+    "name": "binary-translator-text"
+  },
+  {
+    "id": "rot13-cipher-encoder",
+    "name": "rot13-cipher-encoder"
+  },
+  {
+    "id": "upside-down-text-flip",
+    "name": "upside-down-text-flip"
+  },
+  {
+    "id": "strike-through-text",
+    "name": "strike-through-text"
+  },
+  {
+    "id": "zalgo-glitch-text",
+    "name": "zalgo-glitch-text"
+  },
+  {
+    "id": "font-case-stylizer",
+    "name": "font-case-stylizer"
+  },
+  {
+    "id": "cooking-measurement-unit",
+    "name": "cooking-measurement-unit"
+  },
+  {
+    "id": "baking-pan-size-converter",
+    "name": "baking-pan-size-converter"
+  },
+  {
+    "id": "oven-temperature-gas-mark",
+    "name": "oven-temperature-gas-mark"
+  },
+  {
+    "id": "shoe-size-international",
+    "name": "shoe-size-international"
+  },
+  {
+    "id": "clothing-size-converter",
+    "name": "clothing-size-converter"
+  },
+  {
+    "id": "ring-size-diameter-mm",
+    "name": "ring-size-diameter-mm"
+  },
+  {
+    "id": "hat-size-head-circumference",
+    "name": "hat-size-head-circumference"
+  },
+  {
+    "id": "bra-size-calculator",
+    "name": "bra-size-calculator"
+  },
+  {
+    "id": "belt-size-waist-measurement",
+    "name": "belt-size-waist-measurement"
+  },
+  {
+    "id": "gpa-cumulative-college",
+    "name": "gpa-cumulative-college"
+  },
+  {
+    "id": "final-grade-calculator",
+    "name": "final-grade-calculator"
+  },
+  {
+    "id": "grade-percentage-letter",
+    "name": "grade-percentage-letter"
+  },
+  {
+    "id": "test-score-percentage",
+    "name": "test-score-percentage"
+  },
+  {
+    "id": "weighted-grade-calculator",
+    "name": "weighted-grade-calculator"
+  },
+  {
+    "id": "random-decision-wheel",
+    "name": "random-decision-wheel"
+  },
+  {
+    "id": "coin-flipper-simulator",
+    "name": "coin-flipper-simulator"
+  },
+  {
+    "id": "dice-roller-simulator",
+    "name": "dice-roller-simulator"
+  },
+  {
+    "id": "random-letter-generator",
+    "name": "random-letter-generator"
+  },
+  {
+    "id": "aspect-ratio-photo-print",
+    "name": "aspect-ratio-photo-print"
+  },
+  {
+    "id": "candle-power-lumens-lux",
+    "name": "candle-power-lumens-lux"
+  }
+]

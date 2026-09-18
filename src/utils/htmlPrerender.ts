@@ -96,6 +96,20 @@ export function renderSemanticBodyHtml(route: RouteInfo, lang: Language): string
               ${escapeHtml(details.intro)}
             </p>
 
+            ${
+              details.whoUsesIt
+                ? `
+            <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
+              <h3 class="text-xs font-bold uppercase tracking-wider text-slate-900">
+                Who Uses This Calculator
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-600">
+                ${escapeHtml(details.whoUsesIt)}
+              </p>
+            </div>`
+                : ''
+            }
+
             <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
               <h3 class="text-xs font-bold uppercase tracking-wider text-slate-900">
                 What This Calculator Calculates
@@ -106,11 +120,38 @@ export function renderSemanticBodyHtml(route: RouteInfo, lang: Language): string
             </div>
 
             ${
+              details.howToUse && details.howToUse.length > 0
+                ? `
+            <div class="space-y-2">
+              <h3 class="text-base font-bold text-slate-900">How to Use This Calculator</h3>
+              <ol class="list-decimal ps-5 space-y-1 text-xs sm:text-sm text-slate-600">
+                ${details.howToUse.map((step) => `<li>${escapeHtml(step)}</li>`).join('')}
+              </ol>
+            </div>`
+                : ''
+            }
+
+            ${
               details.formula
                 ? `
             <div class="space-y-2">
               <h3 class="text-base font-bold text-slate-900">Formula & Methodology</h3>
               <pre class="p-3 bg-slate-50 rounded-lg text-xs font-mono text-emerald-800 overflow-x-auto"><code>${escapeHtml(details.formula)}</code></pre>
+              ${
+                details.formulaVariables && details.formulaVariables.length > 0
+                  ? `
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1 text-xs">
+                ${details.formulaVariables
+                  .map(
+                    (v) => `
+                <div class="p-2 bg-slate-50 rounded border border-slate-200">
+                  <span class="font-mono font-bold text-emerald-800">${escapeHtml(v.symbol)}:</span> <span class="text-slate-600">${escapeHtml(v.explanation)}</span>
+                </div>`
+                  )
+                  .join('')}
+              </div>`
+                  : ''
+              }
               ${
                 details.unitsAndConversions
                   ? `<p class="text-xs text-slate-500"><strong>Units & Standards:</strong> ${escapeHtml(details.unitsAndConversions)}</p>`
@@ -157,10 +198,23 @@ export function renderSemanticBodyHtml(route: RouteInfo, lang: Language): string
             }
 
             ${
-              details.limitations
+              details.understandingResults
                 ? `
-            <div class="p-3 bg-amber-50 border border-amber-200 rounded-lg text-xs text-amber-900">
-              <strong>Assumptions & Limitations:</strong> ${escapeHtml(details.limitations)}
+            <div class="space-y-2">
+              <h3 class="text-base font-bold text-slate-900">Understanding Your Results</h3>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                ${escapeHtml(details.understandingResults)}
+              </p>
+            </div>`
+                : ''
+            }
+
+            ${
+              details.assumptions || details.limitations
+                ? `
+            <div class="p-3.5 bg-amber-50 border border-amber-200 rounded-xl text-xs text-amber-900 space-y-1">
+              ${details.assumptions ? `<div><strong>Assumptions:</strong> ${escapeHtml(details.assumptions)}</div>` : ''}
+              ${details.limitations ? `<div><strong>Limitations:</strong> ${escapeHtml(details.limitations)}</div>` : ''}
             </div>`
                 : ''
             }

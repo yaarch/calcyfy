@@ -103,6 +103,80 @@ const SuiteCalculators = React.lazy(() =>
   import('./calculators/SuiteCalculators').then((m) => ({ default: m.SuiteCalculators }))
 );
 
+// P0 Domain Engines
+const LoanAmortizationEngine = React.lazy(() =>
+  import('./calculators/domainEngines/finance/LoanAmortizationEngine').then((m) => ({ default: m.LoanAmortizationEngine }))
+);
+const ValuationMetricsEngine = React.lazy(() =>
+  import('./calculators/domainEngines/finance/ValuationMetricsEngine').then((m) => ({ default: m.ValuationMetricsEngine }))
+);
+const InvestmentTaxEngine = React.lazy(() =>
+  import('./calculators/domainEngines/finance/InvestmentTaxEngine').then((m) => ({ default: m.InvestmentTaxEngine }))
+);
+const CardiovascularEngine = React.lazy(() =>
+  import('./calculators/domainEngines/health/CardiovascularEngine').then((m) => ({ default: m.CardiovascularEngine }))
+);
+const ClinicalMetabolicEngine = React.lazy(() =>
+  import('./calculators/domainEngines/health/ClinicalMetabolicEngine').then((m) => ({ default: m.ClinicalMetabolicEngine }))
+);
+const FitnessCalorieEngine = React.lazy(() =>
+  import('./calculators/domainEngines/health/FitnessCalorieEngine').then((m) => ({ default: m.FitnessCalorieEngine }))
+);
+const NutritionBiometricsEngine = React.lazy(() =>
+  import('./calculators/domainEngines/health/NutritionBiometricsEngine').then((m) => ({ default: m.NutritionBiometricsEngine }))
+);
+const PregnancySleepEngine = React.lazy(() =>
+  import('./calculators/domainEngines/health/PregnancySleepEngine').then((m) => ({ default: m.PregnancySleepEngine }))
+);
+const ElectricalPhysicsEngine = React.lazy(() =>
+  import('./calculators/domainEngines/engineering/ElectricalPhysicsEngine').then((m) => ({ default: m.ElectricalPhysicsEngine }))
+);
+const StructuralTradeEngine = React.lazy(() =>
+  import('./calculators/domainEngines/engineering/StructuralTradeEngine').then((m) => ({ default: m.StructuralTradeEngine }))
+);
+
+// P1 Wave 1 Domain Engines
+const UnitConverterDomainEngine = React.lazy(() =>
+  import('./calculators/domainEngines/converters/UnitConverterDomainEngine').then((m) => ({ default: m.UnitConverterDomainEngine }))
+);
+const MathDomainEngine = React.lazy(() =>
+  import('./calculators/domainEngines/math/MathDomainEngine').then((m) => ({ default: m.MathDomainEngine }))
+);
+const FinanceDomainEngine = React.lazy(() =>
+  import('./calculators/domainEngines/finance/FinanceDomainEngine').then((m) => ({ default: m.FinanceDomainEngine }))
+);
+const DeveloperDomainEngine = React.lazy(() =>
+  import('./calculators/domainEngines/developer/DeveloperDomainEngine').then((m) => ({ default: m.DeveloperDomainEngine }))
+);
+
+// P1 Wave 2 Domain Engines
+const DeveloperToolsEngine = React.lazy(() =>
+  import('./calculators/domainEngines/developer/DeveloperToolsEngine').then((m) => ({ default: m.DeveloperToolsEngine }))
+);
+const TextAnalyticsEngine = React.lazy(() =>
+  import('./calculators/domainEngines/text/TextAnalyticsEngine').then((m) => ({ default: m.TextAnalyticsEngine }))
+);
+const HealthFitnessEngine = React.lazy(() =>
+  import('./calculators/domainEngines/health/HealthFitnessEngine').then((m) => ({ default: m.HealthFitnessEngine }))
+);
+const DateTimeEngine = React.lazy(() =>
+  import('./calculators/domainEngines/date/DateTimeEngine').then((m) => ({ default: m.DateTimeEngine }))
+);
+
+// Finance & Investment Domain Engines
+const CorporateValuationEngine = React.lazy(() =>
+  import('./calculators/domainEngines/finance/CorporateValuationEngine').then((m) => ({ default: m.CorporateValuationEngine }))
+);
+const InvestmentMarketEngine = React.lazy(() =>
+  import('./calculators/domainEngines/finance/InvestmentMarketEngine').then((m) => ({ default: m.InvestmentMarketEngine }))
+);
+const RealEstatePersonalFinanceEngine = React.lazy(() =>
+  import('./calculators/domainEngines/finance/RealEstatePersonalFinanceEngine').then((m) => ({ default: m.RealEstatePersonalFinanceEngine }))
+);
+const CryptoForexCurrencyEngine = React.lazy(() =>
+  import('./calculators/domainEngines/finance/CryptoForexCurrencyEngine').then((m) => ({ default: m.CryptoForexCurrencyEngine }))
+);
+
 const CalculatorSkeleton: React.FC = () => (
   <div className="bg-white dark:bg-slate-900 p-6 md:p-8 rounded-2xl border border-slate-200 dark:border-slate-800 animate-pulse space-y-6">
     <div className="h-6 bg-slate-200 dark:bg-slate-800 rounded-lg w-1/3"></div>
@@ -233,6 +307,7 @@ export const ToolPage: React.FC<ToolPageProps> = ({ tool: toolProp, toolId }) =>
       case 'password':
         return <PasswordGenerator tool={tool} />;
       case 'roi-cagr':
+      case 'cagr-calculator':
         return <RoiCagrCalculator tool={tool} />;
       case 'crypto-profit':
         return <CryptoProfitCalculator tool={tool} />;
@@ -246,6 +321,290 @@ export const ToolPage: React.FC<ToolPageProps> = ({ tool: toolProp, toolId }) =>
         return <AspectRatioCalculator tool={tool} />;
       case 'carbon-footprint':
         return <CarbonFootprintCalculator tool={tool} />;
+      
+      // P0 Finance: Loan Amortization Sub-Engine
+      case 'loan-refinance':
+      case 'mortgage-payoff':
+      case 'loan-amortization-schedule':
+      case 'balloon-payment-loan':
+      case 'arm-mortgage-calc':
+      case 'jumbo-mortgage-calc':
+      case 'fha-loan-calc':
+      case 'va-loan-calc':
+      case 'auto-loan-early-payoff':
+      case 'extra-payment-mortgage':
+      case 'arm-vs-fixed-rate':
+      case 'biweekly-mortgage-savings':
+      case 'fha-vs-conventional':
+      case 'boat-rv-loan':
+      case 'business-loan-dscr':
+      case 'bridge-loan-interest':
+      case 'commercial-mortgage-balloon':
+      case 'heloc-interest-only':
+      case 'interest-only-mortgage':
+      case 'land-lot-loan':
+      case 'manufactured-home-loan':
+        return <LoanAmortizationEngine tool={tool} />;
+
+      // P0 Finance: Valuation & Stock Metrics Sub-Engine
+      case 'dscr-calculator':
+      case 'working-capital-ratio':
+      case 'pe-ratio-valuation':
+      case 'pb-ratio-valuation':
+      case 'ps-ratio-valuation':
+      case 'free-cash-flow-fcf':
+      case 'stock-split-calculator':
+      case 'stock-split-ratio':
+      case 'reverse-stock-split':
+      case 'forward-stock-split':
+      case 'ebitda-multiple-valuation':
+      case 'dcf-terminal-value':
+        return <ValuationMetricsEngine tool={tool} />;
+
+      // P0 Finance: Investment & Tax Sub-Engine
+      case 'cagr-calculator':
+      case 'dividend-reinvestment-drip':
+      case 'capital-gains-tax':
+      case 'safe-withdrawal-rate':
+      case 'social-security-break-even':
+      case 'rsu-stock-option-tax':
+      case 'fire-financial-independence':
+      case 'hsa-triple-tax-advantage':
+      case 'crypto-tax-fifo-hifo':
+      case 'options-black-scholes':
+      case 'treasury-yield-curve':
+        return <InvestmentTaxEngine tool={tool} />;
+
+      // P0 Health: Cardiovascular Sub-Engine
+      case 'vo2-max-calculator':
+      case 'heart-rate-reserve':
+      case 'maximum-heart-rate':
+      case 'blood-pressure-cat':
+      case 'mean-arterial-pressure':
+      case 'resting-heart-rate-norm':
+        return <CardiovascularEngine tool={tool} />;
+
+      // P0 Health: Clinical & Metabolic Sub-Engine
+      case 'blood-sugar-a1c':
+      case 'cholesterol-ratio':
+      case 'kidney-gfr-calculator':
+      case 'creatinine-clearance':
+      case 'body-surface-area':
+      case 'dosage-by-weight':
+      case 'iv-drip-rate':
+      case 'fluid-maintenance':
+      case 'insulin-carb-ratio':
+      case 'alcohol-elimination-time':
+      case 'smoking-pack-years':
+      case 'glycemic-index-lookup':
+        return <ClinicalMetabolicEngine tool={tool} />;
+
+      // P0 Health: Fitness & Calorie Sub-Engine
+      case 'calories-burned-swimming':
+      case 'calories-burned-cycling':
+      case 'calories-burned-jump-rope':
+      case 'calories-burned-walking':
+      case 'calories-burned-weightlifting':
+      case 'wilks-score-powerlifting':
+      case 'ipf-points-calculator':
+      case 'run-race-time-predictor':
+      case 'swim-pace-swolf':
+      case 'ergometer-concept2-pace':
+      case 'treadmill-grade-equivalent':
+      case 'vertical-jump-power':
+      case 'grip-strength-norm':
+      case 'flexibility-sit-reach':
+      case 'metabolic-equivalent-met':
+        return <FitnessCalorieEngine tool={tool} />;
+
+      // P0 Health: Nutrition & Biometrics Sub-Engine
+      case 'fat-free-mass-index':
+      case 'macronutrient-keto-highcarb':
+      case 'water-intake-by-activity':
+      case 'sweat-rate-hydration':
+      case 'chest-to-waist-ratio':
+        return <NutritionBiometricsEngine tool={tool} />;
+
+      // P0 Health: Pregnancy & Sleep Sub-Engine
+      case 'pregnancy-due-date':
+      case 'ovulation-fertility-window':
+      case 'sleep-cycle-optimal':
+      case 'pregnancy-weight-gain':
+      case 'fetal-weight-percentile':
+      case 'ovulation-luteal-phase':
+      case 'breastfeeding-calorie-need':
+      case 'baby-formula-feeding':
+      case 'pediatric-growth-percentile':
+      case 'target-height-midparental':
+        return <PregnancySleepEngine tool={tool} />;
+
+      // P0 Engineering: Electrical & Automotive Physics Sub-Engine
+      case 'voltage-drop-wire-size':
+      case 'resistor-color-code-4-5-band':
+      case 'transformer-winding-ratio':
+      case 'solar-pv-array-sizing':
+      case 'led-series-resistor':
+      case 'air-fuel-ratio-engine':
+      case 'brake-stopping-distance':
+      case 'gear-ratio-top-speed':
+      case 'tire-speedo-calibration':
+      case 'solar-inverter-sizing':
+        return <ElectricalPhysicsEngine tool={tool} />;
+
+      // P0 Engineering: Structural & Trade Sub-Engine
+      case 'concrete-slab-volume-bags':
+      case 'concrete-volume':
+      case 'beam-deflection-load':
+      case 'roof-pitch-slope-rafter':
+      case 'hvac-btu-room-cooling':
+      case 'retaining-wall-block-estimator':
+      case 'stair-stringer-riser-tread':
+      case 'rebar-calculator-concrete':
+      case 'stair-baluster-spacing':
+        return <StructuralTradeEngine tool={tool} />;
+
+      // P1 Wave 1: Unit Converter Domain Engine
+      case 'pressure-unit':
+      case 'energy-power':
+      case 'angle-unit':
+      case 'force-unit':
+      case 'torque-unit':
+        return <UnitConverterDomainEngine tool={tool} />;
+
+      // P1 Wave 1: Math Domain Engine
+      case 'matrix-mult':
+      case 'matrix-determinant':
+      case 'combination-permutation':
+      case 'velocity-acceleration':
+      case 'kinetic-energy':
+        return <MathDomainEngine tool={tool} />;
+
+      // P1 Wave 1: Finance Domain Engine
+      case 'payback-period':
+      case 'vat-reverse':
+      case 'commission-calc':
+      case 'appreciation-calc':
+      case 'depreciation-straight':
+      case 'debt-snowball':
+        return <FinanceDomainEngine tool={tool} />;
+
+      // P1 Wave 1: Developer Domain Engine
+      case 'hash-generator':
+      case 'html-entity':
+      case 'resistor-color':
+      case 'ohms-law':
+      case 'json-minify':
+      case 'url-parser':
+        return <DeveloperDomainEngine tool={tool} />;
+
+      // P1 Wave 2: Developer & Network Tools Engine
+      case 'uuid-generator':
+      case 'chmod-permissions':
+      case 'ip-subnet-calc':
+      case 'color-contrast-ratio':
+      case 'jwt-decoder':
+      case 'csv-to-json':
+        return <DeveloperToolsEngine tool={tool} />;
+
+      // P1 Wave 2: Text & SEO Analytics Engine
+      case 'reading-time':
+      case 'keyword-density-checker':
+      case 'meta-description-length':
+      case 'case-converter-camel-snake':
+      case 'flesch-kincaid-readability':
+        return <TextAnalyticsEngine tool={tool} />;
+
+      // P1 Wave 2: Health & Fitness Engine
+      case 'one-rep-max':
+      case 'pace-runner':
+      case 'macro-split':
+      case 'blood-alcohol':
+      case 'protein-intake':
+        return <HealthFitnessEngine tool={tool} />;
+
+      // P1 Wave 2: Date & Time Engine
+      case 'time-duration-between':
+      case 'date-add-subtract':
+      case 'unix-timestamp-converter':
+      case 'work-days-count':
+      case 'leap-year-checker':
+      case 'age-in-days-hours-seconds':
+        return <DateTimeEngine tool={tool} />;
+
+      // Finance & Corporate Valuation Engine
+      case 'wacc-calculator':
+      case 'npv-calculator':
+      case 'irr-calculator':
+      case 'ebitda-calculator':
+      case 'gross-margin-calculator':
+      case 'operating-margin-calculator':
+      case 'ev-ebitda-multiple':
+      case 'break-even':
+      case 'break-even-point':
+      case 'saas-mrr-arr-calc':
+      case 'cac-ltv-ratio':
+      case 'burn-rate-runway':
+      case 'inventory-turnover':
+      case 'quick-ratio-acid-test':
+      case 'roce-calculator':
+      case 'roe-calculator':
+      case 'roa-calculator':
+      case 'per-share-earnings':
+        return <CorporateValuationEngine tool={tool} />;
+
+      // Finance & Investment Market Engine
+      case 'roi-calculator':
+      case 'rule-of-72':
+      case 'bond-yield-to-maturity':
+      case 'treasury-bill-yield':
+      case 'cd-ladder-calculator':
+      case 'stock-beta-volatility':
+      case 'sharpe-ratio-calc':
+      case 'net-worth':
+      case 'dividend-yield':
+      case 'stock-dividend-yield':
+      case 'inflation-impact':
+      case 'inflation-future':
+      case 'college-savings':
+      case '401k-retirement':
+        return <InvestmentMarketEngine tool={tool} />;
+
+      // Real Estate & Personal Finance Engine
+      case 'cap-rate':
+      case 'rental-yield':
+      case 'rental-property-yield':
+      case 'heloc-payment-calc':
+      case 'pmi-calculator':
+      case 'closing-costs-calc':
+      case 'debt-payoff':
+      case 'compound-monthly':
+      case 'freelance-rate':
+      case 'freelance-rate-calc':
+      case 'vat-tax':
+      case 'salary-hourly':
+        return <RealEstatePersonalFinanceEngine tool={tool} />;
+
+      // Crypto, Forex & Currency Engine
+      case 'crypto-profit-loss-calc':
+      case 'crypto-dca-calculator':
+      case 'crypto-impermanent-loss':
+      case 'bitcoin-mining-profit':
+      case 'ethereum-gas-fee-converter':
+      case 'sats-to-bitcoin-usd':
+      case 'crypto-market-cap-rank':
+      case 'crypto-staking-rewards':
+      case 'currency-crypto':
+      case 'forex-pip-value-calculator':
+      case 'forex-position-size-risk':
+      case 'forex-margin-calculator':
+      case 'forex-pivot-points-calc':
+      case 'zakat-calculator-islamic':
+      case 'currency-inflation-purchasing':
+      case 'salary-tax-take-home':
+      case 'sales-tax-by-state-country':
+      case 'travel-budget-daily-expense':
+        return <CryptoForexCurrencyEngine tool={tool} />;
+
       case 'simple-interest':
       case 'auto-loan':
       case 'savings-goal':

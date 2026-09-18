@@ -1,0 +1,514 @@
+[
+  {
+    "id": "cagr-calculator",
+    "name": "Compound Annual Growth Rate Cagr",
+    "category": "finance",
+    "classification": "PARTIALLY SPECIALIZED",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "FinanceDomainEngine"
+  },
+  {
+    "id": "loan-refinance",
+    "name": "Loan Refinance Savings Calculator",
+    "category": "finance",
+    "classification": "PARTIALLY SPECIALIZED",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "FinanceDomainEngine"
+  },
+  {
+    "id": "mortgage-payoff",
+    "name": "Early Mortgage Payoff Calculator",
+    "category": "finance",
+    "classification": "PARTIALLY SPECIALIZED",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "FinanceDomainEngine"
+  },
+  {
+    "id": "concrete-volume",
+    "name": "Concrete Slab Volume Yardage Calculator",
+    "category": "everyday",
+    "classification": "PARTIALLY SPECIALIZED",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "EverydayPracticalEngine"
+  },
+  {
+    "id": "dscr-calculator",
+    "name": "Debt Service Coverage Ratio Dscr",
+    "category": "finance",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "FinanceDomainEngine"
+  },
+  {
+    "id": "loan-amortization-schedule",
+    "name": "Full Loan Amortization Schedule Table",
+    "category": "finance",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "FinanceDomainEngine"
+  },
+  {
+    "id": "balloon-payment-loan",
+    "name": "Balloon Payment Mortgage Loan",
+    "category": "finance",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "FinanceDomainEngine"
+  },
+  {
+    "id": "arm-mortgage-calc",
+    "name": "Adjustable Rate Mortgage Arm Calculator",
+    "category": "finance",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "FinanceDomainEngine"
+  },
+  {
+    "id": "jumbo-mortgage-calc",
+    "name": "Jumbo Loan Mortgage Payment",
+    "category": "finance",
+    "classification": "PARTIALLY SPECIALIZED",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "FinanceDomainEngine"
+  },
+  {
+    "id": "fha-loan-calc",
+    "name": "Fha Loan Down Payment Mip",
+    "category": "finance",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "FinanceDomainEngine"
+  },
+  {
+    "id": "va-loan-calc",
+    "name": "Va Home Loan Funding Fee",
+    "category": "finance",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "FinanceDomainEngine"
+  },
+  {
+    "id": "working-capital-ratio",
+    "name": "Working Capital Current Ratio",
+    "category": "finance",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "FinanceDomainEngine"
+  },
+  {
+    "id": "pe-ratio-valuation",
+    "name": "Price To Earnings Pe Ratio Valuation",
+    "category": "finance",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "FinanceDomainEngine"
+  },
+  {
+    "id": "pb-ratio-valuation",
+    "name": "Price To Book Pb Ratio Valuation",
+    "category": "finance",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "FinanceDomainEngine"
+  },
+  {
+    "id": "ps-ratio-valuation",
+    "name": "Price To Sales Ps Ratio Valuation",
+    "category": "finance",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "FinanceDomainEngine"
+  },
+  {
+    "id": "free-cash-flow-fcf",
+    "name": "Free Cash Flow Fcf Yield",
+    "category": "finance",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "FinanceDomainEngine"
+  },
+  {
+    "id": "vo2-max-calculator",
+    "name": "Vo2 Max Aerobic Fitness Calculator",
+    "category": "health",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "HealthDomainEngine"
+  },
+  {
+    "id": "heart-rate-reserve",
+    "name": "Karvonen Heart Rate Reserve Zones",
+    "category": "health",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "HealthDomainEngine"
+  },
+  {
+    "id": "maximum-heart-rate",
+    "name": "Tanaka Formula Max Heart Rate",
+    "category": "health",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "HealthDomainEngine"
+  },
+  {
+    "id": "blood-pressure-cat",
+    "name": "Blood Pressure Stage Category Checker",
+    "category": "health",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "HealthDomainEngine"
+  },
+  {
+    "id": "blood-sugar-a1c",
+    "name": "A1c To Estimated Average Glucose Eag",
+    "category": "health",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "HealthDomainEngine"
+  },
+  {
+    "id": "cholesterol-ratio",
+    "name": "Cholesterol Hdl Ldl Risk Ratio",
+    "category": "health",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "HealthDomainEngine"
+  },
+  {
+    "id": "kidney-gfr-calculator",
+    "name": "Egfr Ckd Epi Kidney Function",
+    "category": "health",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "HealthDomainEngine"
+  },
+  {
+    "id": "creatinine-clearance",
+    "name": "Cockcroft Gault Creatinine Clearance",
+    "category": "health",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "HealthDomainEngine"
+  },
+  {
+    "id": "mean-arterial-pressure",
+    "name": "Mean Arterial Pressure Map Calculator",
+    "category": "health",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "HealthDomainEngine"
+  },
+  {
+    "id": "body-surface-area",
+    "name": "Body Surface Area Bsa Mosteller",
+    "category": "health",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "HealthDomainEngine"
+  },
+  {
+    "id": "dosage-by-weight",
+    "name": "Pediatric Adult Mg Kg Dosage Calculator",
+    "category": "health",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "HealthDomainEngine"
+  },
+  {
+    "id": "iv-drip-rate",
+    "name": "Iv Infusion Drip Rate Drops Per Minute",
+    "category": "health",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "HealthDomainEngine"
+  },
+  {
+    "id": "fluid-maintenance",
+    "name": "4 2 1 Pediatric Fluid Maintenance Rate",
+    "category": "health",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "HealthDomainEngine"
+  },
+  {
+    "id": "insulin-carb-ratio",
+    "name": "Insulin To Carb Ratio Bolus Dose",
+    "category": "health",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "HealthDomainEngine"
+  },
+  {
+    "id": "calories-burned-swimming",
+    "name": "Swimming Laps Calorie Burn Calculator",
+    "category": "health",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "HealthDomainEngine"
+  },
+  {
+    "id": "calories-burned-cycling",
+    "name": "Cycling Speed Power Calorie Burn",
+    "category": "health",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "HealthDomainEngine"
+  },
+  {
+    "id": "calories-burned-jump-rope",
+    "name": "Skipping Jump Rope Calorie Burn",
+    "category": "health",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "HealthDomainEngine"
+  },
+  {
+    "id": "calories-burned-walking",
+    "name": "Treadmill Incline Walk Calorie Burn",
+    "category": "health",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "HealthDomainEngine"
+  },
+  {
+    "id": "calories-burned-weightlifting",
+    "name": "Strength Training Weightlifting Calories",
+    "category": "health",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "HealthDomainEngine"
+  },
+  {
+    "id": "fat-free-mass-index",
+    "name": "Fat Free Mass Index Ffmi Muscularity",
+    "category": "health",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "HealthDomainEngine"
+  },
+  {
+    "id": "wilks-score-powerlifting",
+    "name": "Wilks Dots Score Powerlifting Strength",
+    "category": "health",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "HealthDomainEngine"
+  },
+  {
+    "id": "ipf-points-calculator",
+    "name": "Ipf Gl Points Powerlifting Calculator",
+    "category": "health",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "HealthDomainEngine"
+  },
+  {
+    "id": "run-race-time-predictor",
+    "name": "Riegel Race Time Predictor 5k Marathon",
+    "category": "health",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "HealthDomainEngine"
+  },
+  {
+    "id": "swim-pace-swolf",
+    "name": "Swolf Swimming Efficiency Score Calculator",
+    "category": "health",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "HealthDomainEngine"
+  },
+  {
+    "id": "sweat-rate-hydration",
+    "name": "Sweat Loss Rate Hydration Planner",
+    "category": "health",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "HealthDomainEngine"
+  },
+  {
+    "id": "macronutrient-keto-highcarb",
+    "name": "Custom Macro Split Carb Cycling",
+    "category": "health",
+    "classification": "PARTIALLY SPECIALIZED",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "HealthDomainEngine"
+  },
+  {
+    "id": "glycemic-index-lookup",
+    "name": "Glycemic Index Food Rating Search",
+    "category": "health",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "HealthDomainEngine"
+  },
+  {
+    "id": "water-intake-by-activity",
+    "name": "Daily Water Intake By Sweat Workout",
+    "category": "health",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "HealthDomainEngine"
+  },
+  {
+    "id": "alcohol-elimination-time",
+    "name": "Alcohol Metabolism Sober Up Calculator",
+    "category": "health",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "HealthDomainEngine"
+  },
+  {
+    "id": "smoking-pack-years",
+    "name": "Tobacco Smoking Pack Years Risk Index",
+    "category": "health",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "HealthDomainEngine"
+  },
+  {
+    "id": "pregnancy-weight-gain",
+    "name": "Iom Pregnancy Weight Gain Calculator",
+    "category": "health",
+    "classification": "PARTIALLY SPECIALIZED",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "HealthDomainEngine"
+  },
+  {
+    "id": "fetal-weight-percentile",
+    "name": "Hadlock Fetal Growth Percentile",
+    "category": "health",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "HealthDomainEngine"
+  },
+  {
+    "id": "ovulation-luteal-phase",
+    "name": "Luteal Phase Ovulation Window Calculator",
+    "category": "health",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "HealthDomainEngine"
+  },
+  {
+    "id": "breastfeeding-calorie-need",
+    "name": "Lactation Nursing Calorie Allowance",
+    "category": "health",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "HealthDomainEngine"
+  },
+  {
+    "id": "baby-formula-feeding",
+    "name": "Infant Daily Formula Intake Calculator",
+    "category": "health",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "HealthDomainEngine"
+  },
+  {
+    "id": "pediatric-growth-percentile",
+    "name": "Who Child Height Weight Percentile",
+    "category": "health",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "HealthDomainEngine"
+  },
+  {
+    "id": "target-height-midparental",
+    "name": "Mid Parental Child Target Height",
+    "category": "health",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "HealthDomainEngine"
+  },
+  {
+    "id": "ergometer-concept2-pace",
+    "name": "Concept2 Rowing Split Pace Watts",
+    "category": "health",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "HealthDomainEngine"
+  },
+  {
+    "id": "treadmill-grade-equivalent",
+    "name": "Treadmill Incline Flat Land Pace Equivalent",
+    "category": "health",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "HealthDomainEngine"
+  },
+  {
+    "id": "vertical-jump-power",
+    "name": "Sayers Vertical Jump Peak Power",
+    "category": "health",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "HealthDomainEngine"
+  },
+  {
+    "id": "grip-strength-norm",
+    "name": "Grip Strength Age Gender Norms",
+    "category": "health",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "HealthDomainEngine"
+  },
+  {
+    "id": "flexibility-sit-reach",
+    "name": "Sit And Reach Flexibility Test Score",
+    "category": "health",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "HealthDomainEngine"
+  },
+  {
+    "id": "resting-heart-rate-norm",
+    "name": "Resting Heart Rate Rhr Fitness Level",
+    "category": "health",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "HealthDomainEngine"
+  },
+  {
+    "id": "metabolic-equivalent-met",
+    "name": "Mets Activity Energy Expenditure",
+    "category": "health",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "HealthDomainEngine"
+  },
+  {
+    "id": "chest-to-waist-ratio",
+    "name": "Adonis Index Shoulder To Waist Ratio",
+    "category": "health",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "HealthDomainEngine"
+  },
+  {
+    "id": "rebar-calculator-concrete",
+    "name": "Concrete Slab Rebar Grid Linear Feet",
+    "category": "everyday",
+    "classification": "PARTIALLY SPECIALIZED",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "EverydayPracticalEngine"
+  },
+  {
+    "id": "solar-inverter-sizing",
+    "name": "Solar Array Inverter Peak Output Sizing",
+    "category": "everyday",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "EverydayPracticalEngine"
+  },
+  {
+    "id": "stair-baluster-spacing",
+    "name": "Stairway Spindle Baluster Gap Calculator",
+    "category": "everyday",
+    "classification": "GENERIC ENGINE",
+    "oldComponent": "UniversalToolEngine",
+    "engine": "EverydayPracticalEngine"
+  }
+]

@@ -9,6 +9,8 @@
     "prerender": "tsx scripts/prerender.ts",
     "generate:sitemap": "tsx scripts/generateSitemaps.ts",
     "validate:seo": "tsx scripts/validateSeo.ts",
+    "validate:content": "tsx scripts/validateContentQuality.ts",
+    "validate:all": "tsx scripts/validateSeo.ts && tsx scripts/validateContentQuality.ts",
     "preview": "vite preview",
     "clean": "rm -rf dist server.js",
     "lint": "tsc --noEmit"

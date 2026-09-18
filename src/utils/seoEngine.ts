@@ -189,7 +189,20 @@ export const generateToolSeo = (
   const catRaw = t(`cat_${catKey}`, '');
   const categoryName = catRaw && !isRawTranslationKey(catRaw) ? catRaw : 'Calculator';
 
-  const title = `${toolName} — Calcyfy`;
+  let title = `${toolName} — Calcyfy`;
+  if (tool.id === 'keto-macros' || tool.id === 'macronutrient-keto-highcarb' || tool.slug.includes('keto')) {
+    if (lang === 'en') {
+      title = 'Keto Macro Calculator — Calculate Fat, Protein & Net Carbs | Calcyfy';
+    } else if (lang === 'es') {
+      title = 'Calculadora de Macros Keto — Grasas, Proteínas y Carbohidratos | Calcyfy';
+    } else if (lang === 'de') {
+      title = 'Keto Makro Rechner — Fett, Protein & Netto-Kohlenhydrate | Calcyfy';
+    } else if (lang === 'fr') {
+      title = 'Calculateur de Macros Céto — Lipides, Protéines et Glucides | Calcyfy';
+    } else if (lang === 'ar') {
+      title = 'حاسبة ماكروز الكيتو — حساب الدهون والبروتين والكارب الصافي | Calcyfy';
+    }
+  }
   const canonical = getCanonicalUrl(getToolPath(tool.slug, lang));
   const hreflang = getHreflangLinks((l) => getToolPath(tool.slug, l));
 

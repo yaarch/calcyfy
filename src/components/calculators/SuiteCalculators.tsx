@@ -2901,6 +2901,58 @@ export const SuiteCalculators: React.FC<SuiteCalculatorsProps> = ({ toolId, tool
       );
     }
 
+    case 'standard-deviation': {
+      const defaultData = '10, 12, 23, 23, 16, 23, 21, 16';
+      const rawText = val1 && val1 !== '1000' ? val1 : defaultData;
+      const nums = rawText
+        .split(/[,\s]+/)
+        .map((x) => parseFloat(x.trim()))
+        .filter((x) => !isNaN(x));
+      const n = nums.length;
+      const sum = nums.reduce((a, b) => a + b, 0);
+      const mean = n > 0 ? sum / n : 0;
+      const varianceSum = nums.reduce((acc, val) => acc + Math.pow(val - mean, 2), 0);
+      const sampleVariance = n > 1 ? varianceSum / (n - 1) : 0;
+      const sampleStdDev = Math.sqrt(sampleVariance);
+      const popVariance = n > 0 ? varianceSum / n : 0;
+      const popStdDev = Math.sqrt(popVariance);
+
+      return (
+        <div className="space-y-6">
+          <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-4">
+            <div>
+              <label className="block text-xs font-semibold uppercase text-slate-500 mb-1">Dataset (comma or space separated)</label>
+              <input
+                type="text"
+                value={val1 === '1000' ? defaultData : val1}
+                onChange={(e) => setVal1(e.target.value)}
+                placeholder="e.g. 10, 12, 23, 23, 16, 23, 21, 16"
+                className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border rounded-xl font-mono text-base"
+              />
+            </div>
+            <div className="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-xl grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+              <div>
+                <span className="text-xs font-semibold text-emerald-600 uppercase">Sample Std Dev (s)</span>
+                <div className="text-2xl font-black font-mono text-emerald-600 dark:text-emerald-400 mt-1">{sampleStdDev.toFixed(2)}</div>
+              </div>
+              <div>
+                <span className="text-xs font-semibold text-slate-500 uppercase">Population Std Dev (σ)</span>
+                <div className="text-2xl font-black font-mono text-slate-900 dark:text-white mt-1">{popStdDev.toFixed(2)}</div>
+              </div>
+              <div>
+                <span className="text-xs font-semibold text-slate-500 uppercase">Mean (x̄)</span>
+                <div className="text-2xl font-black font-mono text-slate-900 dark:text-white mt-1">{mean.toFixed(2)}</div>
+              </div>
+              <div>
+                <span className="text-xs font-semibold text-slate-500 uppercase">Sample Variance (s²)</span>
+                <div className="text-2xl font-black font-mono text-slate-900 dark:text-white mt-1">{sampleVariance.toFixed(2)}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
     default:
       return <UniversalToolEngine toolId={toolId} tool={tool} />;
   }

@@ -1,0 +1,553 @@
+import { ToolContentDetails } from './types';
+import { ToolDef, Language } from '../../types';
+
+// 1. CALORIE CALCULATOR (Mifflin-St Jeor)
+export const CALORIE_KNOWLEDGE: Record<Language, (tool: ToolDef, name: string, relatedTools: ToolDef[]) => ToolContentDetails> = {
+  en: (tool, name, relatedTools) => ({
+    toolName: name,
+    intro: 'A calorie calculator calculates your Basal Metabolic Rate (BMR) and Total Daily Energy Expenditure (TDEE) based on the clinically validated Mifflin-St Jeor equation, age, gender, height, weight, and daily physical activity level.',
+    whoUsesIt: 'Individuals planning fat loss or muscle gain, nutritionists calculating baseline caloric needs, and athletes structuring meal plans.',
+    whatItCalculates: 'BMR (calories burned at rest), TDEE (maintenance calories), and adjusted caloric targets for weight loss (-500 kcal/day) or surplus weight gain (+500 kcal/day).',
+    howToUse: [
+      'Select your biological sex and enter your current age in years.',
+      'Enter your standing height and current body weight.',
+      'Select your average weekly physical activity level from sedentary to highly active.',
+      'Review your Basal Metabolic Rate (BMR) and daily maintenance calories (TDEE).',
+      'Follow the adjusted calorie guidelines for fat loss or lean mass gain.',
+    ],
+    formula: 'BMR (Men) = (10 × wt kg) + (6.25 × ht cm) - (5 × age) + 5  |  BMR (Women) = (10 × wt kg) + (6.25 × ht cm) - (5 × age) - 161',
+    inputs: [
+      { name: 'Biological Sex', description: 'Used to adjust basal metabolic equations for biological differences in lean body tissue.', unit: 'Male / Female', optional: false },
+      { name: 'Age', description: 'Age in years (metabolic rate gradually declines with age).', unit: 'Years', optional: false },
+      { name: 'Height', description: 'Stature in centimeters or inches.', unit: 'cm or in', optional: false },
+      { name: 'Weight', description: 'Current body weight in kilograms or pounds.', unit: 'kg or lb', optional: false },
+      { name: 'Activity Level', description: 'Multiplier ranging from 1.2 (sedentary desk job) to 1.9 (intense daily athletic training).', unit: 'PAL Multiplier', optional: false },
+    ],
+    workedExample: {
+      scenario: 'A 30-year-old male weighing 80 kg, 180 cm tall, with moderate physical activity (exercise 3-5 days/week; multiplier 1.55).',
+      stepByStep: [
+        'Calculate BMR: (10 × 80) + (6.25 × 180) - (5 × 30) + 5 = 800 + 1,125 - 150 + 5 = 1,780 kcal.',
+        'Multiply by physical activity factor: 1,780 × 1.55 = 2,759 kcal/day.',
+        'Target for steady 0.5 kg/week fat loss: 2,759 - 500 = 2,259 kcal/day.',
+      ],
+      result: 'Maintenance TDEE = 2,759 kcal/day; Fat loss intake = 2,259 kcal/day.',
+    },
+    assumptions: 'Assumes typical body fat percentages for general populations using Mifflin-St Jeor parameters.',
+    limitations: 'Metabolic rates vary based on thyroid function, genetics, and lean muscle mass. Caloric counts should serve as an initial guideline adjusted by real-world progress over 2 to 4 weeks.',
+    faqs: [
+      {
+        question: 'How many calories are in one pound of body fat?',
+        answer: 'One pound of human adipose tissue corresponds to approximately 3,500 calories. A daily caloric deficit of 500 calories typically produces about 1 pound (~0.45 kg) of fat loss per week.',
+      },
+    ],
+    relatedTools,
+  }),
+  ar: (tool, name, relatedTools) => ({
+    toolName: name,
+    intro: 'حاسبة السعرات الحرارية تحسب معدل الأيض الأساسي (BMR) وإجمالي استهلاك الطاقة اليومي (TDEE) بالاعتماد على معادلة ميفلين سانت جيور المعتمدة طبياً.',
+    whoUsesIt: 'الراغبون في إنقاص الوزن أو بناء العضلات، وأخصائيو التغذية لتصميم الحميات الغذائية.',
+    whatItCalculates: 'معدل الحرق أثناء الراحة (BMR)، سعرات ثبات الوزن (TDEE)، وسعرات التنشيف أو التضخيم.',
+    howToUse: [
+      'حدد الجنس والعمر بالسنوات.',
+      'أدخل الوزن بالكيلوجرام والطول بالسنتيمتر.',
+      'اختر مستوى نشاطك البدني الأسبوعي المعتاد.',
+      'استعرض معدل الحرق الأساسي وسعرات المحافظة على الوزن وخطة التنشيف أو التضخيم.',
+    ],
+    formula: 'معادلة ميفلين سانت جيور: BMR = (10 × الوزن كجم) + (6.25 × الطول سم) - (5 × العمر) + ثابت الجنس',
+    inputs: [
+      { name: 'الجنس', description: 'ذكر أو أنثى لضبط الفروق البيولوجية في الكتلة العضلية.', unit: 'نوع', optional: false },
+      { name: 'الوزن', description: 'الوزن بالكيلوجرام.', unit: 'كجم', optional: false },
+      { name: 'الطول', description: 'الطول بالسنتيمتر.', unit: 'سم', optional: false },
+      { name: 'العمر', description: 'العمر بالسنوات.', unit: 'سنة', optional: false },
+      { name: 'مستوى النشاط البدني', description: 'معامل النشاط الحركي والرياضي الأسبوعي.', unit: 'مستوى', optional: false },
+    ],
+    workedExample: {
+      scenario: 'رجل عمره 30 سنة، وزنه 80 كجم، طوله 180 سم، يمارس نشاطاً متوسطاً (معامل 1.55).',
+      stepByStep: ['حساب BMR: ينتج 1,780 سعرة حرارية.', 'الضرب في معامل النشاط: 1,780 × 1.55 = 2,759 سعرة يومياً لثبات الوزن.'],
+      result: 'سعرات الثبات: 2,759 سعرة/يوم؛ سعرات إنقاص الوزن: 2,259 سعرة/يوم.',
+    },
+    faqs: [
+      { question: 'كم سعرة حرارية تلزم لخسارة كيلوجرام من الدهون؟', answer: 'خسارة 1 كجم من دهون الجسم تتطلب عجزاً يقارب 7,700 سعرة حرارية موزعة على مدار عدة أسابيع.' },
+    ],
+    relatedTools,
+  }),
+  es: (tool, name, relatedTools) => ({
+    toolName: name,
+    intro: 'La calculadora de calorías estima la Tasa Metabólica Basal (TMB) y el Gasto Energético Diario Total (TDEE) mediante la fórmula clínica de Mifflin-St Jeor.',
+    whoUsesIt: 'Deportistas, personas en proceso de pérdida de grasa o aumento de masa muscular y nutricionistas.',
+    whatItCalculates: 'Calorías basales de reposo, calorías de mantenimiento y objetivos calóricos ajustados.',
+    howToUse: [
+      'Seleccione su sexo biológico e introduzca su edad.',
+      'Indique su peso y altura actuales.',
+      'Elija su nivel de actividad física semanal.',
+      'Consulte su Tasa Metabólica Basal (TMB), gasto diario de mantenimiento (TDEE) y déficit recomendado.',
+    ],
+    formula: 'TDEE = TMB × Factor de actividad física',
+    inputs: [
+      { name: 'Sexo, Edad, Altura y Peso', description: 'Parámetros antropométricos básicos.', unit: 'Métrico / Imperial', optional: false },
+      { name: 'Nivel de actividad', description: 'Desde sedentario (1,2) hasta muy activo (1,9).', unit: 'Factor', optional: false },
+    ],
+    workedExample: {
+      scenario: 'Varón de 30 años, 80 kg y 180 cm con actividad moderada (1,55).',
+      stepByStep: ['TMB: 1.780 kcal.', 'TDEE de mantenimiento: 1.780 × 1,55 = 2.759 kcal/día.'],
+      result: 'Mantenimiento: 2.759 kcal/día; Déficit para perder peso: 2.259 kcal/día.',
+    },
+    faqs: [{ question: '¿Qué es el déficit calórico?', answer: 'Consumir menos calorías de las que el cuerpo gasta al día para obligarlo a recurrir a las reservas de grasa.' }],
+    relatedTools,
+  }),
+  fr: (tool, name, relatedTools) => ({
+    toolName: name,
+    intro: 'Le calculateur de calories estime le métabolisme de base (MB) et la dépense énergétique journalière totale (DEJ) selon l’équation de Mifflin-St Jeor.',
+    whoUsesIt: 'Pratiquants de musculation, personnes en rééquilibrage alimentaire et diététiciens.',
+    whatItCalculates: 'Métabolisme au repos, besoin calorique de maintien et apport pour perte ou prise de poids.',
+    howToUse: [
+      'Indiquez votre sexe biologique et votre âge.',
+      'Saisissez votre taille et votre poids.',
+      'Choisissez votre fréquence et intensité d’activité physique.',
+      'Consultez votre Métabolisme de Base (MB), votre dépense de maintien (DEJ) et l’ajustement calorique conseillé.',
+    ],
+    formula: 'DEJ = Métabolisme de Base × Facteur d’activité',
+    inputs: [
+      { name: 'Sexe, Âge, Taille et Poids', description: 'Données corporelles nécessaires au calcul du métabolisme.', unit: 'Métriques', optional: false },
+      { name: 'Niveau d’activité', description: 'Fréquence et intensité des entraînements hebdomadaires.', unit: 'Facteur', optional: false },
+    ],
+    workedExample: {
+      scenario: 'Homme de 30 ans, 80 kg, 180 cm avec activité modérée (1,55).',
+      stepByStep: ['MB : 1 780 kcal.', 'DEJ : 1 780 × 1,55 = 2 759 kcal/jour.'],
+      result: 'Maintien : 2 759 kcal/jour ; Perte de poids : 2 259 kcal/jour.',
+    },
+    faqs: [{ question: 'Comment perdre du gras durablement ?', answer: 'En instaurant un déficit calorique modéré de 300 à 500 kcal par jour associé à un apport suffisant en protéines.' }],
+    relatedTools,
+  }),
+  de: (tool, name, relatedTools) => ({
+    toolName: name,
+    intro: 'Der Kalorienrechner berechnet den Grundumsatz (BMR) und den täglichen Gesamtenergiebedarf (TDEE) nach der wissenschaftlichen Mifflin-St-Jeor-Formel.',
+    whoUsesIt: 'Personen zur Gewichtsreduktion, Muskelaufbau oder Sporternährung.',
+    whatItCalculates: 'Grundumsatz in Ruhe, Erhaltungskalorien und empfohlene Kalorienzufuhr zum Zu- oder Abnehmen.',
+    howToUse: [
+      'Wählen Sie Ihr biologisches Geschlecht und tragen Sie Ihr Alter ein.',
+      'Geben Sie Ihre Körpergröße und Ihr Körpergewicht ein.',
+      'Wählen Sie Ihr typisches wöchentliches Aktivitätsniveau aus.',
+      'Erhalten Sie Ihren Grundumsatz (BMR), Erhaltungskalorien (TDEE) und Zielkalorien für Ihren Trainingsplan.',
+    ],
+    formula: 'Gesamtumsatz = Grundumsatz × Aktivitätsfaktor (PAL)',
+    inputs: [
+      { name: 'Geschlecht, Alter, Größe und Gewicht', description: 'Biometrische Basisdaten zur Ermittlung des Grundumsatzes.', unit: 'Metrisch', optional: false },
+      { name: 'Aktivitätsgrad', description: 'Einstufung der täglichen körperlichen Bewegung.', unit: 'Faktor', optional: false },
+    ],
+    workedExample: {
+      scenario: 'Mann, 30 Jahre, 80 kg, 180 cm bei moderater Bewegung (1,55).',
+      stepByStep: ['Grundumsatz: 1.780 kcal.', 'Gesamtumsatz: 1.780 × 1,55 = 2.759 kcal/Tag.'],
+      result: 'Erhaltungskalorien: 2.759 kcal/Tag; Kaloriendefizit: 2.259 kcal/Tag.',
+    },
+    faqs: [{ question: 'Wie groß sollte das Kaloriendefizit sein?', answer: 'Ein moderates Defizit von 300 bis 500 kcal pro Tag sorgt für nachhaltigen Fettabbau ohne Muskelverlust.' }],
+    relatedTools,
+  }),
+};
+
+// 2. TIP CALCULATOR
+export const TIP_KNOWLEDGE: Record<Language, (tool: ToolDef, name: string, relatedTools: ToolDef[]) => ToolContentDetails> = {
+  en: (tool, name, relatedTools) => ({
+    toolName: name,
+    intro: 'A tip calculator computes gratuity amounts and splits restaurant, bar, delivery, and hospitality checks evenly among dining guests.',
+    whoUsesIt: 'Diners splitting meal bills, travelers navigating regional gratuity customs, and service patrons calculating appropriate tips.',
+    whatItCalculates: 'Tip amount in dollars, total bill including tip, and exact per-person share when splitting.',
+    howToUse: [
+      'Enter the bill subtotal before tips or gratuities.',
+      'Select a preset tip percentage or type a custom percentage.',
+      'Enter the number of people splitting the payment.',
+      'View the total tip, overall bill, and each person’s individual share.',
+    ],
+    formula: 'Tip = Bill Amount × (Tip % / 100)  |  Per Person = (Bill + Tip) / Number of Guests',
+    inputs: [
+      { name: 'Bill Subtotal ($)', description: 'Total charge for food and beverages before tip.', unit: 'USD ($)', optional: false },
+      { name: 'Tip Percentage (%)', description: 'Selected gratuity percentage (typically 15% for standard service, 18%-20% for excellent service).', unit: 'Percentage (%)', optional: false },
+      { name: 'Split Between (People)', description: 'Number of diners dividing the total bill evenly.', unit: 'Count', optional: true },
+    ],
+    workedExample: {
+      scenario: 'Splitting an $84.00 dinner bill among 4 people with an 18% tip.',
+      stepByStep: [
+        'Calculate tip: $84.00 × 0.18 = $15.12.',
+        'Calculate total bill: $84.00 + $15.12 = $99.12.',
+        'Divide evenly by 4 guests: $99.12 ÷ 4 = $24.78 per person.',
+      ],
+      result: 'Total tip: $15.12; Total bill: $99.12; Each guest pays $24.78.',
+    },
+    faqs: [
+      {
+        question: 'What is the standard tipping percentage in the United States?',
+        answer: 'In US sit-down restaurants, standard etiquette suggests 15% for adequate service, 18% for good service, and 20% or more for exceptional service.',
+      },
+    ],
+    relatedTools,
+  }),
+  ar: (tool, name, relatedTools) => ({
+    toolName: name,
+    intro: 'حاسبة البقشيش (الإكرامية) تحسب قيمة الإكرامية المناسبة وتقسم فاتورة المطعم بالتساوي بين أفراد المجموعة.',
+    whoUsesIt: 'رواد المطاعم، والمجموعات أثناء تناول الطعام، والمسافرون للتعرف على عادات البقشيش.',
+    whatItCalculates: 'مبلغ الإكرامية، إجمالي الفاتورة مع الإكرامية، وحصة كل فرد بدقة.',
+    howToUse: [
+      'أدخل إجمالي مبلغ الفاتورة.',
+      'اختر نسبة البقشيش المقترحة أو أدخل نسبة مخصصة.',
+      'حدد عدد الأشخاص لتقاسم الحساب.',
+      'اطلع على مبلغ الإكرامية والإجمالي وحصة الفرد الواحد.',
+    ],
+    formula: 'قيمة الإكرامية = الفاتورة × (النسبة ÷ 100)  |  نصيب الفرد = الإجمالي ÷ عدد الأفراد',
+    inputs: [
+      { name: 'مبلغ الفاتورة', description: 'إجمالي الحساب قبل إضافة الإكرامية.', unit: 'عملة', optional: false },
+      { name: 'نسبة الإكرامية (%)', description: 'النسبة المئوية المرغوبة (مثلاً 10% إلى 20%).', unit: '%', optional: false },
+      { name: 'عدد الأفراد', description: 'عدد الأشخاص الذين يتقاسمون الفاتورة.', unit: 'أفراد', optional: true },
+    ],
+    workedExample: {
+      scenario: 'فاتورة بقيمة 84 مقسمة على 4 أشخاص بإكرامية 18%.',
+      stepByStep: ['الإكرامية: 84 × 0.18 = 15.12.', 'إجمالي الفاتورة: 99.12.', 'نصيب الفرد: 99.12 ÷ 4 = 24.78.'],
+      result: 'الإكرامية: 15.12؛ الإجمالي: 99.12؛ نصيب كل شخص: 24.78.',
+    },
+    faqs: [{ question: 'هل يختلف البقشيش حسب البلد؟', answer: 'نعم، ففي الولايات المتحدة يعتبر عرفاً أساسياً بين 15% و 20%، بينما في أغلب الدول الأوروبية يكون اختيارياً ومشمولاً بالخدمة.' }],
+    relatedTools,
+  }),
+  es: (tool, name, relatedTools) => ({
+    toolName: name,
+    intro: 'La calculadora de propinas calcula el importe de la propina y divide la cuenta de restaurantes y bares equitativamente entre los comensales.',
+    whoUsesIt: 'Clientes de restaurantes y grupos de amigos al pagar una cuenta compartida.',
+    whatItCalculates: 'Importe de la propina, cuenta total y cuota exacta por persona.',
+    howToUse: [
+      'Introduzca el importe de la cuenta.',
+      'Elija el porcentaje de propina deseado.',
+      'Indique el número de personas a repartir.',
+      'Compruebe la propina acumulada, el total y el pago por comensal.',
+    ],
+    formula: 'Propina = Cuenta × (% / 100)  |  Por persona = Total / Comensales',
+    inputs: [
+      { name: 'Importe de la cuenta', description: 'Total de la consumición.', unit: 'Moneda', optional: false },
+      { name: 'Porcentaje de propina (%)', description: 'Porcentaje habitual (10% a 20%).', unit: '%', optional: false },
+      { name: 'Número de personas', description: 'Comensales entre los que se reparte el pago.', unit: 'Personas', optional: true },
+    ],
+    workedExample: {
+      scenario: 'Cuenta de 84 entre 4 personas con un 18% de propina.',
+      stepByStep: ['Propina: 15,12.', 'Total: 99,12.', 'Por comensal: 24,78.'],
+      result: 'Propina: 15,12; Total: 99,12; Pago individual: 24,78.',
+    },
+    faqs: [{ question: '¿Es obligatoria la propina?', answer: 'Varía según el país: en EE. UU. es casi obligatoria por convención social, mientras que en Europa y América Latina suele ser voluntaria.' }],
+    relatedTools,
+  }),
+  fr: (tool, name, relatedTools) => ({
+    toolName: name,
+    intro: 'Le calculateur de pourboire évalue la gratification du service et partage équitablement l’addition entre convives au restaurant.',
+    whoUsesIt: 'Clients de restaurants et groupes d’amis partageant une note.',
+    whatItCalculates: 'Montant du pourboire, total TTC et montant par convive.',
+    howToUse: [
+      'Indiquez le montant hors pourboire de la note.',
+      'Sélectionnez le pourcentage d’échelonnement du pourboire.',
+      'Renseignez le nombre de personnes qui partagent l’addition.',
+      'Obtenez le pourboire calculé, le total général et la part par personne.',
+    ],
+    formula: 'Pourboire = Addition × (% / 100)  |  Par personne = Total / Convives',
+    inputs: [
+      { name: 'Montant de l’addition', description: 'Note avant pourboire.', unit: 'Devise', optional: false },
+      { name: 'Pourcentage de pourboire (%)', description: 'Pourcentage choisi.', unit: '%', optional: false },
+      { name: 'Nombre de personnes', description: 'Nombre de convives payants.', unit: 'Personnes', optional: true },
+    ],
+    workedExample: {
+      scenario: 'Addition de 84 partagée entre 4 personnes avec 18 % de pourboire.',
+      stepByStep: ['Pourboire : 15,12.', 'Total : 99,12.', 'Par personne : 24,78.'],
+      result: 'Pourboire : 15,12 ; Total : 99,12 ; Par personne : 24,78.',
+    },
+    faqs: [{ question: 'Le pourboire est-il compris en France ?', answer: 'En France, le service est inclus dans le prix (15 % service compris), le pourboire est donc un geste de remerciement facultatif.' }],
+    relatedTools,
+  }),
+  de: (tool, name, relatedTools) => ({
+    toolName: name,
+    intro: 'Der Trinkgeldrechner ermittelt das angemessene Trinkgeld und teilt Restaurantrechnungen exakt auf mehrere Gäste auf.',
+    whoUsesIt: 'Gäste in Restaurants und Reisende zur schnellen Rechnungsaufteilung.',
+    whatItCalculates: 'Trinkgeldbetrag, Gesamtrechnung und Einzelanteil pro Person.',
+    howToUse: [
+      'Geben Sie den Rechnungsbetrag ein.',
+      'Wählen Sie den gewünschten Trinkgeldsatz.',
+      'Tragen Sie die Anzahl der beteiligten Personen ein.',
+      'Sehen Sie den Trinkgeldbetrag, die Endsumme und den Pro-Kopf-Anteil.',
+    ],
+    formula: 'Trinkgeld = Rechnungsbetrag × (% / 100)',
+    inputs: [
+      { name: 'Rechnungsbetrag', description: 'Rechnungssumme vor Trinkgeld.', unit: 'Währung', optional: false },
+      { name: 'Trinkgeld in %', description: 'Gewünschter Prozentsatz (üblich 5 % bis 15 %).', unit: '%', optional: false },
+      { name: 'Personenanzahl', description: 'Anzahl der Personen zur Kostenteilung.', unit: 'Anzahl', optional: true },
+    ],
+    workedExample: {
+      scenario: '84 Rechnung aufgeteilt auf 4 Personen mit 18 % Trinkgeld.',
+      stepByStep: ['Trinkgeld: 15,12.', 'Gesamtbetrag: 99,12.', 'Anteil pro Gast: 24,78.'],
+      result: 'Trinkgeld: 15,12; Gesamtsumme: 99,12; Pro Person: 24,78.',
+    },
+    faqs: [{ question: 'Wie viel Trinkgeld gibt man in Deutschland?', answer: 'In Deutschland und Mitteleuropa sind 5 % bis 10 % Trinkgeld für guten Service im Restaurant üblich.' }],
+    relatedTools,
+  }),
+};
+
+// 3. DISCOUNT CALCULATOR
+export const DISCOUNT_KNOWLEDGE: Record<Language, (tool: ToolDef, name: string, relatedTools: ToolDef[]) => ToolContentDetails> = {
+  en: (tool, name, relatedTools) => ({
+    toolName: name,
+    intro: 'A discount calculator determines the final checkout price after applying percentage reductions, store coupons, sales promotions, or additional stacked discounts.',
+    whoUsesIt: 'Shoppers calculating promotional savings and retailers pricing markdown items.',
+    whatItCalculates: 'Total money saved, final discounted price, and effective combined discount rate.',
+    howToUse: [
+      'Enter the original retail price before markdown.',
+      'Enter the percentage discount or promotional rate.',
+      'Review your total cash savings and the final discounted checkout price.',
+    ],
+    formula: 'Savings = Original Price × (Discount % / 100)  |  Final Price = Original Price - Savings',
+    inputs: [
+      { name: 'Original Price ($)', description: 'The sticker price before markdown.', unit: 'USD ($)', optional: false },
+      { name: 'Discount Percentage (%)', description: 'The promotional reduction offered.', unit: 'Percentage (%)', optional: false },
+    ],
+    workedExample: {
+      scenario: 'Buying a $120 jacket with a 25% sale discount.',
+      stepByStep: [
+        'Calculate discount amount: $120 × (25 / 100) = $30.00 saved.',
+        'Subtract savings from original price: $120 - $30 = $90.00 final price.',
+      ],
+      result: 'You save $30.00; Final price to pay is $90.00.',
+    },
+    faqs: [
+      {
+        question: 'How do stacked discounts work (e.g. 20% off plus an extra 10% off)?',
+        answer: 'Stacked discounts apply successively to the remaining balance, not additively. For example, 20% off $100 reduces the price to $80; an additional 10% off reduces $80 by $8, yielding a final price of $72 (a 28% total discount, not 30%).',
+      },
+    ],
+    relatedTools,
+  }),
+  ar: (tool, name, relatedTools) => ({
+    toolName: name,
+    intro: 'حاسبة الخصم تحسب السعر النهائي بعد تطبيق التخفيضات ومقدار التوفير المالي المحقق.',
+    whoUsesIt: 'المتسوقون أثناء مواسم العروض، وأصحاب المتاجر لتسعير البضائع المخفضة.',
+    whatItCalculates: 'المبلغ الموفر بالنقود، والسعر الصافي بعد الخصم.',
+    howToUse: [
+      'أدخل السعر الأصلي قبل التخفيض.',
+      'أدخل نسبة الخصم المئوية المعلنة.',
+      'استعرض المبلغ الموفر وقيمة السعر النهائي للدفع.',
+    ],
+    formula: 'المبلغ الموفر = السعر الأصلي × (نسبة الخصم ÷ 100)  |  السعر النهائي = السعر الأصلي - التوفير',
+    inputs: [
+      { name: 'السعر الأصلي', description: 'السعر قبل تطبيق التخفيض.', unit: 'عملة', optional: false },
+      { name: 'نسبة الخصم (%)', description: 'النسبة المئوية المعلنة للتخفيض.', unit: '%', optional: false },
+    ],
+    workedExample: {
+      scenario: 'شراء معطف بسعر 120 مع تخفيض 25%.',
+      stepByStep: ['حساب التوفير: 120 × 0.25 = 30.', 'طرح التوفير من السعر الأصلي: 120 - 30 = 90.'],
+      result: 'التوفير: 30؛ السعر النهائي للدفع: 90.',
+    },
+    faqs: [{ question: 'هل الخصم الإضافي يجمع حسابياً؟', answer: 'كلا، إذا كان هناك خصم 20% ثم خصم 10% إضافي، يطبق الخصم الثاني على السعر المخفض بعد الخصم الأول.' }],
+    relatedTools,
+  }),
+  es: (tool, name, relatedTools) => ({
+    toolName: name,
+    intro: 'La calculadora de descuentos calcula el precio final tras aplicar rebajas porcentuales y el ahorro económico exacto.',
+    whoUsesIt: 'Compradores en rebajas y comercios que preparan promociones.',
+    whatItCalculates: 'Dinero ahorrado y precio final tras la rebaja.',
+    howToUse: [
+      'Introduzca el precio original del producto antes del descuento.',
+      'Indique el porcentaje de rebaja aplicado.',
+      'Compruebe el ahorro conseguido y el precio final a pagar.',
+    ],
+    formula: 'Ahorro = Precio original × (% / 100)  |  Precio final = Original - Ahorro',
+    inputs: [
+      { name: 'Precio original', description: 'Precio de etiqueta antes del descuento.', unit: 'Moneda', optional: false },
+      { name: 'Descuento (%)', description: 'Porcentaje de rebaja aplicado.', unit: '%', optional: false },
+    ],
+    workedExample: {
+      scenario: 'Prenda de 120 con 25% de rebaja.',
+      stepByStep: ['Ahorro: 120 × 0,25 = 30.', 'Precio final: 120 - 30 = 90.'],
+      result: 'Ahorro: 30; Precio a pagar: 90.',
+    },
+    faqs: [{ question: '¿Cómo calcular descuentos acumulados?', answer: 'El segundo descuento se calcula sobre el precio ya rebajado, no sobre el importe inicial.' }],
+    relatedTools,
+  }),
+  fr: (tool, name, relatedTools) => ({
+    toolName: name,
+    intro: 'Le calculateur de remise détermine le prix payé après application d’un pourcentage de réduction et le montant économisé.',
+    whoUsesIt: 'Consommateurs pendant les soldes et commerçants pour l’étiquetage promotionnel.',
+    whatItCalculates: 'Montant de la remise et prix net après réduction.',
+    howToUse: [
+      'Indiquez le prix d’origine avant démarque.',
+      'Saisissez le pourcentage de réduction offert.',
+      'Découvrez l’économie financière réalisée et le montant net à régler.',
+    ],
+    formula: 'Remise = Prix initial × (% / 100)  |  Prix final = Prix initial - Remise',
+    inputs: [
+      { name: 'Prix initial', description: 'Prix affiché avant démarque.', unit: 'Devise', optional: false },
+      { name: 'Taux de remise (%)', description: 'Pourcentage de réduction offert.', unit: '%', optional: false },
+    ],
+    workedExample: {
+      scenario: 'Article à 120 avec une remise de 25 %.',
+      stepByStep: ['Remise : 120 × 0,25 = 30.', 'Prix final : 120 - 30 = 90.'],
+      result: 'Économie réalisée : 30 ; Prix final : 90.',
+    },
+    faqs: [{ question: 'Comment s’appliquent deux remises cumulées ?', answer: 'La seconde réduction s’applique sur le prix déjà remisé par la première démarque.' }],
+    relatedTools,
+  }),
+  de: (tool, name, relatedTools) => ({
+    toolName: name,
+    intro: 'Der Rabattrechner ermittelt den reduzierten Endpreis und die Ersparnis bei prozentualen Preisnachlässen und Aktionen.',
+    whoUsesIt: 'Käufer beim Schlussverkauf und Einzelhändler zur Preisauszeichnung.',
+    whatItCalculates: 'Ersparnis in Euro/Dollar und reduzierter Endpreis.',
+    howToUse: [
+      'Geben Sie den ursprünglichen Preis vor dem Rabatt ein.',
+      'Tragen Sie den prozentualen Preisnachlass ein.',
+      'Sehen Sie sofort Ihre Ersparnis und den reduzierten Endpreis.',
+    ],
+    formula: 'Ersparnis = Ursprungspreis × (% / 100)  |  Endpreis = Ursprungspreis - Ersparnis',
+    inputs: [
+      { name: 'Ursprungspreis', description: 'Preis vor dem Rabatt.', unit: 'Währung', optional: false },
+      { name: 'Rabatt in %', description: 'Gewährter prozentualer Preisnachlass.', unit: '%', optional: false },
+    ],
+    workedExample: {
+      scenario: 'Kleidungsstück für 120 mit 25 % Rabatt.',
+      stepByStep: ['Rabattbetrag: 120 × 0,25 = 30.', 'Endpreis: 120 - 30 = 90.'],
+      result: 'Ersparnis: 30; Zu zahlender Endpreis: 90.',
+    },
+    faqs: [{ question: 'Wie berechnet man Zusatzrabatte?', answer: 'Der Zusatzrabatt wird immer vom bereits reduzierten Zwischenbetrag abgezogen, nicht vom Ausgangspreis.' }],
+    relatedTools,
+  }),
+};
+
+// 4. BODY FAT CALCULATOR (US Navy Method)
+export const BODY_FAT_KNOWLEDGE: Record<Language, (tool: ToolDef, name: string, relatedTools: ToolDef[]) => ToolContentDetails> = {
+  en: (tool, name, relatedTools) => ({
+    toolName: name,
+    intro: 'A body fat calculator estimates body fat percentage and classifies physical fitness composition using the official US Navy circumference method based on height, neck, waist, and hip measurements.',
+    whoUsesIt: 'Athletes tracking lean mass changes, military personnel verifying body composition compliance, and fitness enthusiasts monitoring body recomposition.',
+    whatItCalculates: 'Estimated body fat percentage and body composition category (Essential Fat, Athletes, Fitness, Average, or Obese).',
+    howToUse: [
+      'Select your biological gender (male or female).',
+      'Enter your height in centimeters.',
+      'Measure and enter neck circumference just below the larynx.',
+      'Measure and enter waist circumference (at navel level for men, narrowest point for women).',
+      'For women, measure and enter hip circumference at the widest point.',
+      'View your body fat percentage and fitness category classification.',
+    ],
+    formula: 'Men: %Fat = 86.010 × log10(waist - neck) - 70.041 × log10(height) + 36.76  |  Women: %Fat = 163.205 × log10(waist + hip - neck) - 97.684 × log10(height) - 78.387',
+    inputs: [
+      { name: 'Biological Sex', description: 'Used to select sex-specific US Navy circumference formulas and anatomical fat distribution models.', unit: 'Male / Female', optional: false },
+      { name: 'Height (cm)', description: 'Stature measured barefoot without shoes.', unit: 'Centimeters (cm)', optional: false },
+      { name: 'Neck Circumference (cm)', description: 'Measured around the neck immediately below the larynx (Adam\'s apple).', unit: 'Centimeters (cm)', optional: false },
+      { name: 'Waist Circumference (cm)', description: 'Measured horizontally at the navel level for men, or narrowest natural waistline for women.', unit: 'Centimeters (cm)', optional: false },
+      { name: 'Hip Circumference (cm)', description: 'Measured at the widest horizontal point across the buttocks (required for women).', unit: 'Centimeters (cm)', optional: true },
+    ],
+    workedExample: {
+      scenario: 'A male with height 178 cm, neck circumference 38 cm, and waist circumference 85 cm.',
+      stepByStep: [
+        'Calculate waist minus neck: 85 - 38 = 47 cm.',
+        'Calculate log10(47): 1.6721; multiplied by 86.010 = 143.82.',
+        'Calculate log10(178): 2.2504; multiplied by 70.041 = 157.62.',
+        'Apply formula: 143.82 - 157.62 + 36.76 = 22.96% (rounded to 23.0%).',
+        'Compare against thresholds: 18% to 25% for men falls into the "Average" category.',
+      ],
+      result: 'Estimated Body Fat = 23.0% (Category: Average).',
+    },
+    assumptions: 'Assumes tape measurements are taken firmly against bare skin without compressing soft tissue.',
+    limitations: 'The US Navy formula is an estimate with an average error margin of ±3% compared to DEXA scans or hydrostatic weighing. Extreme musculature or localized water retention can shift results.',
+    faqs: [
+      {
+        question: 'What is considered an ideal body fat percentage?',
+        answer: 'For men, general fitness is typically 14%–17% and average is 18%–24%. For women, fitness is typically 21%–24% and average is 25%–31%. Essential fat levels are 2%–5% for men and 10%–13% for women.',
+      },
+      {
+        question: 'Why does the US Navy method require tape measurements rather than scale weight?',
+        answer: 'Because tape measurements reflect physical dimensions and body shape rather than gravitational weight alone, allowing the formula to differentiate between dense muscle mass and adipose tissue.',
+      },
+    ],
+    relatedTools,
+  }),
+  ar: (tool, name, relatedTools) => ({
+    toolName: name,
+    intro: 'حاسبة نسبة الدهون في الجسم تقدر النسبة المئوية لكتلة الدهون وتحدد فئة اللياقة البدنية باستخدام طريقة البحرية الأمريكية المعتمدة قياسياً.',
+    whoUsesIt: 'الرياضيون، ومتابعو اللياقة البدنية، ومن يتبعون برامج التنشيف والتخسيس.',
+    whatItCalculates: 'نسبة الدهون في الجسم وتصنيف التكوين البدني (دهون أساسية، رياضي، لياقة، متوسط، بدين).',
+    howToUse: [
+      'حدد الجنس (ذكر أو أنثى).',
+      'أدخل الطول بالسنتيمتر.',
+      'قس محيط الرقبة بالسنتيمتر تحت الحنجرة مباشرة.',
+      'قس محيط الخصر بالسنتيمتر بمحاذاة السرة.',
+      'للإناث: قس محيط الورك عند أعرض نقطة.',
+      'استعرض نسبة الدهون المقدرة وفئة التكوين الجسدي.',
+    ],
+    formula: 'معادلة البحرية الأمريكية (US Navy Method) المعتمدة على لوغاريتمات محيطات الجسم والطول',
+    inputs: [
+      { name: 'الجنس والطول', description: 'النوع والقامة بالسنتيمتر.', unit: 'سم', optional: false },
+      { name: 'محيط الرقبة والخصر', description: 'قياسات شريط القياس بالسنتيمتر بدقة.', unit: 'سم', optional: false },
+    ],
+    workedExample: {
+      scenario: 'رجل بطول 178 سم، محيط الرقبة 38 سم، والخصر 85 سم.',
+      stepByStep: ['تطبيق معادلة البحرية الأمريكية للرجال ينتج: 22.96% تقرب إلى 23.0%.'],
+      result: 'نسبة الدهون: 23.0% (الفئة: متوسط).',
+    },
+    faqs: [{ question: 'ما هو المعدل الصحي للدهون عند الرجال والنساء؟', answer: 'المعدل الطبيعي الصحي للرجال بين 14% و 24%، وللنساء بين 21% و 31%.' }],
+    relatedTools,
+  }),
+  es: (tool, name, relatedTools) => ({
+    toolName: name,
+    intro: 'La calculadora de grasa corporal estima el porcentaje de tejido adiposo según el método de la Marina de EE. UU. a partir del contorno corporal.',
+    whoUsesIt: 'Deportistas y personas en proceso de recomposición corporal.',
+    whatItCalculates: 'Porcentaje de grasa corporal estimado y categoría de composición corporal.',
+    howToUse: [
+      'Seleccione su sexo (hombre o mujer).',
+      'Introduzca su estatura en centímetros.',
+      'Mida e introduzca el perímetro del cuello y de la cintura.',
+      'En mujeres, añada el perímetro de la cadera.',
+      'Consulte su porcentaje graso y clasificación fitness.',
+    ],
+    formula: 'Método US Navy (medidas corporales y logaritmos de contornos)',
+    inputs: [{ name: 'Sexo, Estatura y Contornos', description: 'Medidas antropométricas con cinta métrica.', unit: 'cm', optional: false }],
+    workedExample: {
+      scenario: 'Hombre de 178 cm de altura, cuello de 38 cm y cintura de 85 cm.',
+      stepByStep: ['Cálculo de la fórmula US Navy: 22,96% (23,0% redondeado).'],
+      result: 'Grasa corporal = 23,0% (Categoría: Promedio).',
+    },
+    faqs: [{ question: '¿Cuál es el margen de error?', answer: 'Suele situarse en un ±3% respecto a pruebas densitométricas DEXA.' }],
+    relatedTools,
+  }),
+  fr: (tool, name, relatedTools) => ({
+    toolName: name,
+    intro: 'Le calculateur de masse grasse estime votre taux de graisse corporelle selon la méthode officielle de l’US Navy basée sur les circonférences corporelles.',
+    whoUsesIt: 'Sportifs, pratiquants de fitness et adeptes de la recomposition corporelle.',
+    whatItCalculates: 'Pourcentage de masse grasse estimé et catégorie de composition corporelle.',
+    howToUse: [
+      'Sélectionnez votre sexe (homme ou femme).',
+      'Indiquez votre taille en centimètres.',
+      'Mesurez et saisissez le tour de cou et le tour de taille.',
+      'Pour les femmes, renseignez le tour de hanches.',
+      'Obtenez votre taux de masse grasse et votre catégorie.',
+    ],
+    formula: 'Méthode de la Navy américaine basée sur les circonférences et la taille',
+    inputs: [{ name: 'Sexe, Taille et Mensurations', description: 'Taille, tour de cou, taille et hanches.', unit: 'cm', optional: false }],
+    workedExample: {
+      scenario: 'Homme de 178 cm, tour de cou 38 cm et tour de taille 85 cm.',
+      stepByStep: ['Application de l’équation Navy : 22,96% (23,0% arrondi).'],
+      result: 'Masse grasse = 23,0% (Catégorie : Moyenne).',
+    },
+    faqs: [{ question: 'Quel est le taux de masse grasse idéal ?', answer: 'Entre 14 % et 17 % pour les hommes sportifs, et entre 21 % et 24 % pour les femmes sportives.' }],
+    relatedTools,
+  }),
+  de: (tool, name, relatedTools) => ({
+    toolName: name,
+    intro: 'Der Körperfettrechner ermittelt den Körperfettanteil (KFA) nach der wissenschaftlich anerkannten US-Navy-Umfangsmethode.',
+    whoUsesIt: 'Sportler zur Verfolgung der Körperzusammensetzung und Personen bei Diäten.',
+    whatItCalculates: 'Geschätzter Körperfettanteil (KFA) in Prozent und Einstufung der Fitnesskategorie.',
+    howToUse: [
+      'Wählen Sie Ihr biologisches Geschlecht (männlich oder weiblich).',
+      'Geben Sie Ihre Körpergröße in Zentimetern an.',
+      'Messen Sie den Halsumfang und den Taillenumfang mit einem Maßband.',
+      'Bei Frauen: Messen Sie den Hüftumfang an der breitesten Stelle.',
+      'Sehen Sie Ihren berechneten KFA und die Einstufung.',
+    ],
+    formula: 'US-Navy-Formel anhand von Körpergröße und Umfangsmessungen',
+    inputs: [{ name: 'Geschlecht, Größe und Umfänge', description: 'Körpermaße mit dem Maßband in cm.', unit: 'cm', optional: false }],
+    workedExample: {
+      scenario: 'Mann mit 178 cm Größe, 38 cm Halsumfang und 85 cm Taillenumfang.',
+      stepByStep: ['Berechnung nach US-Navy-Formel: 22,96% (gerundet 23,0%).'],
+      result: 'Körperfettanteil = 23,0% (Kategorie: Durchschnitt).',
+    },
+    faqs: [{ question: 'Wie genau ist die US-Navy-Methode?', answer: 'Die Methode weist gegenüber DEXA-Scans eine durchschnittliche Genauigkeit von ca. ±3 Prozentpunkten auf.' }],
+    relatedTools,
+  }),
+};

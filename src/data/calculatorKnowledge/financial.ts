@@ -1,0 +1,543 @@
+import { ToolContentDetails } from './types';
+import { ToolDef, Language } from '../../types';
+
+// 1. LOAN CALCULATOR
+export const LOAN_KNOWLEDGE: Record<Language, (tool: ToolDef, name: string, relatedTools: ToolDef[]) => ToolContentDetails> = {
+  en: (tool, name, relatedTools) => ({
+    toolName: name,
+    intro: 'A loan calculator computes your periodic installment payments, total financing costs, and complete amortization schedule for personal loans, auto loans, or general consumer credit.',
+    whoUsesIt: 'Borrowers comparing loan offers, shoppers calculating auto financing budgets, and consumers evaluating debt consolidation options.',
+    whatItCalculates: 'Monthly payment amount, total interest payable over the loan term, total repayment amount (principal plus interest), and amortization balance progression.',
+    howToUse: [
+      'Enter the total borrowed principal amount.',
+      'Enter the lender annual interest rate (APR).',
+      'Specify the loan repayment duration in years or months.',
+      'Review your fixed monthly installment, total interest charges, and the yearly amortization schedule.',
+    ],
+    formula: 'A = P × [r(1 + r)^n] / [(1 + r)^n - 1]',
+    formulaVariables: [
+      { symbol: 'A', explanation: 'Periodic installment payment per month' },
+      { symbol: 'P', explanation: 'Total borrowed loan amount (principal)' },
+      { symbol: 'r', explanation: 'Periodic interest rate (annual nominal rate divided by 12)' },
+      { symbol: 'n', explanation: 'Total number of scheduled payments (term in years × 12)' },
+    ],
+    inputs: [
+      { name: 'Loan Amount ($)', description: 'The net sum of money borrowed from the lender.', unit: 'USD ($)', optional: false },
+      { name: 'Annual Interest Rate (%)', description: 'The annual percentage rate (APR) charged by the lender.', unit: 'Percentage (%)', optional: false },
+      { name: 'Loan Term (Years or Months)', description: 'The total agreed time frame to extinguish the debt.', unit: 'Years / Months', optional: false },
+    ],
+    unitsAndConversions: 'Interest compounds on each monthly payment cycle according to standard declining-balance amortization.',
+    workedExample: {
+      scenario: 'Borrowing $25,000 for a car loan at 5.5% annual interest over a 5-year term (60 months).',
+      stepByStep: [
+        'Determine monthly rate: r = 0.055 / 12 = 0.0045833.',
+        'Total payments: n = 5 × 12 = 60 months.',
+        'Calculate monthly payment: A = $25,000 × [0.0045833(1.0045833)^60] / [(1.0045833)^60 - 1] = $477.53.',
+        'Calculate total paid: $477.53 × 60 = $28,651.80.',
+        'Calculate total interest: $28,651.80 - $25,000 = $3,651.80.',
+      ],
+      result: '$477.53 per month; total interest paid equals $3,651.80 over 5 years.',
+    },
+    understandingResults: 'The monthly payment is fixed. At the start of repayment, interest makes up a higher proportion of each payment; as the principal declines, the interest portion shrinks and principal reduction accelerates.',
+    assumptions: 'Assumes an unchanging fixed interest rate and regular, on-time monthly payments throughout the entire term.',
+    limitations: 'Does not account for optional lender origination fees, late penalties, or prepayment charges unless factored into the effective APR.',
+    faqs: [
+      {
+        question: 'How can I lower the total interest paid on a loan?',
+        answer: 'You can lower total interest by making extra principal payments, securing a lower interest rate, or choosing a shorter loan term with higher monthly payments.',
+      },
+      {
+        question: 'What is the difference between interest rate and APR?',
+        answer: 'The interest rate represents the annual cost of borrowing the principal balance, while APR (Annual Percentage Rate) includes both the interest rate and mandatory lender origination fees, providing a more comprehensive measure of borrowing cost.',
+      },
+      {
+        question: 'Can I pay off my loan early without penalty?',
+        answer: 'Most consumer and auto loans permit early prepayment without penalty, but borrowers should verify their loan agreement terms before accelerating repayments.',
+      },
+    ],
+    relatedTools,
+  }),
+  ar: (tool, name, relatedTools) => ({
+    toolName: name,
+    intro: 'حاسبة القروض تحسب قيمة القسط الشهري الثابت وإجمالي الفوائد وتكلفة التمويل الإجمالية للقروض الشخصية وقروض السيارات والتسهيلات الائتمانية.',
+    whoUsesIt: 'الأفراد الراغبون في معرفة التزاماتهم المالية الشهرية قبل الاقتراض، ومقارنو العروض البنكية.',
+    whatItCalculates: 'القسط الشهري، إجمالي الفوائد المدفوعة، والمبلغ الإجمالي المسدد طوال فترة القرض.',
+    howToUse: [
+      'أدخل المبلغ الإجمالي للقرض المراد اقتراضه.',
+      'أدخل معدل الفائدة السنوي أو هامش الربح البنكي.',
+      'حدد فترة السداد بالأشهر أو السنوات.',
+      'استعرض قيمة القسط الشهري المستحق، إجمالي الفائدة، وجدول السداد.',
+    ],
+    formula: 'A = P × [r(1 + r)^n] / [(1 + r)^n - 1]',
+    formulaVariables: [
+      { symbol: 'A', explanation: 'القسط الشهري المستحق' },
+      { symbol: 'P', explanation: 'مبلغ القرض المطلوب (أصل الدين)' },
+      { symbol: 'r', explanation: 'معدل الفائدة الشهري (المعدل السنوي مقسوماً على 12)' },
+      { symbol: 'n', explanation: 'إجمالي عدد الأشهر لسداد القرض' },
+    ],
+    inputs: [
+      { name: 'مبلغ التمويل / القرض', description: 'المبلغ الإجمالي الذي تنوي اقتراضه من الجهة الممولة.', unit: 'عملة نقدية', optional: false },
+      { name: 'معدل الفائدة السنوي (%)', description: 'النسبة المئوية للفائدة السنوية أو هامش الربح.', unit: 'نسبة سنوية (%)', optional: false },
+      { name: 'مدة السداد (بالسنوات أو الأشهر)', description: 'المدة المتفق عليها لإبراء كامل الدين.', unit: 'سنوات / أشهر', optional: false },
+    ],
+    unitsAndConversions: 'تحسب الفائدة على الرصيد المتناقص مع كل دورة سداد شهرية منتظمة.',
+    workedExample: {
+      scenario: 'اقتراض 25,000 لشراء سيارة بفائدة 5.5% سنوية لمدة 5 سنوات (60 شهراً).',
+      stepByStep: [
+        'تحديد النسبة الشهرية: 0.055 ÷ 12 = 0.0045833.',
+        'حساب القسط عبر معادلة الاستهلاك: ينتج 477.53 شهرياً.',
+        'إجمالي المدفوعات: 477.53 × 60 = 28,651.80.',
+        'إجمالي الفائدة: 28,651.80 - 25,000 = 3,651.80.',
+      ],
+      result: 'القسط الشهري 477.53؛ وإجمالي الفوائد المدفوعة 3,651.80 على مدار 5 سنوات.',
+    },
+    understandingResults: 'يظل القسط الشهري ثابتاً طوال المدة. في الأشهر الأولى تذهب حصة أكبر للفائدة، وتتناقص تدريجياً لصالح سداد أصل الدين.',
+    assumptions: 'يفترض استقرار معدل الفائدة الثابت والالتزام بمواعيد السداد دون تأخير.',
+    limitations: 'الحسابات تقديرية للأغراض الاسترشادية ولا تتضمن الرسوم الإدارية أو رسوم التأمين البنكي.',
+    faqs: [
+      {
+        question: 'كيف أستطيع تقليل الفائدة الإجمالية للقرض؟',
+        answer: 'عبر تقصير مدة القرض، أو زيادة الدفعة المقدمة لتقليص أصل الدين، أو سداد دفعات إضافية مبكرة موجهة للأصل.',
+      },
+      {
+        question: 'هل السداد المبكر متاح لجميع القروض؟',
+        answer: 'نعم غالباً، لكن قد تنطبق شروط خاصة أو رسوم سداد مبكر محددة نظاماً من قبل البنوك المركزية.',
+      },
+    ],
+    relatedTools,
+  }),
+  es: (tool, name, relatedTools) => ({
+    toolName: name,
+    intro: 'La calculadora de préstamos estima el pago mensual regular, el coste total de intereses y el cuadro de amortización para préstamos personales, préstamos para vehículos o créditos al consumo.',
+    whoUsesIt: 'Prestatarios que evalúan ofertas de crédito, compradores de automóviles y personas que planean consolidar deudas.',
+    whatItCalculates: 'Cuota mensual fija, intereses totales acumulados, importe total a reembolsar y evolución del capital amortizado.',
+    howToUse: [
+      'Introduzca el importe total del préstamo solicitado.',
+      'Indique el tipo de interés anual nominal (TIN / TAE).',
+      'Seleccione el plazo de amortización en años o meses.',
+      'Consulte la cuota mensual resultante, los intereses totales y el cuadro de amortización.',
+    ],
+    formula: 'A = P × [r(1 + r)^n] / [(1 + r)^n - 1]',
+    inputs: [
+      { name: 'Importe del préstamo ($)', description: 'Cantidad total de dinero que solicita prestada a la entidad financiera.', unit: 'Moneda local', optional: false },
+      { name: 'Tipo de interés anual nominal (%)', description: 'Porcentaje anual aplicado por la entidad prestamista.', unit: 'Porcentaje anual (%)', optional: false },
+      { name: 'Plazo de amortización', description: 'Número de años o meses pactados para la devolución íntegra del crédito.', unit: 'Años o Meses', optional: false },
+    ],
+    workedExample: {
+      scenario: 'Préstamo de 25.000 para vehículo al 5,5% anual a 5 años (60 meses).',
+      stepByStep: [
+        'Tipo mensual: 0,055 / 12 = 0,0045833; 60 cuotas mensuales.',
+        'Cálculo de cuota mensual fija: 477,53 por mes.',
+        'Reembolso total: 477,53 × 60 = 28.651,80.',
+        'Intereses totales: 28.651,80 - 25.000 = 3.651,80.',
+      ],
+      result: 'Cuota mensual de 477,53; coste total en intereses: 3.651,80.',
+    },
+    assumptions: 'Tipo de interés fijo y pagos mensuales regulares sin comisiones adicionales.',
+    limitations: 'No incluye posibles gastos de apertura o seguros vinculados salvo que se utilicen con la TAE efectiva.',
+    faqs: [
+      { question: '¿Cómo reducir los intereses de un préstamo?', answer: 'Amortizando capital anticipadamente o eligiendo un plazo más corto con cuotas mayores.' },
+      { question: '¿Qué diferencia hay entre TIN y TAE?', answer: 'El TIN es el interés puro del préstamo; la TAE incluye además las comisiones y gastos asociados.' },
+    ],
+    relatedTools,
+  }),
+  fr: (tool, name, relatedTools) => ({
+    toolName: name,
+    intro: 'Le calculateur de prêt estime l’échéance mensuelle constante, le coût global des intérêts et le remboursement prévisionnel d’un crédit personnel ou d’un prêt automobile.',
+    whoUsesIt: 'Les emprunteurs souhaitant calibrer leur capacité de remboursement avant de solliciter un crédit bancaire.',
+    whatItCalculates: 'Mensualité constante, coût total des intérêts et montant total dû sur la durée convenue.',
+    howToUse: [
+      'Indiquez le capital net emprunté.',
+      'Saisissez le taux d’intérêt annuel.',
+      'Choisissez la durée de remboursement en années ou en mois.',
+      'Consultez la mensualité fixe, le cumul des intérêts et l’échéancier.',
+    ],
+    formula: 'A = P × [r(1 + r)^n] / [(1 + r)^n - 1]',
+    inputs: [
+      { name: 'Montant emprunté (€ / $)', description: 'Capital net financé auprès de l’établissement bancaire.', unit: 'Devise', optional: false },
+      { name: 'Taux annuel débiteur (%)', description: 'Taux d’intérêt nominal annuel du prêt.', unit: 'Taux annuel (%)', optional: false },
+      { name: 'Durée de remboursement', description: 'Nombre d’années ou de mois accordés pour le remboursement.', unit: 'Années / Mois', optional: false },
+    ],
+    workedExample: {
+      scenario: 'Crédit auto de 25 000 au taux de 5,5 % sur 5 ans (60 mois).',
+      stepByStep: [
+        'Taux mensuel : 0,055 / 12 = 0,0045833 ; 60 mensualités.',
+        'Mensualité calculée : 477,53 par mois.',
+        'Total remboursé : 477,53 × 60 = 28 651,80.',
+        'Coût des intérêts : 28 651,80 - 25 000 = 3 651,80.',
+      ],
+      result: '477,53 par mois ; coût total des intérêts de 3 651,80 sur 5 ans.',
+    },
+    assumptions: 'Calcul fondé sur un taux d’intérêt fixe et des prélèvements mensuels réguliers.',
+    limitations: 'Simulation à titre indicatif hors frais de dossier et cotisations d’assurance facultative.',
+    faqs: [
+      { question: 'Quelle est la différence entre taux nominal et TAEG ?', answer: 'Le TAEG regroupe le taux nominal ainsi que tous les frais et assurances obligatoires liés au prêt.' },
+      { question: 'Peut-on rembourser par anticipation ?', answer: 'Oui, le remboursement par anticipation est encadré légalement avec ou sans indemnité selon le montant.' },
+    ],
+    relatedTools,
+  }),
+  de: (tool, name, relatedTools) => ({
+    toolName: name,
+    intro: 'Der Kreditrechner ermittelt die monatliche Rate, die Zinskosten und den Gesamtaufwand für Ratenkredite, Autokredite und Privatdarlehen.',
+    whoUsesIt: 'Verbraucher zur Prüfung der monatlichen Belastung vor Darlehensabschluss und zum Vergleich von Kreditangeboten.',
+    whatItCalculates: 'Monatliche Ratenhöhe, gesamte Zinslast und Gesamtrückzahlungsbetrag.',
+    howToUse: [
+      'Geben Sie den gewünschten Nettodarlehensbetrag ein.',
+      'Tragen Sie den jährlichen Sollzinssatz ein.',
+      'Wählen Sie die Kreditlaufzeit in Jahren oder Monaten.',
+      'Entnehmen Sie die monatliche Kreditrate, Zinskosten und Tilgungsübersicht.',
+    ],
+    formula: 'A = P × [r(1 + r)^n] / [(1 + r)^n - 1]',
+    inputs: [
+      { name: 'Kreditbetrag (€ / $)', description: 'Nettodarlehensbetrag, der von der Bank ausgezahlt wird.', unit: 'Währung', optional: false },
+      { name: 'Sollzinssatz p.a. (%)', description: 'Gebundener jährlicher Zinssatz der Bank.', unit: 'Prozentsatz (%)', optional: false },
+      { name: 'Laufzeit (Jahre / Monate)', description: 'Vereinbarte Dauer bis zur vollständigen Tilgung.', unit: 'Jahre oder Monate', optional: false },
+    ],
+    workedExample: {
+      scenario: 'Autokredit über 25.000 zu 5,5 % Zinsen über 5 Jahre (60 Monate).',
+      stepByStep: [
+        'Monatszinssatz: 0,055 / 12 = 0,0045833 ; 60 Raten.',
+        'Berechnung der Monatsrate: 477,53 monatlich.',
+        'Gesamtzahlung: 477,53 × 60 = 28.651,80.',
+        'Zinsaufwand: 28.651,80 - 25.000 = 3.651,80.',
+      ],
+      result: '477,53 monatliche Rate; gesamte Zinskosten von 3.651,80 über 5 Jahre.',
+    },
+    assumptions: 'Konstanter Sollzinssatz über die gesamte Laufzeit und pünktliche Monatsraten.',
+    limitations: 'Modellrechnung ohne Gewähr. Der effektive Jahreszins kann bei Abschluss abweichen.',
+    faqs: [
+      { question: 'Wie wirkt sich eine vorzeitige Sondertilgung aus?', answer: 'Sie senkt die Restschuld sofort und verringert die zukünftigen Zinszahlungen beträchtlich.' },
+      { question: 'Was ist der Unterschied zwischen Sollzins und effektivem Jahreszins?', answer: 'Der effektive Jahreszins berücksichtigt alle Nebenkosten und Gebühren und eignet sich daher zum Preisvergleich.' },
+    ],
+    relatedTools,
+  }),
+};
+
+// 2. COMPOUND INTEREST CALCULATOR
+export const COMPOUND_INTEREST_KNOWLEDGE: Record<Language, (tool: ToolDef, name: string, relatedTools: ToolDef[]) => ToolContentDetails> = {
+  en: (tool, name, relatedTools) => ({
+    toolName: name,
+    intro: 'A compound interest calculator models the exponential growth of invested capital over time when earnings are reinvested to generate their own subsequent returns.',
+    whoUsesIt: 'Long-term savers, retirement investors, and wealth planners projecting investment asset growth.',
+    whatItCalculates: 'Final portfolio balance, total principal contributions, total compound interest accrued, and annual growth trajectory.',
+    howToUse: [
+      'Enter your initial starting principal balance.',
+      'Enter your anticipated annual interest or return rate.',
+      'Specify the investment duration in years.',
+      'Optionally set regular monthly contributions and compounding frequency.',
+      'Review your future projected balance, total deposits, and total compound interest earnings.',
+    ],
+    formula: 'A = P(1 + r/n)^(nt) + PMT × [((1 + r/n)^(nt) - 1) / (r/n)]',
+    formulaVariables: [
+      { symbol: 'A', explanation: 'Final future balance' },
+      { symbol: 'P', explanation: 'Initial principal investment' },
+      { symbol: 'r', explanation: 'Nominal annual interest or expected return rate (decimal)' },
+      { symbol: 'n', explanation: 'Number of compounding periods per year' },
+      { symbol: 't', explanation: 'Number of years invested' },
+      { symbol: 'PMT', explanation: 'Regular periodic contribution made each period' },
+    ],
+    inputs: [
+      { name: 'Initial Principal ($)', description: 'The starting lump sum deposited into the investment.', unit: 'USD ($)', optional: false },
+      { name: 'Annual Interest / Return Rate (%)', description: 'Expected annual percentage growth rate or dividend yield.', unit: 'Percentage (%)', optional: false },
+      { name: 'Investment Horizon (Years)', description: 'Duration in years the funds remain invested.', unit: 'Years', optional: false },
+      { name: 'Compounding Frequency', description: 'How often accrued returns are added to principal (annually, quarterly, monthly, daily).', unit: 'Frequency', optional: true },
+      { name: 'Regular Contribution ($)', description: 'Optional ongoing deposits added on a periodic schedule.', unit: 'USD / Period', optional: true },
+    ],
+    workedExample: {
+      scenario: 'Investing $10,000 initial principal at a 7% annual return compounded annually for 20 years with zero additional contributions.',
+      stepByStep: [
+        'Set parameters: P = $10,000, r = 0.07, n = 1, t = 20.',
+        'Apply formula: A = $10,000 × (1 + 0.07/1)^(1 × 20) = $10,000 × (1.07)^20.',
+        'Evaluate exponential term: (1.07)^20 ≈ 3.86968.',
+        'Calculate final balance: $10,000 × 3.86968 = $38,696.84.',
+        'Total interest earned: $38,696.84 - $10,000 = $28,696.84.',
+      ],
+      result: 'Final balance: $38,696.84 ($28,696.84 in compound earnings; capital nearly quadrupled).',
+    },
+    understandingResults: 'Compound interest generates non-linear growth. In the first few years, annual gains appear modest, but over multi-decade spans, reinvested earnings begin generating more annual income than the original contributions.',
+    assumptions: 'Assumes consistent reinvestment of all yields and steady returns without capital withdrawals.',
+    limitations: 'Actual investment markets fluctuate; investment projections do not account for inflation, management fees, or capital gains taxation.',
+    faqs: [
+      {
+        question: 'What is the Rule of 72 in compound interest?',
+        answer: 'The Rule of 72 is a mental shortcut to estimate how many years it takes for an investment to double: divide 72 by the annual return rate. At 8% return, money doubles in approximately 9 years (72 ÷ 8 = 9).',
+      },
+      {
+        question: 'How does compounding frequency affect total yield?',
+        answer: 'More frequent compounding (such as daily or monthly versus annually) yields slightly higher total returns because earned interest begins accumulating its own interest sooner.',
+      },
+    ],
+    relatedTools,
+  }),
+  ar: (tool, name, relatedTools) => ({
+    toolName: name,
+    intro: 'حاسبة الفائدة المركبة تحاكي النمو التراكمي لرأس المال المستثمر عبر الزمن عند إعادة استثمار الأرباح لتوليد عوائد إضافية متعاقبة.',
+    whoUsesIt: 'المستثمرون على المدى الطويل، والمخططون للتقاعد، والراغبون في معرفة القوة التراكمية للمدخرات.',
+    whatItCalculates: 'الرصيد النهائي المستقبلي، إجمالي المبالغ المودعة، وإجمالي العوائد التراكمية المركبة.',
+    howToUse: [
+      'أدخل المبلغ الأولي المستثمر (رأس المال الأساسي).',
+      'حدد معدل العائد أو نسبة الفائدة السنوية المتوقعة.',
+      'حدد عدد سنوات الاستثمار.',
+      'استعرض الرصيد النهائي المتراكم وإجمالي الأرباح المركبة الناتجة.',
+    ],
+    formula: 'A = P(1 + r/n)^(nt)',
+    inputs: [
+      { name: 'المبلغ المالي المبدئي', description: 'رأس المال الأساسي الذي تبدأ به استثمارك.', unit: 'عملة نقدية', optional: false },
+      { name: 'معدل العائد السنوي المتوقع (%)', description: 'نسبة النمو أو العائد السنوي المتوقعة.', unit: 'نسبة سنوية (%)', optional: false },
+      { name: 'عدد السنوات', description: 'الفترة الزمنية للاستثمار بالسنوات.', unit: 'سنوات', optional: false },
+    ],
+    workedExample: {
+      scenario: 'استثمار 10,000 بعائد 7% سنوياً لمدة 20 سنة.',
+      stepByStep: [
+        'المعادلة: 10,000 × (1.07)^20 = 10,000 × 3.8697.',
+        'الرصيد النهائي: 38,696.84.',
+        'إجمالي الأرباح المركبة: 28,696.84.',
+      ],
+      result: 'الرصيد النهائي 38,696.84 (تضاعف رأس المال قرابة 4 مرات بفضل العائد المركب).',
+    },
+    assumptions: 'يفترض ثبات معدل العائد وإعادة استثمار كامل الأرباح دون سحوبات.',
+    limitations: 'لا تتضمن الحسابات تأثير التضخم المالي أو الضرائب على الأرباح الرأسمالية.',
+    faqs: [
+      { question: 'ما هي قاعدة 72؟', answer: 'قاعدة تقريبية لحساب مدة مضاعفة رأس المال بقسمة 72 على نسبة العائد السنوي (مثلاً: 72 ÷ 8% = 9 سنوات).' },
+    ],
+    relatedTools,
+  }),
+  es: (tool, name, relatedTools) => ({
+    toolName: name,
+    intro: 'La calculadora de interés compuesto proyecta el crecimiento exponencial del capital invertido mediante la reinversión continua de los rendimientos generados.',
+    whoUsesIt: 'Ahorradores a largo plazo, inversores en fondos indexados y planificadores de jubilación.',
+    whatItCalculates: 'Capital final acumulado, aportaciones totales y beneficio generado por el interés compuesto.',
+    howToUse: [
+      'Introduzca el capital inicial invertido.',
+      'Indique la rentabilidad anual esperada en porcentaje.',
+      'Seleccione el plazo de la inversión en años.',
+      'Compruebe el capital final acumulado y los intereses generados.',
+    ],
+    formula: 'A = P(1 + r/n)^(nt)',
+    inputs: [
+      { name: 'Capital inicial ($)', description: 'Cantidad inicial invertida.', unit: 'Moneda local', optional: false },
+      { name: 'Tasa de rendimiento anual (%)', description: 'Rentabilidad anual esperada.', unit: 'Porcentaje (%)', optional: false },
+      { name: 'Horizonte temporal (Años)', description: 'Tiempo que se mantendrá la inversión.', unit: 'Años', optional: false },
+    ],
+    workedExample: {
+      scenario: 'Invertir 10.000 al 7% anual durante 20 años.',
+      stepByStep: ['10.000 × (1,07)^20 = 38.696,84.', 'Ganancia neta: 28.696,84 en intereses.'],
+      result: 'Capital final: 38.696,84.',
+    },
+    assumptions: 'Rendimiento anual constante y reinversión total sin rescates anticipados.',
+    limitations: 'No descuenta la inflación ni comisiones de custodia o retenciones fiscales.',
+    faqs: [
+      { question: '¿Qué es la regla del 72?', answer: 'Permite estimar en cuántos años se duplica un capital dividiendo 72 entre la tasa de interés anual.' },
+    ],
+    relatedTools,
+  }),
+  fr: (tool, name, relatedTools) => ({
+    toolName: name,
+    intro: 'Le calculateur d’intérêts composés modélise la croissance exponentielle d’un capital où les gains générés s’ajoutent au capital initial pour produire à leur tour de nouveaux intérêts.',
+    whoUsesIt: 'Les épargnants préparant leur retraite et les investisseurs sur les marchés financiers.',
+    whatItCalculates: 'Capital final acquis, montant total investi et intérêts cumulés.',
+    howToUse: [
+      'Indiquez le capital initial placé.',
+      'Renseignez le rendement annuel espéré en pourcentage.',
+      'Définissez l’horizon d’investissement en années.',
+      'Consultez la valorisation finale et le total des intérêts produits.',
+    ],
+    formula: 'A = P(1 + r/n)^(nt)',
+    inputs: [
+      { name: 'Capital initial (€ / $)', description: 'Montant déposé à l’ouverture du placement.', unit: 'Devise', optional: false },
+      { name: 'Taux de rendement annuel (%)', description: 'Rendement annuel estimé.', unit: 'Pourcentage (%)', optional: false },
+      { name: 'Durée du placement (Années)', description: 'Nombre d’années d’investissement.', unit: 'Années', optional: false },
+    ],
+    workedExample: {
+      scenario: 'Placer 10 000 au taux de 7 % pendant 20 ans.',
+      stepByStep: ['10 000 × (1,07)^20 = 38 696,84.', 'Plus-value totale : 28 696,84.'],
+      result: 'Capital final : 38 696,84.',
+    },
+    assumptions: 'Rendement constant réinvesti intégralement.',
+    limitations: 'Ne prend pas en compte les prélèvements sociaux, la fiscalité ou l’inflation.',
+    faqs: [
+      { question: 'Qu’est-ce que la règle de 72 ?', answer: 'Une méthode rapide : divisez 72 par le taux de rendement pour connaître le nombre d’années nécessaires pour doubler votre capital.' },
+    ],
+    relatedTools,
+  }),
+  de: (tool, name, relatedTools) => ({
+    toolName: name,
+    intro: 'Der Zinseszinsrechner modelliert das exponentielle Vermögenswachstum, wenn erwirtschaftete Zinsen und Dividenden laufend wiederangelegt werden.',
+    whoUsesIt: 'Sparer für den Vermögensaufbau und die private Altersvorsorge.',
+    whatItCalculates: 'Endkapital, Summe der Einzahlungen und erwirtschaftete Zinseszinsen.',
+    howToUse: [
+      'Geben Sie das anfängliche Startkapital ein.',
+      'Tragen Sie die erwartete jährliche Rendite in Prozent ein.',
+      'Wählen Sie den Anlagehorizont in Jahren.',
+      'Entnehmen Sie das prognostizierte Endkapital und die Zinseszinsgewinne.',
+    ],
+    formula: 'A = P(1 + r/n)^(nt)',
+    inputs: [
+      { name: 'Anfangskapital (€ / $)', description: 'Einmalig zu Beginn investierter Geldbetrag.', unit: 'Währung', optional: false },
+      { name: 'Zinssatz p.a. (%)', description: 'Erwartete jährliche Rendite.', unit: 'Prozentsatz (%)', optional: false },
+      { name: 'Anlagedauer (Jahre)', description: 'Geplanter Anlagehorizont in Jahren.', unit: 'Jahre', optional: false },
+    ],
+    workedExample: {
+      scenario: '10.000 Startkapital zu 7 % Rendite über 20 Jahre.',
+      stepByStep: ['10.000 × (1,07)^20 = 38.696,84.', 'Zinsertrag: 28.696,84.'],
+      result: 'Endkapital: 38.696,84.',
+    },
+    assumptions: 'Gleichbleibende Rendite ohne zwischenzeitliche Entnahmen.',
+    limitations: 'Inflation und Abgeltungsteuer sind in der Modellrechnung nicht abgezogen.',
+    faqs: [
+      { question: 'Was besagt die 72er-Regel?', answer: 'Teilt man 72 durch den Zinssatz, erhält man die ungefähre Anzahl der Jahre, in denen sich das Kapital verdoppelt.' },
+    ],
+    relatedTools,
+  }),
+};
+
+// 3. SALARY CALCULATOR
+export const SALARY_KNOWLEDGE: Record<Language, (tool: ToolDef, name: string, relatedTools: ToolDef[]) => ToolContentDetails> = {
+  en: (tool, name, relatedTools) => ({
+    toolName: name,
+    intro: 'A salary calculator converts between annual salary, monthly earnings, bi-weekly paychecks, weekly pay, daily wages, and hourly rates based on standard working hours and weeks per year.',
+    whoUsesIt: 'Job seekers negotiating compensation, employees budgeting across pay periods, and freelancers converting contracts into equivalent annual salaries.',
+    whatItCalculates: 'Equivalent annual salary, monthly salary, bi-weekly paycheck, weekly pay, daily pay, and hourly wage.',
+    howToUse: [
+      'Choose whether to input an annual salary or an hourly wage.',
+      'Enter the compensation amount.',
+      'Adjust the scheduled hours per week (default is 40) and weeks worked per year (default is 52).',
+      'Review equivalent earnings across annual, monthly, bi-weekly, weekly, daily, and hourly periods.',
+    ],
+    formula: 'Hourly Rate = Annual Salary / (Hours per Week × Weeks per Year)  |  Monthly = Annual / 12',
+    inputs: [
+      { name: 'Pay Type', description: 'Select whether entering an annual salary or an hourly wage.', unit: 'Annual / Hourly', optional: false },
+      { name: 'Salary or Wage Amount ($)', description: 'Compensation figure in dollars.', unit: 'USD ($)', optional: false },
+      { name: 'Hours per Week', description: 'Number of paid working hours scheduled each week (standard full-time is 40).', unit: 'Hours', optional: false },
+      { name: 'Weeks per Year', description: 'Total weeks worked annually (standard full year is 52).', unit: 'Weeks', optional: false },
+    ],
+    workedExample: {
+      scenario: 'A full-time employee earning a $60,000 annual salary working 40 hours per week for 52 weeks (2,080 annual hours).',
+      stepByStep: [
+        'Calculate total annual hours: 40 hours/week × 52 weeks = 2,080 hours.',
+        'Calculate hourly rate: $60,000 ÷ 2,080 = $28.85 per hour.',
+        'Calculate monthly earnings: $60,000 ÷ 12 = $5,000.00 per month.',
+        'Calculate bi-weekly paycheck: $60,000 ÷ 26 = $2,307.69.',
+        'Calculate weekly pay: $60,000 ÷ 52 = $1,153.85.',
+        'Calculate daily pay: $1,153.85 ÷ 5 = $230.77 per day.',
+      ],
+      result: 'At $60,000/yr: $28.85/hr, $5,000.00/mo, $2,307.69 bi-weekly, $1,153.85 weekly, $230.77 daily.',
+    },
+    assumptions: 'Assumes consistent weekly working hours without unpaid overtime or unpaid leave unless adjusted via weeks/hours inputs.',
+    limitations: 'Calculates gross pre-tax income. Net take-home pay requires factoring in federal, state, and local income taxes, social security, and health insurance deductions.',
+    faqs: [
+      {
+        question: 'How many work hours are in a standard year?',
+        answer: 'A standard full-time work year comprises 2,080 hours (40 hours per week × 52 weeks).',
+      },
+      {
+        question: 'What is the difference between gross salary and net take-home pay?',
+        answer: 'Gross salary is your total compensation before payroll deductions, whereas net take-home pay is the final amount deposited into your account after taxes, pensions, and medical benefits are withheld.',
+      },
+    ],
+    relatedTools,
+  }),
+  ar: (tool, name, relatedTools) => ({
+    toolName: name,
+    intro: 'حاسبة الراتب تحول بدقة بين الراتب السنوي، والدخل الشهري، والراتب الأسبوعي، والأجر اليومي، وسعر الساعة للعمل.',
+    whoUsesIt: 'الموظفون لتقدير دخلهم، والباحثون عن عمل لمقارنة العروض الوظيفية، وأصحاب العمل لتحديد الأجور.',
+    whatItCalculates: 'الراتب السنوي، الراتب الشهري، الدخل نصف الشهري، الراتب الأسبوعي، الأجر اليومي، ومعدل أجر الساعة.',
+    howToUse: [
+      'حدد نوع الإدخال: راتب سنوي أو أجر بالساعة.',
+      'أدخل المبلغ الإجمالي.',
+      'اضبط ساعات العمل الأسبوعية (افتراضياً 40 ساعة) وعدد أسابيع العمل بالسنوات (افتراضياً 52 أسبوعاً).',
+      'اطلع على جدول تحويل الراتب عبر جميع الفترات الزمنية.',
+    ],
+    formula: 'أجر الساعة = الراتب السنوي ÷ (ساعات الأسبوع × أسابيع السنة)',
+    inputs: [
+      { name: 'نوع الأجر', description: 'راتب سنوي أو أجر بالساعة.', unit: 'نوع', optional: false },
+      { name: 'المبلغ', description: 'قيمة الراتب الإجمالي.', unit: 'عملة', optional: false },
+      { name: 'ساعات العمل أسبوعياً', description: 'عدد الساعات المعتمدة في الأسبوع (40 ساعة غالباً).', unit: 'ساعات', optional: false },
+    ],
+    workedExample: {
+      scenario: 'موظف يتقاضى 60,000 سنوياً بدوام كامل 40 ساعة أسبوعياً على مدار 52 أسبوعاً.',
+      stepByStep: [
+        'إجمالي ساعات العمل السنوية: 40 × 52 = 2,080 ساعة.',
+        'أجر الساعة: 60,000 ÷ 2,080 = 28.85 لكل ساعة.',
+        'الراتب الشهري: 60,000 ÷ 12 = 5,000 شهرياً.',
+      ],
+      result: 'الراتب: 28.85 للساعة، 5,000 شهرياً، 1,153.85 أسبوعياً.',
+    },
+    faqs: [
+      { question: 'هل يمثل الناتج الراتب الصافي أم الإجمالي؟', answer: 'يمثل الراتب الإجمالي قبل استقطاع الضرائب والتأمينات الاجتماعية.' },
+    ],
+    relatedTools,
+  }),
+  es: (tool, name, relatedTools) => ({
+    toolName: name,
+    intro: 'La calculadora de salario convierte entre sueldo anual, nómina mensual, paga quincenal, retribución semanal y tarifa por hora.',
+    whoUsesIt: 'Profesionales en negociación salarial, autónomos y trabajadores que comparan ofertas laborales.',
+    whatItCalculates: 'Sueldo anual, mensual, quincenal, semanal, diario y precio por hora de trabajo.',
+    howToUse: [
+      'Seleccione si desea calcular a partir del salario anual o del precio por hora.',
+      'Introduzca la cuantía retributiva.',
+      'Ajuste las horas semanales y semanas laborables al año.',
+      'Consulte la equivalencia de su remuneración en todos los períodos temporales.',
+    ],
+    formula: 'Tarifa Hora = Salario Anual / (Horas Semanales × Semanas Año)',
+    inputs: [
+      { name: 'Tipo y Cuantía', description: 'Salario anual o tarifa horaria en moneda de cálculo.', unit: 'Moneda', optional: false },
+      { name: 'Horas y Semanas', description: 'Jornada laboral habitual (40 h/sem, 52 sem/año).', unit: 'Tiempo', optional: false },
+    ],
+    workedExample: {
+      scenario: 'Salario bruto de 60.000 al año con jornada de 40 horas semanales durante 52 semanas.',
+      stepByStep: ['2.080 horas anuales.', '60.000 ÷ 2.080 = 28,85 por hora.', '60.000 ÷ 12 = 5.000 al mes.'],
+      result: '60.000/año equivale a 28,85/hora y 5.000/mes.',
+    },
+    faqs: [{ question: '¿Incluye retenciones de impuestos?', answer: 'Calcula el salario bruto. El salario neto depende de las retenciones fiscales de cada país o comunidad.' }],
+    relatedTools,
+  }),
+  fr: (tool, name, relatedTools) => ({
+    toolName: name,
+    intro: 'Le calculateur de salaire convertit votre rémunération entre salaire annuel brut, salaire mensuel, hebdomadaire, journalier et taux horaire.',
+    whoUsesIt: 'Salariés en négociation d’embauche, freelances et demandeurs d’emploi.',
+    whatItCalculates: 'Rémunération annuelle, mensuelle, bimensuelle, hebdomadaire, journalière et taux horaire équivalent.',
+    howToUse: [
+      'Sélectionnez le mode de saisie : salaire annuel ou taux horaire.',
+      'Indiquez le montant de la rémunération.',
+      'Ajustez le volume d’heures hebdomadaires (ex. 35 h ou 40 h) et les semaines travaillées par an.',
+      'Obtenez instantanément la décomposition détaillée de votre salaire.',
+    ],
+    formula: 'Taux Horaire = Salaire Annuel / (Heures par Semaine × Semaines Travaillées)',
+    inputs: [
+      { name: 'Type et Montant', description: 'Rémunération brute annuelle ou taux horaire.', unit: 'Devise', optional: false },
+      { name: 'Temps de travail', description: 'Heures hebdomadaires et semaines annuelles.', unit: 'Heures', optional: false },
+    ],
+    workedExample: {
+      scenario: 'Salaire brut de 60 000 par an pour 40 heures par semaine sur 52 semaines.',
+      stepByStep: ['2 080 heures annuelles.', '60 000 ÷ 2 080 = 28,85 par heure.', '60 000 ÷ 12 = 5 000 par mois.'],
+      result: 'Pour 60 000/an : 28,85/heure et 5 000/mois.',
+    },
+    faqs: [{ question: 'Ce montant est-il brut ou net ?', answer: 'Il s’agit d’une conversion en brut. Le salaire net perçu dépend des cotisations sociales obligatoires.' }],
+    relatedTools,
+  }),
+  de: (tool, name, relatedTools) => ({
+    toolName: name,
+    intro: 'Der Gehaltsrechner rechnet zwischen Jahresbruttogehalt, Monatsgehalt, Wochenlohn, Tagessatz und Stundenlohn präzise um.',
+    whoUsesIt: 'Arbeitnehmer bei Gehaltsverhandlungen, Freiberufler und Bewerber beim Arbeitsplatzvergleich.',
+    whatItCalculates: 'Jahresgehalt, Monatsgehalt, 14-tägige Auszahlung, Wochenlohn, Tagessatz und Stundenlohn.',
+    howToUse: [
+      'Wählen Sie, ob Sie das Jahresgehalt oder den Stundenlohn eingeben möchten.',
+      'Tragen Sie den Bruttobetrag ein.',
+      'Passen Sie die Wochenarbeitszeit (Standard 40 Std.) und Arbeitswochen pro Jahr (Standard 52) an.',
+      'Sehen Sie die genaue Umrechnung für alle Zahlungsintervalle.',
+    ],
+    formula: 'Stundenlohn = Jahresgehalt / (Wochenstunden × Jahresarbeitswochen)',
+    inputs: [
+      { name: 'Vergütungsart und Betrag', description: 'Jahresbrutto oder Stundensatz.', unit: 'Währung', optional: false },
+      { name: 'Arbeitszeit', description: 'Wöchentliche Arbeitsstunden und Arbeitswochen je Jahr.', unit: 'Stunden', optional: false },
+    ],
+    workedExample: {
+      scenario: '60.000 Bruttojahresgehalt bei 40 Wochenstunden und 52 Arbeitswochen.',
+      stepByStep: ['2.080 Arbeitsstunden im Jahr.', '60.000 ÷ 2.080 = 28,85 pro Stunde.', '60.000 ÷ 12 = 5.000 pro Monat.'],
+      result: '60.000/Jahr entspricht 28,85/Std. und 5.000/Monat.',
+    },
+    faqs: [{ question: 'Handelt es sich um Brutto- oder Nettobeträge?', answer: 'Der Rechner ermittelt die Bruttobeträge. Das Nettogehalt variiert je nach Steuerklasse und Sozialabgaben.' }],
+    relatedTools,
+  }),
+};

@@ -2,6 +2,7 @@ import React from 'react';
 import { BookOpen, HelpCircle, Lightbulb, Calculator, CheckCircle2, ArrowRight, AlertTriangle, Layers } from 'lucide-react';
 import { Tool, Language } from '../types';
 import { getToolContentDetails } from '../utils/toolContentEngine';
+import { getToolName, getToolDescription } from '../utils/toolMetadata';
 import { AppLink } from './common/AppLink';
 import { useApp } from '../context/AppContext';
 
@@ -17,7 +18,7 @@ export const ToolSeoContent: React.FC<ToolSeoContentProps> = ({
   toolName,
   categoryName,
 }) => {
-  const { lang, getToolUrl } = useApp();
+  const { lang, getToolUrl, t } = useApp();
   const details = getToolContentDetails(tool, lang);
 
   return (
@@ -44,6 +45,17 @@ export const ToolSeoContent: React.FC<ToolSeoContentProps> = ({
           <p className="text-base text-slate-700 dark:text-slate-200 font-medium">
             {details.intro}
           </p>
+          {details.whoUsesIt && (
+            <div className="p-4 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700/80">
+              <h3 className="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white mb-1.5 flex items-center gap-1.5">
+                <CheckCircle2 className="w-4 h-4 text-emerald-500" />
+                Who Uses This Calculator
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+                {details.whoUsesIt}
+              </p>
+            </div>
+          )}
           <div className="p-4 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700/80">
             <h3 className="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white mb-1.5 flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-emerald-500" />
@@ -55,6 +67,26 @@ export const ToolSeoContent: React.FC<ToolSeoContentProps> = ({
           </div>
         </div>
 
+        {/* How to Use This Calculator */}
+        {details.howToUse && details.howToUse.length > 0 && (
+          <div className="space-y-3">
+            <h3 className="text-base font-bold text-slate-900 dark:text-white flex items-center gap-2">
+              <BookOpen className="w-4 h-4 text-emerald-500" />
+              How to Use This Calculator
+            </h3>
+            <ol className="space-y-2.5">
+              {details.howToUse.map((step, idx) => (
+                <li key={idx} className="flex items-start gap-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+                  <span className="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 font-bold text-xs flex items-center justify-center">
+                    {idx + 1}
+                  </span>
+                  <span className="pt-0.5">{step}</span>
+                </li>
+              ))}
+            </ol>
+          </div>
+        )}
+
         {/* Formula & Mathematical Methodology */}
         {details.formula && (
           <div className="space-y-3">
@@ -65,6 +97,16 @@ export const ToolSeoContent: React.FC<ToolSeoContentProps> = ({
             <div className="p-4 bg-emerald-50/50 dark:bg-emerald-950/20 rounded-xl border border-emerald-200 dark:border-emerald-800/60 font-mono text-xs sm:text-sm text-emerald-900 dark:text-emerald-200">
               <code>{details.formula}</code>
             </div>
+            {details.formulaVariables && details.formulaVariables.length > 0 && (
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1">
+                {details.formulaVariables.map((v, idx) => (
+                  <div key={idx} className="p-2.5 bg-slate-50 dark:bg-slate-800/40 rounded-lg border border-slate-200 dark:border-slate-700/60 text-xs">
+                    <span className="font-mono font-bold text-emerald-700 dark:text-emerald-300">{v.symbol}: </span>
+                    <span className="text-slate-600 dark:text-slate-400">{v.explanation}</span>
+                  </div>
+                ))}
+              </div>
+            )}
             {details.unitsAndConversions && (
               <p className="text-xs text-slate-500 dark:text-slate-400">
                 <span className="font-semibold text-slate-700 dark:text-slate-300">Units & Standards: </span>
@@ -124,13 +166,36 @@ export const ToolSeoContent: React.FC<ToolSeoContentProps> = ({
           </div>
         )}
 
+        {/* Understanding Results */}
+        {details.understandingResults && (
+          <div className="space-y-2">
+            <h3 className="text-base font-bold text-slate-900 dark:text-white flex items-center gap-2">
+              <CheckCircle2 className="w-4 h-4 text-emerald-500" />
+              Understanding Your Results
+            </h3>
+            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed bg-slate-50 dark:bg-slate-800/40 p-4 rounded-xl border border-slate-200 dark:border-slate-700/60">
+              {details.understandingResults}
+            </p>
+          </div>
+        )}
+
         {/* Technical Limitations & Assumptions */}
-        {details.limitations && (
-          <div className="p-3.5 bg-amber-50/60 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-800/60 rounded-xl flex items-start gap-2.5 text-xs text-amber-900 dark:text-amber-300">
+        {(details.assumptions || details.limitations) && (
+          <div className="p-4 bg-amber-50/60 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-800/60 rounded-xl flex items-start gap-3 text-xs text-amber-900 dark:text-amber-300">
             <AlertTriangle className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
-            <div>
-              <span className="font-bold">Assumptions & Limitations: </span>
-              {details.limitations}
+            <div className="space-y-1.5">
+              {details.assumptions && (
+                <div>
+                  <span className="font-bold">Assumptions: </span>
+                  {details.assumptions}
+                </div>
+              )}
+              {details.limitations && (
+                <div>
+                  <span className="font-bold">Limitations: </span>
+                  {details.limitations}
+                </div>
+              )}
             </div>
           </div>
         )}
@@ -188,10 +253,10 @@ export const ToolSeoContent: React.FC<ToolSeoContentProps> = ({
               >
                 <div>
                   <h4 className="text-xs font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
-                    {relTool.slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}
+                    {getToolName(relTool, lang, t)}
                   </h4>
                   <p className="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-2 mt-1">
-                    Free online calculator for {relTool.slug.replace(/-/g, ' ')}.
+                    {getToolDescription(relTool, lang, t)}
                   </p>
                 </div>
                 <div className="mt-3 pt-2 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-[11px] text-emerald-600 dark:text-emerald-400 font-semibold">
