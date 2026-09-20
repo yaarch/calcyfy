@@ -8,6 +8,7 @@ interface AppLinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
   title?: string;
   activeClassName?: string;
+  hrefLang?: string;
   hreflang?: string;
 }
 
@@ -17,10 +18,12 @@ export const AppLink: React.FC<AppLinkProps> = ({
   className = '',
   onClick,
   activeClassName = '',
+  hrefLang,
   hreflang,
   ...props
 }) => {
   const { navigateTo } = useApp();
+  const effectiveHrefLang = hrefLang ?? hreflang;
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     // If custom onClick was provided, let it run
@@ -55,7 +58,7 @@ export const AppLink: React.FC<AppLinkProps> = ({
       href={href}
       onClick={handleClick}
       className={className}
-      hreflang={hreflang}
+      hrefLang={effectiveHrefLang}
       {...props}
     >
       {children}

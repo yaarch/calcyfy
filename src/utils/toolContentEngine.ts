@@ -27,6 +27,9 @@ import { BATCH3_HEALTH2_HANDLERS } from '../data/calculatorKnowledge/batch3Healt
 import { BATCH3_MATH_HANDLERS } from '../data/calculatorKnowledge/batch3Math';
 import { BATCH3_PRACTICAL_HANDLERS } from '../data/calculatorKnowledge/batch3Practical';
 import { MASTER_FINANCE_SPECIALIZED_HANDLERS } from '../data/calculatorKnowledge/specializedFinanceContent/masterFinanceSpecializedContent';
+import { CORPORATE_FINANCE_SPECIALIZED_HANDLERS } from '../data/calculatorKnowledge/corporateFinanceKnowledge';
+import { CLINICAL_HEALTH_SPECIALIZED_HANDLERS } from '../data/calculatorKnowledge/clinicalHealthKnowledge';
+import { ADVANCED_MATH_SPECIALIZED_HANDLERS } from '../data/calculatorKnowledge/advancedMathKnowledge';
 import { getStructuredFallbackDetails } from '../data/calculatorKnowledge/fallback';
 
 export type { ToolContentDetails, ToolFaq, ToolInputExplanation, ToolWorkedExample } from '../data/calculatorKnowledge/types';
@@ -60,10 +63,135 @@ const BATCH3_HANDLERS: Record<string, any> = {
 
 const COMBINED_UPGRADED_HANDLERS: Record<string, any> = {
   ...MASTER_FINANCE_SPECIALIZED_HANDLERS,
+  ...CORPORATE_FINANCE_SPECIALIZED_HANDLERS,
+  ...CLINICAL_HEALTH_SPECIALIZED_HANDLERS,
+  ...ADVANCED_MATH_SPECIALIZED_HANDLERS,
   ...BATCH1_HANDLERS,
   ...BATCH2_HANDLERS,
   ...BATCH3_HANDLERS,
 };
+
+const COMPLEMENTARY_TOOL_MAP: Record<string, string[]> = {
+  // Finance
+  'mortgage': ['loan', 'amortization-schedule-calculator', 'down-payment', 'property-tax'],
+  'wacc-calculator': ['dscr-calculator', 'cap-rate', 'irr-calculator', 'ebitda-calculator'],
+  'dscr-calculator': ['wacc-calculator', 'cap-rate', 'debt-payoff', 'commercial-loan'],
+  'options-black-scholes': ['roi-cagr', 'dividend-yield', 'crypto-profit', 'stock-dividend-yield'],
+  'cap-rate': ['rental-property-yield', 'dscr-calculator', 'mortgage', 'wacc-calculator'],
+  'debt-to-income': ['mortgage', 'loan', 'dscr-calculator', 'debt-payoff'],
+  'debt-to-income-ratio': ['mortgage', 'loan', 'dscr-calculator', 'debt-payoff'],
+  'debt-payoff': ['debt-snowball-payoff-calculator', 'loan', 'compound-interest', 'salary'],
+
+  // Health
+  'kidney-gfr-calculator': ['mean-arterial-pressure', 'body-surface-area', 'bmi', 'calorie'],
+  'gfr-calculator': ['mean-arterial-pressure', 'body-surface-area', 'bmi', 'calorie'],
+  'mean-arterial-pressure': ['target-heart-rate', 'kidney-gfr-calculator', 'blood-pressure-cat', 'cardiac-output-map'],
+  'map-calculator': ['target-heart-rate', 'kidney-gfr-calculator', 'blood-pressure-cat', 'cardiac-output-map'],
+  'target-heart-rate': ['mean-arterial-pressure', 'calorie-burn', 'bmi', 'ideal-weight'],
+  'bmi': ['body-fat', 'ideal-weight', 'calorie', 'target-heart-rate'],
+  'body-fat': ['bmi', 'ideal-weight', 'calorie-burn', 'macro'],
+
+  // Math & Physics
+  'hex-calculator': ['binary-addition', 'binary-hex', 'hex-to-ascii-string', 'modulo-calc'],
+  'hexadecimal-math-calculator': ['binary-addition', 'binary-hex', 'hex-to-ascii-string', 'modulo-calc'],
+  'binary-addition': ['hex-calculator', 'binary-hex', 'modulo-calc', 'bitwise-calc'],
+  'kinetic-energy': ['velocity-acceleration', 'potential-energy-grav', 'gravitational-force', 'torque-calculator'],
+  'kinetic-energy-mass-velocity': ['velocity-acceleration', 'potential-energy-grav', 'gravitational-force', 'torque-calculator'],
+  'velocity-acceleration': ['kinetic-energy', 'gravitational-force', 'torque-calculator', 'speed-distance'],
+  'matrix-inverse': ['matrix-determinant', 'matrix-transpose-calc', 'eigenvalues-2x2', 'system-linear-2vars'],
+  'matrix-inverse-calc': ['matrix-determinant', 'matrix-transpose-calc', 'eigenvalues-2x2', 'system-linear-2vars'],
+  'matrix-determinant': ['matrix-inverse-calc', 'matrix-transpose-calc', 'system-linear-3vars', 'cross-product-vectors'],
+  'vector-calculator': ['cross-product-vectors', 'dot-product-vectors', 'unit-vector-calculator', 'distance-3d-points'],
+  'vector-magnitude': ['cross-product-vectors', 'dot-product-vectors', 'unit-vector-calculator', 'distance-3d-points'],
+  'cross-product-vectors': ['dot-product-vectors', 'vector-magnitude', 'unit-vector-calculator', 'matrix-determinant'],
+  'dot-product-vectors': ['cross-product-vectors', 'vector-magnitude', 'unit-vector-calculator', 'matrix-determinant'],
+  'differential-equation': ['system-linear-2vars', 'system-linear-3vars', 'quadratic', 'integral'],
+
+  // Converters & Everyday
+  'temperature': ['unit-converter', 'heat-capacity-specific', 'speed-distance', 'pressure-unit'],
+  'unit-converter': ['temperature', 'speed-distance', 'data-size', 'fuel-consumption'],
+  'currency': ['currency-crypto', 'inflation-impact', 'vat-tax', 'salary'],
+  'currency-converter': ['currency-crypto', 'inflation-impact', 'vat-tax', 'salary']
+};
+
+/**
+ * Derives genuinely relevant related tools using a strict 5-tier semantic hierarchy:
+ * 1. Explicit complementary domain map
+ * 2. Shared specialized subcategory
+ * 3. Tag overlap count
+ * 4. Conceptual semantic token matching
+ * 5. Broad category fallback
+ */
+export function getRelatedTools(tool: ToolDef, limit = 4): ToolDef[] {
+  const result: ToolDef[] = [];
+  const added = new Set<string>([tool.id]);
+
+  // 1. Explicit Complementary Domain Map
+  const directSlugs = COMPLEMENTARY_TOOL_MAP[tool.id] || COMPLEMENTARY_TOOL_MAP[tool.slug] || [];
+  for (const slugOrId of directSlugs) {
+    if (result.length >= limit) break;
+    const match = TOOLS.find((t) => (t.id === slugOrId || t.slug === slugOrId) && !added.has(t.id));
+    if (match) {
+      result.push(match);
+      added.add(match.id);
+    }
+  }
+
+  // 2. Specialized Subcategory Match
+  if (result.length < limit && tool.subcategoryId) {
+    const subMatches = TOOLS.filter((t) => !added.has(t.id) && t.subcategoryId === tool.subcategoryId);
+    for (const m of subMatches) {
+      if (result.length >= limit) break;
+      result.push(m);
+      added.add(m.id);
+    }
+  }
+
+  // 3. High Tag Overlap
+  if (result.length < limit && tool.tags && tool.tags.length > 0) {
+    const tagMatches = TOOLS
+      .filter((t) => !added.has(t.id) && t.tags && t.tags.length > 0)
+      .map((t) => ({
+        tool: t,
+        overlap: t.tags!.filter((tag) => tool.tags!.includes(tag)).length
+      }))
+      .filter((x) => x.overlap > 0)
+      .sort((a, b) => b.overlap - a.overlap);
+
+    for (const item of tagMatches) {
+      if (result.length >= limit) break;
+      result.push(item.tool);
+      added.add(item.tool.id);
+    }
+  }
+
+  // 4. Conceptual Token Match
+  if (result.length < limit) {
+    const tokens = tool.slug.split('-').filter((w) => w.length > 3 && !['calculator', 'calc'].includes(w));
+    if (tokens.length > 0) {
+      const conceptMatches = TOOLS.filter(
+        (t) => !added.has(t.id) && tokens.some((token) => t.slug.includes(token) || t.id.includes(token))
+      );
+      for (const m of conceptMatches) {
+        if (result.length >= limit) break;
+        result.push(m);
+        added.add(m.id);
+      }
+    }
+  }
+
+  // 5. Category Fallback
+  if (result.length < limit) {
+    const catMatches = TOOLS.filter((t) => !added.has(t.id) && t.categoryId === tool.categoryId);
+    for (const m of catMatches) {
+      if (result.length >= limit) break;
+      result.push(m);
+      added.add(m.id);
+    }
+  }
+
+  return result.slice(0, limit);
+}
 
 export function getToolContentDetails(
   tool: ToolDef,
@@ -73,46 +201,8 @@ export function getToolContentDetails(
   const id = tool.id.toLowerCase();
   const slug = tool.slug.toLowerCase();
 
-  // Find 4 genuinely related tools in the same or complementary category
-  const relatedTools = TOOLS.filter(
-    (t) => t.id !== tool.id && (t.categoryId === tool.categoryId || t.slug.includes(id.split('-')[0]))
-  ).slice(0, 4);
-
-  // Check Batch 1 and Batch 2 upgraded tool implementations
-  const customHandlerGroup = COMBINED_UPGRADED_HANDLERS[id] || COMBINED_UPGRADED_HANDLERS[slug];
-  if (customHandlerGroup) {
-    const handler = customHandlerGroup[lang] || customHandlerGroup.en;
-    const res = handler(tool, name, relatedTools);
-    return {
-      toolName: res.toolName || name,
-      intro: res.intro || res.overview || '',
-      whoUsesIt: res.whoUsesIt,
-      howToUse: res.howToUse || [],
-      whatItCalculates: res.whatItCalculates || res.overview || '',
-      formula: res.formula,
-      formulaVariables: res.formulaVariables
-        ? res.formulaVariables.map((v: any) => ({
-            symbol: v.symbol || v.name || '',
-            explanation: v.explanation || v.description || ''
-          }))
-        : undefined,
-      inputs: res.inputs || (res.formulaVariables
-        ? res.formulaVariables.map((v: any) => ({
-            name: v.name || v.symbol || '',
-            description: v.description || v.explanation || '',
-            unit: v.unit,
-            optional: v.optional
-          }))
-        : []),
-      unitsAndConversions: res.unitsAndConversions,
-      workedExample: res.workedExample,
-      understandingResults: res.understandingResults || res.interpretation,
-      assumptions: res.assumptions,
-      limitations: res.limitations,
-      faqs: res.faqs || [],
-      relatedTools: res.relatedTools || relatedTools
-    };
-  }
+  // Find 4 genuinely related tools using the strict 5-tier semantic hierarchy
+  const relatedTools = getRelatedTools(tool, 4);
 
   // 1. MORTGAGE CALCULATOR (Gold Standard Target)
   if (id === 'mortgage' || slug === 'mortgage-calculator' || slug.includes('mortgage-payment') || slug.includes('fixed-mortgage')) {
@@ -215,6 +305,48 @@ export function getToolContentDetails(
   if (id === 'date' || slug === 'date-calculator' || slug.includes('date-difference') || slug.includes('date-between')) {
     const handler = DATE_KNOWLEDGE[lang] || DATE_KNOWLEDGE.en;
     return handler(tool, name, relatedTools);
+  }
+
+  // Check Batch 1, 2, 3 and Domain-Specialized upgraded tool implementations
+  const customHandlerGroup =
+    COMBINED_UPGRADED_HANDLERS[id] ||
+    COMBINED_UPGRADED_HANDLERS[slug] ||
+    COMBINED_UPGRADED_HANDLERS[id.replace(/-calculator$/, '')] ||
+    COMBINED_UPGRADED_HANDLERS[`${id}-calculator`] ||
+    COMBINED_UPGRADED_HANDLERS[slug.replace(/-calculator$/, '')] ||
+    COMBINED_UPGRADED_HANDLERS[`${slug}-calculator`];
+  if (customHandlerGroup) {
+    const handler = customHandlerGroup[lang] || customHandlerGroup.en;
+    const res = handler(tool, name, relatedTools);
+    return {
+      toolName: res.toolName || name,
+      intro: res.intro || res.overview || '',
+      whoUsesIt: res.whoUsesIt,
+      howToUse: res.howToUse || [],
+      whatItCalculates: res.whatItCalculates || res.overview || '',
+      formula: res.formula,
+      formulaVariables: res.formulaVariables
+        ? res.formulaVariables.map((v: any) => ({
+            symbol: v.symbol || v.name || '',
+            explanation: v.explanation || v.description || ''
+          }))
+        : undefined,
+      inputs: res.inputs || (res.formulaVariables
+        ? res.formulaVariables.map((v: any) => ({
+            name: v.name || v.symbol || '',
+            description: v.description || v.explanation || '',
+            unit: v.unit,
+            optional: v.optional
+          }))
+        : []),
+      unitsAndConversions: res.unitsAndConversions,
+      workedExample: res.workedExample,
+      understandingResults: res.understandingResults || res.interpretation,
+      assumptions: res.assumptions,
+      limitations: res.limitations,
+      faqs: res.faqs || [],
+      relatedTools: res.relatedTools || relatedTools
+    };
   }
 
   // 13. COMPREHENSIVE MULTILINGUAL STRUCTURED FALLBACK

@@ -240,7 +240,7 @@ const buildPrintHtml = (
     </div>
     <div class="print-meta">
       <div><strong>Date:</strong> ${formattedDate}</div>
-      <div><strong>URL:</strong> ${typeof window !== 'undefined' ? window.location.href : 'calcyfy.com'}</div>
+      <div><strong>URL:</strong> ${typeof window !== 'undefined' ? window.location.href : 'calcyfy.pages.dev'}</div>
     </div>
   </div>
 
@@ -255,7 +255,7 @@ const buildPrintHtml = (
 
   <div class="print-footer">
     <span>CALCYFY — Privacy-first, client-side calculations.</span>
-    <span>www.calcyfy.com</span>
+    <span>calcyfy.pages.dev</span>
   </div>
 </body>
 </html>

@@ -149,136 +149,239 @@ export const CALORIE_KNOWLEDGE: Record<Language, (tool: ToolDef, name: string, r
 export const TIP_KNOWLEDGE: Record<Language, (tool: ToolDef, name: string, relatedTools: ToolDef[]) => ToolContentDetails> = {
   en: (tool, name, relatedTools) => ({
     toolName: name,
-    intro: 'A tip calculator computes gratuity amounts and splits restaurant, bar, delivery, and hospitality checks evenly among dining guests.',
-    whoUsesIt: 'Diners splitting meal bills, travelers navigating regional gratuity customs, and service patrons calculating appropriate tips.',
-    whatItCalculates: 'Tip amount in dollars, total bill including tip, and exact per-person share when splitting.',
+    intro: 'The Tip Calculator quickly computes restaurant tips, divides bills evenly among any number of diners, and includes optional round-up features to make splitting dining expenses completely hassle-free.',
+    whoUsesIt: 'Restaurant diners, groups splitting bills, travelers, and anyone looking for a fast, accurate way to calculate gratuities and individual shares.',
+    whatItCalculates: 'Total tip amount, overall bill including gratuity, exact per-person share, and rounded totals.',
     howToUse: [
-      'Enter the bill subtotal before tips or gratuities.',
-      'Select a preset tip percentage or type a custom percentage.',
-      'Enter the number of people splitting the payment.',
-      'View the total tip, overall bill, and each person’s individual share.',
+      'Enter the pre-tax bill subtotal before tips or gratuities.',
+      'Select a tip percentage (e.g., 10%, 15%, 18%, 20%, 25%) or enter a custom rate.',
+      'Specify the number of diners sharing the bill.',
+      'Optionally toggle "Round up" to round the total bill to the nearest whole dollar.',
+      'Review the total tip, overall bill, and each person\'s exact share in real time.'
     ],
-    formula: 'Tip = Bill Amount × (Tip % / 100)  |  Per Person = (Bill + Tip) / Number of Guests',
+    formula: 'Tip Amount = Bill Amount × (Tip Percentage / 100)  |  Total Per Person = (Bill Amount + Tip Amount) / Number of People',
+    formulaVariables: [
+      { symbol: 'Bill Amount ($)', name: 'Bill Amount ($)', explanation: 'The total cost of the meal or service before tips.' },
+      { symbol: 'Tip Percentage (%)', name: 'Tip Percentage (%)', explanation: 'The selected rate of gratuity (e.g., 15%, 18%, 20%).' },
+      { symbol: 'Split Between People', name: 'Split Between People', explanation: 'The number of guests sharing the total bill.' },
+      { symbol: 'Tip Amount ($)', name: 'Tip Amount ($)', explanation: 'Total gratuity added to the check.' },
+      { symbol: 'Total Per Person ($)', name: 'Total Per Person ($)', explanation: 'The exact amount owed by each diner including their tip share.' }
+    ],
     inputs: [
-      { name: 'Bill Subtotal ($)', description: 'Total charge for food and beverages before tip.', unit: 'USD ($)', optional: false },
-      { name: 'Tip Percentage (%)', description: 'Selected gratuity percentage (typically 15% for standard service, 18%-20% for excellent service).', unit: 'Percentage (%)', optional: false },
-      { name: 'Split Between (People)', description: 'Number of diners dividing the total bill evenly.', unit: 'Count', optional: true },
+      { name: 'Bill Amount ($)', description: 'The total cost of the meal or service before tips.', unit: 'USD ($)', optional: false },
+      { name: 'Tip Percentage (%)', description: 'The selected rate of gratuity (e.g., 15%, 18%, 20%).', unit: 'Percentage (%)', optional: false },
+      { name: 'Split Between People', description: 'The number of guests sharing the total bill.', unit: 'People (Count)', optional: true },
     ],
+    unitsAndConversions: 'Calculations are displayed in standard currency units rounded to two decimal places (cents).',
     workedExample: {
-      scenario: 'Splitting an $84.00 dinner bill among 4 people with an 18% tip.',
+      scenario: 'Splitting an $85.50 restaurant bill between 2 people with an 18% gratuity tip.',
       stepByStep: [
-        'Calculate tip: $84.00 × 0.18 = $15.12.',
-        'Calculate total bill: $84.00 + $15.12 = $99.12.',
-        'Divide evenly by 4 guests: $99.12 ÷ 4 = $24.78 per person.',
+        'Identify bill parameters: Bill Amount = $85.50, Tip Percentage = 18%, Split = 2 people.',
+        'Calculate total tip amount: $85.50 × 0.18 = $15.39.',
+        'Calculate overall total bill: $85.50 + $15.39 = $100.89.',
+        'Divide evenly across 2 diners: $100.89 ÷ 2 = $50.45 per person (Tip per person: $7.70).'
       ],
-      result: 'Total tip: $15.12; Total bill: $99.12; Each guest pays $24.78.',
+      result: 'Total Tip: $15.39 | Total Bill: $100.89 | Per Person Share: $50.45 (Tip share: $7.70 each)'
     },
+    understandingResults: 'The calculator delivers an instant breakdown of the gratuity owed, overall bill, and equal individual contributions, eliminating manual payment confusion.',
+    assumptions: 'Assumes equal bill splitting across all dining participants and standard percentage gratuity calculation.',
+    limitations: 'Does not account for individual itemized drink or food splits unless calculated separately.',
     faqs: [
       {
-        question: 'What is the standard tipping percentage in the United States?',
-        answer: 'In US sit-down restaurants, standard etiquette suggests 15% for adequate service, 18% for good service, and 20% or more for exceptional service.',
+        question: 'What is standard dining tip etiquette?',
+        answer: 'In the United States and Canada, standard gratuity ranges from 15% for adequate service to 18%-20% for good service, and 20%+ for exceptional service.'
       },
+      {
+        question: 'Should you calculate tips before or after sales tax?',
+        answer: 'Standard etiquette recommends tipping on the pre-tax food and beverage subtotal, although tipping on the post-tax total is also very common.'
+      },
+      {
+        question: 'How does the round-up total bill option work?',
+        answer: 'Toggling "Round up" rounds the overall bill to the next whole dollar, adding the minor rounding difference directly to the server\'s tip.'
+      }
     ],
     relatedTools,
   }),
   ar: (tool, name, relatedTools) => ({
     toolName: name,
-    intro: 'حاسبة البقشيش (الإكرامية) تحسب قيمة الإكرامية المناسبة وتقسم فاتورة المطعم بالتساوي بين أفراد المجموعة.',
-    whoUsesIt: 'رواد المطاعم، والمجموعات أثناء تناول الطعام، والمسافرون للتعرف على عادات البقشيش.',
-    whatItCalculates: 'مبلغ الإكرامية، إجمالي الفاتورة مع الإكرامية، وحصة كل فرد بدقة.',
+    intro: 'تحسب حاسبة الإكرامية (البقشيش) وتقسيم الفاتورة قيمة الإكرامية للمطاعم والخدمات، وتقسم الفاتورة بالتساوي بين أي عدد من الأشخاص مع ميزة تقريب المبلغ لأقرب رقم صحيح لجعل مشاركة النفقات سهلة وخالية من التعقيد.',
+    whoUsesIt: 'رواد المطاعم، والمجموعات التي تتقاسم الفواتير، والمسافرون، وكل من يبحث عن وسيلة سريعة ودقيقة لحساب الإكراميات وحصة كل فرد.',
+    whatItCalculates: 'مبلغ الإكرامية الإجمالي، والفاتورة الكلية مع الإكرامية، وحصة الفرد الواحد بالتساوي، وتقريب الحساب للأرقام الصحيحة.',
     howToUse: [
-      'أدخل إجمالي مبلغ الفاتورة.',
-      'اختر نسبة البقشيش المقترحة أو أدخل نسبة مخصصة.',
-      'حدد عدد الأشخاص لتقاسم الحساب.',
-      'اطلع على مبلغ الإكرامية والإجمالي وحصة الفرد الواحد.',
+      'أدخل مبلغ الفاتورة الإجمالي قبل الإكرامية.',
+      'اختر نسبة الإكرامية المطلوبة (مثل 10%، 15%، 18%، 20%، 25%) أو أدخل نسبة مخصصة.',
+      'حدد عدد الأشخاص الذين يتقاسمون الفاتورة.',
+      'يمكنك تفعيل خيار "تقريب المبلغ" لجبر الكسور إلى أقرب دولار صحيح.',
+      'اطلع فورياً على إجمالي الإكرامية، والمبلغ الكلي، وحصة كل شخص بدقة.'
     ],
-    formula: 'قيمة الإكرامية = الفاتورة × (النسبة ÷ 100)  |  نصيب الفرد = الإجمالي ÷ عدد الأفراد',
+    formula: 'قيمة الإكرامية = مبلغ الفاتورة × (نسبة الإكرامية ÷ 100)  |  نصيب الفرد = (مبلغ الفاتورة + قيمة الإكرامية) ÷ عدد الأشخاص',
+    formulaVariables: [
+      { symbol: 'مبلغ الفاتورة ($)', name: 'مبلغ الفاتورة ($)', explanation: 'التكلفة الإجمالية للوجبة أو الخدمة قبل إضافة الإكرامية.' },
+      { symbol: 'نسبة الإكرامية (%)', name: 'نسبة الإكرامية (%)', explanation: 'النسبة المئوية المختارة للإكرامية (مثل 15%، 18%، 20%).' },
+      { symbol: 'عدد الأشخاص', name: 'عدد الأشخاص', explanation: 'عدد الأفراد المشتركين في دفع وتقاسم الفاتورة.' },
+      { symbol: 'إجمالي الإكرامية ($)', name: 'إجمالي الإكرامية ($)', explanation: 'مبلغ البقشيش المضاف إلى الفاتورة.' },
+      { symbol: 'نصيب الفرد ($)', name: 'نصيب الفرد ($)', explanation: 'المبلغ الدقيق المستحق على كل شخص شاملاً حصته من الإكرامية.' }
+    ],
     inputs: [
-      { name: 'مبلغ الفاتورة', description: 'إجمالي الحساب قبل إضافة الإكرامية.', unit: 'عملة', optional: false },
-      { name: 'نسبة الإكرامية (%)', description: 'النسبة المئوية المرغوبة (مثلاً 10% إلى 20%).', unit: '%', optional: false },
-      { name: 'عدد الأفراد', description: 'عدد الأشخاص الذين يتقاسمون الفاتورة.', unit: 'أفراد', optional: true },
+      { name: 'مبلغ الفاتورة ($)', description: 'التكلفة الإجمالية للوجبة أو الخدمة قبل إضافة الإكرامية.', unit: 'دولار ($)', optional: false },
+      { name: 'نسبة الإكرامية (%)', description: 'النسبة المئوية المختارة للإكرامية (مثل 15%، 18%، 20%).', unit: '%', optional: false },
+      { name: 'تقسيم بين أفراد', description: 'عدد الضيوف المشاركين في تقاسم الحساب.', unit: 'أشخاص', optional: true }
     ],
+    unitsAndConversions: 'تُعرض المبالغ المالية بالعملة القياسية مقربة لمنزلتين عشريتين (السنتات).',
     workedExample: {
-      scenario: 'فاتورة بقيمة 84 مقسمة على 4 أشخاص بإكرامية 18%.',
-      stepByStep: ['الإكرامية: 84 × 0.18 = 15.12.', 'إجمالي الفاتورة: 99.12.', 'نصيب الفرد: 99.12 ÷ 4 = 24.78.'],
-      result: 'الإكرامية: 15.12؛ الإجمالي: 99.12؛ نصيب كل شخص: 24.78.',
+      scenario: 'تقاسم فاتورة مطعم بقيمة 85.50 دولار بين شخصين بإكرامية نسبتها 18%.',
+      stepByStep: [
+        'تحديد معطيات الفاتورة: المبلغ = 85.50 دولار، نسبة الإكرامية = 18%، عدد الأشخاص = 2.',
+        'حساب إجمالي قيمة الإكرامية: 85.50 × 0.18 = 15.39 دولار.',
+        'حساب الإجمالي النهائي للفاتورة: 85.50 + 15.39 = 100.89 دولار.',
+        'تقسيم الحساب بالتساوي بين شخصين: 100.89 ÷ 2 = 50.45 دولار لكل شخص (مع تفصيل الإكرامية بـ 7.70 دولار لكل شخص).'
+      ],
+      result: 'إجمالي الإكرامية: 15.39$ | الفاتورة الإجمالية: 100.89$ | نصيب كل شخص: 50.45$ (الإكرامية للفرد: 7.70$)'
     },
-    faqs: [{ question: 'هل يختلف البقشيش حسب البلد؟', answer: 'نعم، ففي الولايات المتحدة يعتبر عرفاً أساسياً بين 15% و 20%، بينما في أغلب الدول الأوروبية يكون اختيارياً ومشمولاً بالخدمة.' }],
+    understandingResults: 'تمنحك الحاسبة تفصيلاً فورياً لقيمة الإكرامية والمبلغ الكلي وحصة كل فرد، مما يقضي على أي حرج أو التباس عند دفع الحساب في المطاعم.',
+    assumptions: 'تفترض تقاسم الفاتورة بالتساوي بين جميع الأفراد وتطبيق النسبة المئوية المحددة للإكرامية.',
+    limitations: 'لا تفصل الحساب للأطباق الفردية أو المشروبات الخاصة إلا إذا تم حسابها بشكل منفصل.',
+    faqs: [
+      {
+        question: 'ما هي النسبة المعتادة للإكرامية في المطاعم؟',
+        answer: 'في الولايات المتحدة وكندا، تتراوح النسبة المعتادة بين 15% للخدمة العادية، و18% إلى 20% للخدمة الجيدة، وأكثر من 20% للخدمة الممتازة.'
+      },
+      {
+        question: 'هل تُحسب الإكرامية قبل أم بعد الضرائب؟',
+        answer: 'العرف المعتاد يقترح حساب الإكرامية على المبلغ الإجمالي للأطعمة والمشروبات قبل الضريبة، مع أن الكثيرين يفضلون الحساب على الإجمالي النهائي.'
+      },
+      {
+        question: 'كيف تعمل ميزة تقريب المبلغ الإجمالي؟',
+        answer: 'تقوم ميزة التقريب برفع الإجمالي النهائي إلى أقرب دولار صحيح تلقائياً، مع إضافة الفارق البسيط مباشرة إلى إكرامية النادل.'
+      }
+    ],
     relatedTools,
   }),
   es: (tool, name, relatedTools) => ({
     toolName: name,
-    intro: 'La calculadora de propinas calcula el importe de la propina y divide la cuenta de restaurantes y bares equitativamente entre los comensales.',
-    whoUsesIt: 'Clientes de restaurantes y grupos de amigos al pagar una cuenta compartida.',
-    whatItCalculates: 'Importe de la propina, cuenta total y cuota exacta por persona.',
+    intro: 'La calculadora de propinas calcula rápidamente las propinas de restaurantes, divide la cuenta en partes iguales entre comensales e incluye opciones de redondeo para simplificar los gastos compartidos.',
+    whoUsesIt: 'Comensales de restaurantes, grupos que dividen cuentas, viajeros y clientes de servicios que desean calcular propinas exactas.',
+    whatItCalculates: 'Importe de la propina, cuenta total con propina, cuota exacta por comensal y redondeos.',
     howToUse: [
-      'Introduzca el importe de la cuenta.',
-      'Elija el porcentaje de propina deseado.',
-      'Indique el número de personas a repartir.',
-      'Compruebe la propina acumulada, el total y el pago por comensal.',
+      'Introduzca el importe subtotal de la cuenta.',
+      'Elija el porcentaje de propina deseado (10%, 15%, 18%, 20%, 25%) o introduzca un porcentaje personalizado.',
+      'Indique el número de personas que comparten el pago.',
+      'Active opcionalmente el redondeo al entero superior.',
+      'Compruebe la propina, el total y la parte de cada persona en tiempo real.'
     ],
-    formula: 'Propina = Cuenta × (% / 100)  |  Por persona = Total / Comensales',
+    formula: 'Propina = Cuenta × (Porcentaje / 100)  |  Por persona = (Cuenta + Propina) / Número de comensales',
+    formulaVariables: [
+      { symbol: 'Importe de la cuenta ($)', name: 'Importe de la cuenta ($)', explanation: 'Total de la consumición antes de propinas.' },
+      { symbol: 'Porcentaje de propina (%)', name: 'Porcentaje de propina (%)', explanation: 'Porcentaje de gratificación aplicado.' },
+      { symbol: 'Número de comensales', name: 'Número de comensales', explanation: 'Cantidad de personas que comparten la cuenta.' }
+    ],
     inputs: [
-      { name: 'Importe de la cuenta', description: 'Total de la consumición.', unit: 'Moneda', optional: false },
-      { name: 'Porcentaje de propina (%)', description: 'Porcentaje habitual (10% a 20%).', unit: '%', optional: false },
-      { name: 'Número de personas', description: 'Comensales entre los que se reparte el pago.', unit: 'Personas', optional: true },
+      { name: 'Importe de la cuenta ($)', description: 'Total antes de propina.', unit: 'Moneda ($)', optional: false },
+      { name: 'Porcentaje de propina (%)', description: 'Porcentaje seleccionado.', unit: '%', optional: false },
+      { name: 'Número de comensales', description: 'Personas que comparten.', unit: 'Personas', optional: true },
     ],
+    unitsAndConversions: 'Moneda local con precisión de dos decimales.',
     workedExample: {
-      scenario: 'Cuenta de 84 entre 4 personas con un 18% de propina.',
-      stepByStep: ['Propina: 15,12.', 'Total: 99,12.', 'Por comensal: 24,78.'],
-      result: 'Propina: 15,12; Total: 99,12; Pago individual: 24,78.',
+      scenario: 'Dividir una cuenta de 85,50 $ entre 2 personas con un 18% de propina.',
+      stepByStep: [
+        'Parámetros: Cuenta = 85,50 $, Propina = 18%, Comensales = 2.',
+        'Calcular propina: 85,50 $ × 0,18 = 15,39 $.',
+        'Calcular total con propina: 85,50 $ + 15,39 $ = 100,89 $.',
+        'Dividir entre 2 personas: 100,89 $ ÷ 2 = 50,45 $ por persona (con 7,70 $ de propina cada uno).'
+      ],
+      result: 'Propina: 15,39 $ | Total: 100,89 $ | Por persona: 50,45 $ (Propina por comensal: 7,70 $)'
     },
-    faqs: [{ question: '¿Es obligatoria la propina?', answer: 'Varía según el país: en EE. UU. es casi obligatoria por convención social, mientras que en Europa y América Latina suele ser voluntaria.' }],
+    understandingResults: 'Muestra la descomposición exacta del pago individual para evitar confusiones en restaurantes.',
+    assumptions: 'División equitativa entre todos los participantes.',
+    limitations: 'No desglosa consumiciones individuales específicas.',
+    faqs: [
+      { question: '¿Cuál es el porcentaje habitual de propina?', answer: 'En EE. UU. oscila entre el 15% (servicio estándar) y el 18-20% (buen servicio).' },
+      { question: '¿Se calcula antes o después de impuestos?', answer: 'La costumbre estándar recomienda calcular sobre el subtotal antes de impuestos.' }
+    ],
     relatedTools,
   }),
   fr: (tool, name, relatedTools) => ({
     toolName: name,
-    intro: 'Le calculateur de pourboire évalue la gratification du service et partage équitablement l’addition entre convives au restaurant.',
-    whoUsesIt: 'Clients de restaurants et groupes d’amis partageant une note.',
-    whatItCalculates: 'Montant du pourboire, total TTC et montant par convive.',
+    intro: 'Le calculateur de pourboire calcule rapidement les gratifications de restaurant, partage équitablement l’addition entre convives et propose l\'arrondi supérieur.',
+    whoUsesIt: 'Clients de restaurants, groupes d’amis partageant une note et voyageurs.',
+    whatItCalculates: 'Montant du pourboire, total général avec service, et montant individuel par personne.',
     howToUse: [
       'Indiquez le montant hors pourboire de la note.',
-      'Sélectionnez le pourcentage d’échelonnement du pourboire.',
-      'Renseignez le nombre de personnes qui partagent l’addition.',
-      'Obtenez le pourboire calculé, le total général et la part par personne.',
+      'Sélectionnez le pourcentage de pourboire (10 %, 15 %, 18 %, 20 %, 25 %) ou un taux personnalisé.',
+      'Renseignez le nombre de convives.',
+      'Activez éventuellement l’arrondi au dollar supérieur.',
+      'Consultez le pourboire, le total général et la part par personne instantanément.'
     ],
-    formula: 'Pourboire = Addition × (% / 100)  |  Par personne = Total / Convives',
+    formula: 'Pourboire = Addition × (Pourcentage / 100)  |  Par personne = (Addition + Pourboire) / Nombre de convives',
+    formulaVariables: [
+      { symbol: 'Montant de l’addition ($)', name: 'Montant de l’addition ($)', explanation: 'Total de la commande avant pourboire.' },
+      { symbol: 'Pourcentage de pourboire (%)', name: 'Pourcentage de pourboire (%)', explanation: 'Taux de gratification appliqué.' },
+      { symbol: 'Nombre de convives', name: 'Nombre de convives', explanation: 'Nombre de personnes qui partagent.' }
+    ],
     inputs: [
-      { name: 'Montant de l’addition', description: 'Note avant pourboire.', unit: 'Devise', optional: false },
-      { name: 'Pourcentage de pourboire (%)', description: 'Pourcentage choisi.', unit: '%', optional: false },
-      { name: 'Nombre de personnes', description: 'Nombre de convives payants.', unit: 'Personnes', optional: true },
+      { name: 'Montant de l’addition ($)', description: 'Note avant pourboire.', unit: 'Devise ($)', optional: false },
+      { name: 'Pourcentage de pourboire (%)', description: 'Taux choisi.', unit: '%', optional: false },
+      { name: 'Nombre de convives', description: 'Nombre de personnes payantes.', unit: 'Personnes', optional: true },
     ],
+    unitsAndConversions: 'Devise monétaire avec deux décimales.',
     workedExample: {
-      scenario: 'Addition de 84 partagée entre 4 personnes avec 18 % de pourboire.',
-      stepByStep: ['Pourboire : 15,12.', 'Total : 99,12.', 'Par personne : 24,78.'],
-      result: 'Pourboire : 15,12 ; Total : 99,12 ; Par personne : 24,78.',
+      scenario: 'Partage d\'une addition de 85,50 $ entre 2 personnes avec 18 % de pourboire.',
+      stepByStep: [
+        'Données : Addition = 85,50 $, Pourboire = 18 %, Convives = 2.',
+        'Calcul du pourboire : 85,50 $ × 0,18 = 15,39 $.',
+        'Calcul du montant total : 85,50 $ + 15,39 $ = 100,89 $.',
+        'Partage entre 2 personnes : 100,89 $ ÷ 2 = 50,45 $ par personne (soit 7,70 $ de pourboire chacun).'
+      ],
+      result: 'Pourboire : 15,39 $ | Total : 100,89 $ | Par personne : 50,45 $ (Pourboire par convive : 7,70 $)'
     },
-    faqs: [{ question: 'Le pourboire est-il compris en France ?', answer: 'En France, le service est inclus dans le prix (15 % service compris), le pourboire est donc un geste de remerciement facultatif.' }],
+    understandingResults: 'Offre une répartition transparente et sans ambiguïté des frais de repas entre amis.',
+    assumptions: 'Partage égalitaire de la facture globale.',
+    limitations: 'Ne détaille pas les consommations individuelles.',
+    faqs: [
+      { question: 'Quel est le pourboire d\'usage ?', answer: 'En Amérique du Nord, il est d\'usage de laisser entre 15 % et 20 % selon la qualité du service.' }
+    ],
     relatedTools,
   }),
   de: (tool, name, relatedTools) => ({
     toolName: name,
-    intro: 'Der Trinkgeldrechner ermittelt das angemessene Trinkgeld und teilt Restaurantrechnungen exakt auf mehrere Gäste auf.',
-    whoUsesIt: 'Gäste in Restaurants und Reisende zur schnellen Rechnungsaufteilung.',
-    whatItCalculates: 'Trinkgeldbetrag, Gesamtrechnung und Einzelanteil pro Person.',
+    intro: 'Der Trinkgeldrechner berechnet Trinkgeldbeträge, teilt Restaurantrechnungen gleichmäßig auf jede Personengruppe auf und bietet eine praktische Aufrundungsfunktion.',
+    whoUsesIt: 'Restaurantbesucher, Gruppen zur Rechnungsaufteilung und Reisende.',
+    whatItCalculates: 'Trinkgeldbetrag, Gesamtrechnung inklusive Trinkgeld und Pro-Kopf-Betrag.',
     howToUse: [
-      'Geben Sie den Rechnungsbetrag ein.',
-      'Wählen Sie den gewünschten Trinkgeldsatz.',
-      'Tragen Sie die Anzahl der beteiligten Personen ein.',
-      'Sehen Sie den Trinkgeldbetrag, die Endsumme und den Pro-Kopf-Anteil.',
+      'Geben Sie den Rechnungsbetrag vor Trinkgeld ein.',
+      'Wählen Sie den gewünschten Trinkgeldsatz (z. B. 10 %, 15 %, 18 %, 20 %) oder einen individuellen Satz.',
+      'Tragen Sie die Anzahl der Personen ein.',
+      'Aktivieren Sie optional das Aufrunden auf volle Beträge.',
+      'Sehen Sie Trinkgeld, Endsumme und den Pro-Kopf-Anteil in Echtzeit.'
     ],
-    formula: 'Trinkgeld = Rechnungsbetrag × (% / 100)',
+    formula: 'Trinkgeld = Rechnungsbetrag × (Satz / 100)  |  Pro Person = (Rechnungsbetrag + Trinkgeld) / Anzahl Personen',
+    formulaVariables: [
+      { symbol: 'Rechnungsbetrag ($)', name: 'Rechnungsbetrag ($)', explanation: 'Gesamtbetrag vor Trinkgeld.' },
+      { symbol: 'Trinkgeldsatz (%)', name: 'Trinkgeldsatz (%)', explanation: 'Ausgewählter Prozentsatz.' },
+      { symbol: 'Anzahl Personen', name: 'Anzahl Personen', explanation: 'Anzahl der zahlenden Personen.' }
+    ],
     inputs: [
-      { name: 'Rechnungsbetrag', description: 'Rechnungssumme vor Trinkgeld.', unit: 'Währung', optional: false },
-      { name: 'Trinkgeld in %', description: 'Gewünschter Prozentsatz (üblich 5 % bis 15 %).', unit: '%', optional: false },
-      { name: 'Personenanzahl', description: 'Anzahl der Personen zur Kostenteilung.', unit: 'Anzahl', optional: true },
+      { name: 'Rechnungsbetrag ($)', description: 'Rechnungssumme vor Trinkgeld.', unit: 'Währung ($)', optional: false },
+      { name: 'Trinkgeld in %', description: 'Gewünschter Prozentsatz.', unit: '%', optional: false },
+      { name: 'Personenanzahl', description: 'Anzahl der beteiligten Gäste.', unit: 'Personen', optional: true },
     ],
+    unitsAndConversions: 'Währungsbeträge mit kaufmännischer Rundung auf zwei Dezimalstellen.',
     workedExample: {
-      scenario: '84 Rechnung aufgeteilt auf 4 Personen mit 18 % Trinkgeld.',
-      stepByStep: ['Trinkgeld: 15,12.', 'Gesamtbetrag: 99,12.', 'Anteil pro Gast: 24,78.'],
-      result: 'Trinkgeld: 15,12; Gesamtsumme: 99,12; Pro Person: 24,78.',
+      scenario: 'Aufteilung einer Restaurantrechnung von 85,50 $ auf 2 Personen mit 18 % Trinkgeld.',
+      stepByStep: [
+        'Eingaben: Rechnungsbetrag = 85,50 $, Trinkgeld = 18 %, Personen = 2.',
+        'Trinkgeld berechnen: 85,50 $ × 0,18 = 15,39 $.',
+        'Gesamtrechnung berechnen: 85,50 $ + 15,39 $ = 100,89 $.',
+        'Auf 2 Personen aufteilen: 100,89 $ ÷ 2 = 50,45 $ pro Person (Trinkgeldanteil: 7,70 $).'
+      ],
+      result: 'Trinkgeld: 15,39 $ | Gesamtrechnung: 100,89 $ | Pro Person: 50,45 $ (Trinkgeldanteil: 7,70 $)'
     },
-    faqs: [{ question: 'Wie viel Trinkgeld gibt man in Deutschland?', answer: 'In Deutschland und Mitteleuropa sind 5 % bis 10 % Trinkgeld für guten Service im Restaurant üblich.' }],
+    understandingResults: 'Liefert eine übersichtliche Kostenaufteilung ohne lästiges Kopfrechnen am Tisch.',
+    assumptions: 'Gleichmäßige Aufteilung der Gesamtsumme.',
+    limitations: 'Keine getrennte Einzelpostenabrechnung.',
+    faqs: [
+      { question: 'Wie viel Trinkgeld ist üblich?', answer: 'In den USA 15–20 %, in Europa sind 5–10 % als freiwillige Anerkennung üblich.' }
+    ],
     relatedTools,
   }),
 };

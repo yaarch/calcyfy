@@ -355,7 +355,77 @@ export const InvestmentMarketEngine: React.FC<InvestmentMarketEngineProps> = ({ 
         </div>
       )}
 
-      {/* 6. INFLATION PURCHASING POWER */}
+      {/* 6. SHARPE RATIO & STOCK BETA VOLATILITY */}
+      {(id === 'sharpe-ratio-calc' || id === 'stock-beta-volatility') && (() => {
+        const sharpe = stdDeviation > 0 ? (portfolioReturn - riskFreeRate) / stdDeviation : 0;
+        const betaVal = 1.15; // default beta metric
+        const capmExpReturn = riskFreeRate + betaVal * (marketReturn - riskFreeRate);
+        return (
+          <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6 shadow-xs space-y-6">
+            <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
+              <div>
+                <label className="block text-xs font-semibold uppercase text-slate-700 dark:text-slate-300 mb-1">Portfolio Return (%)</label>
+                <input
+                  type="number"
+                  step="0.5"
+                  value={portfolioReturn}
+                  onChange={(e) => setPortfolioReturn(parseFloat(e.target.value) || 0)}
+                  className="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg font-mono text-sm"
+                />
+              </div>
+              <div>
+                <label className="block text-xs font-semibold uppercase text-slate-700 dark:text-slate-300 mb-1">Risk-Free Rate (Rf, %)</label>
+                <input
+                  type="number"
+                  step="0.25"
+                  value={riskFreeRate}
+                  onChange={(e) => setRiskFreeRate(parseFloat(e.target.value) || 0)}
+                  className="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg font-mono text-sm"
+                />
+              </div>
+              <div>
+                <label className="block text-xs font-semibold uppercase text-slate-700 dark:text-slate-300 mb-1">Std Dev / Volatility (%)</label>
+                <input
+                  type="number"
+                  step="0.5"
+                  value={stdDeviation}
+                  onChange={(e) => setStdDeviation(parseFloat(e.target.value) || 0)}
+                  className="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg font-mono text-sm"
+                />
+              </div>
+              <div>
+                <label className="block text-xs font-semibold uppercase text-slate-700 dark:text-slate-300 mb-1">Market Benchmark Return (%)</label>
+                <input
+                  type="number"
+                  step="0.5"
+                  value={marketReturn}
+                  onChange={(e) => setMarketReturn(parseFloat(e.target.value) || 0)}
+                  className="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg font-mono text-sm"
+                />
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="p-4 bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 rounded-xl">
+                <span className="text-xs font-bold uppercase text-emerald-700 dark:text-emerald-400">Sharpe Ratio</span>
+                <span className="text-3xl font-black font-mono text-emerald-600 dark:text-emerald-300 mt-1 block">
+                  {sharpe.toFixed(2)}
+                </span>
+                <span className="text-xs text-slate-500 font-mono mt-1 block">Formula: (Portfolio Return - Rf) ÷ Standard Deviation</span>
+              </div>
+              <div className="p-4 bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 rounded-xl">
+                <span className="text-xs font-bold uppercase text-emerald-700 dark:text-emerald-400">CAPM Expected Return (Beta = {betaVal})</span>
+                <span className="text-3xl font-black font-mono text-emerald-600 dark:text-emerald-300 mt-1 block">
+                  {capmExpReturn.toFixed(2)}%
+                </span>
+                <span className="text-xs text-slate-500 font-mono mt-1 block">Formula: Re = Rf + Beta × (Rm - Rf)</span>
+              </div>
+            </div>
+          </div>
+        );
+      })()}
+
+      {/* 7. INFLATION PURCHASING POWER */}
       {(id === 'inflation-impact' || id === 'inflation-future') && (
         <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6 shadow-xs space-y-6">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">

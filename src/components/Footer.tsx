@@ -194,6 +194,16 @@ export const Footer: React.FC = () => {
                   {t('nav_sitemap', 'HTML Sitemap')}
                 </AppLink>
               </li>
+              <li>
+                <a
+                  href="/sitemap.xml"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400"
+                >
+                  {t('nav_xml_sitemap', 'XML Sitemap')}
+                </a>
+              </li>
             </ul>
           </div>
         </div>

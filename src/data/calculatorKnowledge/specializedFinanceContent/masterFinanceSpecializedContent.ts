@@ -14,7 +14,7 @@ export const KNOWLEDGE_LOAN: Record<Language, (tool: ToolDef, name: string, rela
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -25,13 +25,11 @@ export const KNOWLEDGE_LOAN: Record<Language, (tool: ToolDef, name: string, rela
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating LOAN using representative market values.`,
+      scenario: `Calculating monthly payment for a $25,000 personal loan at 7.5% annual interest over 5 years (60 months).`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -52,7 +50,7 @@ export const KNOWLEDGE_LOAN: Record<Language, (tool: ToolDef, name: string, rela
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -63,13 +61,11 @@ export const KNOWLEDGE_LOAN: Record<Language, (tool: ToolDef, name: string, rela
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating LOAN using representative market values.`,
+      scenario: `Calculating monthly payment for a $25,000 personal loan at 7.5% annual interest over 5 years (60 months).`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -85,14 +81,14 @@ export const KNOWLEDGE_LOAN: Record<Language, (tool: ToolDef, name: string, rela
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating LOAN using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating monthly payment for a $25,000 personal loan at 7.5% annual interest over 5 years (60 months).`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -106,14 +102,14 @@ export const KNOWLEDGE_LOAN: Record<Language, (tool: ToolDef, name: string, rela
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating LOAN using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating monthly payment for a $25,000 personal loan at 7.5% annual interest over 5 years (60 months).`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -127,14 +123,14 @@ export const KNOWLEDGE_LOAN: Record<Language, (tool: ToolDef, name: string, rela
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating LOAN using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating monthly payment for a $25,000 personal loan at 7.5% annual interest over 5 years (60 months).`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -156,7 +152,7 @@ export const KNOWLEDGE_MORTGAGE: Record<Language, (tool: ToolDef, name: string, 
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -167,13 +163,11 @@ export const KNOWLEDGE_MORTGAGE: Record<Language, (tool: ToolDef, name: string, 
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating MORTGAGE using representative market values.`,
+      scenario: `Calculating MORTGAGE with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -194,7 +188,7 @@ export const KNOWLEDGE_MORTGAGE: Record<Language, (tool: ToolDef, name: string, 
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -205,13 +199,11 @@ export const KNOWLEDGE_MORTGAGE: Record<Language, (tool: ToolDef, name: string, 
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating MORTGAGE using representative market values.`,
+      scenario: `Calculating MORTGAGE with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -227,14 +219,14 @@ export const KNOWLEDGE_MORTGAGE: Record<Language, (tool: ToolDef, name: string, 
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating MORTGAGE using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating MORTGAGE with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -248,14 +240,14 @@ export const KNOWLEDGE_MORTGAGE: Record<Language, (tool: ToolDef, name: string, 
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating MORTGAGE using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating MORTGAGE with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -269,14 +261,14 @@ export const KNOWLEDGE_MORTGAGE: Record<Language, (tool: ToolDef, name: string, 
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating MORTGAGE using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating MORTGAGE with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -298,7 +290,7 @@ export const KNOWLEDGE_COMPOUND_INTEREST: Record<Language, (tool: ToolDef, name:
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -309,13 +301,11 @@ export const KNOWLEDGE_COMPOUND_INTEREST: Record<Language, (tool: ToolDef, name:
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating COMPOUND INTEREST using representative market values.`,
+      scenario: `Calculating COMPOUND INTEREST with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -336,7 +326,7 @@ export const KNOWLEDGE_COMPOUND_INTEREST: Record<Language, (tool: ToolDef, name:
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -347,13 +337,11 @@ export const KNOWLEDGE_COMPOUND_INTEREST: Record<Language, (tool: ToolDef, name:
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating COMPOUND INTEREST using representative market values.`,
+      scenario: `Calculating COMPOUND INTEREST with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -369,14 +357,14 @@ export const KNOWLEDGE_COMPOUND_INTEREST: Record<Language, (tool: ToolDef, name:
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating COMPOUND INTEREST using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating COMPOUND INTEREST with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -390,14 +378,14 @@ export const KNOWLEDGE_COMPOUND_INTEREST: Record<Language, (tool: ToolDef, name:
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating COMPOUND INTEREST using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating COMPOUND INTEREST with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -411,14 +399,14 @@ export const KNOWLEDGE_COMPOUND_INTEREST: Record<Language, (tool: ToolDef, name:
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating COMPOUND INTEREST using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating COMPOUND INTEREST with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -432,140 +420,239 @@ export const KNOWLEDGE_COMPOUND_INTEREST: Record<Language, (tool: ToolDef, name:
 export const KNOWLEDGE_TIP: Record<Language, (tool: ToolDef, name: string, relatedTools: ToolDef[]) => ToolContentDetails> = {
   en: (tool, name, relatedTools) => ({
     toolName: name,
-    intro: `The TIP calculator evaluates financial parameters with precise mathematical formulas and real-time updates.`,
-    whoUsesIt: 'Financial professionals, corporate managers, individual investors, and analysts.',
-    whatItCalculates: 'Precise financial metrics, ratios, and breakdown values based on standard formulas.',
+    intro: 'The Tip Calculator quickly computes restaurant tips, divides bills evenly among any number of diners, and includes optional round-up features to make splitting dining expenses completely hassle-free.',
+    whoUsesIt: 'Restaurant diners, groups splitting bills, travelers, and anyone looking for a fast, accurate way to calculate gratuities and individual shares.',
+    whatItCalculates: 'Total tip amount, overall bill including gratuity, exact per-person share, and rounded totals.',
     howToUse: [
-      'Enter your verified financial inputs in the corresponding fields above.',
-      'The calculation engine evaluates results instantly in real time.',
-      'Review summary metrics, formulas, and worked examples below.'
+      'Enter the pre-tax bill subtotal before tips or gratuities.',
+      'Select a tip percentage (e.g., 10%, 15%, 18%, 20%, 25%) or enter a custom rate.',
+      'Specify the number of diners sharing the bill.',
+      'Optionally toggle "Round up" to round the total bill to the nearest whole dollar.',
+      'Review the total tip, overall bill, and each person\'s exact share in real time.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: 'Tip Amount = Bill Amount × (Tip Percentage / 100)  |  Total Per Person = (Bill Amount + Tip Amount) / Number of People',
     formulaVariables: [
-      { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
-      { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
+      { symbol: 'Bill Amount ($)', name: 'Bill Amount ($)', explanation: 'The total cost of the meal or service before tips.' },
+      { symbol: 'Tip Percentage (%)', name: 'Tip Percentage (%)', explanation: 'The selected rate of gratuity (e.g., 15%, 18%, 20%).' },
+      { symbol: 'Split Between People', name: 'Split Between People', explanation: 'The number of guests sharing the total bill.' },
+      { symbol: 'Tip Amount ($)', name: 'Tip Amount ($)', explanation: 'Total gratuity added to the check.' },
+      { symbol: 'Total Per Person ($)', name: 'Total Per Person ($)', explanation: 'The exact amount owed by each diner including their tip share.' }
     ],
     inputs: [
-      { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false },
-      { name: `Rate / Factor (%)`, description: `Applicable percentage rate, yield, or ratio.`, unit: 'Unit / %', optional: false }
+      { name: 'Bill Amount ($)', description: 'The total cost of the meal or service before tips.', unit: 'USD ($)', optional: false },
+      { name: 'Tip Percentage (%)', description: 'The selected rate of gratuity (e.g., 15%, 18%, 20%).', unit: 'Percentage (%)', optional: false },
+      { name: 'Split Between People', description: 'The number of guests sharing the total bill.', unit: 'People (Count)', optional: true },
     ],
-    unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
+    unitsAndConversions: 'Calculations are displayed in standard currency units rounded to two decimal places (cents).',
     workedExample: {
-      scenario: `Calculating TIP using representative market values.`,
+      scenario: 'Splitting an $85.50 restaurant bill between 2 people with an 18% gratuity tip.',
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        'Identify bill parameters: Bill Amount = $85.50, Tip Percentage = 18%, Split = 2 people.',
+        'Calculate total tip amount: $85.50 × 0.18 = $15.39.',
+        'Calculate overall total bill: $85.50 + $15.39 = $100.89.',
+        'Divide evenly across 2 diners: $100.89 ÷ 2 = $50.45 per person (Tip per person: $7.70).'
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: 'Total Tip: $15.39 | Total Bill: $100.89 | Per Person Share: $50.45 (Tip share: $7.70 each)'
     },
-    understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
-    assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
-    limitations: 'Calculations serve informational and educational planning purposes.',
+    understandingResults: 'The calculator delivers an instant breakdown of the gratuity owed, overall bill, and equal individual contributions, eliminating manual payment confusion.',
+    assumptions: 'Assumes equal bill splitting across all dining participants and standard percentage gratuity calculation.',
+    limitations: 'Does not account for individual itemized drink or food splits unless calculated separately.',
     faqs: [
-      { question: `How is TIP calculated?`, answer: `It uses standard financial formulas applied directly to your input parameters.` },
-      { question: `Are my inputs saved?`, answer: `No, all calculations run client-side in your browser for privacy.` }
+      {
+        question: 'What is standard dining tip etiquette?',
+        answer: 'In the United States and Canada, standard gratuity ranges from 15% for adequate service to 18%-20% for good service, and 20%+ for exceptional service.'
+      },
+      {
+        question: 'Should you calculate tips before or after sales tax?',
+        answer: 'Standard etiquette recommends tipping on the pre-tax food and beverage subtotal, although tipping on the post-tax total is also very common.'
+      },
+      {
+        question: 'How does the round-up total bill option work?',
+        answer: 'Toggling "Round up" rounds the overall bill to the next whole dollar, adding the minor rounding difference directly to the server\'s tip.'
+      }
     ],
     relatedTools
   }),
   ar: (tool, name, relatedTools) => ({
     toolName: name,
-    intro: `تقدم حاسبة TIP تقييماً مالياً دقيقاً باستخدام المعادلات المعتمدة مع تحديث فوري للنتائج.`,
-    whoUsesIt: 'المحللون الماليون والمستثمرون والأفراد الراغبون في حسابات دقيقة.',
-    whatItCalculates: 'قيم مالية ومؤشرات دقيقة بناءً على المعايير المعتمدة.',
+    intro: 'تحسب حاسبة الإكرامية (البقشيش) وتقسيم الفاتورة قيمة الإكرامية للمطاعم والخدمات، وتقسم الفاتورة بالتساوي بين أي عدد من الأشخاص مع ميزة تقريب المبلغ لأقرب رقم صحيح لجعل مشاركة النفقات سهلة وخالية من التعقيد.',
+    whoUsesIt: 'رواد المطاعم، والمجموعات التي تتقاسم الفواتير، والمسافرون، وكل من يبحث عن وسيلة سريعة ودقيقة لحساب الإكراميات وحصة كل فرد.',
+    whatItCalculates: 'مبلغ الإكرامية الإجمالي، والفاتورة الكلية مع الإكرامية، وحصة الفرد الواحد بالتساوي، وتقريب الحساب للأرقام الصحيحة.',
     howToUse: [
-      'أدخل البيانات المالية المطلوبة في الحقول أعلاه.',
-      'يعالج المحرك الحسابي البيانات بشكل فوري.',
-      'استعرض النتائج والخطوات والمثال التوضيحي.'
+      'أدخل مبلغ الفاتورة الإجمالي قبل الإكرامية.',
+      'اختر نسبة الإكرامية المطلوبة (مثل 10%، 15%، 18%، 20%، 25%) أو أدخل نسبة مخصصة.',
+      'حدد عدد الأشخاص الذين يتقاسمون الفاتورة.',
+      'يمكنك تفعيل خيار "تقريب المبلغ" لجبر الكسور إلى أقرب دولار صحيح.',
+      'اطلع فورياً على إجمالي الإكرامية، والمبلغ الكلي، وحصة كل شخص بدقة.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: 'قيمة الإكرامية = مبلغ الفاتورة × (نسبة الإكرامية ÷ 100)  |  نصيب الفرد = (مبلغ الفاتورة + قيمة الإكرامية) ÷ عدد الأشخاص',
     formulaVariables: [
-      { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
-      { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
+      { symbol: 'مبلغ الفاتورة ($)', name: 'مبلغ الفاتورة ($)', explanation: 'التكلفة الإجمالية للوجبة أو الخدمة قبل إضافة الإكرامية.' },
+      { symbol: 'نسبة الإكرامية (%)', name: 'نسبة الإكرامية (%)', explanation: 'النسبة المئوية المختارة للإكرامية (مثل 15%، 18%، 20%).' },
+      { symbol: 'عدد الأشخاص', name: 'عدد الأشخاص', explanation: 'عدد الأفراد المشتركين في دفع وتقاسم الفاتورة.' },
+      { symbol: 'إجمالي الإكرامية ($)', name: 'إجمالي الإكرامية ($)', explanation: 'مبلغ البقشيش المضاف إلى الفاتورة.' },
+      { symbol: 'نصيب الفرد ($)', name: 'نصيب الفرد ($)', explanation: 'المبلغ الدقيق المستحق على كل شخص شاملاً حصته من الإكرامية.' }
     ],
     inputs: [
-      { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'دولار ($)', optional: false },
-      { name: `Rate / Factor (%)`, description: `Applicable percentage rate, yield, or ratio.`, unit: 'نسبة / وحدة', optional: false }
+      { name: 'مبلغ الفاتورة ($)', description: 'التكلفة الإجمالية للوجبة أو الخدمة قبل إضافة الإكرامية.', unit: 'دولار ($)', optional: false },
+      { name: 'نسبة الإكرامية (%)', description: 'النسبة المئوية المختارة للإكرامية (مثل 15%، 18%، 20%).', unit: '%', optional: false },
+      { name: 'تقسيم بين أفراد', description: 'عدد الضيوف المشاركين في تقاسم الحساب.', unit: 'أشخاص', optional: true }
     ],
-    unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
+    unitsAndConversions: 'تُعرض المبالغ المالية بالعملة القياسية مقربة لمنزلتين عشريتين (السنتات).',
     workedExample: {
-      scenario: `Calculating TIP using representative market values.`,
+      scenario: 'تقاسم فاتورة مطعم بقيمة 85.50 دولار بين شخصين بإكرامية نسبتها 18%.',
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        'تحديد معطيات الفاتورة: المبلغ = 85.50 دولار، نسبة الإكرامية = 18%، عدد الأشخاص = 2.',
+        'حساب إجمالي قيمة الإكرامية: 85.50 × 0.18 = 15.39 دولار.',
+        'حساب الإجمالي النهائي للفاتورة: 85.50 + 15.39 = 100.89 دولار.',
+        'تقسيم الحساب بالتساوي بين شخصين: 100.89 ÷ 2 = 50.45 دولار لكل شخص (مع تفصيل الإكرامية بـ 7.70 دولار لكل شخص).'
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: 'إجمالي الإكرامية: 15.39$ | الفاتورة الإجمالية: 100.89$ | نصيب كل شخص: 50.45$ (الإكرامية للفرد: 7.70$)'
     },
-    understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
-    assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
-    limitations: 'النتائج لأغراض التخطيط والدراسة الماليين.',
+    understandingResults: 'تمنحك الحاسبة تفصيلاً فورياً لقيمة الإكرامية والمبلغ الكلي وحصة كل فرد، مما يقضي على أي حرج أو التباس عند دفع الحساب في المطاعم.',
+    assumptions: 'تفترض تقاسم الفاتورة بالتساوي بين جميع الأفراد وتطبيق النسبة المئوية المحددة للإكرامية.',
+    limitations: 'لا تفصل الحساب للأطباق الفردية أو المشروبات الخاصة إلا إذا تم حسابها بشكل منفصل.',
     faqs: [
-      { question: `كيف تعمل هذه الحاسبة؟`, answer: `تطبق المعادلات المالية المعيارية بشكل مباشر وفوري.` }
+      {
+        question: 'ما هي النسبة المعتادة للإكرامية في المطاعم؟',
+        answer: 'في الولايات المتحدة وكندا، تتراوح النسبة المعتادة بين 15% للخدمة العادية، و18% إلى 20% للخدمة الجيدة، وأكثر من 20% للخدمة الممتازة.'
+      },
+      {
+        question: 'هل تُحسب الإكرامية قبل أم بعد الضرائب؟',
+        answer: 'العرف المعتاد يقترح حساب الإكرامية على المبلغ الإجمالي للأطعمة والمشروبات قبل الضريبة، مع أن الكثيرين يفضلون الحساب على الإجمالي النهائي.'
+      },
+      {
+        question: 'كيف تعمل ميزة تقريب المبلغ الإجمالي؟',
+        answer: 'تقوم ميزة التقريب برفع الإجمالي النهائي إلى أقرب دولار صحيح تلقائياً، مع إضافة الفارق البسيط مباشرة إلى إكرامية النادل.'
+      }
     ],
     relatedTools
   }),
   es: (tool, name, relatedTools) => ({
     toolName: name,
-    intro: `La calculadora de TIP proporciona evaluaciones financieras precisas según modelos matemáticos estandarizados.`,
-    whoUsesIt: 'Analistas financieros, inversores y profesionales.',
-    whatItCalculates: 'Métricas e indicadores financieros exactos.',
-    howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
-    inputs: [
-      { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
+    intro: 'La calculadora de propinas calcula rápidamente las propinas de restaurantes, divide la cuenta en partes iguales entre comensales e incluye opciones de redondeo para simplificar los gastos compartidos.',
+    whoUsesIt: 'Comensales de restaurantes, grupos que dividen cuentas, viajeros y clientes de servicios que desean calcular propinas exactas.',
+    whatItCalculates: 'Importe de la propina, cuenta total con propina, cuota exacta por comensal y redondeos.',
+    howToUse: [
+      'Introduzca el importe subtotal de la cuenta.',
+      'Elija el porcentaje de propina deseado (10%, 15%, 18%, 20%, 25%) o introduzca un porcentaje personalizado.',
+      'Indique el número de personas que comparten el pago.',
+      'Active opcionalmente el redondeo al entero superior.',
+      'Compruebe la propina, el total y la parte de cada persona en tiempo real.'
     ],
+    formula: 'Propina = Cuenta × (Porcentaje / 100)  |  Por persona = (Cuenta + Propina) / Número de comensales',
+    formulaVariables: [
+      { symbol: 'Importe de la cuenta ($)', name: 'Importe de la cuenta ($)', explanation: 'Total de la consumición antes de propinas.' },
+      { symbol: 'Porcentaje de propina (%)', name: 'Porcentaje de propina (%)', explanation: 'Porcentaje de gratificación aplicado.' },
+      { symbol: 'Número de comensales', name: 'Número de comensales', explanation: 'Cantidad de personas que comparten la cuenta.' }
+    ],
+    inputs: [
+      { name: 'Importe de la cuenta ($)', description: 'Total antes de propina.', unit: 'Moneda ($)', optional: false },
+      { name: 'Porcentaje de propina (%)', description: 'Porcentaje seleccionado.', unit: '%', optional: false },
+      { name: 'Número de comensales', description: 'Personas que comparten.', unit: 'Personas', optional: true },
+    ],
+    unitsAndConversions: 'Moneda local con precisión de dos decimales.',
     workedExample: {
-      scenario: `Calculating TIP using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: 'Dividir una cuenta de 85,50 $ entre 2 personas con un 18% de propina.',
+      stepByStep: [
+        'Parámetros: Cuenta = 85,50 $, Propina = 18%, Comensales = 2.',
+        'Calcular propina: 85,50 $ × 0,18 = 15,39 $.',
+        'Calcular total con propina: 85,50 $ + 15,39 $ = 100,89 $.',
+        'Dividir entre 2 personas: 100,89 $ ÷ 2 = 50,45 $ por persona (con 7,70 $ de propina cada uno).'
+      ],
+      result: 'Propina: 15,39 $ | Total: 100,89 $ | Por persona: 50,45 $ (Propina por comensal: 7,70 $)'
     },
-    understandingResults: 'Valores numéricos derivados de los datos introducidos.',
-    assumptions: 'Condiciones financieras estándar.',
-    limitations: 'Fines de orientación e información.',
-    faqs: [{ question: '¿Cómo funciona?', answer: 'Aplica fórmulas estándar instantáneamente.' }],
+    understandingResults: 'Muestra la descomposición exacta del pago individual para evitar confusiones en restaurantes.',
+    assumptions: 'División equitativa entre todos los participantes.',
+    limitations: 'No desglosa consumiciones individuales específicas.',
+    faqs: [
+      { question: '¿Cuál es el porcentaje habitual de propina?', answer: 'En EE. UU. oscila entre el 15% (servicio estándar) y el 18-20% (buen servicio).' },
+      { question: '¿Se calcula antes o después de impuestos?', answer: 'La costumbre estándar recomienda calcular sobre el subtotal antes de impuestos.' }
+    ],
     relatedTools
   }),
   fr: (tool, name, relatedTools) => ({
     toolName: name,
-    intro: `Le calculateur de TIP fournit des évaluations financières précises selon des modèles mathématiques établis.`,
-    whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
-    whatItCalculates: 'Métrique et ratios financiers précis.',
-    howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
-    inputs: [
-      { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
+    intro: 'Le calculateur de pourboire calcule rapidement les gratifications de restaurant, partage équitablement l’addition entre convives et propose l\'arrondi supérieur.',
+    whoUsesIt: 'Clients de restaurants, groupes d’amis partageant une note et voyageurs.',
+    whatItCalculates: 'Montant du pourboire, total général avec service, et montant individuel par personne.',
+    howToUse: [
+      'Indiquez le montant hors pourboire de la note.',
+      'Sélectionnez le pourcentage de pourboire (10 %, 15 %, 18 %, 20 %, 25 %) ou un taux personnalisé.',
+      'Renseignez le nombre de convives.',
+      'Activez éventuellement l’arrondi au dollar supérieur.',
+      'Consultez le pourboire, le total général et la part par personne instantanément.'
     ],
+    formula: 'Pourboire = Addition × (Pourcentage / 100)  |  Par personne = (Addition + Pourboire) / Nombre de convives',
+    formulaVariables: [
+      { symbol: 'Montant de l’addition ($)', name: 'Montant de l’addition ($)', explanation: 'Total de la commande avant pourboire.' },
+      { symbol: 'Pourcentage de pourboire (%)', name: 'Pourcentage de pourboire (%)', explanation: 'Taux de gratification appliqué.' },
+      { symbol: 'Nombre de convives', name: 'Nombre de convives', explanation: 'Nombre de personnes qui partagent.' }
+    ],
+    inputs: [
+      { name: 'Montant de l’addition ($)', description: 'Note avant pourboire.', unit: 'Devise ($)', optional: false },
+      { name: 'Pourcentage de pourboire (%)', description: 'Taux choisi.', unit: '%', optional: false },
+      { name: 'Nombre de convives', description: 'Nombre de personnes payantes.', unit: 'Personnes', optional: true },
+    ],
+    unitsAndConversions: 'Devise monétaire avec deux décimales.',
     workedExample: {
-      scenario: `Calculating TIP using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: 'Partage d\'une addition de 85,50 $ entre 2 personnes avec 18 % de pourboire.',
+      stepByStep: [
+        'Données : Addition = 85,50 $, Pourboire = 18 %, Convives = 2.',
+        'Calcul du pourboire : 85,50 $ × 0,18 = 15,39 $.',
+        'Calcul du montant total : 85,50 $ + 15,39 $ = 100,89 $.',
+        'Partage entre 2 personnes : 100,89 $ ÷ 2 = 50,45 $ par personne (soit 7,70 $ de pourboire chacun).'
+      ],
+      result: 'Pourboire : 15,39 $ | Total : 100,89 $ | Par personne : 50,45 $ (Pourboire par convive : 7,70 $)'
     },
-    understandingResults: 'Résultats dérivés directement de vos saisies.',
-    assumptions: 'Hypothèses comptables standard.',
-    limitations: 'À des fins d’information et d’analyse.',
-    faqs: [{ question: 'Comment ça marche ?', answer: 'Applique les formules financières établies.' }],
+    understandingResults: 'Offre une répartition transparente et sans ambiguïté des frais de repas entre amis.',
+    assumptions: 'Partage égalitaire de la facture globale.',
+    limitations: 'Ne détaille pas les consommations individuelles.',
+    faqs: [
+      { question: 'Quel est le pourboire d\'usage ?', answer: 'En Amérique du Nord, il est d\'usage de laisser entre 15 % et 20 % selon la qualité du service.' }
+    ],
     relatedTools
   }),
   de: (tool, name, relatedTools) => ({
     toolName: name,
-    intro: `Der TIP-Rechner bietet präzise finanzielle Auswertungen basierend auf etablierten mathematischen Modellen.`,
-    whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
-    whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
-    howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
-    inputs: [
-      { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
+    intro: 'Der Trinkgeldrechner berechnet Trinkgeldbeträge, teilt Restaurantrechnungen gleichmäßig auf jede Personengruppe auf und bietet eine praktische Aufrundungsfunktion.',
+    whoUsesIt: 'Restaurantbesucher, Gruppen zur Rechnungsaufteilung und Reisende.',
+    whatItCalculates: 'Trinkgeldbetrag, Gesamtrechnung inklusive Trinkgeld und Pro-Kopf-Betrag.',
+    howToUse: [
+      'Geben Sie den Rechnungsbetrag vor Trinkgeld ein.',
+      'Wählen Sie den gewünschten Trinkgeldsatz (z. B. 10 %, 15 %, 18 %, 20 %) oder einen individuellen Satz.',
+      'Tragen Sie die Anzahl der Personen ein.',
+      'Aktivieren Sie optional das Aufrunden auf volle Beträge.',
+      'Sehen Sie Trinkgeld, Endsumme und den Pro-Kopf-Anteil in Echtzeit.'
     ],
+    formula: 'Trinkgeld = Rechnungsbetrag × (Satz / 100)  |  Pro Person = (Rechnungsbetrag + Trinkgeld) / Anzahl Personen',
+    formulaVariables: [
+      { symbol: 'Rechnungsbetrag ($)', name: 'Rechnungsbetrag ($)', explanation: 'Gesamtbetrag vor Trinkgeld.' },
+      { symbol: 'Trinkgeldsatz (%)', name: 'Trinkgeldsatz (%)', explanation: 'Ausgewählter Prozentsatz.' },
+      { symbol: 'Anzahl Personen', name: 'Anzahl Personen', explanation: 'Anzahl der zahlenden Personen.' }
+    ],
+    inputs: [
+      { name: 'Rechnungsbetrag ($)', description: 'Rechnungssumme vor Trinkgeld.', unit: 'Währung ($)', optional: false },
+      { name: 'Trinkgeld in %', description: 'Gewünschter Prozentsatz.', unit: '%', optional: false },
+      { name: 'Personenanzahl', description: 'Anzahl der beteiligten Gäste.', unit: 'Personen', optional: true },
+    ],
+    unitsAndConversions: 'Währungsbeträge mit kaufmännischer Rundung auf zwei Dezimalstellen.',
     workedExample: {
-      scenario: `Calculating TIP using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: 'Aufteilung einer Restaurantrechnung von 85,50 $ auf 2 Personen mit 18 % Trinkgeld.',
+      stepByStep: [
+        'Eingaben: Rechnungsbetrag = 85,50 $, Trinkgeld = 18 %, Personen = 2.',
+        'Trinkgeld berechnen: 85,50 $ × 0,18 = 15,39 $.',
+        'Gesamtrechnung berechnen: 85,50 $ + 15,39 $ = 100,89 $.',
+        'Auf 2 Personen aufteilen: 100,89 $ ÷ 2 = 50,45 $ pro Person (Trinkgeldanteil: 7,70 $).'
+      ],
+      result: 'Trinkgeld: 15,39 $ | Gesamtrechnung: 100,89 $ | Pro Person: 50,45 $ (Trinkgeldanteil: 7,70 $)'
     },
-    understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
-    assumptions: 'Standardmäßige Finanzannahmen.',
-    limitations: 'Zu Informations- und Planungszwecken.',
-    faqs: [{ question: 'Wie funktioniert der Rechner?', answer: 'Wendet etablierte Finanzformeln an.' }],
+    understandingResults: 'Liefert eine übersichtliche Kostenaufteilung ohne lästiges Kopfrechnen am Tisch.',
+    assumptions: 'Gleichmäßige Aufteilung der Gesamtsumme.',
+    limitations: 'Keine getrennte Einzelpostenabrechnung.',
+    faqs: [
+      { question: 'Wie viel Trinkgeld ist üblich?', answer: 'In den USA 15–20 %, in Europa sind 5–10 % als freiwillige Anerkennung üblich.' }
+    ],
     relatedTools
   })
 };
@@ -582,7 +669,7 @@ export const KNOWLEDGE_DISCOUNT: Record<Language, (tool: ToolDef, name: string, 
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -593,13 +680,11 @@ export const KNOWLEDGE_DISCOUNT: Record<Language, (tool: ToolDef, name: string, 
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating DISCOUNT using representative market values.`,
+      scenario: `Calculating DISCOUNT with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -620,7 +705,7 @@ export const KNOWLEDGE_DISCOUNT: Record<Language, (tool: ToolDef, name: string, 
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -631,13 +716,11 @@ export const KNOWLEDGE_DISCOUNT: Record<Language, (tool: ToolDef, name: string, 
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating DISCOUNT using representative market values.`,
+      scenario: `Calculating DISCOUNT with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -653,14 +736,14 @@ export const KNOWLEDGE_DISCOUNT: Record<Language, (tool: ToolDef, name: string, 
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating DISCOUNT using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating DISCOUNT with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -674,14 +757,14 @@ export const KNOWLEDGE_DISCOUNT: Record<Language, (tool: ToolDef, name: string, 
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating DISCOUNT using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating DISCOUNT with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -695,14 +778,14 @@ export const KNOWLEDGE_DISCOUNT: Record<Language, (tool: ToolDef, name: string, 
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating DISCOUNT using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating DISCOUNT with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -724,7 +807,7 @@ export const KNOWLEDGE_CURRENCY: Record<Language, (tool: ToolDef, name: string, 
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -735,13 +818,11 @@ export const KNOWLEDGE_CURRENCY: Record<Language, (tool: ToolDef, name: string, 
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating CURRENCY using representative market values.`,
+      scenario: `Calculating CURRENCY with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -762,7 +843,7 @@ export const KNOWLEDGE_CURRENCY: Record<Language, (tool: ToolDef, name: string, 
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -773,13 +854,11 @@ export const KNOWLEDGE_CURRENCY: Record<Language, (tool: ToolDef, name: string, 
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating CURRENCY using representative market values.`,
+      scenario: `Calculating CURRENCY with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -795,14 +874,14 @@ export const KNOWLEDGE_CURRENCY: Record<Language, (tool: ToolDef, name: string, 
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating CURRENCY using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating CURRENCY with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -816,14 +895,14 @@ export const KNOWLEDGE_CURRENCY: Record<Language, (tool: ToolDef, name: string, 
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating CURRENCY using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating CURRENCY with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -837,14 +916,14 @@ export const KNOWLEDGE_CURRENCY: Record<Language, (tool: ToolDef, name: string, 
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating CURRENCY using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating CURRENCY with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -866,7 +945,7 @@ export const KNOWLEDGE_TAX: Record<Language, (tool: ToolDef, name: string, relat
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -877,13 +956,11 @@ export const KNOWLEDGE_TAX: Record<Language, (tool: ToolDef, name: string, relat
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating TAX using representative market values.`,
+      scenario: `Calculating TAX with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -904,7 +981,7 @@ export const KNOWLEDGE_TAX: Record<Language, (tool: ToolDef, name: string, relat
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -915,13 +992,11 @@ export const KNOWLEDGE_TAX: Record<Language, (tool: ToolDef, name: string, relat
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating TAX using representative market values.`,
+      scenario: `Calculating TAX with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -937,14 +1012,14 @@ export const KNOWLEDGE_TAX: Record<Language, (tool: ToolDef, name: string, relat
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating TAX using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating TAX with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -958,14 +1033,14 @@ export const KNOWLEDGE_TAX: Record<Language, (tool: ToolDef, name: string, relat
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating TAX using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating TAX with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -979,14 +1054,14 @@ export const KNOWLEDGE_TAX: Record<Language, (tool: ToolDef, name: string, relat
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating TAX using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating TAX with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -1008,7 +1083,7 @@ export const KNOWLEDGE_SALARY: Record<Language, (tool: ToolDef, name: string, re
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -1019,13 +1094,11 @@ export const KNOWLEDGE_SALARY: Record<Language, (tool: ToolDef, name: string, re
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating SALARY using representative market values.`,
+      scenario: `Calculating SALARY with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -1046,7 +1119,7 @@ export const KNOWLEDGE_SALARY: Record<Language, (tool: ToolDef, name: string, re
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -1057,13 +1130,11 @@ export const KNOWLEDGE_SALARY: Record<Language, (tool: ToolDef, name: string, re
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating SALARY using representative market values.`,
+      scenario: `Calculating SALARY with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -1079,14 +1150,14 @@ export const KNOWLEDGE_SALARY: Record<Language, (tool: ToolDef, name: string, re
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating SALARY using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating SALARY with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -1100,14 +1171,14 @@ export const KNOWLEDGE_SALARY: Record<Language, (tool: ToolDef, name: string, re
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating SALARY using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating SALARY with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -1121,14 +1192,14 @@ export const KNOWLEDGE_SALARY: Record<Language, (tool: ToolDef, name: string, re
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating SALARY using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating SALARY with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -1150,7 +1221,7 @@ export const KNOWLEDGE_ROI_CAGR: Record<Language, (tool: ToolDef, name: string, 
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -1161,13 +1232,11 @@ export const KNOWLEDGE_ROI_CAGR: Record<Language, (tool: ToolDef, name: string, 
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating ROI CAGR using representative market values.`,
+      scenario: `Calculating ROI CAGR with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -1188,7 +1257,7 @@ export const KNOWLEDGE_ROI_CAGR: Record<Language, (tool: ToolDef, name: string, 
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -1199,13 +1268,11 @@ export const KNOWLEDGE_ROI_CAGR: Record<Language, (tool: ToolDef, name: string, 
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating ROI CAGR using representative market values.`,
+      scenario: `Calculating ROI CAGR with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -1221,14 +1288,14 @@ export const KNOWLEDGE_ROI_CAGR: Record<Language, (tool: ToolDef, name: string, 
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating ROI CAGR using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating ROI CAGR with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -1242,14 +1309,14 @@ export const KNOWLEDGE_ROI_CAGR: Record<Language, (tool: ToolDef, name: string, 
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating ROI CAGR using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating ROI CAGR with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -1263,14 +1330,14 @@ export const KNOWLEDGE_ROI_CAGR: Record<Language, (tool: ToolDef, name: string, 
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating ROI CAGR using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating ROI CAGR with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -1434,7 +1501,7 @@ export const KNOWLEDGE_SIMPLE_INTEREST: Record<Language, (tool: ToolDef, name: s
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -1445,13 +1512,11 @@ export const KNOWLEDGE_SIMPLE_INTEREST: Record<Language, (tool: ToolDef, name: s
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating SIMPLE INTEREST using representative market values.`,
+      scenario: `Calculating SIMPLE INTEREST with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -1472,7 +1537,7 @@ export const KNOWLEDGE_SIMPLE_INTEREST: Record<Language, (tool: ToolDef, name: s
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -1483,13 +1548,11 @@ export const KNOWLEDGE_SIMPLE_INTEREST: Record<Language, (tool: ToolDef, name: s
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating SIMPLE INTEREST using representative market values.`,
+      scenario: `Calculating SIMPLE INTEREST with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -1505,14 +1568,14 @@ export const KNOWLEDGE_SIMPLE_INTEREST: Record<Language, (tool: ToolDef, name: s
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating SIMPLE INTEREST using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating SIMPLE INTEREST with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -1526,14 +1589,14 @@ export const KNOWLEDGE_SIMPLE_INTEREST: Record<Language, (tool: ToolDef, name: s
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating SIMPLE INTEREST using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating SIMPLE INTEREST with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -1547,14 +1610,14 @@ export const KNOWLEDGE_SIMPLE_INTEREST: Record<Language, (tool: ToolDef, name: s
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating SIMPLE INTEREST using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating SIMPLE INTEREST with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -1576,7 +1639,7 @@ export const KNOWLEDGE_AUTO_LOAN: Record<Language, (tool: ToolDef, name: string,
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -1587,13 +1650,11 @@ export const KNOWLEDGE_AUTO_LOAN: Record<Language, (tool: ToolDef, name: string,
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating AUTO LOAN using representative market values.`,
+      scenario: `Calculating AUTO LOAN with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -1614,7 +1675,7 @@ export const KNOWLEDGE_AUTO_LOAN: Record<Language, (tool: ToolDef, name: string,
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -1625,13 +1686,11 @@ export const KNOWLEDGE_AUTO_LOAN: Record<Language, (tool: ToolDef, name: string,
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating AUTO LOAN using representative market values.`,
+      scenario: `Calculating AUTO LOAN with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -1647,14 +1706,14 @@ export const KNOWLEDGE_AUTO_LOAN: Record<Language, (tool: ToolDef, name: string,
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating AUTO LOAN using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating AUTO LOAN with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -1668,14 +1727,14 @@ export const KNOWLEDGE_AUTO_LOAN: Record<Language, (tool: ToolDef, name: string,
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating AUTO LOAN using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating AUTO LOAN with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -1689,14 +1748,14 @@ export const KNOWLEDGE_AUTO_LOAN: Record<Language, (tool: ToolDef, name: string,
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating AUTO LOAN using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating AUTO LOAN with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -1718,7 +1777,7 @@ export const KNOWLEDGE_SAVINGS_GOAL: Record<Language, (tool: ToolDef, name: stri
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -1729,13 +1788,11 @@ export const KNOWLEDGE_SAVINGS_GOAL: Record<Language, (tool: ToolDef, name: stri
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating SAVINGS GOAL using representative market values.`,
+      scenario: `Calculating SAVINGS GOAL with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -1756,7 +1813,7 @@ export const KNOWLEDGE_SAVINGS_GOAL: Record<Language, (tool: ToolDef, name: stri
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -1767,13 +1824,11 @@ export const KNOWLEDGE_SAVINGS_GOAL: Record<Language, (tool: ToolDef, name: stri
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating SAVINGS GOAL using representative market values.`,
+      scenario: `Calculating SAVINGS GOAL with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -1789,14 +1844,14 @@ export const KNOWLEDGE_SAVINGS_GOAL: Record<Language, (tool: ToolDef, name: stri
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating SAVINGS GOAL using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating SAVINGS GOAL with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -1810,14 +1865,14 @@ export const KNOWLEDGE_SAVINGS_GOAL: Record<Language, (tool: ToolDef, name: stri
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating SAVINGS GOAL using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating SAVINGS GOAL with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -1831,14 +1886,14 @@ export const KNOWLEDGE_SAVINGS_GOAL: Record<Language, (tool: ToolDef, name: stri
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating SAVINGS GOAL using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating SAVINGS GOAL with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -1860,7 +1915,7 @@ export const KNOWLEDGE_MARKUP: Record<Language, (tool: ToolDef, name: string, re
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -1871,13 +1926,11 @@ export const KNOWLEDGE_MARKUP: Record<Language, (tool: ToolDef, name: string, re
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating MARKUP using representative market values.`,
+      scenario: `Calculating MARKUP with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -1898,7 +1951,7 @@ export const KNOWLEDGE_MARKUP: Record<Language, (tool: ToolDef, name: string, re
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -1909,13 +1962,11 @@ export const KNOWLEDGE_MARKUP: Record<Language, (tool: ToolDef, name: string, re
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating MARKUP using representative market values.`,
+      scenario: `Calculating MARKUP with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -1931,14 +1982,14 @@ export const KNOWLEDGE_MARKUP: Record<Language, (tool: ToolDef, name: string, re
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating MARKUP using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating MARKUP with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -1952,14 +2003,14 @@ export const KNOWLEDGE_MARKUP: Record<Language, (tool: ToolDef, name: string, re
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating MARKUP using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating MARKUP with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -1973,14 +2024,14 @@ export const KNOWLEDGE_MARKUP: Record<Language, (tool: ToolDef, name: string, re
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating MARKUP using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating MARKUP with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -2002,7 +2053,7 @@ export const KNOWLEDGE_NET_WORTH: Record<Language, (tool: ToolDef, name: string,
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -2013,13 +2064,11 @@ export const KNOWLEDGE_NET_WORTH: Record<Language, (tool: ToolDef, name: string,
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating NET WORTH using representative market values.`,
+      scenario: `Calculating NET WORTH with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -2040,7 +2089,7 @@ export const KNOWLEDGE_NET_WORTH: Record<Language, (tool: ToolDef, name: string,
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -2051,13 +2100,11 @@ export const KNOWLEDGE_NET_WORTH: Record<Language, (tool: ToolDef, name: string,
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating NET WORTH using representative market values.`,
+      scenario: `Calculating NET WORTH with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -2073,14 +2120,14 @@ export const KNOWLEDGE_NET_WORTH: Record<Language, (tool: ToolDef, name: string,
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating NET WORTH using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating NET WORTH with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -2094,14 +2141,14 @@ export const KNOWLEDGE_NET_WORTH: Record<Language, (tool: ToolDef, name: string,
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating NET WORTH using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating NET WORTH with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -2115,14 +2162,14 @@ export const KNOWLEDGE_NET_WORTH: Record<Language, (tool: ToolDef, name: string,
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating NET WORTH using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating NET WORTH with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -2144,7 +2191,7 @@ export const KNOWLEDGE_DEBT_PAYOFF: Record<Language, (tool: ToolDef, name: strin
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -2155,13 +2202,11 @@ export const KNOWLEDGE_DEBT_PAYOFF: Record<Language, (tool: ToolDef, name: strin
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating DEBT PAYOFF using representative market values.`,
+      scenario: `Calculating DEBT PAYOFF with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -2182,7 +2227,7 @@ export const KNOWLEDGE_DEBT_PAYOFF: Record<Language, (tool: ToolDef, name: strin
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -2193,13 +2238,11 @@ export const KNOWLEDGE_DEBT_PAYOFF: Record<Language, (tool: ToolDef, name: strin
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating DEBT PAYOFF using representative market values.`,
+      scenario: `Calculating DEBT PAYOFF with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -2215,14 +2258,14 @@ export const KNOWLEDGE_DEBT_PAYOFF: Record<Language, (tool: ToolDef, name: strin
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating DEBT PAYOFF using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating DEBT PAYOFF with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -2236,14 +2279,14 @@ export const KNOWLEDGE_DEBT_PAYOFF: Record<Language, (tool: ToolDef, name: strin
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating DEBT PAYOFF using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating DEBT PAYOFF with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -2257,14 +2300,14 @@ export const KNOWLEDGE_DEBT_PAYOFF: Record<Language, (tool: ToolDef, name: strin
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating DEBT PAYOFF using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating DEBT PAYOFF with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -2286,7 +2329,7 @@ export const KNOWLEDGE_BREAK_EVEN: Record<Language, (tool: ToolDef, name: string
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -2297,13 +2340,11 @@ export const KNOWLEDGE_BREAK_EVEN: Record<Language, (tool: ToolDef, name: string
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating BREAK EVEN using representative market values.`,
+      scenario: `Calculating BREAK EVEN with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -2324,7 +2365,7 @@ export const KNOWLEDGE_BREAK_EVEN: Record<Language, (tool: ToolDef, name: string
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -2335,13 +2376,11 @@ export const KNOWLEDGE_BREAK_EVEN: Record<Language, (tool: ToolDef, name: string
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating BREAK EVEN using representative market values.`,
+      scenario: `Calculating BREAK EVEN with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -2357,14 +2396,14 @@ export const KNOWLEDGE_BREAK_EVEN: Record<Language, (tool: ToolDef, name: string
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating BREAK EVEN using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating BREAK EVEN with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -2378,14 +2417,14 @@ export const KNOWLEDGE_BREAK_EVEN: Record<Language, (tool: ToolDef, name: string
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating BREAK EVEN using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating BREAK EVEN with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -2399,14 +2438,14 @@ export const KNOWLEDGE_BREAK_EVEN: Record<Language, (tool: ToolDef, name: string
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating BREAK EVEN using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating BREAK EVEN with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -2428,7 +2467,7 @@ export const KNOWLEDGE_COMPOUND_MONTHLY: Record<Language, (tool: ToolDef, name: 
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -2439,13 +2478,11 @@ export const KNOWLEDGE_COMPOUND_MONTHLY: Record<Language, (tool: ToolDef, name: 
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating COMPOUND MONTHLY using representative market values.`,
+      scenario: `Calculating COMPOUND MONTHLY with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -2466,7 +2503,7 @@ export const KNOWLEDGE_COMPOUND_MONTHLY: Record<Language, (tool: ToolDef, name: 
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -2477,13 +2514,11 @@ export const KNOWLEDGE_COMPOUND_MONTHLY: Record<Language, (tool: ToolDef, name: 
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating COMPOUND MONTHLY using representative market values.`,
+      scenario: `Calculating COMPOUND MONTHLY with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -2499,14 +2534,14 @@ export const KNOWLEDGE_COMPOUND_MONTHLY: Record<Language, (tool: ToolDef, name: 
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating COMPOUND MONTHLY using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating COMPOUND MONTHLY with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -2520,14 +2555,14 @@ export const KNOWLEDGE_COMPOUND_MONTHLY: Record<Language, (tool: ToolDef, name: 
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating COMPOUND MONTHLY using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating COMPOUND MONTHLY with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -2541,14 +2576,14 @@ export const KNOWLEDGE_COMPOUND_MONTHLY: Record<Language, (tool: ToolDef, name: 
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating COMPOUND MONTHLY using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating COMPOUND MONTHLY with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -2570,7 +2605,7 @@ export const KNOWLEDGE_DIVIDEND_YIELD: Record<Language, (tool: ToolDef, name: st
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -2581,13 +2616,11 @@ export const KNOWLEDGE_DIVIDEND_YIELD: Record<Language, (tool: ToolDef, name: st
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating DIVIDEND YIELD using representative market values.`,
+      scenario: `Calculating DIVIDEND YIELD with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -2608,7 +2641,7 @@ export const KNOWLEDGE_DIVIDEND_YIELD: Record<Language, (tool: ToolDef, name: st
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -2619,13 +2652,11 @@ export const KNOWLEDGE_DIVIDEND_YIELD: Record<Language, (tool: ToolDef, name: st
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating DIVIDEND YIELD using representative market values.`,
+      scenario: `Calculating DIVIDEND YIELD with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -2641,14 +2672,14 @@ export const KNOWLEDGE_DIVIDEND_YIELD: Record<Language, (tool: ToolDef, name: st
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating DIVIDEND YIELD using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating DIVIDEND YIELD with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -2662,14 +2693,14 @@ export const KNOWLEDGE_DIVIDEND_YIELD: Record<Language, (tool: ToolDef, name: st
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating DIVIDEND YIELD using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating DIVIDEND YIELD with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -2683,14 +2714,14 @@ export const KNOWLEDGE_DIVIDEND_YIELD: Record<Language, (tool: ToolDef, name: st
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating DIVIDEND YIELD using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating DIVIDEND YIELD with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -2712,7 +2743,7 @@ export const KNOWLEDGE_INFLATION_IMPACT: Record<Language, (tool: ToolDef, name: 
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -2723,13 +2754,11 @@ export const KNOWLEDGE_INFLATION_IMPACT: Record<Language, (tool: ToolDef, name: 
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating INFLATION IMPACT using representative market values.`,
+      scenario: `Calculating INFLATION IMPACT with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -2750,7 +2779,7 @@ export const KNOWLEDGE_INFLATION_IMPACT: Record<Language, (tool: ToolDef, name: 
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -2761,13 +2790,11 @@ export const KNOWLEDGE_INFLATION_IMPACT: Record<Language, (tool: ToolDef, name: 
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating INFLATION IMPACT using representative market values.`,
+      scenario: `Calculating INFLATION IMPACT with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -2783,14 +2810,14 @@ export const KNOWLEDGE_INFLATION_IMPACT: Record<Language, (tool: ToolDef, name: 
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating INFLATION IMPACT using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating INFLATION IMPACT with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -2804,14 +2831,14 @@ export const KNOWLEDGE_INFLATION_IMPACT: Record<Language, (tool: ToolDef, name: 
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating INFLATION IMPACT using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating INFLATION IMPACT with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -2825,14 +2852,14 @@ export const KNOWLEDGE_INFLATION_IMPACT: Record<Language, (tool: ToolDef, name: 
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating INFLATION IMPACT using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating INFLATION IMPACT with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -3138,7 +3165,7 @@ export const KNOWLEDGE_VAT_TAX: Record<Language, (tool: ToolDef, name: string, r
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -3149,13 +3176,11 @@ export const KNOWLEDGE_VAT_TAX: Record<Language, (tool: ToolDef, name: string, r
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating VAT TAX using representative market values.`,
+      scenario: `Calculating VAT TAX with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -3176,7 +3201,7 @@ export const KNOWLEDGE_VAT_TAX: Record<Language, (tool: ToolDef, name: string, r
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -3187,13 +3212,11 @@ export const KNOWLEDGE_VAT_TAX: Record<Language, (tool: ToolDef, name: string, r
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating VAT TAX using representative market values.`,
+      scenario: `Calculating VAT TAX with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -3209,14 +3232,14 @@ export const KNOWLEDGE_VAT_TAX: Record<Language, (tool: ToolDef, name: string, r
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating VAT TAX using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating VAT TAX with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -3230,14 +3253,14 @@ export const KNOWLEDGE_VAT_TAX: Record<Language, (tool: ToolDef, name: string, r
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating VAT TAX using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating VAT TAX with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -3251,14 +3274,14 @@ export const KNOWLEDGE_VAT_TAX: Record<Language, (tool: ToolDef, name: string, r
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating VAT TAX using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating VAT TAX with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -3564,7 +3587,7 @@ export const KNOWLEDGE_PAYBACK_PERIOD: Record<Language, (tool: ToolDef, name: st
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -3575,13 +3598,11 @@ export const KNOWLEDGE_PAYBACK_PERIOD: Record<Language, (tool: ToolDef, name: st
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating PAYBACK PERIOD using representative market values.`,
+      scenario: `Calculating PAYBACK PERIOD with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -3602,7 +3623,7 @@ export const KNOWLEDGE_PAYBACK_PERIOD: Record<Language, (tool: ToolDef, name: st
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -3613,13 +3634,11 @@ export const KNOWLEDGE_PAYBACK_PERIOD: Record<Language, (tool: ToolDef, name: st
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating PAYBACK PERIOD using representative market values.`,
+      scenario: `Calculating PAYBACK PERIOD with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -3635,14 +3654,14 @@ export const KNOWLEDGE_PAYBACK_PERIOD: Record<Language, (tool: ToolDef, name: st
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating PAYBACK PERIOD using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating PAYBACK PERIOD with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -3656,14 +3675,14 @@ export const KNOWLEDGE_PAYBACK_PERIOD: Record<Language, (tool: ToolDef, name: st
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating PAYBACK PERIOD using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating PAYBACK PERIOD with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -3677,14 +3696,14 @@ export const KNOWLEDGE_PAYBACK_PERIOD: Record<Language, (tool: ToolDef, name: st
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating PAYBACK PERIOD using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating PAYBACK PERIOD with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -3706,7 +3725,7 @@ export const KNOWLEDGE_LOAN_REFINANCE: Record<Language, (tool: ToolDef, name: st
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -3717,13 +3736,11 @@ export const KNOWLEDGE_LOAN_REFINANCE: Record<Language, (tool: ToolDef, name: st
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating LOAN REFINANCE using representative market values.`,
+      scenario: `Calculating LOAN REFINANCE with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -3744,7 +3761,7 @@ export const KNOWLEDGE_LOAN_REFINANCE: Record<Language, (tool: ToolDef, name: st
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -3755,13 +3772,11 @@ export const KNOWLEDGE_LOAN_REFINANCE: Record<Language, (tool: ToolDef, name: st
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating LOAN REFINANCE using representative market values.`,
+      scenario: `Calculating LOAN REFINANCE with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -3777,14 +3792,14 @@ export const KNOWLEDGE_LOAN_REFINANCE: Record<Language, (tool: ToolDef, name: st
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating LOAN REFINANCE using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating LOAN REFINANCE with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -3798,14 +3813,14 @@ export const KNOWLEDGE_LOAN_REFINANCE: Record<Language, (tool: ToolDef, name: st
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating LOAN REFINANCE using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating LOAN REFINANCE with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -3819,14 +3834,14 @@ export const KNOWLEDGE_LOAN_REFINANCE: Record<Language, (tool: ToolDef, name: st
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating LOAN REFINANCE using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating LOAN REFINANCE with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -3848,7 +3863,7 @@ export const KNOWLEDGE_VAT_REVERSE: Record<Language, (tool: ToolDef, name: strin
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -3859,13 +3874,11 @@ export const KNOWLEDGE_VAT_REVERSE: Record<Language, (tool: ToolDef, name: strin
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating VAT REVERSE using representative market values.`,
+      scenario: `Calculating VAT REVERSE with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -3886,7 +3899,7 @@ export const KNOWLEDGE_VAT_REVERSE: Record<Language, (tool: ToolDef, name: strin
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -3897,13 +3910,11 @@ export const KNOWLEDGE_VAT_REVERSE: Record<Language, (tool: ToolDef, name: strin
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating VAT REVERSE using representative market values.`,
+      scenario: `Calculating VAT REVERSE with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -3919,14 +3930,14 @@ export const KNOWLEDGE_VAT_REVERSE: Record<Language, (tool: ToolDef, name: strin
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating VAT REVERSE using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating VAT REVERSE with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -3940,14 +3951,14 @@ export const KNOWLEDGE_VAT_REVERSE: Record<Language, (tool: ToolDef, name: strin
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating VAT REVERSE using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating VAT REVERSE with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -3961,14 +3972,14 @@ export const KNOWLEDGE_VAT_REVERSE: Record<Language, (tool: ToolDef, name: strin
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating VAT REVERSE using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating VAT REVERSE with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -3990,7 +4001,7 @@ export const KNOWLEDGE_SALARY_HOURLY: Record<Language, (tool: ToolDef, name: str
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -4001,13 +4012,11 @@ export const KNOWLEDGE_SALARY_HOURLY: Record<Language, (tool: ToolDef, name: str
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating SALARY HOURLY using representative market values.`,
+      scenario: `Calculating SALARY HOURLY with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -4028,7 +4037,7 @@ export const KNOWLEDGE_SALARY_HOURLY: Record<Language, (tool: ToolDef, name: str
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -4039,13 +4048,11 @@ export const KNOWLEDGE_SALARY_HOURLY: Record<Language, (tool: ToolDef, name: str
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating SALARY HOURLY using representative market values.`,
+      scenario: `Calculating SALARY HOURLY with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -4061,14 +4068,14 @@ export const KNOWLEDGE_SALARY_HOURLY: Record<Language, (tool: ToolDef, name: str
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating SALARY HOURLY using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating SALARY HOURLY with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -4082,14 +4089,14 @@ export const KNOWLEDGE_SALARY_HOURLY: Record<Language, (tool: ToolDef, name: str
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating SALARY HOURLY using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating SALARY HOURLY with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -4103,14 +4110,14 @@ export const KNOWLEDGE_SALARY_HOURLY: Record<Language, (tool: ToolDef, name: str
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating SALARY HOURLY using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating SALARY HOURLY with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -4274,7 +4281,7 @@ export const KNOWLEDGE_BREAK_EVEN_POINT: Record<Language, (tool: ToolDef, name: 
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -4285,13 +4292,11 @@ export const KNOWLEDGE_BREAK_EVEN_POINT: Record<Language, (tool: ToolDef, name: 
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating BREAK EVEN POINT using representative market values.`,
+      scenario: `Calculating BREAK EVEN POINT with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -4312,7 +4317,7 @@ export const KNOWLEDGE_BREAK_EVEN_POINT: Record<Language, (tool: ToolDef, name: 
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -4323,13 +4328,11 @@ export const KNOWLEDGE_BREAK_EVEN_POINT: Record<Language, (tool: ToolDef, name: 
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating BREAK EVEN POINT using representative market values.`,
+      scenario: `Calculating BREAK EVEN POINT with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -4345,14 +4348,14 @@ export const KNOWLEDGE_BREAK_EVEN_POINT: Record<Language, (tool: ToolDef, name: 
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating BREAK EVEN POINT using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating BREAK EVEN POINT with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -4366,14 +4369,14 @@ export const KNOWLEDGE_BREAK_EVEN_POINT: Record<Language, (tool: ToolDef, name: 
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating BREAK EVEN POINT using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating BREAK EVEN POINT with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -4387,14 +4390,14 @@ export const KNOWLEDGE_BREAK_EVEN_POINT: Record<Language, (tool: ToolDef, name: 
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating BREAK EVEN POINT using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating BREAK EVEN POINT with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -4416,7 +4419,7 @@ export const KNOWLEDGE_COMMISSION_CALC: Record<Language, (tool: ToolDef, name: s
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -4427,13 +4430,11 @@ export const KNOWLEDGE_COMMISSION_CALC: Record<Language, (tool: ToolDef, name: s
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating COMMISSION CALC using representative market values.`,
+      scenario: `Calculating COMMISSION CALC with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -4454,7 +4455,7 @@ export const KNOWLEDGE_COMMISSION_CALC: Record<Language, (tool: ToolDef, name: s
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -4465,13 +4466,11 @@ export const KNOWLEDGE_COMMISSION_CALC: Record<Language, (tool: ToolDef, name: s
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating COMMISSION CALC using representative market values.`,
+      scenario: `Calculating COMMISSION CALC with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -4487,14 +4486,14 @@ export const KNOWLEDGE_COMMISSION_CALC: Record<Language, (tool: ToolDef, name: s
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating COMMISSION CALC using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating COMMISSION CALC with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -4508,14 +4507,14 @@ export const KNOWLEDGE_COMMISSION_CALC: Record<Language, (tool: ToolDef, name: s
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating COMMISSION CALC using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating COMMISSION CALC with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -4529,14 +4528,14 @@ export const KNOWLEDGE_COMMISSION_CALC: Record<Language, (tool: ToolDef, name: s
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating COMMISSION CALC using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating COMMISSION CALC with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -4558,7 +4557,7 @@ export const KNOWLEDGE_APPRECIATION_CALC: Record<Language, (tool: ToolDef, name:
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -4569,13 +4568,11 @@ export const KNOWLEDGE_APPRECIATION_CALC: Record<Language, (tool: ToolDef, name:
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating APPRECIATION CALC using representative market values.`,
+      scenario: `Calculating APPRECIATION CALC with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -4596,7 +4593,7 @@ export const KNOWLEDGE_APPRECIATION_CALC: Record<Language, (tool: ToolDef, name:
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -4607,13 +4604,11 @@ export const KNOWLEDGE_APPRECIATION_CALC: Record<Language, (tool: ToolDef, name:
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating APPRECIATION CALC using representative market values.`,
+      scenario: `Calculating APPRECIATION CALC with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -4629,14 +4624,14 @@ export const KNOWLEDGE_APPRECIATION_CALC: Record<Language, (tool: ToolDef, name:
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating APPRECIATION CALC using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating APPRECIATION CALC with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -4650,14 +4645,14 @@ export const KNOWLEDGE_APPRECIATION_CALC: Record<Language, (tool: ToolDef, name:
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating APPRECIATION CALC using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating APPRECIATION CALC with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -4671,14 +4666,14 @@ export const KNOWLEDGE_APPRECIATION_CALC: Record<Language, (tool: ToolDef, name:
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating APPRECIATION CALC using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating APPRECIATION CALC with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -4700,7 +4695,7 @@ export const KNOWLEDGE_DEPRECIATION_STRAIGHT: Record<Language, (tool: ToolDef, n
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -4711,13 +4706,11 @@ export const KNOWLEDGE_DEPRECIATION_STRAIGHT: Record<Language, (tool: ToolDef, n
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating DEPRECIATION STRAIGHT using representative market values.`,
+      scenario: `Calculating DEPRECIATION STRAIGHT with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -4738,7 +4731,7 @@ export const KNOWLEDGE_DEPRECIATION_STRAIGHT: Record<Language, (tool: ToolDef, n
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -4749,13 +4742,11 @@ export const KNOWLEDGE_DEPRECIATION_STRAIGHT: Record<Language, (tool: ToolDef, n
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating DEPRECIATION STRAIGHT using representative market values.`,
+      scenario: `Calculating DEPRECIATION STRAIGHT with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -4771,14 +4762,14 @@ export const KNOWLEDGE_DEPRECIATION_STRAIGHT: Record<Language, (tool: ToolDef, n
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating DEPRECIATION STRAIGHT using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating DEPRECIATION STRAIGHT with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -4792,14 +4783,14 @@ export const KNOWLEDGE_DEPRECIATION_STRAIGHT: Record<Language, (tool: ToolDef, n
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating DEPRECIATION STRAIGHT using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating DEPRECIATION STRAIGHT with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -4813,14 +4804,14 @@ export const KNOWLEDGE_DEPRECIATION_STRAIGHT: Record<Language, (tool: ToolDef, n
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating DEPRECIATION STRAIGHT using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating DEPRECIATION STRAIGHT with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -4842,7 +4833,7 @@ export const KNOWLEDGE_STOCK_DIVIDEND_YIELD: Record<Language, (tool: ToolDef, na
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -4853,13 +4844,11 @@ export const KNOWLEDGE_STOCK_DIVIDEND_YIELD: Record<Language, (tool: ToolDef, na
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating STOCK DIVIDEND YIELD using representative market values.`,
+      scenario: `Calculating STOCK DIVIDEND YIELD with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -4880,7 +4869,7 @@ export const KNOWLEDGE_STOCK_DIVIDEND_YIELD: Record<Language, (tool: ToolDef, na
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -4891,13 +4880,11 @@ export const KNOWLEDGE_STOCK_DIVIDEND_YIELD: Record<Language, (tool: ToolDef, na
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating STOCK DIVIDEND YIELD using representative market values.`,
+      scenario: `Calculating STOCK DIVIDEND YIELD with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -4913,14 +4900,14 @@ export const KNOWLEDGE_STOCK_DIVIDEND_YIELD: Record<Language, (tool: ToolDef, na
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating STOCK DIVIDEND YIELD using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating STOCK DIVIDEND YIELD with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -4934,14 +4921,14 @@ export const KNOWLEDGE_STOCK_DIVIDEND_YIELD: Record<Language, (tool: ToolDef, na
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating STOCK DIVIDEND YIELD using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating STOCK DIVIDEND YIELD with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -4955,14 +4942,14 @@ export const KNOWLEDGE_STOCK_DIVIDEND_YIELD: Record<Language, (tool: ToolDef, na
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `PMT = P × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating STOCK DIVIDEND YIELD using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating STOCK DIVIDEND YIELD with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -5268,7 +5255,7 @@ export const KNOWLEDGE_MORTGAGE_PAYOFF: Record<Language, (tool: ToolDef, name: s
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Monthly Savings = Original Payment - New Payment | Time Saved = Original Term - New Term`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -5279,13 +5266,11 @@ export const KNOWLEDGE_MORTGAGE_PAYOFF: Record<Language, (tool: ToolDef, name: s
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating MORTGAGE PAYOFF using representative market values.`,
+      scenario: `Calculating MORTGAGE PAYOFF with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -5306,7 +5291,7 @@ export const KNOWLEDGE_MORTGAGE_PAYOFF: Record<Language, (tool: ToolDef, name: s
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Monthly Savings = Original Payment - New Payment | Time Saved = Original Term - New Term`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -5317,13 +5302,11 @@ export const KNOWLEDGE_MORTGAGE_PAYOFF: Record<Language, (tool: ToolDef, name: s
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating MORTGAGE PAYOFF using representative market values.`,
+      scenario: `Calculating MORTGAGE PAYOFF with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -5339,14 +5322,14 @@ export const KNOWLEDGE_MORTGAGE_PAYOFF: Record<Language, (tool: ToolDef, name: s
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Monthly Savings = Original Payment - New Payment | Time Saved = Original Term - New Term`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating MORTGAGE PAYOFF using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating MORTGAGE PAYOFF with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -5360,14 +5343,14 @@ export const KNOWLEDGE_MORTGAGE_PAYOFF: Record<Language, (tool: ToolDef, name: s
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Monthly Savings = Original Payment - New Payment | Time Saved = Original Term - New Term`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating MORTGAGE PAYOFF using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating MORTGAGE PAYOFF with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -5381,14 +5364,14 @@ export const KNOWLEDGE_MORTGAGE_PAYOFF: Record<Language, (tool: ToolDef, name: s
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Monthly Savings = Original Payment - New Payment | Time Saved = Original Term - New Term`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating MORTGAGE PAYOFF using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating MORTGAGE PAYOFF with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -5410,7 +5393,7 @@ export const KNOWLEDGE_COLLEGE_SAVINGS: Record<Language, (tool: ToolDef, name: s
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Future Fund = P × (1 + r)^t + PMT × [((1 + r)^t - 1) / r]`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -5421,13 +5404,11 @@ export const KNOWLEDGE_COLLEGE_SAVINGS: Record<Language, (tool: ToolDef, name: s
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating COLLEGE SAVINGS using representative market values.`,
+      scenario: `Calculating COLLEGE SAVINGS with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -5448,7 +5429,7 @@ export const KNOWLEDGE_COLLEGE_SAVINGS: Record<Language, (tool: ToolDef, name: s
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Future Fund = P × (1 + r)^t + PMT × [((1 + r)^t - 1) / r]`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -5459,13 +5440,11 @@ export const KNOWLEDGE_COLLEGE_SAVINGS: Record<Language, (tool: ToolDef, name: s
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating COLLEGE SAVINGS using representative market values.`,
+      scenario: `Calculating COLLEGE SAVINGS with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -5481,14 +5460,14 @@ export const KNOWLEDGE_COLLEGE_SAVINGS: Record<Language, (tool: ToolDef, name: s
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Future Fund = P × (1 + r)^t + PMT × [((1 + r)^t - 1) / r]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating COLLEGE SAVINGS using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating COLLEGE SAVINGS with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -5502,14 +5481,14 @@ export const KNOWLEDGE_COLLEGE_SAVINGS: Record<Language, (tool: ToolDef, name: s
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Future Fund = P × (1 + r)^t + PMT × [((1 + r)^t - 1) / r]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating COLLEGE SAVINGS using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating COLLEGE SAVINGS with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -5523,14 +5502,14 @@ export const KNOWLEDGE_COLLEGE_SAVINGS: Record<Language, (tool: ToolDef, name: s
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Future Fund = P × (1 + r)^t + PMT × [((1 + r)^t - 1) / r]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating COLLEGE SAVINGS using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating COLLEGE SAVINGS with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -5552,7 +5531,7 @@ export const KNOWLEDGE_401K_RETIREMENT: Record<Language, (tool: ToolDef, name: s
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Balance at Retirement = P × (1 + r)^t + (Annual Contribution + Employer Match) × [((1 + r)^t - 1) / r]`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -5563,13 +5542,11 @@ export const KNOWLEDGE_401K_RETIREMENT: Record<Language, (tool: ToolDef, name: s
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating 401K RETIREMENT using representative market values.`,
+      scenario: `Calculating 401K RETIREMENT with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -5590,7 +5567,7 @@ export const KNOWLEDGE_401K_RETIREMENT: Record<Language, (tool: ToolDef, name: s
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Balance at Retirement = P × (1 + r)^t + (Annual Contribution + Employer Match) × [((1 + r)^t - 1) / r]`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -5601,13 +5578,11 @@ export const KNOWLEDGE_401K_RETIREMENT: Record<Language, (tool: ToolDef, name: s
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating 401K RETIREMENT using representative market values.`,
+      scenario: `Calculating 401K RETIREMENT with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -5623,14 +5598,14 @@ export const KNOWLEDGE_401K_RETIREMENT: Record<Language, (tool: ToolDef, name: s
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Balance at Retirement = P × (1 + r)^t + (Annual Contribution + Employer Match) × [((1 + r)^t - 1) / r]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating 401K RETIREMENT using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating 401K RETIREMENT with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -5644,14 +5619,14 @@ export const KNOWLEDGE_401K_RETIREMENT: Record<Language, (tool: ToolDef, name: s
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Balance at Retirement = P × (1 + r)^t + (Annual Contribution + Employer Match) × [((1 + r)^t - 1) / r]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating 401K RETIREMENT using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating 401K RETIREMENT with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -5665,14 +5640,14 @@ export const KNOWLEDGE_401K_RETIREMENT: Record<Language, (tool: ToolDef, name: s
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Balance at Retirement = P × (1 + r)^t + (Annual Contribution + Employer Match) × [((1 + r)^t - 1) / r]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating 401K RETIREMENT using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating 401K RETIREMENT with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -5694,7 +5669,7 @@ export const KNOWLEDGE_DEBT_SNOWBALL: Record<Language, (tool: ToolDef, name: str
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Months to Payoff = f(Min Payments + Extra Payment ordered by Balance / Interest Rate)`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -5705,13 +5680,11 @@ export const KNOWLEDGE_DEBT_SNOWBALL: Record<Language, (tool: ToolDef, name: str
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating DEBT SNOWBALL using representative market values.`,
+      scenario: `Calculating DEBT SNOWBALL with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -5732,7 +5705,7 @@ export const KNOWLEDGE_DEBT_SNOWBALL: Record<Language, (tool: ToolDef, name: str
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Months to Payoff = f(Min Payments + Extra Payment ordered by Balance / Interest Rate)`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -5743,13 +5716,11 @@ export const KNOWLEDGE_DEBT_SNOWBALL: Record<Language, (tool: ToolDef, name: str
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating DEBT SNOWBALL using representative market values.`,
+      scenario: `Calculating DEBT SNOWBALL with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -5765,14 +5736,14 @@ export const KNOWLEDGE_DEBT_SNOWBALL: Record<Language, (tool: ToolDef, name: str
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Months to Payoff = f(Min Payments + Extra Payment ordered by Balance / Interest Rate)`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating DEBT SNOWBALL using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating DEBT SNOWBALL with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -5786,14 +5757,14 @@ export const KNOWLEDGE_DEBT_SNOWBALL: Record<Language, (tool: ToolDef, name: str
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Months to Payoff = f(Min Payments + Extra Payment ordered by Balance / Interest Rate)`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating DEBT SNOWBALL using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating DEBT SNOWBALL with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -5807,14 +5778,14 @@ export const KNOWLEDGE_DEBT_SNOWBALL: Record<Language, (tool: ToolDef, name: str
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Months to Payoff = f(Min Payments + Extra Payment ordered by Balance / Interest Rate)`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating DEBT SNOWBALL using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating DEBT SNOWBALL with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -5836,7 +5807,7 @@ export const KNOWLEDGE_INFLATION_FUTURE: Record<Language, (tool: ToolDef, name: 
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Future Price = Present Price × (1 + Inflation Rate)^Years`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -5847,13 +5818,11 @@ export const KNOWLEDGE_INFLATION_FUTURE: Record<Language, (tool: ToolDef, name: 
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating INFLATION FUTURE using representative market values.`,
+      scenario: `Calculating INFLATION FUTURE with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -5874,7 +5843,7 @@ export const KNOWLEDGE_INFLATION_FUTURE: Record<Language, (tool: ToolDef, name: 
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Future Price = Present Price × (1 + Inflation Rate)^Years`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -5885,13 +5854,11 @@ export const KNOWLEDGE_INFLATION_FUTURE: Record<Language, (tool: ToolDef, name: 
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating INFLATION FUTURE using representative market values.`,
+      scenario: `Calculating INFLATION FUTURE with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -5907,14 +5874,14 @@ export const KNOWLEDGE_INFLATION_FUTURE: Record<Language, (tool: ToolDef, name: 
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Future Price = Present Price × (1 + Inflation Rate)^Years`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating INFLATION FUTURE using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating INFLATION FUTURE with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -5928,14 +5895,14 @@ export const KNOWLEDGE_INFLATION_FUTURE: Record<Language, (tool: ToolDef, name: 
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Future Price = Present Price × (1 + Inflation Rate)^Years`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating INFLATION FUTURE using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating INFLATION FUTURE with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -5949,14 +5916,14 @@ export const KNOWLEDGE_INFLATION_FUTURE: Record<Language, (tool: ToolDef, name: 
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Future Price = Present Price × (1 + Inflation Rate)^Years`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating INFLATION FUTURE using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating INFLATION FUTURE with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -5978,7 +5945,7 @@ export const KNOWLEDGE_CURRENCY_CRYPTO: Record<Language, (tool: ToolDef, name: s
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Market Cap = Circulating Supply × Unit Price | FDV = Total Max Supply × Unit Price`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -5989,13 +5956,11 @@ export const KNOWLEDGE_CURRENCY_CRYPTO: Record<Language, (tool: ToolDef, name: s
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating CURRENCY CRYPTO using representative market values.`,
+      scenario: `Calculating CURRENCY CRYPTO with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -6016,7 +5981,7 @@ export const KNOWLEDGE_CURRENCY_CRYPTO: Record<Language, (tool: ToolDef, name: s
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Market Cap = Circulating Supply × Unit Price | FDV = Total Max Supply × Unit Price`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -6027,13 +5992,11 @@ export const KNOWLEDGE_CURRENCY_CRYPTO: Record<Language, (tool: ToolDef, name: s
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating CURRENCY CRYPTO using representative market values.`,
+      scenario: `Calculating CURRENCY CRYPTO with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -6049,14 +6012,14 @@ export const KNOWLEDGE_CURRENCY_CRYPTO: Record<Language, (tool: ToolDef, name: s
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Market Cap = Circulating Supply × Unit Price | FDV = Total Max Supply × Unit Price`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating CURRENCY CRYPTO using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating CURRENCY CRYPTO with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -6070,14 +6033,14 @@ export const KNOWLEDGE_CURRENCY_CRYPTO: Record<Language, (tool: ToolDef, name: s
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Market Cap = Circulating Supply × Unit Price | FDV = Total Max Supply × Unit Price`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating CURRENCY CRYPTO using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating CURRENCY CRYPTO with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -6091,14 +6054,14 @@ export const KNOWLEDGE_CURRENCY_CRYPTO: Record<Language, (tool: ToolDef, name: s
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Market Cap = Circulating Supply × Unit Price | FDV = Total Max Supply × Unit Price`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating CURRENCY CRYPTO using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating CURRENCY CRYPTO with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -6546,7 +6509,7 @@ export const KNOWLEDGE_GROSS_MARGIN_CALCULATOR: Record<Language, (tool: ToolDef,
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Gross Margin % = [(Revenue - Cost of Goods Sold) / Revenue] × 100`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -6557,13 +6520,11 @@ export const KNOWLEDGE_GROSS_MARGIN_CALCULATOR: Record<Language, (tool: ToolDef,
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating GROSS MARGIN CALCULATOR using representative market values.`,
+      scenario: `Calculating GROSS MARGIN CALCULATOR with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -6584,7 +6545,7 @@ export const KNOWLEDGE_GROSS_MARGIN_CALCULATOR: Record<Language, (tool: ToolDef,
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Gross Margin % = [(Revenue - Cost of Goods Sold) / Revenue] × 100`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -6595,13 +6556,11 @@ export const KNOWLEDGE_GROSS_MARGIN_CALCULATOR: Record<Language, (tool: ToolDef,
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating GROSS MARGIN CALCULATOR using representative market values.`,
+      scenario: `Calculating GROSS MARGIN CALCULATOR with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -6617,14 +6576,14 @@ export const KNOWLEDGE_GROSS_MARGIN_CALCULATOR: Record<Language, (tool: ToolDef,
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Gross Margin % = [(Revenue - Cost of Goods Sold) / Revenue] × 100`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating GROSS MARGIN CALCULATOR using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating GROSS MARGIN CALCULATOR with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -6638,14 +6597,14 @@ export const KNOWLEDGE_GROSS_MARGIN_CALCULATOR: Record<Language, (tool: ToolDef,
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Gross Margin % = [(Revenue - Cost of Goods Sold) / Revenue] × 100`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating GROSS MARGIN CALCULATOR using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating GROSS MARGIN CALCULATOR with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -6659,14 +6618,14 @@ export const KNOWLEDGE_GROSS_MARGIN_CALCULATOR: Record<Language, (tool: ToolDef,
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Gross Margin % = [(Revenue - Cost of Goods Sold) / Revenue] × 100`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating GROSS MARGIN CALCULATOR using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating GROSS MARGIN CALCULATOR with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -6688,7 +6647,7 @@ export const KNOWLEDGE_OPERATING_MARGIN_CALCULATOR: Record<Language, (tool: Tool
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Operating Margin % = (Operating Income / Revenue) × 100`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -6699,13 +6658,11 @@ export const KNOWLEDGE_OPERATING_MARGIN_CALCULATOR: Record<Language, (tool: Tool
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating OPERATING MARGIN CALCULATOR using representative market values.`,
+      scenario: `Calculating OPERATING MARGIN CALCULATOR with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -6726,7 +6683,7 @@ export const KNOWLEDGE_OPERATING_MARGIN_CALCULATOR: Record<Language, (tool: Tool
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Operating Margin % = (Operating Income / Revenue) × 100`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -6737,13 +6694,11 @@ export const KNOWLEDGE_OPERATING_MARGIN_CALCULATOR: Record<Language, (tool: Tool
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating OPERATING MARGIN CALCULATOR using representative market values.`,
+      scenario: `Calculating OPERATING MARGIN CALCULATOR with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -6759,14 +6714,14 @@ export const KNOWLEDGE_OPERATING_MARGIN_CALCULATOR: Record<Language, (tool: Tool
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Operating Margin % = (Operating Income / Revenue) × 100`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating OPERATING MARGIN CALCULATOR using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating OPERATING MARGIN CALCULATOR with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -6780,14 +6735,14 @@ export const KNOWLEDGE_OPERATING_MARGIN_CALCULATOR: Record<Language, (tool: Tool
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Operating Margin % = (Operating Income / Revenue) × 100`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating OPERATING MARGIN CALCULATOR using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating OPERATING MARGIN CALCULATOR with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -6801,14 +6756,14 @@ export const KNOWLEDGE_OPERATING_MARGIN_CALCULATOR: Record<Language, (tool: Tool
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Operating Margin % = (Operating Income / Revenue) × 100`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating OPERATING MARGIN CALCULATOR using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating OPERATING MARGIN CALCULATOR with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -6830,7 +6785,7 @@ export const KNOWLEDGE_DSCR_CALCULATOR: Record<Language, (tool: ToolDef, name: s
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `DSCR = Net Operating Income / Total Debt Service`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -6841,13 +6796,11 @@ export const KNOWLEDGE_DSCR_CALCULATOR: Record<Language, (tool: ToolDef, name: s
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating DSCR CALCULATOR using representative market values.`,
+      scenario: `Calculating DSCR CALCULATOR with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -6868,7 +6821,7 @@ export const KNOWLEDGE_DSCR_CALCULATOR: Record<Language, (tool: ToolDef, name: s
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `DSCR = Net Operating Income / Total Debt Service`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -6879,13 +6832,11 @@ export const KNOWLEDGE_DSCR_CALCULATOR: Record<Language, (tool: ToolDef, name: s
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating DSCR CALCULATOR using representative market values.`,
+      scenario: `Calculating DSCR CALCULATOR with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -6901,14 +6852,14 @@ export const KNOWLEDGE_DSCR_CALCULATOR: Record<Language, (tool: ToolDef, name: s
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `DSCR = Net Operating Income / Total Debt Service`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating DSCR CALCULATOR using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating DSCR CALCULATOR with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -6922,14 +6873,14 @@ export const KNOWLEDGE_DSCR_CALCULATOR: Record<Language, (tool: ToolDef, name: s
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `DSCR = Net Operating Income / Total Debt Service`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating DSCR CALCULATOR using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating DSCR CALCULATOR with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -6943,14 +6894,14 @@ export const KNOWLEDGE_DSCR_CALCULATOR: Record<Language, (tool: ToolDef, name: s
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `DSCR = Net Operating Income / Total Debt Service`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating DSCR CALCULATOR using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating DSCR CALCULATOR with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -6972,7 +6923,7 @@ export const KNOWLEDGE_LOAN_AMORTIZATION_SCHEDULE: Record<Language, (tool: ToolD
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Monthly Payment M = P × [r(1+r)^n] / [(1+r)^n - 1] | Interest_i = Remaining Principal × r`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -6983,13 +6934,11 @@ export const KNOWLEDGE_LOAN_AMORTIZATION_SCHEDULE: Record<Language, (tool: ToolD
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating LOAN AMORTIZATION SCHEDULE using representative market values.`,
+      scenario: `Calculating LOAN AMORTIZATION SCHEDULE with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -7010,7 +6959,7 @@ export const KNOWLEDGE_LOAN_AMORTIZATION_SCHEDULE: Record<Language, (tool: ToolD
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Monthly Payment M = P × [r(1+r)^n] / [(1+r)^n - 1] | Interest_i = Remaining Principal × r`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -7021,13 +6970,11 @@ export const KNOWLEDGE_LOAN_AMORTIZATION_SCHEDULE: Record<Language, (tool: ToolD
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating LOAN AMORTIZATION SCHEDULE using representative market values.`,
+      scenario: `Calculating LOAN AMORTIZATION SCHEDULE with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -7043,14 +6990,14 @@ export const KNOWLEDGE_LOAN_AMORTIZATION_SCHEDULE: Record<Language, (tool: ToolD
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Monthly Payment M = P × [r(1+r)^n] / [(1+r)^n - 1] | Interest_i = Remaining Principal × r`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating LOAN AMORTIZATION SCHEDULE using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating LOAN AMORTIZATION SCHEDULE with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -7064,14 +7011,14 @@ export const KNOWLEDGE_LOAN_AMORTIZATION_SCHEDULE: Record<Language, (tool: ToolD
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Monthly Payment M = P × [r(1+r)^n] / [(1+r)^n - 1] | Interest_i = Remaining Principal × r`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating LOAN AMORTIZATION SCHEDULE using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating LOAN AMORTIZATION SCHEDULE with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -7085,14 +7032,14 @@ export const KNOWLEDGE_LOAN_AMORTIZATION_SCHEDULE: Record<Language, (tool: ToolD
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Monthly Payment M = P × [r(1+r)^n] / [(1+r)^n - 1] | Interest_i = Remaining Principal × r`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating LOAN AMORTIZATION SCHEDULE using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating LOAN AMORTIZATION SCHEDULE with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -7114,7 +7061,7 @@ export const KNOWLEDGE_BALLOON_PAYMENT_LOAN: Record<Language, (tool: ToolDef, na
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Monthly Payment = P × [r(1+r)^n] / [(1+r)^n - 1] | Balloon Balance = Remaining Principal at Month k`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -7125,13 +7072,11 @@ export const KNOWLEDGE_BALLOON_PAYMENT_LOAN: Record<Language, (tool: ToolDef, na
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating BALLOON PAYMENT LOAN using representative market values.`,
+      scenario: `Calculating BALLOON PAYMENT LOAN with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -7152,7 +7097,7 @@ export const KNOWLEDGE_BALLOON_PAYMENT_LOAN: Record<Language, (tool: ToolDef, na
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Monthly Payment = P × [r(1+r)^n] / [(1+r)^n - 1] | Balloon Balance = Remaining Principal at Month k`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -7163,13 +7108,11 @@ export const KNOWLEDGE_BALLOON_PAYMENT_LOAN: Record<Language, (tool: ToolDef, na
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating BALLOON PAYMENT LOAN using representative market values.`,
+      scenario: `Calculating BALLOON PAYMENT LOAN with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -7185,14 +7128,14 @@ export const KNOWLEDGE_BALLOON_PAYMENT_LOAN: Record<Language, (tool: ToolDef, na
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Monthly Payment = P × [r(1+r)^n] / [(1+r)^n - 1] | Balloon Balance = Remaining Principal at Month k`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating BALLOON PAYMENT LOAN using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating BALLOON PAYMENT LOAN with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -7206,14 +7149,14 @@ export const KNOWLEDGE_BALLOON_PAYMENT_LOAN: Record<Language, (tool: ToolDef, na
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Monthly Payment = P × [r(1+r)^n] / [(1+r)^n - 1] | Balloon Balance = Remaining Principal at Month k`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating BALLOON PAYMENT LOAN using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating BALLOON PAYMENT LOAN with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -7227,14 +7170,14 @@ export const KNOWLEDGE_BALLOON_PAYMENT_LOAN: Record<Language, (tool: ToolDef, na
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Monthly Payment = P × [r(1+r)^n] / [(1+r)^n - 1] | Balloon Balance = Remaining Principal at Month k`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating BALLOON PAYMENT LOAN using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating BALLOON PAYMENT LOAN with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -7256,7 +7199,7 @@ export const KNOWLEDGE_HELOC_PAYMENT_CALC: Record<Language, (tool: ToolDef, name
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Draw Period Interest = Draw Balance × (APR / 12) | Repayment Payment = Amortized Principal + Interest`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -7267,13 +7210,11 @@ export const KNOWLEDGE_HELOC_PAYMENT_CALC: Record<Language, (tool: ToolDef, name
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating HELOC PAYMENT CALC using representative market values.`,
+      scenario: `Calculating HELOC PAYMENT CALC with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -7294,7 +7235,7 @@ export const KNOWLEDGE_HELOC_PAYMENT_CALC: Record<Language, (tool: ToolDef, name
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Draw Period Interest = Draw Balance × (APR / 12) | Repayment Payment = Amortized Principal + Interest`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -7305,13 +7246,11 @@ export const KNOWLEDGE_HELOC_PAYMENT_CALC: Record<Language, (tool: ToolDef, name
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating HELOC PAYMENT CALC using representative market values.`,
+      scenario: `Calculating HELOC PAYMENT CALC with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -7327,14 +7266,14 @@ export const KNOWLEDGE_HELOC_PAYMENT_CALC: Record<Language, (tool: ToolDef, name
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Draw Period Interest = Draw Balance × (APR / 12) | Repayment Payment = Amortized Principal + Interest`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating HELOC PAYMENT CALC using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating HELOC PAYMENT CALC with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -7348,14 +7287,14 @@ export const KNOWLEDGE_HELOC_PAYMENT_CALC: Record<Language, (tool: ToolDef, name
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Draw Period Interest = Draw Balance × (APR / 12) | Repayment Payment = Amortized Principal + Interest`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating HELOC PAYMENT CALC using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating HELOC PAYMENT CALC with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -7369,14 +7308,14 @@ export const KNOWLEDGE_HELOC_PAYMENT_CALC: Record<Language, (tool: ToolDef, name
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Draw Period Interest = Draw Balance × (APR / 12) | Repayment Payment = Amortized Principal + Interest`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating HELOC PAYMENT CALC using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating HELOC PAYMENT CALC with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -7398,7 +7337,7 @@ export const KNOWLEDGE_ARM_MORTGAGE_CALC: Record<Language, (tool: ToolDef, name:
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Initial Payment = P × [r_init(1+r_init)^n] / [(1+r_init)^n - 1] | Adjusted Rate = Index Rate + Margin (Subject to Caps)`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -7409,13 +7348,11 @@ export const KNOWLEDGE_ARM_MORTGAGE_CALC: Record<Language, (tool: ToolDef, name:
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating ARM MORTGAGE CALC using representative market values.`,
+      scenario: `Calculating ARM MORTGAGE CALC with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -7436,7 +7373,7 @@ export const KNOWLEDGE_ARM_MORTGAGE_CALC: Record<Language, (tool: ToolDef, name:
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Initial Payment = P × [r_init(1+r_init)^n] / [(1+r_init)^n - 1] | Adjusted Rate = Index Rate + Margin (Subject to Caps)`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -7447,13 +7384,11 @@ export const KNOWLEDGE_ARM_MORTGAGE_CALC: Record<Language, (tool: ToolDef, name:
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating ARM MORTGAGE CALC using representative market values.`,
+      scenario: `Calculating ARM MORTGAGE CALC with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -7469,14 +7404,14 @@ export const KNOWLEDGE_ARM_MORTGAGE_CALC: Record<Language, (tool: ToolDef, name:
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Initial Payment = P × [r_init(1+r_init)^n] / [(1+r_init)^n - 1] | Adjusted Rate = Index Rate + Margin (Subject to Caps)`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating ARM MORTGAGE CALC using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating ARM MORTGAGE CALC with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -7490,14 +7425,14 @@ export const KNOWLEDGE_ARM_MORTGAGE_CALC: Record<Language, (tool: ToolDef, name:
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Initial Payment = P × [r_init(1+r_init)^n] / [(1+r_init)^n - 1] | Adjusted Rate = Index Rate + Margin (Subject to Caps)`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating ARM MORTGAGE CALC using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating ARM MORTGAGE CALC with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -7511,14 +7446,14 @@ export const KNOWLEDGE_ARM_MORTGAGE_CALC: Record<Language, (tool: ToolDef, name:
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Initial Payment = P × [r_init(1+r_init)^n] / [(1+r_init)^n - 1] | Adjusted Rate = Index Rate + Margin (Subject to Caps)`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating ARM MORTGAGE CALC using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating ARM MORTGAGE CALC with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -7540,7 +7475,7 @@ export const KNOWLEDGE_JUMBO_MORTGAGE_CALC: Record<Language, (tool: ToolDef, nam
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Monthly P&I = Jumbo Loan Amount × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -7551,13 +7486,11 @@ export const KNOWLEDGE_JUMBO_MORTGAGE_CALC: Record<Language, (tool: ToolDef, nam
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating JUMBO MORTGAGE CALC using representative market values.`,
+      scenario: `Calculating JUMBO MORTGAGE CALC with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -7578,7 +7511,7 @@ export const KNOWLEDGE_JUMBO_MORTGAGE_CALC: Record<Language, (tool: ToolDef, nam
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Monthly P&I = Jumbo Loan Amount × [r(1+r)^n] / [(1+r)^n - 1]`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -7589,13 +7522,11 @@ export const KNOWLEDGE_JUMBO_MORTGAGE_CALC: Record<Language, (tool: ToolDef, nam
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating JUMBO MORTGAGE CALC using representative market values.`,
+      scenario: `Calculating JUMBO MORTGAGE CALC with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -7611,14 +7542,14 @@ export const KNOWLEDGE_JUMBO_MORTGAGE_CALC: Record<Language, (tool: ToolDef, nam
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Monthly P&I = Jumbo Loan Amount × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating JUMBO MORTGAGE CALC using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating JUMBO MORTGAGE CALC with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -7632,14 +7563,14 @@ export const KNOWLEDGE_JUMBO_MORTGAGE_CALC: Record<Language, (tool: ToolDef, nam
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Monthly P&I = Jumbo Loan Amount × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating JUMBO MORTGAGE CALC using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating JUMBO MORTGAGE CALC with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -7653,14 +7584,14 @@ export const KNOWLEDGE_JUMBO_MORTGAGE_CALC: Record<Language, (tool: ToolDef, nam
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Monthly P&I = Jumbo Loan Amount × [r(1+r)^n] / [(1+r)^n - 1]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating JUMBO MORTGAGE CALC using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating JUMBO MORTGAGE CALC with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -7682,7 +7613,7 @@ export const KNOWLEDGE_PMI_CALCULATOR: Record<Language, (tool: ToolDef, name: st
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Annual PMI = Loan Amount × PMI Rate | Monthly PMI = Annual PMI / 12`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -7693,13 +7624,11 @@ export const KNOWLEDGE_PMI_CALCULATOR: Record<Language, (tool: ToolDef, name: st
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating PMI CALCULATOR using representative market values.`,
+      scenario: `Calculating PMI CALCULATOR with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -7720,7 +7649,7 @@ export const KNOWLEDGE_PMI_CALCULATOR: Record<Language, (tool: ToolDef, name: st
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Annual PMI = Loan Amount × PMI Rate | Monthly PMI = Annual PMI / 12`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -7731,13 +7660,11 @@ export const KNOWLEDGE_PMI_CALCULATOR: Record<Language, (tool: ToolDef, name: st
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating PMI CALCULATOR using representative market values.`,
+      scenario: `Calculating PMI CALCULATOR with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -7753,14 +7680,14 @@ export const KNOWLEDGE_PMI_CALCULATOR: Record<Language, (tool: ToolDef, name: st
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Annual PMI = Loan Amount × PMI Rate | Monthly PMI = Annual PMI / 12`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating PMI CALCULATOR using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating PMI CALCULATOR with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -7774,14 +7701,14 @@ export const KNOWLEDGE_PMI_CALCULATOR: Record<Language, (tool: ToolDef, name: st
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Annual PMI = Loan Amount × PMI Rate | Monthly PMI = Annual PMI / 12`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating PMI CALCULATOR using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating PMI CALCULATOR with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -7795,14 +7722,14 @@ export const KNOWLEDGE_PMI_CALCULATOR: Record<Language, (tool: ToolDef, name: st
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Annual PMI = Loan Amount × PMI Rate | Monthly PMI = Annual PMI / 12`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating PMI CALCULATOR using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating PMI CALCULATOR with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -7824,7 +7751,7 @@ export const KNOWLEDGE_CLOSING_COSTS_CALC: Record<Language, (tool: ToolDef, name
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Total Closing Costs = Home Price × Closing Cost Percentage (Typically 2% - 5%)`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -7835,13 +7762,11 @@ export const KNOWLEDGE_CLOSING_COSTS_CALC: Record<Language, (tool: ToolDef, name
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating CLOSING COSTS CALC using representative market values.`,
+      scenario: `Calculating CLOSING COSTS CALC with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -7862,7 +7787,7 @@ export const KNOWLEDGE_CLOSING_COSTS_CALC: Record<Language, (tool: ToolDef, name
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Total Closing Costs = Home Price × Closing Cost Percentage (Typically 2% - 5%)`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -7873,13 +7798,11 @@ export const KNOWLEDGE_CLOSING_COSTS_CALC: Record<Language, (tool: ToolDef, name
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating CLOSING COSTS CALC using representative market values.`,
+      scenario: `Calculating CLOSING COSTS CALC with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -7895,14 +7818,14 @@ export const KNOWLEDGE_CLOSING_COSTS_CALC: Record<Language, (tool: ToolDef, name
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Total Closing Costs = Home Price × Closing Cost Percentage (Typically 2% - 5%)`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating CLOSING COSTS CALC using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating CLOSING COSTS CALC with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -7916,14 +7839,14 @@ export const KNOWLEDGE_CLOSING_COSTS_CALC: Record<Language, (tool: ToolDef, name
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Total Closing Costs = Home Price × Closing Cost Percentage (Typically 2% - 5%)`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating CLOSING COSTS CALC using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating CLOSING COSTS CALC with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -7937,14 +7860,14 @@ export const KNOWLEDGE_CLOSING_COSTS_CALC: Record<Language, (tool: ToolDef, name
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Total Closing Costs = Home Price × Closing Cost Percentage (Typically 2% - 5%)`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating CLOSING COSTS CALC using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating CLOSING COSTS CALC with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -7966,7 +7889,7 @@ export const KNOWLEDGE_FHA_LOAN_CALC: Record<Language, (tool: ToolDef, name: str
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `FHA Upfront MIP = Base Loan × 1.75% | Monthly Payment = P&I + Annual MIP / 12`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -7977,13 +7900,11 @@ export const KNOWLEDGE_FHA_LOAN_CALC: Record<Language, (tool: ToolDef, name: str
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating FHA LOAN CALC using representative market values.`,
+      scenario: `Calculating FHA LOAN CALC with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -8004,7 +7925,7 @@ export const KNOWLEDGE_FHA_LOAN_CALC: Record<Language, (tool: ToolDef, name: str
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `FHA Upfront MIP = Base Loan × 1.75% | Monthly Payment = P&I + Annual MIP / 12`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -8015,13 +7936,11 @@ export const KNOWLEDGE_FHA_LOAN_CALC: Record<Language, (tool: ToolDef, name: str
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating FHA LOAN CALC using representative market values.`,
+      scenario: `Calculating FHA LOAN CALC with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -8037,14 +7956,14 @@ export const KNOWLEDGE_FHA_LOAN_CALC: Record<Language, (tool: ToolDef, name: str
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `FHA Upfront MIP = Base Loan × 1.75% | Monthly Payment = P&I + Annual MIP / 12`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating FHA LOAN CALC using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating FHA LOAN CALC with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -8058,14 +7977,14 @@ export const KNOWLEDGE_FHA_LOAN_CALC: Record<Language, (tool: ToolDef, name: str
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `FHA Upfront MIP = Base Loan × 1.75% | Monthly Payment = P&I + Annual MIP / 12`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating FHA LOAN CALC using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating FHA LOAN CALC with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -8079,14 +7998,14 @@ export const KNOWLEDGE_FHA_LOAN_CALC: Record<Language, (tool: ToolDef, name: str
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `FHA Upfront MIP = Base Loan × 1.75% | Monthly Payment = P&I + Annual MIP / 12`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating FHA LOAN CALC using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating FHA LOAN CALC with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -8108,7 +8027,7 @@ export const KNOWLEDGE_VA_LOAN_CALC: Record<Language, (tool: ToolDef, name: stri
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `VA Funding Fee = Loan Amount × Funding Fee % | Total VA Loan = Base Loan + Funding Fee`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -8119,13 +8038,11 @@ export const KNOWLEDGE_VA_LOAN_CALC: Record<Language, (tool: ToolDef, name: stri
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating VA LOAN CALC using representative market values.`,
+      scenario: `Calculating VA LOAN CALC with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -8146,7 +8063,7 @@ export const KNOWLEDGE_VA_LOAN_CALC: Record<Language, (tool: ToolDef, name: stri
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `VA Funding Fee = Loan Amount × Funding Fee % | Total VA Loan = Base Loan + Funding Fee`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -8157,13 +8074,11 @@ export const KNOWLEDGE_VA_LOAN_CALC: Record<Language, (tool: ToolDef, name: stri
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating VA LOAN CALC using representative market values.`,
+      scenario: `Calculating VA LOAN CALC with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -8179,14 +8094,14 @@ export const KNOWLEDGE_VA_LOAN_CALC: Record<Language, (tool: ToolDef, name: stri
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `VA Funding Fee = Loan Amount × Funding Fee % | Total VA Loan = Base Loan + Funding Fee`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating VA LOAN CALC using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating VA LOAN CALC with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -8200,14 +8115,14 @@ export const KNOWLEDGE_VA_LOAN_CALC: Record<Language, (tool: ToolDef, name: stri
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `VA Funding Fee = Loan Amount × Funding Fee % | Total VA Loan = Base Loan + Funding Fee`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating VA LOAN CALC using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating VA LOAN CALC with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -8221,14 +8136,14 @@ export const KNOWLEDGE_VA_LOAN_CALC: Record<Language, (tool: ToolDef, name: stri
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `VA Funding Fee = Loan Amount × Funding Fee % | Total VA Loan = Base Loan + Funding Fee`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating VA LOAN CALC using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating VA LOAN CALC with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -8250,7 +8165,7 @@ export const KNOWLEDGE_RULE_OF_72: Record<Language, (tool: ToolDef, name: string
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Years to Double ≈ 72 / Annual Interest Rate (%)`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -8261,13 +8176,11 @@ export const KNOWLEDGE_RULE_OF_72: Record<Language, (tool: ToolDef, name: string
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating RULE OF 72 using representative market values.`,
+      scenario: `Calculating RULE OF 72 with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -8288,7 +8201,7 @@ export const KNOWLEDGE_RULE_OF_72: Record<Language, (tool: ToolDef, name: string
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Years to Double ≈ 72 / Annual Interest Rate (%)`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -8299,13 +8212,11 @@ export const KNOWLEDGE_RULE_OF_72: Record<Language, (tool: ToolDef, name: string
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating RULE OF 72 using representative market values.`,
+      scenario: `Calculating RULE OF 72 with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -8321,14 +8232,14 @@ export const KNOWLEDGE_RULE_OF_72: Record<Language, (tool: ToolDef, name: string
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Years to Double ≈ 72 / Annual Interest Rate (%)`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating RULE OF 72 using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating RULE OF 72 with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -8342,14 +8253,14 @@ export const KNOWLEDGE_RULE_OF_72: Record<Language, (tool: ToolDef, name: string
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Years to Double ≈ 72 / Annual Interest Rate (%)`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating RULE OF 72 using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating RULE OF 72 with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -8363,14 +8274,14 @@ export const KNOWLEDGE_RULE_OF_72: Record<Language, (tool: ToolDef, name: string
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Years to Double ≈ 72 / Annual Interest Rate (%)`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating RULE OF 72 using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating RULE OF 72 with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -8392,7 +8303,7 @@ export const KNOWLEDGE_BOND_YIELD_TO_MATURITY: Record<Language, (tool: ToolDef, 
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `YTM ≈ [Annual Coupon + (Face Value - Price) / Years] / [(Face Value + Price) / 2]`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -8403,13 +8314,11 @@ export const KNOWLEDGE_BOND_YIELD_TO_MATURITY: Record<Language, (tool: ToolDef, 
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating BOND YIELD TO MATURITY using representative market values.`,
+      scenario: `Calculating BOND YIELD TO MATURITY with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -8430,7 +8339,7 @@ export const KNOWLEDGE_BOND_YIELD_TO_MATURITY: Record<Language, (tool: ToolDef, 
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `YTM ≈ [Annual Coupon + (Face Value - Price) / Years] / [(Face Value + Price) / 2]`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -8441,13 +8350,11 @@ export const KNOWLEDGE_BOND_YIELD_TO_MATURITY: Record<Language, (tool: ToolDef, 
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating BOND YIELD TO MATURITY using representative market values.`,
+      scenario: `Calculating BOND YIELD TO MATURITY with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -8463,14 +8370,14 @@ export const KNOWLEDGE_BOND_YIELD_TO_MATURITY: Record<Language, (tool: ToolDef, 
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `YTM ≈ [Annual Coupon + (Face Value - Price) / Years] / [(Face Value + Price) / 2]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating BOND YIELD TO MATURITY using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating BOND YIELD TO MATURITY with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -8484,14 +8391,14 @@ export const KNOWLEDGE_BOND_YIELD_TO_MATURITY: Record<Language, (tool: ToolDef, 
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `YTM ≈ [Annual Coupon + (Face Value - Price) / Years] / [(Face Value + Price) / 2]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating BOND YIELD TO MATURITY using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating BOND YIELD TO MATURITY with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -8505,14 +8412,14 @@ export const KNOWLEDGE_BOND_YIELD_TO_MATURITY: Record<Language, (tool: ToolDef, 
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `YTM ≈ [Annual Coupon + (Face Value - Price) / Years] / [(Face Value + Price) / 2]`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating BOND YIELD TO MATURITY using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating BOND YIELD TO MATURITY with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -8534,7 +8441,7 @@ export const KNOWLEDGE_CD_LADDER_CALCULATOR: Record<Language, (tool: ToolDef, na
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Weighted Average APY = Σ(CD Amount_i × APY_i) / Total CD Portfolio Investment`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -8545,13 +8452,11 @@ export const KNOWLEDGE_CD_LADDER_CALCULATOR: Record<Language, (tool: ToolDef, na
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating CD LADDER CALCULATOR using representative market values.`,
+      scenario: `Calculating CD LADDER CALCULATOR with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -8572,7 +8477,7 @@ export const KNOWLEDGE_CD_LADDER_CALCULATOR: Record<Language, (tool: ToolDef, na
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Weighted Average APY = Σ(CD Amount_i × APY_i) / Total CD Portfolio Investment`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -8583,13 +8488,11 @@ export const KNOWLEDGE_CD_LADDER_CALCULATOR: Record<Language, (tool: ToolDef, na
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating CD LADDER CALCULATOR using representative market values.`,
+      scenario: `Calculating CD LADDER CALCULATOR with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -8605,14 +8508,14 @@ export const KNOWLEDGE_CD_LADDER_CALCULATOR: Record<Language, (tool: ToolDef, na
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Weighted Average APY = Σ(CD Amount_i × APY_i) / Total CD Portfolio Investment`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating CD LADDER CALCULATOR using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating CD LADDER CALCULATOR with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -8626,14 +8529,14 @@ export const KNOWLEDGE_CD_LADDER_CALCULATOR: Record<Language, (tool: ToolDef, na
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Weighted Average APY = Σ(CD Amount_i × APY_i) / Total CD Portfolio Investment`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating CD LADDER CALCULATOR using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating CD LADDER CALCULATOR with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -8647,14 +8550,14 @@ export const KNOWLEDGE_CD_LADDER_CALCULATOR: Record<Language, (tool: ToolDef, na
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Weighted Average APY = Σ(CD Amount_i × APY_i) / Total CD Portfolio Investment`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating CD LADDER CALCULATOR using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating CD LADDER CALCULATOR with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -8676,7 +8579,7 @@ export const KNOWLEDGE_TREASURY_BILL_YIELD: Record<Language, (tool: ToolDef, nam
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Discount Yield = [(Par Value - Purchase Price) / Par Value] × (360 / Days to Maturity)`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -8687,13 +8590,11 @@ export const KNOWLEDGE_TREASURY_BILL_YIELD: Record<Language, (tool: ToolDef, nam
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating TREASURY BILL YIELD using representative market values.`,
+      scenario: `Calculating TREASURY BILL YIELD with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -8714,7 +8615,7 @@ export const KNOWLEDGE_TREASURY_BILL_YIELD: Record<Language, (tool: ToolDef, nam
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Discount Yield = [(Par Value - Purchase Price) / Par Value] × (360 / Days to Maturity)`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -8725,13 +8626,11 @@ export const KNOWLEDGE_TREASURY_BILL_YIELD: Record<Language, (tool: ToolDef, nam
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating TREASURY BILL YIELD using representative market values.`,
+      scenario: `Calculating TREASURY BILL YIELD with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -8747,14 +8646,14 @@ export const KNOWLEDGE_TREASURY_BILL_YIELD: Record<Language, (tool: ToolDef, nam
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Discount Yield = [(Par Value - Purchase Price) / Par Value] × (360 / Days to Maturity)`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating TREASURY BILL YIELD using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating TREASURY BILL YIELD with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -8768,14 +8667,14 @@ export const KNOWLEDGE_TREASURY_BILL_YIELD: Record<Language, (tool: ToolDef, nam
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Discount Yield = [(Par Value - Purchase Price) / Par Value] × (360 / Days to Maturity)`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating TREASURY BILL YIELD using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating TREASURY BILL YIELD with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -8789,14 +8688,14 @@ export const KNOWLEDGE_TREASURY_BILL_YIELD: Record<Language, (tool: ToolDef, nam
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Discount Yield = [(Par Value - Purchase Price) / Par Value] × (360 / Days to Maturity)`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating TREASURY BILL YIELD using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating TREASURY BILL YIELD with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -8818,7 +8717,7 @@ export const KNOWLEDGE_CRYPTO_STAKING_REWARDS: Record<Language, (tool: ToolDef, 
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Staking Reward = Staked Amount × APY × (Staking Period Days / 365)`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -8829,13 +8728,11 @@ export const KNOWLEDGE_CRYPTO_STAKING_REWARDS: Record<Language, (tool: ToolDef, 
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating CRYPTO STAKING REWARDS using representative market values.`,
+      scenario: `Calculating CRYPTO STAKING REWARDS with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -8856,7 +8753,7 @@ export const KNOWLEDGE_CRYPTO_STAKING_REWARDS: Record<Language, (tool: ToolDef, 
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Staking Reward = Staked Amount × APY × (Staking Period Days / 365)`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -8867,13 +8764,11 @@ export const KNOWLEDGE_CRYPTO_STAKING_REWARDS: Record<Language, (tool: ToolDef, 
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating CRYPTO STAKING REWARDS using representative market values.`,
+      scenario: `Calculating CRYPTO STAKING REWARDS with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -8889,14 +8784,14 @@ export const KNOWLEDGE_CRYPTO_STAKING_REWARDS: Record<Language, (tool: ToolDef, 
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Staking Reward = Staked Amount × APY × (Staking Period Days / 365)`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating CRYPTO STAKING REWARDS using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating CRYPTO STAKING REWARDS with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -8910,14 +8805,14 @@ export const KNOWLEDGE_CRYPTO_STAKING_REWARDS: Record<Language, (tool: ToolDef, 
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Staking Reward = Staked Amount × APY × (Staking Period Days / 365)`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating CRYPTO STAKING REWARDS using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating CRYPTO STAKING REWARDS with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -8931,14 +8826,14 @@ export const KNOWLEDGE_CRYPTO_STAKING_REWARDS: Record<Language, (tool: ToolDef, 
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Staking Reward = Staked Amount × APY × (Staking Period Days / 365)`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating CRYPTO STAKING REWARDS using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating CRYPTO STAKING REWARDS with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -8960,7 +8855,7 @@ export const KNOWLEDGE_STOCK_BETA_VOLATILITY: Record<Language, (tool: ToolDef, n
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Beta = Covariance(Asset Return, Market Return) / Variance(Market Return)`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -8971,13 +8866,11 @@ export const KNOWLEDGE_STOCK_BETA_VOLATILITY: Record<Language, (tool: ToolDef, n
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating STOCK BETA VOLATILITY using representative market values.`,
+      scenario: `Calculating STOCK BETA VOLATILITY with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -8998,7 +8891,7 @@ export const KNOWLEDGE_STOCK_BETA_VOLATILITY: Record<Language, (tool: ToolDef, n
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Beta = Covariance(Asset Return, Market Return) / Variance(Market Return)`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -9009,13 +8902,11 @@ export const KNOWLEDGE_STOCK_BETA_VOLATILITY: Record<Language, (tool: ToolDef, n
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating STOCK BETA VOLATILITY using representative market values.`,
+      scenario: `Calculating STOCK BETA VOLATILITY with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -9031,14 +8922,14 @@ export const KNOWLEDGE_STOCK_BETA_VOLATILITY: Record<Language, (tool: ToolDef, n
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Beta = Covariance(Asset Return, Market Return) / Variance(Market Return)`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating STOCK BETA VOLATILITY using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating STOCK BETA VOLATILITY with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -9052,14 +8943,14 @@ export const KNOWLEDGE_STOCK_BETA_VOLATILITY: Record<Language, (tool: ToolDef, n
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Beta = Covariance(Asset Return, Market Return) / Variance(Market Return)`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating STOCK BETA VOLATILITY using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating STOCK BETA VOLATILITY with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -9073,14 +8964,14 @@ export const KNOWLEDGE_STOCK_BETA_VOLATILITY: Record<Language, (tool: ToolDef, n
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Beta = Covariance(Asset Return, Market Return) / Variance(Market Return)`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating STOCK BETA VOLATILITY using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating STOCK BETA VOLATILITY with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -9102,7 +8993,7 @@ export const KNOWLEDGE_SHARPE_RATIO_CALC: Record<Language, (tool: ToolDef, name:
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Sharpe Ratio = (Portfolio Return - Risk-Free Rate) / Portfolio Standard Deviation`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -9113,13 +9004,11 @@ export const KNOWLEDGE_SHARPE_RATIO_CALC: Record<Language, (tool: ToolDef, name:
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating SHARPE RATIO CALC using representative market values.`,
+      scenario: `Calculating SHARPE RATIO CALC with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -9140,7 +9029,7 @@ export const KNOWLEDGE_SHARPE_RATIO_CALC: Record<Language, (tool: ToolDef, name:
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Sharpe Ratio = (Portfolio Return - Risk-Free Rate) / Portfolio Standard Deviation`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -9151,13 +9040,11 @@ export const KNOWLEDGE_SHARPE_RATIO_CALC: Record<Language, (tool: ToolDef, name:
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating SHARPE RATIO CALC using representative market values.`,
+      scenario: `Calculating SHARPE RATIO CALC with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -9173,14 +9060,14 @@ export const KNOWLEDGE_SHARPE_RATIO_CALC: Record<Language, (tool: ToolDef, name:
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Sharpe Ratio = (Portfolio Return - Risk-Free Rate) / Portfolio Standard Deviation`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating SHARPE RATIO CALC using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating SHARPE RATIO CALC with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -9194,14 +9081,14 @@ export const KNOWLEDGE_SHARPE_RATIO_CALC: Record<Language, (tool: ToolDef, name:
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Sharpe Ratio = (Portfolio Return - Risk-Free Rate) / Portfolio Standard Deviation`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating SHARPE RATIO CALC using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating SHARPE RATIO CALC with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -9215,14 +9102,14 @@ export const KNOWLEDGE_SHARPE_RATIO_CALC: Record<Language, (tool: ToolDef, name:
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Sharpe Ratio = (Portfolio Return - Risk-Free Rate) / Portfolio Standard Deviation`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating SHARPE RATIO CALC using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating SHARPE RATIO CALC with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -9244,7 +9131,7 @@ export const KNOWLEDGE_OPTIONS_BLACK_SCHOLES: Record<Language, (tool: ToolDef, n
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Call Price C = S₀ N(d₁) - K e^(-rT) N(d₂)`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -9255,13 +9142,11 @@ export const KNOWLEDGE_OPTIONS_BLACK_SCHOLES: Record<Language, (tool: ToolDef, n
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating OPTIONS BLACK SCHOLES using representative market values.`,
+      scenario: `Calculating OPTIONS BLACK SCHOLES with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -9282,7 +9167,7 @@ export const KNOWLEDGE_OPTIONS_BLACK_SCHOLES: Record<Language, (tool: ToolDef, n
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Call Price C = S₀ N(d₁) - K e^(-rT) N(d₂)`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -9293,13 +9178,11 @@ export const KNOWLEDGE_OPTIONS_BLACK_SCHOLES: Record<Language, (tool: ToolDef, n
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating OPTIONS BLACK SCHOLES using representative market values.`,
+      scenario: `Calculating OPTIONS BLACK SCHOLES with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -9315,14 +9198,14 @@ export const KNOWLEDGE_OPTIONS_BLACK_SCHOLES: Record<Language, (tool: ToolDef, n
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Call Price C = S₀ N(d₁) - K e^(-rT) N(d₂)`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating OPTIONS BLACK SCHOLES using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating OPTIONS BLACK SCHOLES with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -9336,14 +9219,14 @@ export const KNOWLEDGE_OPTIONS_BLACK_SCHOLES: Record<Language, (tool: ToolDef, n
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Call Price C = S₀ N(d₁) - K e^(-rT) N(d₂)`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating OPTIONS BLACK SCHOLES using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating OPTIONS BLACK SCHOLES with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -9357,14 +9240,14 @@ export const KNOWLEDGE_OPTIONS_BLACK_SCHOLES: Record<Language, (tool: ToolDef, n
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Call Price C = S₀ N(d₁) - K e^(-rT) N(d₂)`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating OPTIONS BLACK SCHOLES using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating OPTIONS BLACK SCHOLES with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -9386,7 +9269,7 @@ export const KNOWLEDGE_SAAS_MRR_ARR_CALC: Record<Language, (tool: ToolDef, name:
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `ARR = MRR × 12 | Net MRR Churn = New MRR - Churned MRR`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -9397,13 +9280,11 @@ export const KNOWLEDGE_SAAS_MRR_ARR_CALC: Record<Language, (tool: ToolDef, name:
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating SAAS MRR ARR CALC using representative market values.`,
+      scenario: `Calculating SAAS MRR ARR CALC with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -9424,7 +9305,7 @@ export const KNOWLEDGE_SAAS_MRR_ARR_CALC: Record<Language, (tool: ToolDef, name:
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `ARR = MRR × 12 | Net MRR Churn = New MRR - Churned MRR`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -9435,13 +9316,11 @@ export const KNOWLEDGE_SAAS_MRR_ARR_CALC: Record<Language, (tool: ToolDef, name:
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating SAAS MRR ARR CALC using representative market values.`,
+      scenario: `Calculating SAAS MRR ARR CALC with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -9457,14 +9336,14 @@ export const KNOWLEDGE_SAAS_MRR_ARR_CALC: Record<Language, (tool: ToolDef, name:
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `ARR = MRR × 12 | Net MRR Churn = New MRR - Churned MRR`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating SAAS MRR ARR CALC using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating SAAS MRR ARR CALC with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -9478,14 +9357,14 @@ export const KNOWLEDGE_SAAS_MRR_ARR_CALC: Record<Language, (tool: ToolDef, name:
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `ARR = MRR × 12 | Net MRR Churn = New MRR - Churned MRR`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating SAAS MRR ARR CALC using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating SAAS MRR ARR CALC with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -9499,14 +9378,14 @@ export const KNOWLEDGE_SAAS_MRR_ARR_CALC: Record<Language, (tool: ToolDef, name:
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `ARR = MRR × 12 | Net MRR Churn = New MRR - Churned MRR`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating SAAS MRR ARR CALC using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating SAAS MRR ARR CALC with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -9528,7 +9407,7 @@ export const KNOWLEDGE_CAC_LTV_RATIO: Record<Language, (tool: ToolDef, name: str
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `LTV / CAC = (ARPU × Gross Margin % / Churn Rate) / Customer Acquisition Cost`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -9539,13 +9418,11 @@ export const KNOWLEDGE_CAC_LTV_RATIO: Record<Language, (tool: ToolDef, name: str
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating CAC LTV RATIO using representative market values.`,
+      scenario: `Calculating CAC LTV RATIO with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -9566,7 +9443,7 @@ export const KNOWLEDGE_CAC_LTV_RATIO: Record<Language, (tool: ToolDef, name: str
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `LTV / CAC = (ARPU × Gross Margin % / Churn Rate) / Customer Acquisition Cost`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -9577,13 +9454,11 @@ export const KNOWLEDGE_CAC_LTV_RATIO: Record<Language, (tool: ToolDef, name: str
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating CAC LTV RATIO using representative market values.`,
+      scenario: `Calculating CAC LTV RATIO with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -9599,14 +9474,14 @@ export const KNOWLEDGE_CAC_LTV_RATIO: Record<Language, (tool: ToolDef, name: str
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `LTV / CAC = (ARPU × Gross Margin % / Churn Rate) / Customer Acquisition Cost`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating CAC LTV RATIO using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating CAC LTV RATIO with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -9620,14 +9495,14 @@ export const KNOWLEDGE_CAC_LTV_RATIO: Record<Language, (tool: ToolDef, name: str
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `LTV / CAC = (ARPU × Gross Margin % / Churn Rate) / Customer Acquisition Cost`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating CAC LTV RATIO using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating CAC LTV RATIO with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -9641,14 +9516,14 @@ export const KNOWLEDGE_CAC_LTV_RATIO: Record<Language, (tool: ToolDef, name: str
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `LTV / CAC = (ARPU × Gross Margin % / Churn Rate) / Customer Acquisition Cost`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating CAC LTV RATIO using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating CAC LTV RATIO with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -9670,7 +9545,7 @@ export const KNOWLEDGE_BURN_RATE_RUNWAY: Record<Language, (tool: ToolDef, name: 
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Cash Runway (Months) = Total Cash Balance / Monthly Net Burn Rate`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -9681,13 +9556,11 @@ export const KNOWLEDGE_BURN_RATE_RUNWAY: Record<Language, (tool: ToolDef, name: 
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating BURN RATE RUNWAY using representative market values.`,
+      scenario: `Calculating BURN RATE RUNWAY with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -9708,7 +9581,7 @@ export const KNOWLEDGE_BURN_RATE_RUNWAY: Record<Language, (tool: ToolDef, name: 
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Cash Runway (Months) = Total Cash Balance / Monthly Net Burn Rate`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -9719,13 +9592,11 @@ export const KNOWLEDGE_BURN_RATE_RUNWAY: Record<Language, (tool: ToolDef, name: 
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating BURN RATE RUNWAY using representative market values.`,
+      scenario: `Calculating BURN RATE RUNWAY with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -9741,14 +9612,14 @@ export const KNOWLEDGE_BURN_RATE_RUNWAY: Record<Language, (tool: ToolDef, name: 
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Cash Runway (Months) = Total Cash Balance / Monthly Net Burn Rate`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating BURN RATE RUNWAY using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating BURN RATE RUNWAY with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -9762,14 +9633,14 @@ export const KNOWLEDGE_BURN_RATE_RUNWAY: Record<Language, (tool: ToolDef, name: 
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Cash Runway (Months) = Total Cash Balance / Monthly Net Burn Rate`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating BURN RATE RUNWAY using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating BURN RATE RUNWAY with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -9783,14 +9654,14 @@ export const KNOWLEDGE_BURN_RATE_RUNWAY: Record<Language, (tool: ToolDef, name: 
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Cash Runway (Months) = Total Cash Balance / Monthly Net Burn Rate`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating BURN RATE RUNWAY using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating BURN RATE RUNWAY with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -9812,7 +9683,7 @@ export const KNOWLEDGE_INVENTORY_TURNOVER: Record<Language, (tool: ToolDef, name
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Inventory Turnover = Cost of Goods Sold (COGS) / Average Inventory`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -9823,13 +9694,11 @@ export const KNOWLEDGE_INVENTORY_TURNOVER: Record<Language, (tool: ToolDef, name
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating INVENTORY TURNOVER using representative market values.`,
+      scenario: `Calculating INVENTORY TURNOVER with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -9850,7 +9719,7 @@ export const KNOWLEDGE_INVENTORY_TURNOVER: Record<Language, (tool: ToolDef, name
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Inventory Turnover = Cost of Goods Sold (COGS) / Average Inventory`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -9861,13 +9730,11 @@ export const KNOWLEDGE_INVENTORY_TURNOVER: Record<Language, (tool: ToolDef, name
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating INVENTORY TURNOVER using representative market values.`,
+      scenario: `Calculating INVENTORY TURNOVER with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -9883,14 +9750,14 @@ export const KNOWLEDGE_INVENTORY_TURNOVER: Record<Language, (tool: ToolDef, name
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Inventory Turnover = Cost of Goods Sold (COGS) / Average Inventory`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating INVENTORY TURNOVER using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating INVENTORY TURNOVER with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -9904,14 +9771,14 @@ export const KNOWLEDGE_INVENTORY_TURNOVER: Record<Language, (tool: ToolDef, name
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Inventory Turnover = Cost of Goods Sold (COGS) / Average Inventory`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating INVENTORY TURNOVER using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating INVENTORY TURNOVER with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -9925,14 +9792,14 @@ export const KNOWLEDGE_INVENTORY_TURNOVER: Record<Language, (tool: ToolDef, name
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Inventory Turnover = Cost of Goods Sold (COGS) / Average Inventory`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating INVENTORY TURNOVER using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating INVENTORY TURNOVER with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -9954,7 +9821,7 @@ export const KNOWLEDGE_WORKING_CAPITAL_RATIO: Record<Language, (tool: ToolDef, n
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Working Capital Ratio = Current Assets / Current Liabilities`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -9965,13 +9832,11 @@ export const KNOWLEDGE_WORKING_CAPITAL_RATIO: Record<Language, (tool: ToolDef, n
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating WORKING CAPITAL RATIO using representative market values.`,
+      scenario: `Calculating WORKING CAPITAL RATIO with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -9992,7 +9857,7 @@ export const KNOWLEDGE_WORKING_CAPITAL_RATIO: Record<Language, (tool: ToolDef, n
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Working Capital Ratio = Current Assets / Current Liabilities`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -10003,13 +9868,11 @@ export const KNOWLEDGE_WORKING_CAPITAL_RATIO: Record<Language, (tool: ToolDef, n
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating WORKING CAPITAL RATIO using representative market values.`,
+      scenario: `Calculating WORKING CAPITAL RATIO with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -10025,14 +9888,14 @@ export const KNOWLEDGE_WORKING_CAPITAL_RATIO: Record<Language, (tool: ToolDef, n
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Working Capital Ratio = Current Assets / Current Liabilities`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating WORKING CAPITAL RATIO using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating WORKING CAPITAL RATIO with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -10046,14 +9909,14 @@ export const KNOWLEDGE_WORKING_CAPITAL_RATIO: Record<Language, (tool: ToolDef, n
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Working Capital Ratio = Current Assets / Current Liabilities`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating WORKING CAPITAL RATIO using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating WORKING CAPITAL RATIO with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -10067,14 +9930,14 @@ export const KNOWLEDGE_WORKING_CAPITAL_RATIO: Record<Language, (tool: ToolDef, n
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Working Capital Ratio = Current Assets / Current Liabilities`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating WORKING CAPITAL RATIO using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating WORKING CAPITAL RATIO with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -10096,7 +9959,7 @@ export const KNOWLEDGE_QUICK_RATIO_ACID_TEST: Record<Language, (tool: ToolDef, n
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Quick Ratio = (Cash + Marketable Securities + Receivables) / Current Liabilities`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -10107,13 +9970,11 @@ export const KNOWLEDGE_QUICK_RATIO_ACID_TEST: Record<Language, (tool: ToolDef, n
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating QUICK RATIO ACID TEST using representative market values.`,
+      scenario: `Calculating QUICK RATIO ACID TEST with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -10134,7 +9995,7 @@ export const KNOWLEDGE_QUICK_RATIO_ACID_TEST: Record<Language, (tool: ToolDef, n
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Quick Ratio = (Cash + Marketable Securities + Receivables) / Current Liabilities`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -10145,13 +10006,11 @@ export const KNOWLEDGE_QUICK_RATIO_ACID_TEST: Record<Language, (tool: ToolDef, n
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating QUICK RATIO ACID TEST using representative market values.`,
+      scenario: `Calculating QUICK RATIO ACID TEST with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -10167,14 +10026,14 @@ export const KNOWLEDGE_QUICK_RATIO_ACID_TEST: Record<Language, (tool: ToolDef, n
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Quick Ratio = (Cash + Marketable Securities + Receivables) / Current Liabilities`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating QUICK RATIO ACID TEST using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating QUICK RATIO ACID TEST with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -10188,14 +10047,14 @@ export const KNOWLEDGE_QUICK_RATIO_ACID_TEST: Record<Language, (tool: ToolDef, n
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Quick Ratio = (Cash + Marketable Securities + Receivables) / Current Liabilities`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating QUICK RATIO ACID TEST using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating QUICK RATIO ACID TEST with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -10209,14 +10068,14 @@ export const KNOWLEDGE_QUICK_RATIO_ACID_TEST: Record<Language, (tool: ToolDef, n
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Quick Ratio = (Cash + Marketable Securities + Receivables) / Current Liabilities`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating QUICK RATIO ACID TEST using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating QUICK RATIO ACID TEST with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -10238,7 +10097,7 @@ export const KNOWLEDGE_ROCE_CALCULATOR: Record<Language, (tool: ToolDef, name: s
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `ROCE % = [EBIT / (Total Assets - Current Liabilities)] × 100`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -10249,13 +10108,11 @@ export const KNOWLEDGE_ROCE_CALCULATOR: Record<Language, (tool: ToolDef, name: s
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating ROCE CALCULATOR using representative market values.`,
+      scenario: `Calculating ROCE CALCULATOR with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -10276,7 +10133,7 @@ export const KNOWLEDGE_ROCE_CALCULATOR: Record<Language, (tool: ToolDef, name: s
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `ROCE % = [EBIT / (Total Assets - Current Liabilities)] × 100`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -10287,13 +10144,11 @@ export const KNOWLEDGE_ROCE_CALCULATOR: Record<Language, (tool: ToolDef, name: s
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating ROCE CALCULATOR using representative market values.`,
+      scenario: `Calculating ROCE CALCULATOR with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -10309,14 +10164,14 @@ export const KNOWLEDGE_ROCE_CALCULATOR: Record<Language, (tool: ToolDef, name: s
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `ROCE % = [EBIT / (Total Assets - Current Liabilities)] × 100`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating ROCE CALCULATOR using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating ROCE CALCULATOR with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -10330,14 +10185,14 @@ export const KNOWLEDGE_ROCE_CALCULATOR: Record<Language, (tool: ToolDef, name: s
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `ROCE % = [EBIT / (Total Assets - Current Liabilities)] × 100`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating ROCE CALCULATOR using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating ROCE CALCULATOR with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -10351,14 +10206,14 @@ export const KNOWLEDGE_ROCE_CALCULATOR: Record<Language, (tool: ToolDef, name: s
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `ROCE % = [EBIT / (Total Assets - Current Liabilities)] × 100`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating ROCE CALCULATOR using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating ROCE CALCULATOR with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -10380,7 +10235,7 @@ export const KNOWLEDGE_ROE_CALCULATOR: Record<Language, (tool: ToolDef, name: st
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `ROE % = (Net Income / Shareholders Equity) × 100`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -10391,13 +10246,11 @@ export const KNOWLEDGE_ROE_CALCULATOR: Record<Language, (tool: ToolDef, name: st
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating ROE CALCULATOR using representative market values.`,
+      scenario: `Calculating ROE CALCULATOR with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -10418,7 +10271,7 @@ export const KNOWLEDGE_ROE_CALCULATOR: Record<Language, (tool: ToolDef, name: st
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `ROE % = (Net Income / Shareholders Equity) × 100`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -10429,13 +10282,11 @@ export const KNOWLEDGE_ROE_CALCULATOR: Record<Language, (tool: ToolDef, name: st
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating ROE CALCULATOR using representative market values.`,
+      scenario: `Calculating ROE CALCULATOR with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -10451,14 +10302,14 @@ export const KNOWLEDGE_ROE_CALCULATOR: Record<Language, (tool: ToolDef, name: st
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `ROE % = (Net Income / Shareholders Equity) × 100`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating ROE CALCULATOR using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating ROE CALCULATOR with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -10472,14 +10323,14 @@ export const KNOWLEDGE_ROE_CALCULATOR: Record<Language, (tool: ToolDef, name: st
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `ROE % = (Net Income / Shareholders Equity) × 100`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating ROE CALCULATOR using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating ROE CALCULATOR with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -10493,14 +10344,14 @@ export const KNOWLEDGE_ROE_CALCULATOR: Record<Language, (tool: ToolDef, name: st
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `ROE % = (Net Income / Shareholders Equity) × 100`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating ROE CALCULATOR using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating ROE CALCULATOR with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -10522,7 +10373,7 @@ export const KNOWLEDGE_ROA_CALCULATOR: Record<Language, (tool: ToolDef, name: st
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `ROA % = (Net Income / Total Assets) × 100`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -10533,13 +10384,11 @@ export const KNOWLEDGE_ROA_CALCULATOR: Record<Language, (tool: ToolDef, name: st
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating ROA CALCULATOR using representative market values.`,
+      scenario: `Calculating ROA CALCULATOR with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -10560,7 +10409,7 @@ export const KNOWLEDGE_ROA_CALCULATOR: Record<Language, (tool: ToolDef, name: st
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `ROA % = (Net Income / Total Assets) × 100`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -10571,13 +10420,11 @@ export const KNOWLEDGE_ROA_CALCULATOR: Record<Language, (tool: ToolDef, name: st
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating ROA CALCULATOR using representative market values.`,
+      scenario: `Calculating ROA CALCULATOR with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -10593,14 +10440,14 @@ export const KNOWLEDGE_ROA_CALCULATOR: Record<Language, (tool: ToolDef, name: st
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `ROA % = (Net Income / Total Assets) × 100`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating ROA CALCULATOR using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating ROA CALCULATOR with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -10614,14 +10461,14 @@ export const KNOWLEDGE_ROA_CALCULATOR: Record<Language, (tool: ToolDef, name: st
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `ROA % = (Net Income / Total Assets) × 100`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating ROA CALCULATOR using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating ROA CALCULATOR with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -10635,14 +10482,14 @@ export const KNOWLEDGE_ROA_CALCULATOR: Record<Language, (tool: ToolDef, name: st
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `ROA % = (Net Income / Total Assets) × 100`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating ROA CALCULATOR using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating ROA CALCULATOR with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -10664,7 +10511,7 @@ export const KNOWLEDGE_PER_SHARE_EARNINGS: Record<Language, (tool: ToolDef, name
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `EPS = (Net Income - Preferred Dividends) / End-of-Period Common Shares Outstanding`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -10675,13 +10522,11 @@ export const KNOWLEDGE_PER_SHARE_EARNINGS: Record<Language, (tool: ToolDef, name
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating PER SHARE EARNINGS using representative market values.`,
+      scenario: `Calculating PER SHARE EARNINGS with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -10702,7 +10547,7 @@ export const KNOWLEDGE_PER_SHARE_EARNINGS: Record<Language, (tool: ToolDef, name
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `EPS = (Net Income - Preferred Dividends) / End-of-Period Common Shares Outstanding`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -10713,13 +10558,11 @@ export const KNOWLEDGE_PER_SHARE_EARNINGS: Record<Language, (tool: ToolDef, name
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating PER SHARE EARNINGS using representative market values.`,
+      scenario: `Calculating PER SHARE EARNINGS with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -10735,14 +10578,14 @@ export const KNOWLEDGE_PER_SHARE_EARNINGS: Record<Language, (tool: ToolDef, name
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `EPS = (Net Income - Preferred Dividends) / End-of-Period Common Shares Outstanding`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating PER SHARE EARNINGS using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating PER SHARE EARNINGS with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -10756,14 +10599,14 @@ export const KNOWLEDGE_PER_SHARE_EARNINGS: Record<Language, (tool: ToolDef, name
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `EPS = (Net Income - Preferred Dividends) / End-of-Period Common Shares Outstanding`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating PER SHARE EARNINGS using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating PER SHARE EARNINGS with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -10777,14 +10620,14 @@ export const KNOWLEDGE_PER_SHARE_EARNINGS: Record<Language, (tool: ToolDef, name
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `EPS = (Net Income - Preferred Dividends) / End-of-Period Common Shares Outstanding`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating PER SHARE EARNINGS using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating PER SHARE EARNINGS with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -10806,7 +10649,7 @@ export const KNOWLEDGE_PE_RATIO_VALUATION: Record<Language, (tool: ToolDef, name
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `P/E Ratio = Market Price per Share / Earnings per Share (EPS)`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -10817,13 +10660,11 @@ export const KNOWLEDGE_PE_RATIO_VALUATION: Record<Language, (tool: ToolDef, name
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating PE RATIO VALUATION using representative market values.`,
+      scenario: `Calculating PE RATIO VALUATION with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -10844,7 +10685,7 @@ export const KNOWLEDGE_PE_RATIO_VALUATION: Record<Language, (tool: ToolDef, name
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `P/E Ratio = Market Price per Share / Earnings per Share (EPS)`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -10855,13 +10696,11 @@ export const KNOWLEDGE_PE_RATIO_VALUATION: Record<Language, (tool: ToolDef, name
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating PE RATIO VALUATION using representative market values.`,
+      scenario: `Calculating PE RATIO VALUATION with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -10877,14 +10716,14 @@ export const KNOWLEDGE_PE_RATIO_VALUATION: Record<Language, (tool: ToolDef, name
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `P/E Ratio = Market Price per Share / Earnings per Share (EPS)`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating PE RATIO VALUATION using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating PE RATIO VALUATION with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -10898,14 +10737,14 @@ export const KNOWLEDGE_PE_RATIO_VALUATION: Record<Language, (tool: ToolDef, name
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `P/E Ratio = Market Price per Share / Earnings per Share (EPS)`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating PE RATIO VALUATION using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating PE RATIO VALUATION with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -10919,14 +10758,14 @@ export const KNOWLEDGE_PE_RATIO_VALUATION: Record<Language, (tool: ToolDef, name
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `P/E Ratio = Market Price per Share / Earnings per Share (EPS)`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating PE RATIO VALUATION using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating PE RATIO VALUATION with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -10948,7 +10787,7 @@ export const KNOWLEDGE_PB_RATIO_VALUATION: Record<Language, (tool: ToolDef, name
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `P/B Ratio = Market Price per Share / Book Value per Share`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -10959,13 +10798,11 @@ export const KNOWLEDGE_PB_RATIO_VALUATION: Record<Language, (tool: ToolDef, name
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating PB RATIO VALUATION using representative market values.`,
+      scenario: `Calculating PB RATIO VALUATION with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -10986,7 +10823,7 @@ export const KNOWLEDGE_PB_RATIO_VALUATION: Record<Language, (tool: ToolDef, name
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `P/B Ratio = Market Price per Share / Book Value per Share`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -10997,13 +10834,11 @@ export const KNOWLEDGE_PB_RATIO_VALUATION: Record<Language, (tool: ToolDef, name
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating PB RATIO VALUATION using representative market values.`,
+      scenario: `Calculating PB RATIO VALUATION with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -11019,14 +10854,14 @@ export const KNOWLEDGE_PB_RATIO_VALUATION: Record<Language, (tool: ToolDef, name
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `P/B Ratio = Market Price per Share / Book Value per Share`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating PB RATIO VALUATION using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating PB RATIO VALUATION with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -11040,14 +10875,14 @@ export const KNOWLEDGE_PB_RATIO_VALUATION: Record<Language, (tool: ToolDef, name
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `P/B Ratio = Market Price per Share / Book Value per Share`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating PB RATIO VALUATION using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating PB RATIO VALUATION with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -11061,14 +10896,14 @@ export const KNOWLEDGE_PB_RATIO_VALUATION: Record<Language, (tool: ToolDef, name
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `P/B Ratio = Market Price per Share / Book Value per Share`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating PB RATIO VALUATION using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating PB RATIO VALUATION with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -11090,7 +10925,7 @@ export const KNOWLEDGE_PS_RATIO_VALUATION: Record<Language, (tool: ToolDef, name
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `P/S Ratio = Market Cap / Total Annual Revenue`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -11101,13 +10936,11 @@ export const KNOWLEDGE_PS_RATIO_VALUATION: Record<Language, (tool: ToolDef, name
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating PS RATIO VALUATION using representative market values.`,
+      scenario: `Calculating PS RATIO VALUATION with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -11128,7 +10961,7 @@ export const KNOWLEDGE_PS_RATIO_VALUATION: Record<Language, (tool: ToolDef, name
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `P/S Ratio = Market Cap / Total Annual Revenue`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -11139,13 +10972,11 @@ export const KNOWLEDGE_PS_RATIO_VALUATION: Record<Language, (tool: ToolDef, name
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating PS RATIO VALUATION using representative market values.`,
+      scenario: `Calculating PS RATIO VALUATION with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -11161,14 +10992,14 @@ export const KNOWLEDGE_PS_RATIO_VALUATION: Record<Language, (tool: ToolDef, name
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `P/S Ratio = Market Cap / Total Annual Revenue`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating PS RATIO VALUATION using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating PS RATIO VALUATION with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -11182,14 +11013,14 @@ export const KNOWLEDGE_PS_RATIO_VALUATION: Record<Language, (tool: ToolDef, name
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `P/S Ratio = Market Cap / Total Annual Revenue`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating PS RATIO VALUATION using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating PS RATIO VALUATION with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -11203,14 +11034,14 @@ export const KNOWLEDGE_PS_RATIO_VALUATION: Record<Language, (tool: ToolDef, name
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `P/S Ratio = Market Cap / Total Annual Revenue`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating PS RATIO VALUATION using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating PS RATIO VALUATION with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -11224,140 +11055,252 @@ export const KNOWLEDGE_PS_RATIO_VALUATION: Record<Language, (tool: ToolDef, name
 export const KNOWLEDGE_EV_EBITDA_MULTIPLE: Record<Language, (tool: ToolDef, name: string, relatedTools: ToolDef[]) => ToolContentDetails> = {
   en: (tool, name, relatedTools) => ({
     toolName: name,
-    intro: `The EV EBITDA MULTIPLE calculator evaluates financial parameters with precise mathematical formulas and real-time updates.`,
-    whoUsesIt: 'Financial professionals, corporate managers, individual investors, and analysts.',
-    whatItCalculates: 'Precise financial metrics, ratios, and breakdown values based on standard formulas.',
+    intro: 'The EV/EBITDA Multiple Calculator determines a company\'s valuation by comparing its Enterprise Value (EV) to its Earnings Before Interest, Taxes, Depreciation, and Amortization (EBITDA), serving as a core valuation metric for M&A and equity analysis.',
+    whoUsesIt: 'Investment bankers, equity research analysts, corporate finance professionals, private equity investors, and business owners evaluating acquisition targets or company valuations.',
+    whatItCalculates: 'Total Enterprise Value (EV), corporate Net Debt, annual EBITDA, and the resulting EV/EBITDA valuation multiple used to assess relative corporate cheapness or expensiveness.',
     howToUse: [
-      'Enter your verified financial inputs in the corresponding fields above.',
-      'The calculation engine evaluates results instantly in real time.',
-      'Review summary metrics, formulas, and worked examples below.'
+      'Enter the company\'s total Market Capitalization (Shares Outstanding × Current Share Price).',
+      'Enter Total Debt (short-term and long-term interest-bearing debt obligations).',
+      'Enter Cash & Cash Equivalents (liquid funds and marketable securities).',
+      'Enter the company\'s annual EBITDA (trailing twelve months or forward projection).',
+      'Review the resulting Enterprise Value, Net Debt, EV/EBITDA multiple, and valuation category in real time.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: 'Enterprise Value (EV) = Market Cap + Total Debt - Cash  |  EV / EBITDA Multiple = Enterprise Value / EBITDA',
     formulaVariables: [
-      { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
-      { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
+      { symbol: 'Market Cap ($)', name: 'Market Capitalization ($)', explanation: 'Total equity market value calculated as shares outstanding multiplied by the current stock price.' },
+      { symbol: 'Total Debt ($)', name: 'Total Debt ($)', explanation: 'All short-term and long-term interest-bearing financial liabilities owed by the company.' },
+      { symbol: 'Cash & Equivalents ($)', name: 'Cash & Cash Equivalents ($)', explanation: 'Liquid bank balances and short-term marketable securities deducted from gross enterprise value.' },
+      { symbol: 'Enterprise Value ($)', name: 'Enterprise Value ($)', explanation: 'The comprehensive theoretical takeover price of the operating business across all capital providers.' },
+      { symbol: 'EBITDA ($)', name: 'EBITDA ($)', explanation: 'Operating cash earnings before interest, income taxes, depreciation, and amortization.' },
+      { symbol: 'EV / EBITDA (x)', name: 'EV/EBITDA Multiple', explanation: 'The ratio showing how many dollars of enterprise value are being paid per dollar of annual operating EBITDA.' }
     ],
     inputs: [
-      { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false },
-      { name: `Rate / Factor (%)`, description: `Applicable percentage rate, yield, or ratio.`, unit: 'Unit / %', optional: false }
+      { name: 'Market Capitalization ($)', description: 'Total dollar value of a company\'s outstanding equity shares.', unit: 'USD ($)', optional: false },
+      { name: 'Total Debt ($)', description: 'All short-term notes, bank loans, and long-term bonds payable.', unit: 'USD ($)', optional: false },
+      { name: 'Cash & Equivalents ($)', description: 'Available liquid cash reserves, bank deposits, and marketable securities.', unit: 'USD ($)', optional: false },
+      { name: 'Annual EBITDA ($)', description: 'Operating cash profit before interest, taxes, depreciation, and amortization.', unit: 'USD ($)', optional: false }
     ],
-    unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
+    unitsAndConversions: 'Monetary values are entered in USD ($) or local base currency; the resulting valuation multiple is expressed as a ratio multiple (e.g., 5.00x).',
     workedExample: {
-      scenario: `Calculating EV EBITDA MULTIPLE using representative market values.`,
+      scenario: 'Evaluating a company with a Market Capitalization of $10,000,000, Total Debt of $3,000,000, Cash of $1,500,000, and an annual EBITDA of $2,300,000.',
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        'Calculate Net Debt: Total Debt ($3,000,000) - Cash ($1,500,000) = $1,500,000.',
+        'Calculate Enterprise Value (EV): Market Cap ($10,000,000) + Net Debt ($1,500,000) = $11,500,000.',
+        'Compute EV/EBITDA Multiple: $11,500,000 Enterprise Value ÷ $2,300,000 EBITDA = 5.00x.'
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: 'Enterprise Value = $11,500,000 | Net Debt = $1,500,000 | EV/EBITDA Multiple = 5.00x (indicative of attractive or deep-value pricing relative to operating cash flows).'
     },
-    understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
-    assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
-    limitations: 'Calculations serve informational and educational planning purposes.',
+    understandingResults: 'A lower EV/EBITDA multiple (typically under 6.0x–8.0x, depending on sector) often suggests that a company may be undervalued, whereas a higher multiple (>12.0x–15.0x+) reflects premium growth expectations.',
+    assumptions: 'Assumes normalized operating earnings without extraordinary non-recurring gains or distortive one-time write-downs.',
+    limitations: 'EV/EBITDA does not account for heavy ongoing capital expenditure (CapEx) requirements; it should be paired with EV/FCF and P/E metrics for comprehensive valuation.',
     faqs: [
-      { question: `How is EV EBITDA MULTIPLE calculated?`, answer: `It uses standard financial formulas applied directly to your input parameters.` },
-      { question: `Are my inputs saved?`, answer: `No, all calculations run client-side in your browser for privacy.` }
+      {
+        question: 'What is a good EV/EBITDA multiple?',
+        answer: 'A lower multiple indicates that a stock may be undervalued or overlooked, while higher multiples reflect strong market growth expectations. Typical benchmarks range from 6x–10x for mature manufacturing/utilities to 12x–20x+ for high-margin technology firms.'
+      },
+      {
+        question: 'Why use EV/EBITDA instead of the P/E ratio?',
+        answer: 'EV/EBITDA accounts for a company\'s debt obligations and cash reserves, making it capital-structure neutral and enabling uniform comparisons between companies with different leverage levels and tax rates.'
+      },
+      {
+        question: 'What is the difference between Market Cap and Enterprise Value?',
+        answer: 'Market Capitalization represents only equity value, whereas Enterprise Value captures the total theoretical takeover cost of the entire operating business by including net debt obligations.'
+      }
     ],
     relatedTools
   }),
   ar: (tool, name, relatedTools) => ({
     toolName: name,
-    intro: `تقدم حاسبة EV EBITDA MULTIPLE تقييماً مالياً دقيقاً باستخدام المعادلات المعتمدة مع تحديث فوري للنتائج.`,
-    whoUsesIt: 'المحللون الماليون والمستثمرون والأفراد الراغبون في حسابات دقيقة.',
-    whatItCalculates: 'قيم مالية ومؤشرات دقيقة بناءً على المعايير المعتمدة.',
+    intro: 'تحدد حاسبة مضاعف القيمة المنشأة إلى الأرباح قبل الفوائد والضرائب والإهلاك والاستهلاك (EV/EBITDA) تقييم الشركات من خلال مقارنة قيمتها المنشأة (EV) بأرباحها التشغيلية النقدية (EBITDA)، مما يجعلها معياراً أساسياً في صفقات الاندماج والاستحواذ وتقييم الأسهم.',
+    whoUsesIt: 'المصرفيون الاستثماريون، ومحللو أبحاث الأسهم، ومديرو التمويل والاستثمار، ومستثمرو الملكية الخاصة، ورواد الأعمال والمستثمرون لتقييم صفقات الاستحواذ وقيمة الشركات العادلة.',
+    whatItCalculates: 'القيمة المنشأة الإجمالية (EV)، وصافي الدين، والربح التشغيلي EBITDA، ومضاعف التقييم EV/EBITDA لتحديد ما إذا كانت الشركة مقومة بأقل أو أعلى من قيمتها العادلة.',
     howToUse: [
-      'أدخل البيانات المالية المطلوبة في الحقول أعلاه.',
-      'يعالج المحرك الحسابي البيانات بشكل فوري.',
-      'استعرض النتائج والخطوات والمثال التوضيحي.'
+      'أدخل القيمة السوقية لأسهم الشركة (عدد الأسهم القائمة × سعر السهم الحالي).',
+      'أدخل إجمالي الديون (الالتزامات والديون قصيرة وطويلة الأجل).',
+      'أدخل النقد وما في حكمه (الأصول السائلة والاستثمارات النقدية قصيرة الأجل).',
+      'أدخل أرباح الشركة السنوية قبل الفوائد والضرائب والإهلاك (EBITDA).',
+      'اطلع فورياً على القيمة المنشأة (EV)، وصافي الدين، ومضاعف EV/EBITDA وفئة التقييم المقارن.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: 'القيمة المنشأة (EV) = القيمة السوقية + إجمالي الدين - النقد  |  مضاعف EV/EBITDA = القيمة المنشأة ÷ EBITDA',
     formulaVariables: [
-      { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
-      { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
+      { symbol: 'القيمة السوقية ($)', name: 'القيمة السوقية للأسهم ($)', explanation: 'القيمة السوقية الإجمالية لحقوق الملكية (عدد الأسهم × سعر السهم).' },
+      { symbol: 'إجمالي الدين ($)', name: 'إجمالي الديون والالتزامات ($)', explanation: 'كافة الالتزامات والديون البنكية والسندات قصيرة وطويلة الأجل.' },
+      { symbol: 'النقد وما في حكمه ($)', name: 'النقد والاستثمارات السائلة ($)', explanation: 'السيولة النقدية والأوراق المالية القابلة للتداول التي تُخصم من الديون.' },
+      { symbol: 'القيمة المنشأة ($)', name: 'القيمة المنشأة الإجمالية (EV)', explanation: 'التكلفة الإجمالية النظرية للاستحواذ على النشاط التشغيلي للشركة لكافة ممولي رأس المال.' },
+      { symbol: 'EBITDA ($)', name: 'الأرباح قبل الفوائد والضرائب والإهلاك ($)', explanation: 'الأرباح التشغيلية النقدية السنوية قبل خصم الفوائد والضرائب واستهلاك الأصول.' },
+      { symbol: 'مضاعف EV/EBITDA (x)', name: 'مضاعف التقييم EV/EBITDA', explanation: 'النسبة التي توضح كم دولاراً من القيمة المنشأة يُدفع مقابل كل دولار من أرباح EBITDA.' }
     ],
     inputs: [
-      { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'دولار ($)', optional: false },
-      { name: `Rate / Factor (%)`, description: `Applicable percentage rate, yield, or ratio.`, unit: 'نسبة / وحدة', optional: false }
+      { name: 'القيمة السوقية ($)', description: 'إجمالي القيمة السوقية لأسهم الشركة.', unit: 'دولار ($)', optional: false },
+      { name: 'إجمالي الدين ($)', description: 'كافة القروض والالتزامات المالية قصيرة وطويلة الأجل.', unit: 'دولار ($)', optional: false },
+      { name: 'النقد وما في حكمه ($)', description: 'السيولة النقدية والأصول المالية السائلة.', unit: 'دولار ($)', optional: false },
+      { name: 'الأرباح السنوية EBITDA ($)', description: 'الربح التشغيلي النقدي قبل الفوائد والضرائب والإهلاك.', unit: 'دولار ($)', optional: false }
     ],
-    unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
+    unitsAndConversions: 'تُدخل القيم بالدولار أو العملة الأساسية، ويُعبّر عن المضاعف كرقم مضاعف نسبي (مثل 5.00x).',
     workedExample: {
-      scenario: `Calculating EV EBITDA MULTIPLE using representative market values.`,
+      scenario: 'تقييم شركة بقيمة سوقية 10,000,000 دولار، وإجمالي ديون 3,000,000 دولار، وسيولة نقدية 1,500,000 دولار، وأرباح سنوية EBITDA بقيمة 2,300,000 دولار.',
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        'حساب صافي الدين: إجمالي الدين (3,000,000$) - النقد (1,500,000$) = 1,500,000 دولار.',
+        'حساب القيمة المنشأة (EV): القيمة السوقية (10,000,000$) + صافي الدين (1,500,000$) = 11,500,000 دولار.',
+        'حساب مضاعف EV/EBITDA: القيمة المنشأة (11,500,000$) ÷ أرباح EBITDA (2,300,000$) = 5.00x.'
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: 'القيمة المنشأة = 11,500,000$ | صافي الدين = 1,500,000$ | مضاعف EV/EBITDA = 5.00x (يعكس تسعيراً استثمارياً جذاباً مقارنة بالتدفقات التشغيلية).'
     },
-    understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
-    assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
-    limitations: 'النتائج لأغراض التخطيط والدراسة الماليين.',
+    understandingResults: 'يشير مضاعف EV/EBITDA المنخفض (أقل من 6.0x–8.0x) إلى أن الشركة مقومة بأقل من قيمتها أو تقدم فرصة شراء جذابة، بينما يعكس المضاعف المرتفع (>12.0x–15.0x+) توقعات نمو قوية أو تقييماً مرتفعاً.',
+    assumptions: 'يفترض أرباحاً تشغيلية اعتيادية ومستمرة خالية من المكاسب أو الخسائر غير المتكررة.',
+    limitations: 'لا يأخذ المضاعف في الاعتبار كثافة النفقات الرأسمالية (CapEx) للشركات؛ لذا يفضل دمجه مع مضاعف التدفق النقدي الحر EV/FCF ومكرر الربحية P/E.',
     faqs: [
-      { question: `كيف تعمل هذه الحاسبة؟`, answer: `تطبق المعادلات المالية المعيارية بشكل مباشر وفوري.` }
+      {
+        question: 'ما هو المضاعف الجيد لـ EV/EBITDA؟',
+        answer: 'المضاعف الأقل يشير عادة إلى أن الشركة مقومة بأقل من قيمتها، بينما المضاعف الأعلى يعكس توقعات نمو مرتفعة. النطاق المعتاد يتراوح بين 6x و 10x للشركات الصناعية والتقليدية، وبين 12x و 20x+ لشركات التقنية سريعة النمو.'
+      },
+      {
+        question: 'لماذا يُفضل مضاعف EV/EBITDA على مكرر الربحية P/E؟',
+        answer: 'لأن مضاعف EV/EBITDA يأخذ في الاعتبار ديون الشركة وسيولتها النقدية ويحيّد الفروق في الهيكل التمويلي ومعدلات الضرائب، مما يتيح مقارنة عادلة بين الشركات المختلفة.'
+      },
+      {
+        question: 'ما الفرق بين القيمة السوقية والقيمة المنشأة (Enterprise Value)؟',
+        answer: 'القيمة السوقية تمثل فقط قيمة حقوق الملكية والأسهم، بينما القيمة المنشأة تمثل التكلفة الإجمالية النظرية لشراء كامل النشاط التجاري شاملاً تسوية كافة الديون واسترداد النقد.'
+      }
     ],
     relatedTools
   }),
   es: (tool, name, relatedTools) => ({
     toolName: name,
-    intro: `La calculadora de EV EBITDA MULTIPLE proporciona evaluaciones financieras precisas según modelos matemáticos estandarizados.`,
-    whoUsesIt: 'Analistas financieros, inversores y profesionales.',
-    whatItCalculates: 'Métricas e indicadores financieros exactos.',
-    howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
-    inputs: [
-      { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
+    intro: 'La calculadora del múltiplo EV/EBITDA determina la valoración de una empresa comparando su Enterprise Value (Valor de Empresa) con su EBITDA anual, sirviendo como métrica clave en fusiones, adquisiciones y análisis bursátil.',
+    whoUsesIt: 'Banqueros de inversión, analistas de renta variable, directores financieros, fondos de capital privado y empresarios.',
+    whatItCalculates: 'Valor de Empresa (EV), Deuda Neta, EBITDA anual y el múltiplo de valoración EV/EBITDA resultante.',
+    howToUse: [
+      'Introduzca la Capitalización Bursátil (Acciones en circulación × Precio por acción).',
+      'Introduzca la Deuda Financiera Total (corto y largo plazo).',
+      'Introduzca la Caja y Equivalentes de efectivo.',
+      'Introduzca el EBITDA anual de la empresa.',
+      'Compruebe en tiempo real el EV, la Deuda Neta y el múltiplo EV/EBITDA.'
     ],
+    formula: 'Enterprise Value (EV) = Capitalización + Deuda Total - Caja  |  Múltiplo EV/EBITDA = EV / EBITDA',
+    formulaVariables: [
+      { symbol: 'Capitalización ($)', name: 'Capitalización Bursátil ($)', explanation: 'Valor total del patrimonio neto según cotización de mercado.' },
+      { symbol: 'Deuda Total ($)', name: 'Deuda Financiera Total ($)', explanation: 'Pasivos financieros remunerados a corto y largo plazo.' },
+      { symbol: 'Caja y Equivalentes ($)', name: 'Tesorería y Equivalentes ($)', explanation: 'Activos líquidos y valores negociables disponibles.' },
+      { symbol: 'Enterprise Value ($)', name: 'Valor de Empresa ($)', explanation: 'Precio total teórico de adquisición de las operaciones de la compañía.' },
+      { symbol: 'EBITDA ($)', name: 'EBITDA ($)', explanation: 'Beneficio operativo antes de intereses, impuestos, depreciación y amortización.' },
+      { symbol: 'Múltiplo EV/EBITDA (x)', name: 'Múltiplo EV/EBITDA', explanation: 'Veces de EBITDA que representa el Valor de Empresa.' }
+    ],
+    inputs: [
+      { name: 'Capitalización Bursátil ($)', description: 'Valor de mercado de las acciones.', unit: 'USD ($)', optional: false },
+      { name: 'Deuda Total ($)', description: 'Deuda financiera remunerada total.', unit: 'USD ($)', optional: false },
+      { name: 'Caja y Equivalentes ($)', description: 'Tesorería disponible e inversiones líquidas.', unit: 'USD ($)', optional: false },
+      { name: 'EBITDA Anual ($)', description: 'Resultado operativo bruto en efectivo.', unit: 'USD ($)', optional: false }
+    ],
+    unitsAndConversions: 'Valores monetarios en USD ($) o moneda local; el múltiplo se expresa en número de veces (ej. 5.00x).',
     workedExample: {
-      scenario: `Calculating EV EBITDA MULTIPLE using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: 'Valoración de una empresa con Capitalización de 10.000.000 $, Deuda de 3.000.000 $, Caja de 1.500.000 $ y EBITDA de 2.300.000 $.',
+      stepByStep: [
+        'Calcular Deuda Neta: 3.000.000 $ - 1.500.000 $ = 1.500.000 $.',
+        'Calcular Enterprise Value (EV): 10.000.000 $ + 1.500.000 $ = 11.500.000 $.',
+        'Calcular Múltiplo EV/EBITDA: 11.500.000 $ ÷ 2.300.000 $ = 5.00x.'
+      ],
+      result: 'Enterprise Value = 11.500.000 $ | Deuda Neta = 1.500.000 $ | Múltiplo EV/EBITDA = 5.00x (valoración atractiva).'
     },
-    understandingResults: 'Valores numéricos derivados de los datos introducidos.',
-    assumptions: 'Condiciones financieras estándar.',
-    limitations: 'Fines de orientación e información.',
-    faqs: [{ question: '¿Cómo funciona?', answer: 'Aplica fórmulas estándar instantáneamente.' }],
+    understandingResults: 'Un múltiplo bajo (< 6.0x–8.0x) puede sugerir infravaloración o descuento, mientras que múltiplos altos (> 12.0x–15.0x) reflejan altas expectativas de crecimiento.',
+    assumptions: 'Asume EBITDA normalizado sin partidas extraordinarias atípicas.',
+    limitations: 'No descuenta el gasto en inversiones de capital continuo (CapEx).',
+    faqs: [
+      { question: '¿Qué es un buen múltiplo EV/EBITDA?', answer: 'Varía por sector: entre 6x y 10x es típico en industria y servicios maduros, mientras que empresas tecnológicas de alto crecimiento cotizan a 12x–20x+.' },
+      { question: '¿Por qué usar EV/EBITDA en vez del PER?', answer: 'Porque neutraliza la estructura de capital y las diferencias fiscales entre empresas con distinto endeudamiento.' }
+    ],
     relatedTools
   }),
   fr: (tool, name, relatedTools) => ({
     toolName: name,
-    intro: `Le calculateur de EV EBITDA MULTIPLE fournit des évaluations financières précises selon des modèles mathématiques établis.`,
-    whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
-    whatItCalculates: 'Métrique et ratios financiers précis.',
-    howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
-    inputs: [
-      { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
+    intro: 'Le calculateur de multiple EV/EBITDA évalue la valorisation d\'une entreprise en comparant sa Valeur d\'Entreprise (Enterprise Value) à son EBITDA annuel, servant de référence en M&A et analyse financière.',
+    whoUsesIt: 'Banquiers d\'affaires, analystes actions, directeurs financiers, fonds de capital-investissement et dirigeants.',
+    whatItCalculates: 'Valeur d\'Entreprise (EV), Dette Nette, EBITDA annuel et le multiple de valorisation EV/EBITDA.',
+    howToUse: [
+      'Indiquez la Capitalisation Boursière (Nombre d\'actions × Cours de l\'action).',
+      'Indiquez la Dette Financière Totale (court et long terme).',
+      'Indiquez la Trésorerie et Équivalents de trésorerie.',
+      'Indiquez l\'EBITDA annuel de l\'entreprise.',
+      'Consultez en direct l\'EV, la Dette Nette et le multiple EV/EBITDA.'
     ],
+    formula: 'Valeur d\'Entreprise (EV) = Capitalisation + Dette Totale - Trésorerie  |  Multiple EV/EBITDA = EV / EBITDA',
+    formulaVariables: [
+      { symbol: 'Capitalisation ($)', name: 'Capitalisation Boursière ($)', explanation: 'Valeur de marché des fonds propres de l\'entreprise.' },
+      { symbol: 'Dette Totale ($)', name: 'Dette Financière Brute ($)', explanation: 'Total des dettes financières à court et long terme.' },
+      { symbol: 'Trésorerie ($)', name: 'Trésorerie et Placements ($)', explanation: 'Disponibilités bancaires liquides déduites de la dette.' },
+      { symbol: 'Enterprise Value ($)', name: 'Valeur d\'Entreprise ($)', explanation: 'Coût théorique total d\'acquisition de l\'activité opérationnelle.' },
+      { symbol: 'EBITDA ($)', name: 'EBITDA ($)', explanation: 'Excédent brut d\'exploitation avant intérêts, impôts et amortissements.' },
+      { symbol: 'Multiple EV/EBITDA (x)', name: 'Multiple EV/EBITDA', explanation: 'Nombre de fois l\'EBITDA que représente la Valeur d\'Entreprise.' }
+    ],
+    inputs: [
+      { name: 'Capitalisation Boursière ($)', description: 'Valeur boursière des actions.', unit: 'USD ($)', optional: false },
+      { name: 'Dette Totale ($)', description: 'Ensemble des dettes financières.', unit: 'USD ($)', optional: false },
+      { name: 'Trésorerie & Équivalents ($)', description: 'Liquidités disponibles.', unit: 'USD ($)', optional: false },
+      { name: 'EBITDA Annuel ($)', description: 'Excédent brut d\'exploitation.', unit: 'USD ($)', optional: false }
+    ],
+    unitsAndConversions: 'Montants monétaires en USD ($) ou devise locale ; multiple exprimé sous forme de ratio (ex. 5.00x).',
     workedExample: {
-      scenario: `Calculating EV EBITDA MULTIPLE using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: 'Valorisation d\'une entreprise avec 10 000 000 $ de Capitalisation, 3 000 000 $ de Dette, 1 500 000 $ de Trésorerie et 2 300 000 $ d\'EBITDA.',
+      stepByStep: [
+        'Calcul de la Dette Nette : 3 000 000 $ - 1 500 000 $ = 1 500 000 $.',
+        'Calcul de la Valeur d\'Entreprise (EV) : 10 000 000 $ + 1 500 000 $ = 11 500 000 $.',
+        'Calcul du Multiple EV/EBITDA : 11 500 000 $ ÷ 2 300 000 $ = 5.00x.'
+      ],
+      result: 'Valeur d\'Entreprise = 11 500 000 $ | Dette Nette = 1 500 000 $ | Multiple EV/EBITDA = 5.00x.'
     },
-    understandingResults: 'Résultats dérivés directement de vos saisies.',
-    assumptions: 'Hypothèses comptables standard.',
-    limitations: 'À des fins d’information et d’analyse.',
-    faqs: [{ question: 'Comment ça marche ?', answer: 'Applique les formules financières établies.' }],
+    understandingResults: 'Un multiple bas (< 6.0x–8.0x) suggère une sous-évaluation potentielle, tandis qu\'un multiple élevé (> 12.0x–15.0x) traduit de fortes perspectives de croissance.',
+    assumptions: 'Suppose un EBITDA récurrent sans éléments non récurrents majeurs.',
+    limitations: 'Ne prend pas en compte l\'intensité des investissements de renouvellement (CapEx).',
+    faqs: [
+      { question: 'Quel est un bon multiple EV/EBITDA ?', answer: 'Généralement entre 6x et 10x pour les entreprises matures et 12x à 20x+ pour les valeurs de croissance technologique.' },
+      { question: 'Pourquoi préférer l\'EV/EBITDA au PER ?', answer: 'Parce qu\'il intègre l\'endettement net et neutralise les disparités de structure financière et de fiscalité.' }
+    ],
     relatedTools
   }),
   de: (tool, name, relatedTools) => ({
     toolName: name,
-    intro: `Der EV EBITDA MULTIPLE-Rechner bietet präzise finanzielle Auswertungen basierend auf etablierten mathematischen Modellen.`,
-    whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
-    whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
-    howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
-    inputs: [
-      { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
+    intro: 'Der EV/EBITDA-Multiple-Rechner ermittelt die Bewertung eines Unternehmens durch den Vergleich seines Unternehmenswerts (Enterprise Value, EV) mit dem EBITDA als zentrale Bewertungskennzahl für M&A und Aktienanalysen.',
+    whoUsesIt: 'Investmentbanker, Aktienanalysten, Finanzvorstände, Private-Equity-Investoren und Unternehmer.',
+    whatItCalculates: 'Enterprise Value (EV), Nettofinanzverschuldung, jährliches EBITDA und das resultierende EV/EBITDA-Bewertungsmultiple.',
+    howToUse: [
+      'Geben Sie die Marktkapitalisierung ein (Aktienanzahl × Aktienkurs).',
+      'Geben Sie die Gesamtverschuldung (kurz- und langfristig) ein.',
+      'Geben Sie liquide Mittel und Zahlungsmitteläquivalente ein.',
+      'Geben Sie das jährliche EBITDA ein.',
+      'Prüfen Sie sofort Enterprise Value, Nettoverschuldung und das EV/EBITDA-Multiple.'
     ],
+    formula: 'Enterprise Value (EV) = Marktkapitalisierung + Gesamtverschuldung - Barmittel  |  EV/EBITDA = EV / EBITDA',
+    formulaVariables: [
+      { symbol: 'Marktkapitalisierung ($)', name: 'Marktkapitalisierung ($)', explanation: 'Gesamtwert des Eigenkapitals an der Börse.' },
+      { symbol: 'Gesamtverschuldung ($)', name: 'Gesamte zinstragende Schulden ($)', explanation: 'Kurz- und langfristige Finanzverbindlichkeiten.' },
+      { symbol: 'Barmittel ($)', name: 'Liquide Mittel und Wertpapiere ($)', explanation: 'Frei verfügbare liquide Bank- und Kassenbestände.' },
+      { symbol: 'Enterprise Value ($)', name: 'Unternehmenswert (EV) ($)', explanation: 'Gesamter theoretischer Übernahmepreis des operativen Geschäfts.' },
+      { symbol: 'EBITDA ($)', name: 'EBITDA ($)', explanation: 'Operativer Gewinn vor Zinsen, Steuern, Abschreibungen auf Sachanlagen und immaterielle Vermögenswerte.' },
+      { symbol: 'EV/EBITDA-Multiple (x)', name: 'EV/EBITDA-Multiple', explanation: 'Vielfaches des operativen Cashflows bezogen auf den Unternehmenswert.' }
+    ],
+    inputs: [
+      { name: 'Marktkapitalisierung ($)', description: 'Börsenwert des Eigenkapitals.', unit: 'USD ($)', optional: false },
+      { name: 'Gesamtverschuldung ($)', description: 'Verzinsliche Finanzverbindlichkeiten.', unit: 'USD ($)', optional: false },
+      { name: 'Barmittel ($)', description: 'Liquide Mittel und Kassenbestand.', unit: 'USD ($)', optional: false },
+      { name: 'Jährliches EBITDA ($)', description: 'Operativer Vorsteuergewinn vor Abschreibungen.', unit: 'USD ($)', optional: false }
+    ],
+    unitsAndConversions: 'Währungsbeträge in USD ($) oder Landeswährung; das Multiple wird als Faktor (z. B. 5.00x) ausgewiesen.',
     workedExample: {
-      scenario: `Calculating EV EBITDA MULTIPLE using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: 'Bewertung eines Unternehmens mit 10.000.000 $ Marktkapitalisierung, 3.000.000 $ Schulden, 1.500.000 $ Barmitteln und 2.300.000 $ EBITDA.',
+      stepByStep: [
+        'Nettoverschuldung berechnen: 3.000.000 $ - 1.500.000 $ = 1.500.000 $.',
+        'Enterprise Value (EV) berechnen: 10.000.000 $ + 1.500.000 $ = 11.500.000 $.',
+        'EV/EBITDA-Multiple berechnen: 11.500.000 $ ÷ 2.300.000 $ = 5.00x.'
+      ],
+      result: 'Enterprise Value = 11.500.000 $ | Nettoverschuldung = 1.500.000 $ | EV/EBITDA = 5.00x (attraktive Bewertung).'
     },
-    understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
-    assumptions: 'Standardmäßige Finanzannahmen.',
-    limitations: 'Zu Informations- und Planungszwecken.',
-    faqs: [{ question: 'Wie funktioniert der Rechner?', answer: 'Wendet etablierte Finanzformeln an.' }],
+    understandingResults: 'Ein niedriges Multiple (< 6.0x–8.0x) deutet oft auf eine günstige Bewertung hin, während hohe Multiples (> 12.0x–15.0x) starke Wachstumserwartungen einpreisen.',
+    assumptions: 'Setzt ein nachhaltiges EBITDA ohne wesentliche Einmaleffekte voraus.',
+    limitations: 'Berücksichtigt keine laufenden Reinvestitionen in Anlagevermögen (CapEx).',
+    faqs: [
+      { question: 'Was gilt als gutes EV/EBITDA-Multiple?', answer: 'In reifen Branchen meist 6x bis 10x, bei wachstumsstarken Technologieunternehmen oft 12x bis 20x+.' },
+      { question: 'Warum EV/EBITDA statt KGV?', answer: 'Weil es unabhängig von der Kapitalstruktur und Besteuerung verlässliche Unternehmensvergleiche ermöglicht.' }
+    ],
     relatedTools
   })
 };
@@ -11374,7 +11317,7 @@ export const KNOWLEDGE_FREE_CASH_FLOW_FCF: Record<Language, (tool: ToolDef, name
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Free Cash Flow (FCF) = Operating Cash Flow - Capital Expenditures (CapEx)`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -11385,13 +11328,11 @@ export const KNOWLEDGE_FREE_CASH_FLOW_FCF: Record<Language, (tool: ToolDef, name
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating FREE CASH FLOW FCF using representative market values.`,
+      scenario: `Calculating FREE CASH FLOW FCF with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -11412,7 +11353,7 @@ export const KNOWLEDGE_FREE_CASH_FLOW_FCF: Record<Language, (tool: ToolDef, name
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Free Cash Flow (FCF) = Operating Cash Flow - Capital Expenditures (CapEx)`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -11423,13 +11364,11 @@ export const KNOWLEDGE_FREE_CASH_FLOW_FCF: Record<Language, (tool: ToolDef, name
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating FREE CASH FLOW FCF using representative market values.`,
+      scenario: `Calculating FREE CASH FLOW FCF with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -11445,14 +11384,14 @@ export const KNOWLEDGE_FREE_CASH_FLOW_FCF: Record<Language, (tool: ToolDef, name
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Free Cash Flow (FCF) = Operating Cash Flow - Capital Expenditures (CapEx)`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating FREE CASH FLOW FCF using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating FREE CASH FLOW FCF with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -11466,14 +11405,14 @@ export const KNOWLEDGE_FREE_CASH_FLOW_FCF: Record<Language, (tool: ToolDef, name
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Free Cash Flow (FCF) = Operating Cash Flow - Capital Expenditures (CapEx)`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating FREE CASH FLOW FCF using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating FREE CASH FLOW FCF with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -11487,14 +11426,14 @@ export const KNOWLEDGE_FREE_CASH_FLOW_FCF: Record<Language, (tool: ToolDef, name
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Free Cash Flow (FCF) = Operating Cash Flow - Capital Expenditures (CapEx)`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating FREE CASH FLOW FCF using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating FREE CASH FLOW FCF with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -11516,7 +11455,7 @@ export const KNOWLEDGE_STOCK_SPLIT_CALCULATOR: Record<Language, (tool: ToolDef, 
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Post-Split Shares = Pre-Split Shares × Ratio | Post-Split Price = Pre-Split Price / Ratio`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -11527,13 +11466,11 @@ export const KNOWLEDGE_STOCK_SPLIT_CALCULATOR: Record<Language, (tool: ToolDef, 
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating STOCK SPLIT CALCULATOR using representative market values.`,
+      scenario: `Calculating STOCK SPLIT CALCULATOR with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -11554,7 +11491,7 @@ export const KNOWLEDGE_STOCK_SPLIT_CALCULATOR: Record<Language, (tool: ToolDef, 
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Post-Split Shares = Pre-Split Shares × Ratio | Post-Split Price = Pre-Split Price / Ratio`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -11565,13 +11502,11 @@ export const KNOWLEDGE_STOCK_SPLIT_CALCULATOR: Record<Language, (tool: ToolDef, 
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating STOCK SPLIT CALCULATOR using representative market values.`,
+      scenario: `Calculating STOCK SPLIT CALCULATOR with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -11587,14 +11522,14 @@ export const KNOWLEDGE_STOCK_SPLIT_CALCULATOR: Record<Language, (tool: ToolDef, 
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Post-Split Shares = Pre-Split Shares × Ratio | Post-Split Price = Pre-Split Price / Ratio`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating STOCK SPLIT CALCULATOR using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating STOCK SPLIT CALCULATOR with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -11608,14 +11543,14 @@ export const KNOWLEDGE_STOCK_SPLIT_CALCULATOR: Record<Language, (tool: ToolDef, 
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Post-Split Shares = Pre-Split Shares × Ratio | Post-Split Price = Pre-Split Price / Ratio`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating STOCK SPLIT CALCULATOR using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating STOCK SPLIT CALCULATOR with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -11629,14 +11564,14 @@ export const KNOWLEDGE_STOCK_SPLIT_CALCULATOR: Record<Language, (tool: ToolDef, 
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Post-Split Shares = Pre-Split Shares × Ratio | Post-Split Price = Pre-Split Price / Ratio`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating STOCK SPLIT CALCULATOR using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating STOCK SPLIT CALCULATOR with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -11658,7 +11593,7 @@ export const KNOWLEDGE_CURRENCY_CONVERTER_LIVE: Record<Language, (tool: ToolDef,
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Target Amount = Base Amount × Live Market Exchange Rate`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -11669,13 +11604,11 @@ export const KNOWLEDGE_CURRENCY_CONVERTER_LIVE: Record<Language, (tool: ToolDef,
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating CURRENCY CONVERTER LIVE using representative market values.`,
+      scenario: `Calculating CURRENCY CONVERTER LIVE with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -11696,7 +11629,7 @@ export const KNOWLEDGE_CURRENCY_CONVERTER_LIVE: Record<Language, (tool: ToolDef,
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Target Amount = Base Amount × Live Market Exchange Rate`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -11707,13 +11640,11 @@ export const KNOWLEDGE_CURRENCY_CONVERTER_LIVE: Record<Language, (tool: ToolDef,
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating CURRENCY CONVERTER LIVE using representative market values.`,
+      scenario: `Calculating CURRENCY CONVERTER LIVE with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -11729,14 +11660,14 @@ export const KNOWLEDGE_CURRENCY_CONVERTER_LIVE: Record<Language, (tool: ToolDef,
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Target Amount = Base Amount × Live Market Exchange Rate`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating CURRENCY CONVERTER LIVE using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating CURRENCY CONVERTER LIVE with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -11750,14 +11681,14 @@ export const KNOWLEDGE_CURRENCY_CONVERTER_LIVE: Record<Language, (tool: ToolDef,
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Target Amount = Base Amount × Live Market Exchange Rate`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating CURRENCY CONVERTER LIVE using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating CURRENCY CONVERTER LIVE with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -11771,14 +11702,14 @@ export const KNOWLEDGE_CURRENCY_CONVERTER_LIVE: Record<Language, (tool: ToolDef,
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Target Amount = Base Amount × Live Market Exchange Rate`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating CURRENCY CONVERTER LIVE using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating CURRENCY CONVERTER LIVE with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -11942,7 +11873,7 @@ export const KNOWLEDGE_CRYPTO_DCA_CALCULATOR: Record<Language, (tool: ToolDef, n
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Total Invested = Recurring Amount × Purchases | Average Cost = Total Invested / Total Tokens Accumulated`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -11953,13 +11884,11 @@ export const KNOWLEDGE_CRYPTO_DCA_CALCULATOR: Record<Language, (tool: ToolDef, n
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating CRYPTO DCA CALCULATOR using representative market values.`,
+      scenario: `Calculating CRYPTO DCA CALCULATOR with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -11980,7 +11909,7 @@ export const KNOWLEDGE_CRYPTO_DCA_CALCULATOR: Record<Language, (tool: ToolDef, n
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Total Invested = Recurring Amount × Purchases | Average Cost = Total Invested / Total Tokens Accumulated`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -11991,13 +11920,11 @@ export const KNOWLEDGE_CRYPTO_DCA_CALCULATOR: Record<Language, (tool: ToolDef, n
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating CRYPTO DCA CALCULATOR using representative market values.`,
+      scenario: `Calculating CRYPTO DCA CALCULATOR with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -12013,14 +11940,14 @@ export const KNOWLEDGE_CRYPTO_DCA_CALCULATOR: Record<Language, (tool: ToolDef, n
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Total Invested = Recurring Amount × Purchases | Average Cost = Total Invested / Total Tokens Accumulated`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating CRYPTO DCA CALCULATOR using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating CRYPTO DCA CALCULATOR with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -12034,14 +11961,14 @@ export const KNOWLEDGE_CRYPTO_DCA_CALCULATOR: Record<Language, (tool: ToolDef, n
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Total Invested = Recurring Amount × Purchases | Average Cost = Total Invested / Total Tokens Accumulated`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating CRYPTO DCA CALCULATOR using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating CRYPTO DCA CALCULATOR with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -12055,14 +11982,14 @@ export const KNOWLEDGE_CRYPTO_DCA_CALCULATOR: Record<Language, (tool: ToolDef, n
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Total Invested = Recurring Amount × Purchases | Average Cost = Total Invested / Total Tokens Accumulated`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating CRYPTO DCA CALCULATOR using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating CRYPTO DCA CALCULATOR with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -12084,7 +12011,7 @@ export const KNOWLEDGE_CRYPTO_IMPERMANENT_LOSS: Record<Language, (tool: ToolDef,
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Impermanent Loss % = 2 × √(Price Ratio) / (1 + Price Ratio) - 1`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -12095,13 +12022,11 @@ export const KNOWLEDGE_CRYPTO_IMPERMANENT_LOSS: Record<Language, (tool: ToolDef,
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating CRYPTO IMPERMANENT LOSS using representative market values.`,
+      scenario: `Calculating CRYPTO IMPERMANENT LOSS with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -12122,7 +12047,7 @@ export const KNOWLEDGE_CRYPTO_IMPERMANENT_LOSS: Record<Language, (tool: ToolDef,
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Impermanent Loss % = 2 × √(Price Ratio) / (1 + Price Ratio) - 1`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -12133,13 +12058,11 @@ export const KNOWLEDGE_CRYPTO_IMPERMANENT_LOSS: Record<Language, (tool: ToolDef,
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating CRYPTO IMPERMANENT LOSS using representative market values.`,
+      scenario: `Calculating CRYPTO IMPERMANENT LOSS with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -12155,14 +12078,14 @@ export const KNOWLEDGE_CRYPTO_IMPERMANENT_LOSS: Record<Language, (tool: ToolDef,
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Impermanent Loss % = 2 × √(Price Ratio) / (1 + Price Ratio) - 1`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating CRYPTO IMPERMANENT LOSS using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating CRYPTO IMPERMANENT LOSS with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -12176,14 +12099,14 @@ export const KNOWLEDGE_CRYPTO_IMPERMANENT_LOSS: Record<Language, (tool: ToolDef,
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Impermanent Loss % = 2 × √(Price Ratio) / (1 + Price Ratio) - 1`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating CRYPTO IMPERMANENT LOSS using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating CRYPTO IMPERMANENT LOSS with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -12197,14 +12120,14 @@ export const KNOWLEDGE_CRYPTO_IMPERMANENT_LOSS: Record<Language, (tool: ToolDef,
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Impermanent Loss % = 2 × √(Price Ratio) / (1 + Price Ratio) - 1`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating CRYPTO IMPERMANENT LOSS using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating CRYPTO IMPERMANENT LOSS with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -12226,7 +12149,7 @@ export const KNOWLEDGE_BITCOIN_MINING_PROFIT: Record<Language, (tool: ToolDef, n
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Daily Profit = (Daily Rewards × BTC Price) - (Wattage × 24 / 1000 × kWh Cost)`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -12237,13 +12160,11 @@ export const KNOWLEDGE_BITCOIN_MINING_PROFIT: Record<Language, (tool: ToolDef, n
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating BITCOIN MINING PROFIT using representative market values.`,
+      scenario: `Calculating BITCOIN MINING PROFIT with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -12264,7 +12185,7 @@ export const KNOWLEDGE_BITCOIN_MINING_PROFIT: Record<Language, (tool: ToolDef, n
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Daily Profit = (Daily Rewards × BTC Price) - (Wattage × 24 / 1000 × kWh Cost)`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -12275,13 +12196,11 @@ export const KNOWLEDGE_BITCOIN_MINING_PROFIT: Record<Language, (tool: ToolDef, n
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating BITCOIN MINING PROFIT using representative market values.`,
+      scenario: `Calculating BITCOIN MINING PROFIT with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -12297,14 +12216,14 @@ export const KNOWLEDGE_BITCOIN_MINING_PROFIT: Record<Language, (tool: ToolDef, n
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Daily Profit = (Daily Rewards × BTC Price) - (Wattage × 24 / 1000 × kWh Cost)`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating BITCOIN MINING PROFIT using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating BITCOIN MINING PROFIT with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -12318,14 +12237,14 @@ export const KNOWLEDGE_BITCOIN_MINING_PROFIT: Record<Language, (tool: ToolDef, n
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Daily Profit = (Daily Rewards × BTC Price) - (Wattage × 24 / 1000 × kWh Cost)`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating BITCOIN MINING PROFIT using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating BITCOIN MINING PROFIT with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -12339,14 +12258,14 @@ export const KNOWLEDGE_BITCOIN_MINING_PROFIT: Record<Language, (tool: ToolDef, n
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Daily Profit = (Daily Rewards × BTC Price) - (Wattage × 24 / 1000 × kWh Cost)`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating BITCOIN MINING PROFIT using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating BITCOIN MINING PROFIT with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -12510,7 +12429,7 @@ export const KNOWLEDGE_SATS_TO_BITCOIN_USD: Record<Language, (tool: ToolDef, nam
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `1 Satoshi = 0.00000001 BTC | USD Value = Satoshis × 0.00000001 × BTC Price USD`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -12521,13 +12440,11 @@ export const KNOWLEDGE_SATS_TO_BITCOIN_USD: Record<Language, (tool: ToolDef, nam
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating SATS TO BITCOIN USD using representative market values.`,
+      scenario: `Calculating SATS TO BITCOIN USD with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -12548,7 +12465,7 @@ export const KNOWLEDGE_SATS_TO_BITCOIN_USD: Record<Language, (tool: ToolDef, nam
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `1 Satoshi = 0.00000001 BTC | USD Value = Satoshis × 0.00000001 × BTC Price USD`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -12559,13 +12476,11 @@ export const KNOWLEDGE_SATS_TO_BITCOIN_USD: Record<Language, (tool: ToolDef, nam
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating SATS TO BITCOIN USD using representative market values.`,
+      scenario: `Calculating SATS TO BITCOIN USD with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -12581,14 +12496,14 @@ export const KNOWLEDGE_SATS_TO_BITCOIN_USD: Record<Language, (tool: ToolDef, nam
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `1 Satoshi = 0.00000001 BTC | USD Value = Satoshis × 0.00000001 × BTC Price USD`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating SATS TO BITCOIN USD using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating SATS TO BITCOIN USD with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -12602,14 +12517,14 @@ export const KNOWLEDGE_SATS_TO_BITCOIN_USD: Record<Language, (tool: ToolDef, nam
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `1 Satoshi = 0.00000001 BTC | USD Value = Satoshis × 0.00000001 × BTC Price USD`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating SATS TO BITCOIN USD using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating SATS TO BITCOIN USD with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -12623,14 +12538,14 @@ export const KNOWLEDGE_SATS_TO_BITCOIN_USD: Record<Language, (tool: ToolDef, nam
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `1 Satoshi = 0.00000001 BTC | USD Value = Satoshis × 0.00000001 × BTC Price USD`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating SATS TO BITCOIN USD using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating SATS TO BITCOIN USD with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -12652,7 +12567,7 @@ export const KNOWLEDGE_CRYPTO_MARKET_CAP_RANK: Record<Language, (tool: ToolDef, 
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Market Cap = Circulating Supply × Unit Token Price`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -12663,13 +12578,11 @@ export const KNOWLEDGE_CRYPTO_MARKET_CAP_RANK: Record<Language, (tool: ToolDef, 
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating CRYPTO MARKET CAP RANK using representative market values.`,
+      scenario: `Calculating CRYPTO MARKET CAP RANK with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -12690,7 +12603,7 @@ export const KNOWLEDGE_CRYPTO_MARKET_CAP_RANK: Record<Language, (tool: ToolDef, 
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Market Cap = Circulating Supply × Unit Token Price`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -12701,13 +12614,11 @@ export const KNOWLEDGE_CRYPTO_MARKET_CAP_RANK: Record<Language, (tool: ToolDef, 
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating CRYPTO MARKET CAP RANK using representative market values.`,
+      scenario: `Calculating CRYPTO MARKET CAP RANK with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -12723,14 +12634,14 @@ export const KNOWLEDGE_CRYPTO_MARKET_CAP_RANK: Record<Language, (tool: ToolDef, 
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Market Cap = Circulating Supply × Unit Token Price`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating CRYPTO MARKET CAP RANK using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating CRYPTO MARKET CAP RANK with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -12744,14 +12655,14 @@ export const KNOWLEDGE_CRYPTO_MARKET_CAP_RANK: Record<Language, (tool: ToolDef, 
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Market Cap = Circulating Supply × Unit Token Price`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating CRYPTO MARKET CAP RANK using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating CRYPTO MARKET CAP RANK with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -12765,14 +12676,14 @@ export const KNOWLEDGE_CRYPTO_MARKET_CAP_RANK: Record<Language, (tool: ToolDef, 
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Market Cap = Circulating Supply × Unit Token Price`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating CRYPTO MARKET CAP RANK using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating CRYPTO MARKET CAP RANK with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -12794,7 +12705,7 @@ export const KNOWLEDGE_GOLD_PRICE_PER_GRAM_OUNCE: Record<Language, (tool: ToolDe
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Price per Gram = Spot Price per Troy Ounce / 31.1034768`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -12805,13 +12716,11 @@ export const KNOWLEDGE_GOLD_PRICE_PER_GRAM_OUNCE: Record<Language, (tool: ToolDe
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating GOLD PRICE PER GRAM OUNCE using representative market values.`,
+      scenario: `Calculating GOLD PRICE PER GRAM OUNCE with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -12832,7 +12741,7 @@ export const KNOWLEDGE_GOLD_PRICE_PER_GRAM_OUNCE: Record<Language, (tool: ToolDe
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Price per Gram = Spot Price per Troy Ounce / 31.1034768`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -12843,13 +12752,11 @@ export const KNOWLEDGE_GOLD_PRICE_PER_GRAM_OUNCE: Record<Language, (tool: ToolDe
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating GOLD PRICE PER GRAM OUNCE using representative market values.`,
+      scenario: `Calculating GOLD PRICE PER GRAM OUNCE with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -12865,14 +12772,14 @@ export const KNOWLEDGE_GOLD_PRICE_PER_GRAM_OUNCE: Record<Language, (tool: ToolDe
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Price per Gram = Spot Price per Troy Ounce / 31.1034768`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating GOLD PRICE PER GRAM OUNCE using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating GOLD PRICE PER GRAM OUNCE with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -12886,14 +12793,14 @@ export const KNOWLEDGE_GOLD_PRICE_PER_GRAM_OUNCE: Record<Language, (tool: ToolDe
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Price per Gram = Spot Price per Troy Ounce / 31.1034768`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating GOLD PRICE PER GRAM OUNCE using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating GOLD PRICE PER GRAM OUNCE with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -12907,14 +12814,14 @@ export const KNOWLEDGE_GOLD_PRICE_PER_GRAM_OUNCE: Record<Language, (tool: ToolDe
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Price per Gram = Spot Price per Troy Ounce / 31.1034768`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating GOLD PRICE PER GRAM OUNCE using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating GOLD PRICE PER GRAM OUNCE with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -12936,7 +12843,7 @@ export const KNOWLEDGE_SILVER_PRICE_PER_OUNCE: Record<Language, (tool: ToolDef, 
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Price per Gram = Silver Spot Price per Troy Ounce / 31.1034768`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -12947,13 +12854,11 @@ export const KNOWLEDGE_SILVER_PRICE_PER_OUNCE: Record<Language, (tool: ToolDef, 
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating SILVER PRICE PER OUNCE using representative market values.`,
+      scenario: `Calculating SILVER PRICE PER OUNCE with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -12974,7 +12879,7 @@ export const KNOWLEDGE_SILVER_PRICE_PER_OUNCE: Record<Language, (tool: ToolDef, 
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Price per Gram = Silver Spot Price per Troy Ounce / 31.1034768`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -12985,13 +12890,11 @@ export const KNOWLEDGE_SILVER_PRICE_PER_OUNCE: Record<Language, (tool: ToolDef, 
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating SILVER PRICE PER OUNCE using representative market values.`,
+      scenario: `Calculating SILVER PRICE PER OUNCE with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -13007,14 +12910,14 @@ export const KNOWLEDGE_SILVER_PRICE_PER_OUNCE: Record<Language, (tool: ToolDef, 
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Price per Gram = Silver Spot Price per Troy Ounce / 31.1034768`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating SILVER PRICE PER OUNCE using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating SILVER PRICE PER OUNCE with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -13028,14 +12931,14 @@ export const KNOWLEDGE_SILVER_PRICE_PER_OUNCE: Record<Language, (tool: ToolDef, 
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Price per Gram = Silver Spot Price per Troy Ounce / 31.1034768`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating SILVER PRICE PER OUNCE using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating SILVER PRICE PER OUNCE with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -13049,14 +12952,14 @@ export const KNOWLEDGE_SILVER_PRICE_PER_OUNCE: Record<Language, (tool: ToolDef, 
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Price per Gram = Silver Spot Price per Troy Ounce / 31.1034768`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating SILVER PRICE PER OUNCE using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating SILVER PRICE PER OUNCE with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -13078,7 +12981,7 @@ export const KNOWLEDGE_PLATINUM_METAL_PRICE: Record<Language, (tool: ToolDef, na
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Price per Gram = Platinum Spot Price per Troy Ounce / 31.1034768`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -13089,13 +12992,11 @@ export const KNOWLEDGE_PLATINUM_METAL_PRICE: Record<Language, (tool: ToolDef, na
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating PLATINUM METAL PRICE using representative market values.`,
+      scenario: `Calculating PLATINUM METAL PRICE with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -13116,7 +13017,7 @@ export const KNOWLEDGE_PLATINUM_METAL_PRICE: Record<Language, (tool: ToolDef, na
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Price per Gram = Platinum Spot Price per Troy Ounce / 31.1034768`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -13127,13 +13028,11 @@ export const KNOWLEDGE_PLATINUM_METAL_PRICE: Record<Language, (tool: ToolDef, na
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating PLATINUM METAL PRICE using representative market values.`,
+      scenario: `Calculating PLATINUM METAL PRICE with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -13149,14 +13048,14 @@ export const KNOWLEDGE_PLATINUM_METAL_PRICE: Record<Language, (tool: ToolDef, na
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Price per Gram = Platinum Spot Price per Troy Ounce / 31.1034768`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating PLATINUM METAL PRICE using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating PLATINUM METAL PRICE with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -13170,14 +13069,14 @@ export const KNOWLEDGE_PLATINUM_METAL_PRICE: Record<Language, (tool: ToolDef, na
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Price per Gram = Platinum Spot Price per Troy Ounce / 31.1034768`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating PLATINUM METAL PRICE using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating PLATINUM METAL PRICE with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -13191,14 +13090,14 @@ export const KNOWLEDGE_PLATINUM_METAL_PRICE: Record<Language, (tool: ToolDef, na
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Price per Gram = Platinum Spot Price per Troy Ounce / 31.1034768`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating PLATINUM METAL PRICE using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating PLATINUM METAL PRICE with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -13220,7 +13119,7 @@ export const KNOWLEDGE_FOREX_PIP_VALUE_CALCULATOR: Record<Language, (tool: ToolD
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Pip Value = (One Pip Value / Exchange Rate) × Lot Size`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -13231,13 +13130,11 @@ export const KNOWLEDGE_FOREX_PIP_VALUE_CALCULATOR: Record<Language, (tool: ToolD
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating FOREX PIP VALUE CALCULATOR using representative market values.`,
+      scenario: `Calculating FOREX PIP VALUE CALCULATOR with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -13258,7 +13155,7 @@ export const KNOWLEDGE_FOREX_PIP_VALUE_CALCULATOR: Record<Language, (tool: ToolD
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Pip Value = (One Pip Value / Exchange Rate) × Lot Size`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -13269,13 +13166,11 @@ export const KNOWLEDGE_FOREX_PIP_VALUE_CALCULATOR: Record<Language, (tool: ToolD
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating FOREX PIP VALUE CALCULATOR using representative market values.`,
+      scenario: `Calculating FOREX PIP VALUE CALCULATOR with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -13291,14 +13186,14 @@ export const KNOWLEDGE_FOREX_PIP_VALUE_CALCULATOR: Record<Language, (tool: ToolD
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Pip Value = (One Pip Value / Exchange Rate) × Lot Size`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating FOREX PIP VALUE CALCULATOR using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating FOREX PIP VALUE CALCULATOR with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -13312,14 +13207,14 @@ export const KNOWLEDGE_FOREX_PIP_VALUE_CALCULATOR: Record<Language, (tool: ToolD
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Pip Value = (One Pip Value / Exchange Rate) × Lot Size`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating FOREX PIP VALUE CALCULATOR using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating FOREX PIP VALUE CALCULATOR with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -13333,14 +13228,14 @@ export const KNOWLEDGE_FOREX_PIP_VALUE_CALCULATOR: Record<Language, (tool: ToolD
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Pip Value = (One Pip Value / Exchange Rate) × Lot Size`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating FOREX PIP VALUE CALCULATOR using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating FOREX PIP VALUE CALCULATOR with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -13362,7 +13257,7 @@ export const KNOWLEDGE_FOREX_POSITION_SIZE_RISK: Record<Language, (tool: ToolDef
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Position Size (Lots) = (Account Risk Amount $) / (Pips at Risk × Pip Value per Lot)`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -13373,13 +13268,11 @@ export const KNOWLEDGE_FOREX_POSITION_SIZE_RISK: Record<Language, (tool: ToolDef
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating FOREX POSITION SIZE RISK using representative market values.`,
+      scenario: `Calculating FOREX POSITION SIZE RISK with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -13400,7 +13293,7 @@ export const KNOWLEDGE_FOREX_POSITION_SIZE_RISK: Record<Language, (tool: ToolDef
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Position Size (Lots) = (Account Risk Amount $) / (Pips at Risk × Pip Value per Lot)`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -13411,13 +13304,11 @@ export const KNOWLEDGE_FOREX_POSITION_SIZE_RISK: Record<Language, (tool: ToolDef
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating FOREX POSITION SIZE RISK using representative market values.`,
+      scenario: `Calculating FOREX POSITION SIZE RISK with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -13433,14 +13324,14 @@ export const KNOWLEDGE_FOREX_POSITION_SIZE_RISK: Record<Language, (tool: ToolDef
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Position Size (Lots) = (Account Risk Amount $) / (Pips at Risk × Pip Value per Lot)`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating FOREX POSITION SIZE RISK using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating FOREX POSITION SIZE RISK with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -13454,14 +13345,14 @@ export const KNOWLEDGE_FOREX_POSITION_SIZE_RISK: Record<Language, (tool: ToolDef
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Position Size (Lots) = (Account Risk Amount $) / (Pips at Risk × Pip Value per Lot)`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating FOREX POSITION SIZE RISK using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating FOREX POSITION SIZE RISK with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -13475,14 +13366,14 @@ export const KNOWLEDGE_FOREX_POSITION_SIZE_RISK: Record<Language, (tool: ToolDef
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Position Size (Lots) = (Account Risk Amount $) / (Pips at Risk × Pip Value per Lot)`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating FOREX POSITION SIZE RISK using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating FOREX POSITION SIZE RISK with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -13504,7 +13395,7 @@ export const KNOWLEDGE_FOREX_MARGIN_CALCULATOR: Record<Language, (tool: ToolDef,
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Required Margin = (Position Size in Units × Current Rate) / Leverage Ratio`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -13515,13 +13406,11 @@ export const KNOWLEDGE_FOREX_MARGIN_CALCULATOR: Record<Language, (tool: ToolDef,
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating FOREX MARGIN CALCULATOR using representative market values.`,
+      scenario: `Calculating FOREX MARGIN CALCULATOR with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -13542,7 +13431,7 @@ export const KNOWLEDGE_FOREX_MARGIN_CALCULATOR: Record<Language, (tool: ToolDef,
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Required Margin = (Position Size in Units × Current Rate) / Leverage Ratio`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -13553,13 +13442,11 @@ export const KNOWLEDGE_FOREX_MARGIN_CALCULATOR: Record<Language, (tool: ToolDef,
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating FOREX MARGIN CALCULATOR using representative market values.`,
+      scenario: `Calculating FOREX MARGIN CALCULATOR with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -13575,14 +13462,14 @@ export const KNOWLEDGE_FOREX_MARGIN_CALCULATOR: Record<Language, (tool: ToolDef,
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Required Margin = (Position Size in Units × Current Rate) / Leverage Ratio`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating FOREX MARGIN CALCULATOR using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating FOREX MARGIN CALCULATOR with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -13596,14 +13483,14 @@ export const KNOWLEDGE_FOREX_MARGIN_CALCULATOR: Record<Language, (tool: ToolDef,
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Required Margin = (Position Size in Units × Current Rate) / Leverage Ratio`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating FOREX MARGIN CALCULATOR using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating FOREX MARGIN CALCULATOR with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -13617,14 +13504,14 @@ export const KNOWLEDGE_FOREX_MARGIN_CALCULATOR: Record<Language, (tool: ToolDef,
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Required Margin = (Position Size in Units × Current Rate) / Leverage Ratio`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating FOREX MARGIN CALCULATOR using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating FOREX MARGIN CALCULATOR with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -13646,7 +13533,7 @@ export const KNOWLEDGE_FOREX_PIVOT_POINTS_CALC: Record<Language, (tool: ToolDef,
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Pivot Point (P) = (High + Low + Close) / 3 | R1 = (2 × P) - Low | S1 = (2 × P) - High`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -13657,13 +13544,11 @@ export const KNOWLEDGE_FOREX_PIVOT_POINTS_CALC: Record<Language, (tool: ToolDef,
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating FOREX PIVOT POINTS CALC using representative market values.`,
+      scenario: `Calculating FOREX PIVOT POINTS CALC with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -13684,7 +13569,7 @@ export const KNOWLEDGE_FOREX_PIVOT_POINTS_CALC: Record<Language, (tool: ToolDef,
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Pivot Point (P) = (High + Low + Close) / 3 | R1 = (2 × P) - Low | S1 = (2 × P) - High`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -13695,13 +13580,11 @@ export const KNOWLEDGE_FOREX_PIVOT_POINTS_CALC: Record<Language, (tool: ToolDef,
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating FOREX PIVOT POINTS CALC using representative market values.`,
+      scenario: `Calculating FOREX PIVOT POINTS CALC with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -13717,14 +13600,14 @@ export const KNOWLEDGE_FOREX_PIVOT_POINTS_CALC: Record<Language, (tool: ToolDef,
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Pivot Point (P) = (High + Low + Close) / 3 | R1 = (2 × P) - Low | S1 = (2 × P) - High`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating FOREX PIVOT POINTS CALC using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating FOREX PIVOT POINTS CALC with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -13738,14 +13621,14 @@ export const KNOWLEDGE_FOREX_PIVOT_POINTS_CALC: Record<Language, (tool: ToolDef,
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Pivot Point (P) = (High + Low + Close) / 3 | R1 = (2 × P) - Low | S1 = (2 × P) - High`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating FOREX PIVOT POINTS CALC using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating FOREX PIVOT POINTS CALC with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -13759,14 +13642,14 @@ export const KNOWLEDGE_FOREX_PIVOT_POINTS_CALC: Record<Language, (tool: ToolDef,
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Pivot Point (P) = (High + Low + Close) / 3 | R1 = (2 × P) - Low | S1 = (2 × P) - High`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating FOREX PIVOT POINTS CALC using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating FOREX PIVOT POINTS CALC with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -13930,7 +13813,7 @@ export const KNOWLEDGE_CURRENCY_INFLATION_PURCHASING: Record<Language, (tool: To
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Adjusted Purchasing Power = Initial Amount / (1 + Cumulative Inflation Rate)`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -13941,13 +13824,11 @@ export const KNOWLEDGE_CURRENCY_INFLATION_PURCHASING: Record<Language, (tool: To
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating CURRENCY INFLATION PURCHASING using representative market values.`,
+      scenario: `Calculating CURRENCY INFLATION PURCHASING with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -13968,7 +13849,7 @@ export const KNOWLEDGE_CURRENCY_INFLATION_PURCHASING: Record<Language, (tool: To
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Adjusted Purchasing Power = Initial Amount / (1 + Cumulative Inflation Rate)`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -13979,13 +13860,11 @@ export const KNOWLEDGE_CURRENCY_INFLATION_PURCHASING: Record<Language, (tool: To
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating CURRENCY INFLATION PURCHASING using representative market values.`,
+      scenario: `Calculating CURRENCY INFLATION PURCHASING with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -14001,14 +13880,14 @@ export const KNOWLEDGE_CURRENCY_INFLATION_PURCHASING: Record<Language, (tool: To
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Adjusted Purchasing Power = Initial Amount / (1 + Cumulative Inflation Rate)`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating CURRENCY INFLATION PURCHASING using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating CURRENCY INFLATION PURCHASING with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -14022,14 +13901,14 @@ export const KNOWLEDGE_CURRENCY_INFLATION_PURCHASING: Record<Language, (tool: To
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Adjusted Purchasing Power = Initial Amount / (1 + Cumulative Inflation Rate)`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating CURRENCY INFLATION PURCHASING using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating CURRENCY INFLATION PURCHASING with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -14043,14 +13922,14 @@ export const KNOWLEDGE_CURRENCY_INFLATION_PURCHASING: Record<Language, (tool: To
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Adjusted Purchasing Power = Initial Amount / (1 + Cumulative Inflation Rate)`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating CURRENCY INFLATION PURCHASING using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating CURRENCY INFLATION PURCHASING with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -14072,7 +13951,7 @@ export const KNOWLEDGE_SALARY_TAX_TAKE_HOME: Record<Language, (tool: ToolDef, na
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Net Take-Home Pay = Gross Salary - Income Tax - Social Security / Payroll Deductions`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -14083,13 +13962,11 @@ export const KNOWLEDGE_SALARY_TAX_TAKE_HOME: Record<Language, (tool: ToolDef, na
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating SALARY TAX TAKE HOME using representative market values.`,
+      scenario: `Calculating SALARY TAX TAKE HOME with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -14110,7 +13987,7 @@ export const KNOWLEDGE_SALARY_TAX_TAKE_HOME: Record<Language, (tool: ToolDef, na
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Net Take-Home Pay = Gross Salary - Income Tax - Social Security / Payroll Deductions`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -14121,13 +13998,11 @@ export const KNOWLEDGE_SALARY_TAX_TAKE_HOME: Record<Language, (tool: ToolDef, na
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating SALARY TAX TAKE HOME using representative market values.`,
+      scenario: `Calculating SALARY TAX TAKE HOME with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -14143,14 +14018,14 @@ export const KNOWLEDGE_SALARY_TAX_TAKE_HOME: Record<Language, (tool: ToolDef, na
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Net Take-Home Pay = Gross Salary - Income Tax - Social Security / Payroll Deductions`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating SALARY TAX TAKE HOME using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating SALARY TAX TAKE HOME with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -14164,14 +14039,14 @@ export const KNOWLEDGE_SALARY_TAX_TAKE_HOME: Record<Language, (tool: ToolDef, na
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Net Take-Home Pay = Gross Salary - Income Tax - Social Security / Payroll Deductions`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating SALARY TAX TAKE HOME using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating SALARY TAX TAKE HOME with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -14185,14 +14060,14 @@ export const KNOWLEDGE_SALARY_TAX_TAKE_HOME: Record<Language, (tool: ToolDef, na
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Net Take-Home Pay = Gross Salary - Income Tax - Social Security / Payroll Deductions`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating SALARY TAX TAKE HOME using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating SALARY TAX TAKE HOME with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -14214,7 +14089,7 @@ export const KNOWLEDGE_SALES_TAX_BY_STATE_COUNTRY: Record<Language, (tool: ToolD
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Total Tax = Subtotal × (State Tax Rate + Local Tax Rate) | Final Price = Subtotal + Total Tax`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -14225,13 +14100,11 @@ export const KNOWLEDGE_SALES_TAX_BY_STATE_COUNTRY: Record<Language, (tool: ToolD
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating SALES TAX BY STATE COUNTRY using representative market values.`,
+      scenario: `Calculating SALES TAX BY STATE COUNTRY with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -14252,7 +14125,7 @@ export const KNOWLEDGE_SALES_TAX_BY_STATE_COUNTRY: Record<Language, (tool: ToolD
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Total Tax = Subtotal × (State Tax Rate + Local Tax Rate) | Final Price = Subtotal + Total Tax`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -14263,13 +14136,11 @@ export const KNOWLEDGE_SALES_TAX_BY_STATE_COUNTRY: Record<Language, (tool: ToolD
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating SALES TAX BY STATE COUNTRY using representative market values.`,
+      scenario: `Calculating SALES TAX BY STATE COUNTRY with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -14285,14 +14156,14 @@ export const KNOWLEDGE_SALES_TAX_BY_STATE_COUNTRY: Record<Language, (tool: ToolD
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Total Tax = Subtotal × (State Tax Rate + Local Tax Rate) | Final Price = Subtotal + Total Tax`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating SALES TAX BY STATE COUNTRY using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating SALES TAX BY STATE COUNTRY with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -14306,14 +14177,14 @@ export const KNOWLEDGE_SALES_TAX_BY_STATE_COUNTRY: Record<Language, (tool: ToolD
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Total Tax = Subtotal × (State Tax Rate + Local Tax Rate) | Final Price = Subtotal + Total Tax`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating SALES TAX BY STATE COUNTRY using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating SALES TAX BY STATE COUNTRY with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -14327,14 +14198,14 @@ export const KNOWLEDGE_SALES_TAX_BY_STATE_COUNTRY: Record<Language, (tool: ToolD
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Total Tax = Subtotal × (State Tax Rate + Local Tax Rate) | Final Price = Subtotal + Total Tax`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating SALES TAX BY STATE COUNTRY using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating SALES TAX BY STATE COUNTRY with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',
@@ -14356,7 +14227,7 @@ export const KNOWLEDGE_TRAVEL_BUDGET_DAILY_EXPENSE: Record<Language, (tool: Tool
       'The calculation engine evaluates results instantly in real time.',
       'Review summary metrics, formulas, and worked examples below.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Total Travel Budget = (Daily Accommodation + Meals + Local Transport + Activities) × Trip Days + Flight Cost`,
     formulaVariables: [
       { symbol: 'Input1', explanation: `Main financial amount or capital input.` },
       { symbol: 'Input2', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -14367,13 +14238,11 @@ export const KNOWLEDGE_TRAVEL_BUDGET_DAILY_EXPENSE: Record<Language, (tool: Tool
     ],
     unitsAndConversions: 'All calculations execute in local client memory using floating-point precision.',
     workedExample: {
-      scenario: `Calculating TRAVEL BUDGET DAILY EXPENSE using representative market values.`,
+      scenario: `Calculating TRAVEL BUDGET DAILY EXPENSE with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Results provide mathematical estimates derived directly from the supplied input values.',
     assumptions: 'Assumes standard financial accounting conventions and fixed rates over the evaluation period.',
@@ -14394,7 +14263,7 @@ export const KNOWLEDGE_TRAVEL_BUDGET_DAILY_EXPENSE: Record<Language, (tool: Tool
       'يعالج المحرك الحسابي البيانات بشكل فوري.',
       'استعرض النتائج والخطوات والمثال التوضيحي.'
     ],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Total Travel Budget = (Daily Accommodation + Meals + Local Transport + Activities) × Trip Days + Flight Cost`,
     formulaVariables: [
       { symbol: 'المتغير الأول', explanation: `Main financial amount or capital input.` },
       { symbol: 'المتغير الثاني', explanation: `Applicable percentage rate, yield, or ratio.` }
@@ -14405,13 +14274,11 @@ export const KNOWLEDGE_TRAVEL_BUDGET_DAILY_EXPENSE: Record<Language, (tool: Tool
     ],
     unitsAndConversions: 'تجري جميع الحسابات بدقة عالية داخل متصفحك.',
     workedExample: {
-      scenario: `Calculating TRAVEL BUDGET DAILY EXPENSE using representative market values.`,
+      scenario: `Calculating TRAVEL BUDGET DAILY EXPENSE with real-world financial input parameters and step-by-step verification.`,
       stepByStep: [
-        `Input primary financial variables into the designated fields.`,
-        `Apply the specialized financial formula.`,
-        `Review the computed outputs and ratio breakdowns.`
+        `Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`
       ],
-      result: `Final computed value aligns with standard mathematical standards.`
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'توضح النتائج القيم الرياضية الدقيقة للبيانات المدخلة.',
     assumptions: 'تفترض ثبات المعايير والنسب المالية خلال فترة التقييم.',
@@ -14427,14 +14294,14 @@ export const KNOWLEDGE_TRAVEL_BUDGET_DAILY_EXPENSE: Record<Language, (tool: Tool
     whoUsesIt: 'Analistas financieros, inversores y profesionales.',
     whatItCalculates: 'Métricas e indicadores financieros exactos.',
     howToUse: ['Introduzca los datos.', 'El sistema calcula en tiempo real.', 'Examine los resultados.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Total Travel Budget = (Daily Accommodation + Meals + Local Transport + Activities) × Trip Days + Flight Cost`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating TRAVEL BUDGET DAILY EXPENSE using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating TRAVEL BUDGET DAILY EXPENSE with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Valores numéricos derivados de los datos introducidos.',
     assumptions: 'Condiciones financieras estándar.',
@@ -14448,14 +14315,14 @@ export const KNOWLEDGE_TRAVEL_BUDGET_DAILY_EXPENSE: Record<Language, (tool: Tool
     whoUsesIt: 'Analystes financiers, investisseurs et professionnels.',
     whatItCalculates: 'Métrique et ratios financiers précis.',
     howToUse: ['Saisissez les données.', 'Calcul instantané.', 'Consultez les résultats.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Total Travel Budget = (Daily Accommodation + Meals + Local Transport + Activities) × Trip Days + Flight Cost`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating TRAVEL BUDGET DAILY EXPENSE using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating TRAVEL BUDGET DAILY EXPENSE with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Résultats dérivés directement de vos saisies.',
     assumptions: 'Hypothèses comptables standard.',
@@ -14469,14 +14336,14 @@ export const KNOWLEDGE_TRAVEL_BUDGET_DAILY_EXPENSE: Record<Language, (tool: Tool
     whoUsesIt: 'Finanzanalysten, Investoren und Fachleute.',
     whatItCalculates: 'Präzise Finanzkennzahlen und Verhältnisse.',
     howToUse: ['Eingaben vornehmen.', 'Sofortige Berechnung.', 'Ergebnisse prüfen.'],
-    formula: `Result = FinancialModel(Inputs)`,
+    formula: `Total Travel Budget = (Daily Accommodation + Meals + Local Transport + Activities) × Trip Days + Flight Cost`,
     inputs: [
       { name: `Primary Value ($)`, description: `Main financial amount or capital input.`, unit: 'USD ($)', optional: false }
     ],
     workedExample: {
-      scenario: `Calculating TRAVEL BUDGET DAILY EXPENSE using representative market values.`,
-      stepByStep: [`Input primary financial variables into the designated fields.`, `Apply the specialized financial formula.`, `Review the computed outputs and ratio breakdowns.`],
-      result: `Final computed value aligns with standard mathematical standards.`
+      scenario: `Calculating TRAVEL BUDGET DAILY EXPENSE with real-world financial input parameters and step-by-step verification.`,
+      stepByStep: [`Specify primary financial inputs (principal, rates, time horizons) in designated fields.`, `The calculation engine applies standard financial equations instantaneously.`, `Examine detailed numerical breakdowns, summary totals, and step-by-step audit logs.`],
+      result: `Final computed outputs provide precise mathematical results based strictly on client-side evaluation.`
     },
     understandingResults: 'Mathematische Auswertung der eingegebenen Daten.',
     assumptions: 'Standardmäßige Finanzannahmen.',

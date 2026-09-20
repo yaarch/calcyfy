@@ -30,6 +30,9 @@ export interface ToolDef {
   popular: boolean;
   implemented: boolean;
   badge?: string;
+  subcategoryId?: string;
+  tags?: string[];
+  defaultInputs?: Record<string, number | string>;
 }
 
 export interface HistoryItem {

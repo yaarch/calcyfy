@@ -142,6 +142,21 @@ const UnitConverterDomainEngine = React.lazy(() =>
 const MathDomainEngine = React.lazy(() =>
   import('./calculators/domainEngines/math/MathDomainEngine').then((m) => ({ default: m.MathDomainEngine }))
 );
+const GeometryTrigEngine = React.lazy(() =>
+  import('./calculators/domainEngines/math/GeometryTrigEngine').then((m) => ({ default: m.GeometryTrigEngine }))
+);
+const AlgebraVectorEngine = React.lazy(() =>
+  import('./calculators/domainEngines/math/AlgebraVectorEngine').then((m) => ({ default: m.AlgebraVectorEngine }))
+);
+const StatsProbabilityEngine = React.lazy(() =>
+  import('./calculators/domainEngines/math/StatsProbabilityEngine').then((m) => ({ default: m.StatsProbabilityEngine }))
+);
+const NumberTheorySeriesEngine = React.lazy(() =>
+  import('./calculators/domainEngines/math/NumberTheorySeriesEngine').then((m) => ({ default: m.NumberTheorySeriesEngine }))
+);
+const PhysicsAppliedMathEngine = React.lazy(() =>
+  import('./calculators/domainEngines/math/PhysicsAppliedMathEngine').then((m) => ({ default: m.PhysicsAppliedMathEngine }))
+);
 const FinanceDomainEngine = React.lazy(() =>
   import('./calculators/domainEngines/finance/FinanceDomainEngine').then((m) => ({ default: m.FinanceDomainEngine }))
 );
@@ -471,13 +486,109 @@ export const ToolPage: React.FC<ToolPageProps> = ({ tool: toolProp, toolId }) =>
       case 'torque-unit':
         return <UnitConverterDomainEngine tool={tool} />;
 
-      // P1 Wave 1: Math Domain Engine
+      // Math Domain Engines
       case 'matrix-mult':
       case 'matrix-determinant':
       case 'combination-permutation':
+        return <MathDomainEngine tool={tool} />;
+
+      // Geometry & Trigonometry
+      case 'area-perimeter':
+      case 'volume':
+      case 'circle-properties':
+      case 'triangle-solver':
+      case 'pythagoras':
+      case 'cylinder-volume-surface':
+      case 'sphere-volume-surface':
+      case 'cone-volume-slant':
+      case 'pyramid-volume-area':
+      case 'ellipsoid-volume':
+      case 'trapezoid-area-perimeter':
+      case 'rhombus-area-side':
+      case 'parallelogram-calculator':
+      case 'polygon-interior-angles':
+      case 'arc-length-sector-area':
+      case 'distance-3d-points':
+      case 'midpoint-3d-calculator':
+        return <GeometryTrigEngine tool={tool} />;
+
+      // Algebra & Vector Math
+      case 'slope-line':
+      case 'slope-intercept-equation':
+      case 'line-perpendicular-parallel':
+      case 'quadratic-solver':
+      case 'cubic-equation-solver':
+      case 'quartic-equation-solver':
+      case 'system-linear-2vars':
+      case 'system-linear-3vars':
+      case 'vector-magnitude':
+      case 'cross-product-vectors':
+      case 'dot-product-vectors':
+      case 'unit-vector-calculator':
+      case 'matrix-inverse-calc':
+      case 'matrix-transpose-calc':
+      case 'eigenvalues-2x2':
+      case 'exponent-power':
+      case 'logarithm':
+      case 'factorial':
+        return <AlgebraVectorEngine tool={tool} />;
+
+      // Statistics & Probability
+      case 'standard-deviation':
+      case 'standard-deviation-calc':
+      case 'percentile-calc':
+      case 'root-mean-square':
+      case 'combinatorics-ncr':
+      case 'binomial-distribution-calc':
+      case 'normal-distribution-zscore':
+      case 'poisson-distribution-calc':
+      case 'confidence-interval-mean':
+      case 't-test-one-sample':
+      case 'chi-square-goodness':
+      case 'covariance-sample-pop':
+      case 'pearson-correlation-r':
+      case 'linear-regression-line':
+      case 'bayes-theorem-calc':
+      case 'hypergeometric-dist':
+      case 'geometric-distribution':
+      case 'bernoulli-trials-calc':
+      case 'p-value-from-zscore':
+      case 'skewness-kurtosis-calc':
+        return <StatsProbabilityEngine tool={tool} />;
+
+      // Number Theory & Series
+      case 'ratio':
+      case 'percentage-change':
+      case 'percentage-of-total':
+      case 'fraction-to-percent':
+      case 'modulo-calc':
+      case 'binary-addition':
+      case 'hex-calculator':
+      case 'geometric-series':
+      case 'arithmetic-series':
+      case 'prime-checker':
+      case 'prime-factorization-tree':
+      case 'gcd-lcm-multiple-numbers':
+      case 'golden-ratio-calculator':
+      case 'fibonacci-sequence-generator':
+      case 'number-to-words':
+      case 'roman-numeral':
+        return <NumberTheorySeriesEngine tool={tool} />;
+
+      // Physics & Applied Math
       case 'velocity-acceleration':
       case 'kinetic-energy':
-        return <MathDomainEngine tool={tool} />;
+      case 'gravitational-force':
+      case 'torque-calculator':
+      case 'ideal-gas-law':
+      case 'half-life-decay':
+      case 'half-life-radioactive':
+      case 'exponential-decay-growth':
+      case 'fuel-consumption':
+      case 'density-mass-volume':
+      case 'molarity-calc':
+      case 'sound-db-distance':
+        return <PhysicsAppliedMathEngine tool={tool} />;
 
       // P1 Wave 1: Finance Domain Engine
       case 'payback-period':
@@ -737,38 +848,40 @@ export const ToolPage: React.FC<ToolPageProps> = ({ tool: toolProp, toolId }) =>
         </React.Suspense>
       </div>
 
-      {/* Explanatory Educational Sections */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6">
-        {/* How to use */}
-        <section className="p-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-3">
-          <div className="flex items-center gap-2 text-slate-900 dark:text-white font-bold text-sm">
-            <BookOpen className="w-4 h-4 text-emerald-500" />
-            <h2 className="text-sm font-bold">{t('lbl_how_to_use', 'How to Use This Calculator')}</h2>
-          </div>
-          <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-            {t('why_simple_desc', 'Enter your known parameters into the labeled inputs. The calculation engine computes results in real-time as you type, offering instant feedback and copyable summary metrics.')}
-          </p>
-          <ul className="text-xs text-slate-600 dark:text-slate-400 space-y-1.5 list-disc ps-4">
-            <li>{t('why_fast_desc', 'Inputs update instantly with no page reloads.')}</li>
-            <li>{t('why_global_desc', 'Use the unit toggle to switch between Metric and Imperial where applicable.')}</li>
-            <li>{t('why_math_desc', 'Click the "Copy" button to copy formatted answers to your clipboard.')}</li>
-          </ul>
-        </section>
+      {/* Explanatory Educational Sections (omitted for BMI and Mortgage to provide dedicated, tool-first supporting content) */}
+      {tool.id !== 'bmi' && tool.id !== 'mortgage' && (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6">
+          {/* How to use */}
+          <section className="p-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-3">
+            <div className="flex items-center gap-2 text-slate-900 dark:text-white font-bold text-sm">
+              <BookOpen className="w-4 h-4 text-emerald-500" />
+              <h2 className="text-sm font-bold">{t('lbl_how_to_use', 'How to Use This Calculator')}</h2>
+            </div>
+            <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+              {t('why_simple_desc', 'Enter your known parameters into the labeled inputs. The calculation engine computes results in real-time as you type, offering instant feedback and copyable summary metrics.')}
+            </p>
+            <ul className="text-xs text-slate-600 dark:text-slate-400 space-y-1.5 list-disc ps-4">
+              <li>{t('why_fast_desc', 'Inputs update instantly with no page reloads.')}</li>
+              <li>{t('why_global_desc', 'Use the unit toggle to switch between Metric and Imperial where applicable.')}</li>
+              <li>{t('why_math_desc', 'Click the "Copy" button to copy formatted answers to your clipboard.')}</li>
+            </ul>
+          </section>
 
-        {/* Mathematical Rigor */}
-        <section className="p-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-3">
-          <div className="flex items-center gap-2 text-slate-900 dark:text-white font-bold text-sm">
-            <Lightbulb className="w-4 h-4 text-emerald-500" />
-            <h2 className="text-sm font-bold">{t('lbl_accuracy_title', 'Accuracy & Mathematical Standard')}</h2>
-          </div>
-          <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-            {t('about_principle_1', 'All calculations are verified against official standards (such as the World Health Organization BMI thresholds and standard compound amortization formulas).')}
-          </p>
-          <p className="text-xs text-slate-600 dark:text-slate-400">
-            {t('why_privacy_desc', 'Calculations are executed client-side inside your browser for maximum privacy and zero data leakage.')}
-          </p>
-        </section>
-      </div>
+          {/* Mathematical Rigor */}
+          <section className="p-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-3">
+            <div className="flex items-center gap-2 text-slate-900 dark:text-white font-bold text-sm">
+              <Lightbulb className="w-4 h-4 text-emerald-500" />
+              <h2 className="text-sm font-bold">{t('lbl_accuracy_title', 'Accuracy & Mathematical Standard')}</h2>
+            </div>
+            <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+              {t('about_principle_1', 'All calculations are verified against official standards (such as the World Health Organization BMI thresholds and standard compound amortization formulas).')}
+            </p>
+            <p className="text-xs text-slate-600 dark:text-slate-400">
+              {t('why_privacy_desc', 'Calculations are executed client-side inside your browser for maximum privacy and zero data leakage.')}
+            </p>
+          </section>
+        </div>
+      )}
 
       {/* Professional SEO Editorial & FAQ Guide */}
       <ToolSeoContent
@@ -828,12 +941,12 @@ export const ToolPage: React.FC<ToolPageProps> = ({ tool: toolProp, toolId }) =>
               <textarea
                 readOnly
                 rows={4}
-                value={`<iframe src="https://calcyfy.com/${lang}/${tool.slug}" width="100%" height="520" frameborder="0" style="border: 1px solid #e2e8f0; border-radius: 12px;" title="${toolName}"></iframe>`}
+                value={`<iframe src="https://calcyfy.pages.dev/${lang}/${tool.slug}" width="100%" height="520" frameborder="0" style="border: 1px solid #e2e8f0; border-radius: 12px;" title="${toolName}"></iframe>`}
                 className="w-full p-3 bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 rounded-xl font-mono text-xs text-slate-800 dark:text-slate-200 resize-none focus:outline-hidden"
               />
               <button
                 onClick={() => {
-                  const code = `<iframe src="https://calcyfy.com/${lang}/${tool.slug}" width="100%" height="520" frameborder="0" style="border: 1px solid #e2e8f0; border-radius: 12px;" title="${toolName}"></iframe>`;
+                  const code = `<iframe src="https://calcyfy.pages.dev/${lang}/${tool.slug}" width="100%" height="520" frameborder="0" style="border: 1px solid #e2e8f0; border-radius: 12px;" title="${toolName}"></iframe>`;
                   navigator.clipboard.writeText(code);
                   setCopiedEmbed(true);
                   setTimeout(() => setCopiedEmbed(false), 2000);

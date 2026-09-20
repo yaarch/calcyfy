@@ -257,6 +257,59 @@ export const SitemapPage: React.FC = () => {
         <p className="text-sm text-slate-500 dark:text-slate-400 max-w-xl mx-auto">
           {t('sitemap_desc', 'Explore all free online tools, converters, and calculators organized by category.')}
         </p>
+
+        {/* XML Sitemap quick access links */}
+        <div className="flex flex-wrap items-center justify-center gap-2 pt-2 text-xs">
+          <span className="text-slate-500 font-medium">XML Sitemaps:</span>
+          <a
+            href="/sitemap.xml"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-2.5 py-1 rounded-lg bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 hover:bg-emerald-100 dark:hover:bg-emerald-900 font-mono text-[11px] border border-emerald-200 dark:border-emerald-800 transition-colors"
+          >
+            sitemap.xml (Index)
+          </a>
+          <a
+            href="/sitemap-en.xml"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-emerald-600 font-mono text-[11px] transition-colors"
+          >
+            en.xml
+          </a>
+          <a
+            href="/sitemap-ar.xml"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-emerald-600 font-mono text-[11px] transition-colors"
+          >
+            ar.xml
+          </a>
+          <a
+            href="/sitemap-es.xml"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-emerald-600 font-mono text-[11px] transition-colors"
+          >
+            es.xml
+          </a>
+          <a
+            href="/sitemap-fr.xml"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-emerald-600 font-mono text-[11px] transition-colors"
+          >
+            fr.xml
+          </a>
+          <a
+            href="/sitemap-de.xml"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-emerald-600 font-mono text-[11px] transition-colors"
+          >
+            de.xml
+          </a>
+        </div>
       </div>
 
       <div className="max-w-md mx-auto">

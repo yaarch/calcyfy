@@ -37,7 +37,7 @@ export const DeveloperDomainEngine: React.FC<DeveloperDomainEngineProps> = ({ to
   const [jsonInput, setJsonInput] = useState<string>('{\n  "status": "success",\n  "tools": 525,\n  "version": "2.0.0"\n}');
 
   // URL Parser State
-  const [urlInput, setUrlInput] = useState<string>('https://calcyfy.com/tool/json-minify?utm_source=search&ref=dev#overview');
+  const [urlInput, setUrlInput] = useState<string>('https://calcyfy.pages.dev/en/json-minify?utm_source=search&ref=dev#overview');
 
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);

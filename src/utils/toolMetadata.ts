@@ -83,6 +83,8 @@ const ACRONYMS: Record<string, string> = {
   charles: "Charles's",
   ohm: "Ohm's",
   ohms: "Ohm's",
+  ncr: '(nCr)',
+  npr: '(nPr)',
   calc: 'Calculator',
 };
 

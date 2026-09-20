@@ -196,7 +196,7 @@ export const Header: React.FC<{ onOpenHistory?: () => void }> = ({ onOpenHistory
                     <AppLink
                       key={item.code}
                       href={getLanguageUrl(item.code)}
-                      hreflang={item.code}
+                      hrefLang={item.code}
                       onClick={() => handleLanguageSelect(item.code)}
                       className={`w-full flex items-center justify-between px-4 py-2 text-xs font-semibold transition-colors ${
                         lang === item.code

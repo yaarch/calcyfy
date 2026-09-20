@@ -33,8 +33,9 @@ export const CorporateValuationEngine: React.FC<CorporateValuationEngineProps> =
 
   // EV / EBITDA State
   const [marketCap, setMarketCap] = useState<number>(10000000);
-  const [totalDebt, setTotalDebt] = useState<number>(2000000);
-  const [cashEquiv, setCashEquiv] = useState<number>(500000);
+  const [totalDebt, setTotalDebt] = useState<number>(3000000);
+  const [cashEquiv, setCashEquiv] = useState<number>(1500000);
+  const [ebitdaMultipleVal, setEbitdaMultipleVal] = useState<number>(2300000);
 
   // Break-Even State
   const [fixedCosts, setFixedCosts] = useState<number>(50000);
@@ -339,7 +340,7 @@ export const CorporateValuationEngine: React.FC<CorporateValuationEngineProps> =
                   ${npv.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                 </span>
                 <span className="text-[11px] text-slate-500 block mt-1">
-                  {npv >= 0 ? 'Accept Project (NPV ≥ 0)' : 'Reject Project (NPV < 0)'}
+                  {npv >= 0 ? 'Positive Net Present Value (NPV ≥ $0)' : 'Negative Net Present Value (NPV < $0)'}
                 </span>
               </div>
               <div className="p-4 bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 rounded-xl">
@@ -439,47 +440,168 @@ export const CorporateValuationEngine: React.FC<CorporateValuationEngineProps> =
 
       {/* 4. EV / EBITDA MULTIPLE */}
       {id === 'ev-ebitda-multiple' && (() => {
-        const ev = marketCap + totalDebt - cashEquiv;
-        const ebitdaVal = 2000000;
-        const multiple = ebitdaVal > 0 ? ev / ebitdaVal : 0;
+        const netDebt = totalDebt - cashEquiv;
+        const ev = marketCap + netDebt;
+        const multiple = ebitdaMultipleVal > 0 ? ev / ebitdaMultipleVal : 0;
+
+        const getMultipleBadge = (m: number) => {
+          if (m <= 0) return { label: 'Negative / Unprofitable', color: 'bg-rose-100 text-rose-700 dark:bg-rose-950/50 dark:text-rose-400' };
+          if (m < 6) return { label: 'Deep Value (< 6.0x)', color: 'bg-amber-100 text-amber-800 dark:bg-amber-950/50 dark:text-amber-300' };
+          if (m <= 10) return { label: 'Fair / Value Range (6x–10x)', color: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-950/50 dark:text-emerald-300' };
+          if (m <= 15) return { label: 'Growth / Quality (10x–15x)', color: 'bg-blue-100 text-blue-800 dark:bg-blue-950/50 dark:text-blue-300' };
+          return { label: 'Premium / High Growth (> 15.0x)', color: 'bg-purple-100 text-purple-800 dark:bg-purple-950/50 dark:text-purple-300' };
+        };
+
+        const badge = getMultipleBadge(multiple);
+
         return (
           <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6 shadow-xs space-y-6">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {/* Quick Presets */}
+            <div className="flex flex-wrap items-center gap-2 pb-2 border-b border-slate-100 dark:border-slate-800">
+              <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">Quick Scenarios:</span>
+              <button
+                type="button"
+                onClick={() => {
+                  setMarketCap(10000000);
+                  setTotalDebt(3000000);
+                  setCashEquiv(1500000);
+                  setEbitdaMultipleVal(2300000);
+                }}
+                className="text-xs px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 font-medium transition"
+              >
+                Standard Example (5.0x)
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  setMarketCap(45000000);
+                  setTotalDebt(6000000);
+                  setCashEquiv(11000000);
+                  setEbitdaMultipleVal(3200000);
+                }}
+                className="text-xs px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 font-medium transition"
+              >
+                Tech SaaS (12.5x)
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  setMarketCap(20000000);
+                  setTotalDebt(8000000);
+                  setCashEquiv(1000000);
+                  setEbitdaMultipleVal(3600000);
+                }}
+                className="text-xs px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 font-medium transition"
+              >
+                Industrial Mid-Cap (7.5x)
+              </button>
+            </div>
+
+            {/* Inputs Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               <div>
-                <label className="block text-xs font-semibold uppercase text-slate-700 dark:text-slate-300 mb-1">Market Capitalization ($)</label>
+                <label className="block text-xs font-semibold uppercase text-slate-700 dark:text-slate-300 mb-1">
+                  Market Capitalization ($)
+                </label>
                 <input
                   type="number"
                   value={marketCap}
                   onChange={(e) => setMarketCap(parseFloat(e.target.value) || 0)}
                   className="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg font-mono text-sm"
                 />
+                <span className="text-[11px] text-slate-400 mt-1 block">Equity value (shares × price)</span>
               </div>
               <div>
-                <label className="block text-xs font-semibold uppercase text-slate-700 dark:text-slate-300 mb-1">Total Debt ($)</label>
+                <label className="block text-xs font-semibold uppercase text-slate-700 dark:text-slate-300 mb-1">
+                  Total Debt ($)
+                </label>
                 <input
                   type="number"
                   value={totalDebt}
                   onChange={(e) => setTotalDebt(parseFloat(e.target.value) || 0)}
                   className="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg font-mono text-sm"
                 />
+                <span className="text-[11px] text-slate-400 mt-1 block">Short-term & long-term debt</span>
               </div>
               <div>
-                <label className="block text-xs font-semibold uppercase text-slate-700 dark:text-slate-300 mb-1">Cash & Equivalents ($)</label>
+                <label className="block text-xs font-semibold uppercase text-slate-700 dark:text-slate-300 mb-1">
+                  Cash & Equivalents ($)
+                </label>
                 <input
                   type="number"
                   value={cashEquiv}
                   onChange={(e) => setCashEquiv(parseFloat(e.target.value) || 0)}
                   className="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg font-mono text-sm"
                 />
+                <span className="text-[11px] text-slate-400 mt-1 block">Liquid cash & securities</span>
+              </div>
+              <div>
+                <label className="block text-xs font-semibold uppercase text-slate-700 dark:text-slate-300 mb-1">
+                  Annual EBITDA ($)
+                </label>
+                <input
+                  type="number"
+                  value={ebitdaMultipleVal}
+                  onChange={(e) => setEbitdaMultipleVal(parseFloat(e.target.value) || 0)}
+                  className="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg font-mono text-sm"
+                />
+                <span className="text-[11px] text-slate-400 mt-1 block">Operating cash earnings</span>
               </div>
             </div>
 
-            <div className="p-4 bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 rounded-xl">
-              <span className="text-xs font-bold uppercase text-emerald-700 dark:text-emerald-400">Enterprise Value (EV)</span>
-              <span className="text-3xl font-black font-mono text-emerald-600 dark:text-emerald-300 mt-1 block">
-                ${ev.toLocaleString()}
-              </span>
-              <span className="text-xs text-slate-500 font-mono mt-1 block">EV = Market Cap + Debt - Cash</span>
+            {/* Results Display */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="p-5 bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 rounded-xl">
+                <span className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                  Enterprise Value (EV)
+                </span>
+                <span className="text-3xl font-black font-mono text-slate-900 dark:text-white mt-1 block">
+                  ${ev.toLocaleString()}
+                </span>
+                <div className="flex items-center gap-2 mt-2 text-xs text-slate-500 font-mono">
+                  <span>Net Debt: ${netDebt.toLocaleString()}</span>
+                  <span>•</span>
+                  <span>EV = Market Cap + Debt - Cash</span>
+                </div>
+              </div>
+
+              <div className="p-5 bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 rounded-xl">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-bold uppercase tracking-wider text-emerald-800 dark:text-emerald-400">
+                    EV / EBITDA Multiple
+                  </span>
+                  <span className={`text-[11px] font-semibold px-2 py-0.5 rounded-full ${badge.color}`}>
+                    {badge.label}
+                  </span>
+                </div>
+                <span className="text-3xl font-black font-mono text-emerald-600 dark:text-emerald-300 mt-1 block">
+                  {multiple.toFixed(2)}x
+                </span>
+                <span className="text-xs text-emerald-700 dark:text-emerald-400 font-mono mt-2 block">
+                  Multiple = ${ev.toLocaleString()} EV ÷ ${ebitdaMultipleVal.toLocaleString()} EBITDA
+                </span>
+              </div>
+            </div>
+
+            {/* Step-by-Step Breakdown */}
+            <div className="p-4 bg-slate-50 dark:bg-slate-800/40 rounded-xl border border-slate-200 dark:border-slate-700/60 space-y-2">
+              <h4 className="text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300">
+                Mathematical Verification
+              </h4>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs font-mono text-slate-600 dark:text-slate-300">
+                <div className="p-2.5 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800">
+                  <div className="text-[10px] text-slate-400 uppercase font-sans">1. Net Debt</div>
+                  <div className="font-semibold text-slate-900 dark:text-white mt-0.5">${totalDebt.toLocaleString()} - ${cashEquiv.toLocaleString()} = ${netDebt.toLocaleString()}</div>
+                </div>
+                <div className="p-2.5 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800">
+                  <div className="text-[10px] text-slate-400 uppercase font-sans">2. Enterprise Value</div>
+                  <div className="font-semibold text-slate-900 dark:text-white mt-0.5">${marketCap.toLocaleString()} + ${netDebt.toLocaleString()} = ${ev.toLocaleString()}</div>
+                </div>
+                <div className="p-2.5 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800">
+                  <div className="text-[10px] text-slate-400 uppercase font-sans">3. EV/EBITDA Multiple</div>
+                  <div className="font-semibold text-emerald-600 dark:text-emerald-400 mt-0.5">${ev.toLocaleString()} ÷ ${ebitdaMultipleVal.toLocaleString()} = {multiple.toFixed(2)}x</div>
+                </div>
+              </div>
             </div>
           </div>
         );

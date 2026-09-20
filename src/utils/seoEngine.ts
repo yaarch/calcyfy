@@ -154,6 +154,21 @@ export const parseRoute = (pathname: string, hash: string = ''): RouteInfo => {
     };
   }
 
+  // Also support 2-segment category/tool URLs like /en/finance/mortgage-calculator
+  if (remainingSegments.length === 2 && remainingSegments[1]) {
+    const subTool = findTool(remainingSegments[1]);
+    if (subTool) {
+      return {
+        view: 'tool',
+        lang,
+        toolId: subTool.id,
+        toolSlug: subTool.slug,
+        categoryId: subTool.categoryId,
+        path: getToolPath(subTool.slug, lang),
+      };
+    }
+  }
+
   return {
     view: 'not-found',
     lang,
@@ -190,7 +205,19 @@ export const generateToolSeo = (
   const categoryName = catRaw && !isRawTranslationKey(catRaw) ? catRaw : 'Calculator';
 
   let title = `${toolName} — Calcyfy`;
-  if (tool.id === 'keto-macros' || tool.id === 'macronutrient-keto-highcarb' || tool.slug.includes('keto')) {
+  if (tool.id === 'combinatorics-ncr' || tool.slug.includes('combinations-ncr-permutations-npr')) {
+    if (lang === 'en') {
+      title = 'Combinations (nCr) & Permutations (nPr) Calculator | Calcyfy';
+    } else if (lang === 'es') {
+      title = 'Calculadora de Combinaciones (nCr) y Permutaciones (nPr) | Calcyfy';
+    } else if (lang === 'de') {
+      title = 'Kombinationen (nCr) und Permutationen (nPr) Rechner | Calcyfy';
+    } else if (lang === 'fr') {
+      title = 'Calculateur de Combinaisons (nCr) et Permutations (nPr) | Calcyfy';
+    } else if (lang === 'ar') {
+      title = 'حاسبة التوافيق (nCr) والتباديل (nPr) | Calcyfy';
+    }
+  } else if (tool.id === 'keto-macros' || tool.id === 'macronutrient-keto-highcarb' || tool.slug.includes('keto')) {
     if (lang === 'en') {
       title = 'Keto Macro Calculator — Calculate Fat, Protein & Net Carbs | Calcyfy';
     } else if (lang === 'es') {

@@ -5,6 +5,8 @@ import { getToolContentDetails } from '../utils/toolContentEngine';
 import { getToolName, getToolDescription } from '../utils/toolMetadata';
 import { AppLink } from './common/AppLink';
 import { useApp } from '../context/AppContext';
+import { BmiInfoContent } from './BmiInfoContent';
+import { MortgageInfoContent } from './MortgageInfoContent';
 
 interface ToolSeoContentProps {
   tool: Tool;
@@ -20,6 +22,104 @@ export const ToolSeoContent: React.FC<ToolSeoContentProps> = ({
 }) => {
   const { lang, getToolUrl, t } = useApp();
   const details = getToolContentDetails(tool, lang);
+
+  if (tool.id === 'bmi') {
+    return (
+      <div className="space-y-8 pt-8 border-t border-slate-200 dark:border-slate-800">
+        <BmiInfoContent toolName={toolName} />
+
+        {/* Genuinely Related Tools with Semantic HTML5 Links */}
+        {details.relatedTools && details.relatedTools.length > 0 && (
+          <section className="space-y-4 pt-4">
+            <div className="flex items-center justify-between">
+              <h3 className="text-lg font-bold text-slate-900 dark:text-white">
+                Related {categoryName} Calculators
+              </h3>
+              <AppLink
+                href={`/${lang}/category/${tool.categoryId}`}
+                className="text-xs font-semibold text-emerald-600 dark:text-emerald-400 hover:underline inline-flex items-center gap-1"
+              >
+                <span>View All</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </AppLink>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+              {details.relatedTools.map((relTool) => (
+                <AppLink
+                  key={relTool.id}
+                  href={getToolUrl(relTool.slug)}
+                  className="group p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-emerald-500/50 hover:shadow-xs transition-all flex flex-col justify-between"
+                >
+                  <div>
+                    <h4 className="text-xs font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+                      {getToolName(relTool, lang, t)}
+                    </h4>
+                    <p className="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-2 mt-1">
+                      {getToolDescription(relTool, lang, t)}
+                    </p>
+                  </div>
+                  <div className="mt-3 pt-2 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-[11px] text-emerald-600 dark:text-emerald-400 font-semibold">
+                    <span>Open Tool</span>
+                    <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
+                  </div>
+                </AppLink>
+              ))}
+            </div>
+          </section>
+        )}
+      </div>
+    );
+  }
+
+  if (tool.id === 'mortgage') {
+    return (
+      <div className="space-y-8 pt-8 border-t border-slate-200 dark:border-slate-800">
+        <MortgageInfoContent toolName={toolName} />
+
+        {/* Genuinely Related Tools with Semantic HTML5 Links */}
+        {details.relatedTools && details.relatedTools.length > 0 && (
+          <section className="space-y-4 pt-4">
+            <div className="flex items-center justify-between">
+              <h3 className="text-lg font-bold text-slate-900 dark:text-white">
+                Related {categoryName} Calculators
+              </h3>
+              <AppLink
+                href={`/${lang}/category/${tool.categoryId}`}
+                className="text-xs font-semibold text-emerald-600 dark:text-emerald-400 hover:underline inline-flex items-center gap-1"
+              >
+                <span>View All</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </AppLink>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+              {details.relatedTools.map((relTool) => (
+                <AppLink
+                  key={relTool.id}
+                  href={getToolUrl(relTool.slug)}
+                  className="group p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-emerald-500/50 hover:shadow-xs transition-all flex flex-col justify-between"
+                >
+                  <div>
+                    <h4 className="text-xs font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+                      {getToolName(relTool, lang, t)}
+                    </h4>
+                    <p className="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-2 mt-1">
+                      {getToolDescription(relTool, lang, t)}
+                    </p>
+                  </div>
+                  <div className="mt-3 pt-2 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-[11px] text-emerald-600 dark:text-emerald-400 font-semibold">
+                    <span>Open Tool</span>
+                    <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
+                  </div>
+                </AppLink>
+              ))}
+            </div>
+          </section>
+        )}
+      </div>
+    );
+  }
 
   return (
     <div className="space-y-8 pt-8 border-t border-slate-200 dark:border-slate-800">
@@ -56,15 +156,17 @@ export const ToolSeoContent: React.FC<ToolSeoContentProps> = ({
               </p>
             </div>
           )}
-          <div className="p-4 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700/80">
-            <h3 className="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white mb-1.5 flex items-center gap-1.5">
-              <CheckCircle2 className="w-4 h-4 text-emerald-500" />
-              What This Calculator Calculates
-            </h3>
-            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300">
-              {details.whatItCalculates}
-            </p>
-          </div>
+          {details.whatItCalculates && details.whatItCalculates !== details.intro && (
+            <div className="p-4 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700/80">
+              <h3 className="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white mb-1.5 flex items-center gap-1.5">
+                <CheckCircle2 className="w-4 h-4 text-emerald-500" />
+                What This Calculator Calculates
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+                {details.whatItCalculates}
+              </p>
+            </div>
+          )}
         </div>
 
         {/* How to Use This Calculator */}
