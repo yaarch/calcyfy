@@ -1,3 +1,5 @@
+import fs from 'fs';
+import path from 'path';
 import { TOOLS } from '../src/data/tools.js';
 import { CATEGORIES } from '../src/data/categories.js';
 import { generateSeoForRoute, parseRoute, SUPPORTED_LANGUAGES, SITE_BASE_URL } from '../src/utils/seoEngine.js';
@@ -226,6 +228,40 @@ function validateSeoArchitecture() {
     }
   }
   console.log(`✓ Initial HTML prerendering verified: <title>, <meta description>, <link rel="canonical">, hreflang, and <h1> are present in initial HTML.\n`);
+
+  // 6. XML Sitemaps Existence and Well-formedness
+  console.log(`[Test 6] Checking existence and valid structure of XML Sitemaps...`);
+  const publicDir = path.resolve(process.cwd(), 'public');
+  const requiredSitemaps = [
+    'sitemap.xml',
+    'sitemap-pages.xml',
+    'sitemap-tools.xml',
+    'sitemap-categories.xml',
+    'sitemap-en.xml',
+    'sitemap-ar.xml',
+    'sitemap-es.xml',
+    'sitemap-fr.xml',
+    'sitemap-de.xml',
+  ];
+
+  for (const sm of requiredSitemaps) {
+    const smPath = path.join(publicDir, sm);
+    if (!fs.existsSync(smPath)) {
+      console.error(`❌ Required sitemap missing: ${sm}`);
+      errors++;
+    } else {
+      const content = fs.readFileSync(smPath, 'utf-8');
+      if (!content.includes('<?xml version="1.0" encoding="UTF-8"?>')) {
+        console.error(`❌ Malformed XML header in ${sm}`);
+        errors++;
+      }
+      if (!content.includes('<urlset') && !content.includes('<sitemapindex')) {
+        console.error(`❌ Missing urlset or sitemapindex in ${sm}`);
+        errors++;
+      }
+    }
+  }
+  console.log(`✓ All ${requiredSitemaps.length} XML sitemaps verified and present in public/ directory.\n`);
 
   // Summary
   console.log('========================================');

@@ -21,64 +21,7 @@ interface SitemapUrlEntry {
   alternates: { lang: string; href: string }[];
 }
 
-function generateLanguageSitemap(targetLang: string): string {
-  const entries: SitemapUrlEntry[] = [];
-
-  // 1. Homepage
-  entries.push({
-    loc: `${BASE_URL}/${targetLang}`,
-    lastmod: TODAY,
-    changefreq: 'daily',
-    priority: '1.0',
-    alternates: [
-      ...LANGUAGES.map((l) => ({ lang: l, href: `${BASE_URL}/${l}` })),
-      { lang: 'x-default', href: `${BASE_URL}/en` },
-    ],
-  });
-
-  // 2. Static Pages
-  for (const page of STATIC_PAGES) {
-    entries.push({
-      loc: `${BASE_URL}/${targetLang}/${page}`,
-      lastmod: TODAY,
-      changefreq: page === 'tools' ? 'daily' : page === 'sitemap' ? 'weekly' : 'monthly',
-      priority: page === 'tools' ? '0.9' : page === 'sitemap' ? '0.6' : '0.5',
-      alternates: [
-        ...LANGUAGES.map((l) => ({ lang: l, href: `${BASE_URL}/${l}/${page}` })),
-        { lang: 'x-default', href: `${BASE_URL}/en/${page}` },
-      ],
-    });
-  }
-
-  // 3. Category Pages
-  for (const cat of CATEGORIES) {
-    entries.push({
-      loc: `${BASE_URL}/${targetLang}/category/${cat.slug}`,
-      lastmod: TODAY,
-      changefreq: 'weekly',
-      priority: '0.8',
-      alternates: [
-        ...LANGUAGES.map((l) => ({ lang: l, href: `${BASE_URL}/${l}/category/${cat.slug}` })),
-        { lang: 'x-default', href: `${BASE_URL}/en/category/${cat.slug}` },
-      ],
-    });
-  }
-
-  // 4. All 525+ Tool Pages
-  for (const tool of TOOLS) {
-    entries.push({
-      loc: `${BASE_URL}/${targetLang}/${tool.slug}`,
-      lastmod: TODAY,
-      changefreq: 'weekly',
-      priority: tool.popular ? '0.9' : '0.8',
-      alternates: [
-        ...LANGUAGES.map((l) => ({ lang: l, href: `${BASE_URL}/${l}/${tool.slug}` })),
-        { lang: 'x-default', href: `${BASE_URL}/en/${tool.slug}` },
-      ],
-    });
-  }
-
-  // Build XML
+function buildXmlUrlSet(entries: SitemapUrlEntry[]): string {
   let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
   xml += `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n`;
   xml += `        xmlns:xhtml="http://www.w3.org/1999/xhtml">\n`;
@@ -99,13 +42,176 @@ function generateLanguageSitemap(targetLang: string): string {
   return xml;
 }
 
+// 1. Language-Specific Sitemaps (sitemap-en.xml, etc.)
+function generateLanguageSitemap(targetLang: string): string {
+  const entries: SitemapUrlEntry[] = [];
+
+  // Homepage
+  entries.push({
+    loc: `${BASE_URL}/${targetLang}`,
+    lastmod: TODAY,
+    changefreq: 'daily',
+    priority: '1.0',
+    alternates: [
+      ...LANGUAGES.map((l) => ({ lang: l, href: `${BASE_URL}/${l}` })),
+      { lang: 'x-default', href: `${BASE_URL}/en` },
+    ],
+  });
+
+  // Static Pages
+  for (const page of STATIC_PAGES) {
+    entries.push({
+      loc: `${BASE_URL}/${targetLang}/${page}`,
+      lastmod: TODAY,
+      changefreq: page === 'tools' ? 'daily' : page === 'sitemap' ? 'weekly' : 'monthly',
+      priority: page === 'tools' ? '0.9' : page === 'sitemap' ? '0.6' : '0.5',
+      alternates: [
+        ...LANGUAGES.map((l) => ({ lang: l, href: `${BASE_URL}/${l}/${page}` })),
+        { lang: 'x-default', href: `${BASE_URL}/en/${page}` },
+      ],
+    });
+  }
+
+  // Category Pages
+  for (const cat of CATEGORIES) {
+    entries.push({
+      loc: `${BASE_URL}/${targetLang}/category/${cat.slug}`,
+      lastmod: TODAY,
+      changefreq: 'weekly',
+      priority: '0.8',
+      alternates: [
+        ...LANGUAGES.map((l) => ({ lang: l, href: `${BASE_URL}/${l}/category/${cat.slug}` })),
+        { lang: 'x-default', href: `${BASE_URL}/en/category/${cat.slug}` },
+      ],
+    });
+  }
+
+  // All 525+ Tool Pages
+  for (const tool of TOOLS) {
+    entries.push({
+      loc: `${BASE_URL}/${targetLang}/${tool.slug}`,
+      lastmod: TODAY,
+      changefreq: 'weekly',
+      priority: tool.popular ? '0.9' : '0.8',
+      alternates: [
+        ...LANGUAGES.map((l) => ({ lang: l, href: `${BASE_URL}/${l}/${tool.slug}` })),
+        { lang: 'x-default', href: `${BASE_URL}/en/${tool.slug}` },
+      ],
+    });
+  }
+
+  return buildXmlUrlSet(entries);
+}
+
+// 2. Static / Pages Sitemap (sitemap-pages.xml)
+function generatePagesSitemap(): string {
+  const entries: SitemapUrlEntry[] = [];
+
+  // Root / default redirects to default language
+  entries.push({
+    loc: `${BASE_URL}/`,
+    lastmod: TODAY,
+    changefreq: 'daily',
+    priority: '1.0',
+    alternates: [
+      ...LANGUAGES.map((l) => ({ lang: l, href: `${BASE_URL}/${l}` })),
+      { lang: 'x-default', href: `${BASE_URL}/en` },
+    ],
+  });
+
+  // Language homepages
+  for (const l of LANGUAGES) {
+    entries.push({
+      loc: `${BASE_URL}/${l}`,
+      lastmod: TODAY,
+      changefreq: 'daily',
+      priority: '1.0',
+      alternates: [
+        ...LANGUAGES.map((otherLang) => ({ lang: otherLang, href: `${BASE_URL}/${otherLang}` })),
+        { lang: 'x-default', href: `${BASE_URL}/en` },
+      ],
+    });
+  }
+
+  // Static pages across all languages
+  for (const page of STATIC_PAGES) {
+    for (const l of LANGUAGES) {
+      entries.push({
+        loc: `${BASE_URL}/${l}/${page}`,
+        lastmod: TODAY,
+        changefreq: page === 'tools' ? 'daily' : page === 'sitemap' ? 'weekly' : 'monthly',
+        priority: page === 'tools' ? '0.9' : page === 'sitemap' ? '0.6' : '0.5',
+        alternates: [
+          ...LANGUAGES.map((otherLang) => ({ lang: otherLang, href: `${BASE_URL}/${otherLang}/${page}` })),
+          { lang: 'x-default', href: `${BASE_URL}/en/${page}` },
+        ],
+      });
+    }
+  }
+
+  return buildXmlUrlSet(entries);
+}
+
+// 3. Category Pages Sitemap (sitemap-categories.xml)
+function generateCategoriesSitemap(): string {
+  const entries: SitemapUrlEntry[] = [];
+
+  for (const cat of CATEGORIES) {
+    for (const l of LANGUAGES) {
+      entries.push({
+        loc: `${BASE_URL}/${l}/category/${cat.slug}`,
+        lastmod: TODAY,
+        changefreq: 'weekly',
+        priority: '0.8',
+        alternates: [
+          ...LANGUAGES.map((otherLang) => ({ lang: otherLang, href: `${BASE_URL}/${otherLang}/category/${cat.slug}` })),
+          { lang: 'x-default', href: `${BASE_URL}/en/category/${cat.slug}` },
+        ],
+      });
+    }
+  }
+
+  return buildXmlUrlSet(entries);
+}
+
+// 4. Tools / Calculators Sitemap (sitemap-tools.xml & sitemap-calculators.xml)
+function generateToolsSitemap(): string {
+  const entries: SitemapUrlEntry[] = [];
+
+  for (const tool of TOOLS) {
+    for (const l of LANGUAGES) {
+      entries.push({
+        loc: `${BASE_URL}/${l}/${tool.slug}`,
+        lastmod: TODAY,
+        changefreq: 'weekly',
+        priority: tool.popular ? '0.9' : '0.8',
+        alternates: [
+          ...LANGUAGES.map((otherLang) => ({ lang: otherLang, href: `${BASE_URL}/${otherLang}/${tool.slug}` })),
+          { lang: 'x-default', href: `${BASE_URL}/en/${tool.slug}` },
+        ],
+      });
+    }
+  }
+
+  return buildXmlUrlSet(entries);
+}
+
+// 5. Master Sitemap Index (sitemap.xml)
 function generateSitemapIndex(): string {
   let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
   xml += `<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
 
-  for (const l of LANGUAGES) {
+  // Section sitemaps
+  const sectionSitemaps = [
+    'sitemap-pages.xml',
+    'sitemap-tools.xml',
+    'sitemap-categories.xml',
+    ...LANGUAGES.map((l) => `sitemap-${l}.xml`),
+  ];
+
+  for (const sitemap of sectionSitemaps) {
     xml += `  <sitemap>\n`;
-    xml += `    <loc>${BASE_URL}/sitemap-${l}.xml</loc>\n`;
+    xml += `    <loc>${BASE_URL}/${sitemap}</loc>\n`;
     xml += `    <lastmod>${TODAY}</lastmod>\n`;
     xml += `  </sitemap>\n`;
   }
@@ -120,12 +226,29 @@ function run() {
     fs.mkdirSync(publicDir, { recursive: true });
   }
 
-  // Write Sitemap Index
+  // 1. Write Master Sitemap Index & Standard Aliases
   const indexXml = generateSitemapIndex();
   fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), indexXml, 'utf-8');
-  console.log(`Generated: public/sitemap.xml (Sitemap Index for 5 languages)`);
+  fs.writeFileSync(path.join(publicDir, 'sitemap_index.xml'), indexXml, 'utf-8');
+  fs.writeFileSync(path.join(publicDir, 'sitemap-index.xml'), indexXml, 'utf-8');
+  console.log(`Generated: public/sitemap.xml, public/sitemap_index.xml, public/sitemap-index.xml`);
 
-  // Write Language Sitemaps
+  // 2. Write Section Sitemaps (Pages, Categories, Tools/Calculators)
+  const pagesXml = generatePagesSitemap();
+  fs.writeFileSync(path.join(publicDir, 'sitemap-pages.xml'), pagesXml, 'utf-8');
+  fs.writeFileSync(path.join(publicDir, 'sitemap_pages.xml'), pagesXml, 'utf-8');
+  console.log(`Generated: public/sitemap-pages.xml & public/sitemap_pages.xml (${STATIC_PAGES.length * LANGUAGES.length + LANGUAGES.length + 1} static & hub page URLs)`);
+
+  const categoriesXml = generateCategoriesSitemap();
+  fs.writeFileSync(path.join(publicDir, 'sitemap-categories.xml'), categoriesXml, 'utf-8');
+  console.log(`Generated: public/sitemap-categories.xml (${CATEGORIES.length * LANGUAGES.length} category URLs)`);
+
+  const toolsXml = generateToolsSitemap();
+  fs.writeFileSync(path.join(publicDir, 'sitemap-tools.xml'), toolsXml, 'utf-8');
+  fs.writeFileSync(path.join(publicDir, 'sitemap-calculators.xml'), toolsXml, 'utf-8');
+  console.log(`Generated: public/sitemap-tools.xml & public/sitemap-calculators.xml (${TOOLS.length * LANGUAGES.length} calculator URLs)`);
+
+  // 3. Write Language-Specific Sitemaps
   for (const l of LANGUAGES) {
     const langXml = generateLanguageSitemap(l);
     const fileName = `sitemap-${l}.xml`;
@@ -133,7 +256,7 @@ function run() {
     console.log(`Generated: public/${fileName} with full hreflang alternates`);
   }
 
-  console.log(`\nSuccessfully generated full sitemap index and 5 language sitemaps for ${TOOLS.length} tools!`);
+  console.log(`\nSuccessfully generated comprehensive XML sitemaps for Calcyfy (${TOOLS.length} calculators across 5 languages)!`);
 }
 
 run();

@@ -270,6 +270,22 @@ export const SitemapPage: React.FC = () => {
             sitemap.xml (Index)
           </a>
           <a
+            href="/sitemap-pages.xml"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-2.5 py-1 rounded-lg bg-indigo-50 dark:bg-indigo-950/50 text-indigo-700 dark:text-indigo-300 hover:bg-indigo-100 dark:hover:bg-indigo-900 font-mono text-[11px] border border-indigo-200 dark:border-indigo-800 transition-colors"
+          >
+            sitemap-pages.xml
+          </a>
+          <a
+            href="/sitemap-tools.xml"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-2.5 py-1 rounded-lg bg-amber-50 dark:bg-amber-950/50 text-amber-700 dark:text-amber-300 hover:bg-amber-100 dark:hover:bg-amber-900 font-mono text-[11px] border border-amber-200 dark:border-amber-800 transition-colors"
+          >
+            sitemap-tools.xml
+          </a>
+          <a
             href="/sitemap-en.xml"
             target="_blank"
             rel="noopener noreferrer"
