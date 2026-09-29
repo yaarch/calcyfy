@@ -123,6 +123,7 @@ let totalSitemapUrls = 0;
 let totalCalculatorSitemapUrls = 0;
 let hasHashInSitemap = false;
 let hasPagesDevInSitemap = false;
+let hasDpdnsInSitemap = false;
 let invalidXml = false;
 
 for (const lang of SUPPORTED_LANGUAGES) {
@@ -132,6 +133,7 @@ for (const lang of SUPPORTED_LANGUAGES) {
   }
   if (childXml.includes('#')) hasHashInSitemap = true;
   if (childXml.includes('pages.dev')) hasPagesDevInSitemap = true;
+  if (childXml.includes('calcyfy.dpdns.org')) hasDpdnsInSitemap = true;
   
   const locMatches = childXml.match(/<loc>(.*?)<\/loc>/g) || [];
   totalSitemapUrls += locMatches.length;
@@ -150,7 +152,8 @@ for (const lang of SUPPORTED_LANGUAGES) {
 
 console.log(`Child sitemaps XML valid: ${!invalidXml}`);
 console.log(`Has Hash in Sitemaps: ${hasHashInSitemap}`);
-console.log(`Has pages.dev in Sitemaps: ${hasPagesDevInSitemap}`);
+console.log(`Has old pages.dev in Sitemaps: ${hasPagesDevInSitemap}`);
+console.log(`Has permanent dpdns.org in Sitemaps: ${hasDpdnsInSitemap}`);
 console.log(`Total URLs in all child sitemaps: ${totalSitemapUrls}`);
 console.log(`Total Calculator URLs in sitemaps: ${totalCalculatorSitemapUrls} (Expected: 2625)`);
 

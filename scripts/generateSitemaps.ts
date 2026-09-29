@@ -8,7 +8,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Allow configuring via environment variable during build, or default
-const BASE_URL = process.env.SITE_URL || process.env.VITE_SITE_URL || 'https://calcyfy.pages.dev';
+const BASE_URL = process.env.SITE_URL || process.env.VITE_SITE_URL || 'https://calcyfy.dpdns.org';
 const LANGUAGES = ['en', 'ar', 'es', 'fr', 'de'] as const;
 const STATIC_PAGES = ['tools', 'about', 'privacy', 'terms', 'contact', 'sitemap'] as const;
 const TODAY = new Date().toISOString().split('T')[0];
@@ -201,17 +201,10 @@ function generateSitemapIndex(): string {
   let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
   xml += `<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
 
-  // Section sitemaps
-  const sectionSitemaps = [
-    'sitemap-pages.xml',
-    'sitemap-tools.xml',
-    'sitemap-categories.xml',
-    ...LANGUAGES.map((l) => `sitemap-${l}.xml`),
-  ];
-
-  for (const sitemap of sectionSitemaps) {
+  // Provide clean, language-partitioned sub-sitemaps in the master index
+  for (const l of LANGUAGES) {
     xml += `  <sitemap>\n`;
-    xml += `    <loc>${BASE_URL}/${sitemap}</loc>\n`;
+    xml += `    <loc>${BASE_URL}/sitemap-${l}.xml</loc>\n`;
     xml += `    <lastmod>${TODAY}</lastmod>\n`;
     xml += `  </sitemap>\n`;
   }

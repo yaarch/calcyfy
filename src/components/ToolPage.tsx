@@ -22,6 +22,7 @@ import { executePrint } from '../utils/printHelper';
 import { ToolSeoContent } from './ToolSeoContent';
 import { AppLink } from './common/AppLink';
 import { getToolName, getToolDescription } from '../utils/toolMetadata';
+import { SITE_BASE_URL } from '../utils/seoEngine';
 
 // Lazy Loaded Calculators for Peak Performance & Instant First Load
 const PercentageCalculator = React.lazy(() =>
@@ -941,12 +942,12 @@ export const ToolPage: React.FC<ToolPageProps> = ({ tool: toolProp, toolId }) =>
               <textarea
                 readOnly
                 rows={4}
-                value={`<iframe src="https://calcyfy.pages.dev/${lang}/${tool.slug}" width="100%" height="520" frameborder="0" style="border: 1px solid #e2e8f0; border-radius: 12px;" title="${toolName}"></iframe>`}
+                value={`<iframe src="${SITE_BASE_URL}/${lang}/${tool.slug}" width="100%" height="520" frameborder="0" style="border: 1px solid #e2e8f0; border-radius: 12px;" title="${toolName}"></iframe>`}
                 className="w-full p-3 bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 rounded-xl font-mono text-xs text-slate-800 dark:text-slate-200 resize-none focus:outline-hidden"
               />
               <button
                 onClick={() => {
-                  const code = `<iframe src="https://calcyfy.pages.dev/${lang}/${tool.slug}" width="100%" height="520" frameborder="0" style="border: 1px solid #e2e8f0; border-radius: 12px;" title="${toolName}"></iframe>`;
+                  const code = `<iframe src="${SITE_BASE_URL}/${lang}/${tool.slug}" width="100%" height="520" frameborder="0" style="border: 1px solid #e2e8f0; border-radius: 12px;" title="${toolName}"></iframe>`;
                   navigator.clipboard.writeText(code);
                   setCopiedEmbed(true);
                   setTimeout(() => setCopiedEmbed(false), 2000);

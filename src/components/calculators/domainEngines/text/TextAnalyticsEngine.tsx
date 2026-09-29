@@ -251,7 +251,7 @@ export const TextAnalyticsEngine: React.FC<TextAnalyticsEngineProps> = ({ tool }
 
               {/* Google SERP Preview Box */}
               <div className="p-4 bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl space-y-1">
-                <span className="text-[11px] text-slate-400 font-mono block">calcyfy.pages.dev › tool › meta-description-length</span>
+                <span className="text-[11px] text-slate-400 font-mono block">calcyfy.dpdns.org › tool › meta-description-length</span>
                 <span className="text-base text-blue-600 dark:text-blue-400 font-semibold hover:underline cursor-pointer block">
                   {tool.name} — Free Online Utility
                 </span>

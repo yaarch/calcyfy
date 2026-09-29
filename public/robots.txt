@@ -1,14 +1,14 @@
-# CALCYFY Robots.txt
 User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://calcyfy.pages.dev/sitemap.xml
-Sitemap: https://calcyfy.pages.dev/sitemap-pages.xml
-Sitemap: https://calcyfy.pages.dev/sitemap-tools.xml
-Sitemap: https://calcyfy.pages.dev/sitemap-categories.xml
-Sitemap: https://calcyfy.pages.dev/sitemap-en.xml
-Sitemap: https://calcyfy.pages.dev/sitemap-ar.xml
-Sitemap: https://calcyfy.pages.dev/sitemap-es.xml
-Sitemap: https://calcyfy.pages.dev/sitemap-fr.xml
-Sitemap: https://calcyfy.pages.dev/sitemap-de.xml
+
+Sitemap: https://calcyfy.dpdns.org/sitemap.xml
+Sitemap: https://calcyfy.dpdns.org/sitemap-pages.xml
+Sitemap: https://calcyfy.dpdns.org/sitemap-tools.xml
+Sitemap: https://calcyfy.dpdns.org/sitemap-categories.xml
+Sitemap: https://calcyfy.dpdns.org/sitemap-en.xml
+Sitemap: https://calcyfy.dpdns.org/sitemap-ar.xml
+Sitemap: https://calcyfy.dpdns.org/sitemap-es.xml
+Sitemap: https://calcyfy.dpdns.org/sitemap-fr.xml
+Sitemap: https://calcyfy.dpdns.org/sitemap-de.xml

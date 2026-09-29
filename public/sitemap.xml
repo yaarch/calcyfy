@@ -1,35 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
-    <loc>https://calcyfy.pages.dev/sitemap-pages.xml</loc>
-    <lastmod>2026-09-27</lastmod>
+    <loc>https://calcyfy.dpdns.org/sitemap-en.xml</loc>
+    <lastmod>2026-09-29</lastmod>
   </sitemap>
   <sitemap>
-    <loc>https://calcyfy.pages.dev/sitemap-tools.xml</loc>
-    <lastmod>2026-09-27</lastmod>
+    <loc>https://calcyfy.dpdns.org/sitemap-ar.xml</loc>
+    <lastmod>2026-09-29</lastmod>
   </sitemap>
   <sitemap>
-    <loc>https://calcyfy.pages.dev/sitemap-categories.xml</loc>
-    <lastmod>2026-09-27</lastmod>
+    <loc>https://calcyfy.dpdns.org/sitemap-es.xml</loc>
+    <lastmod>2026-09-29</lastmod>
   </sitemap>
   <sitemap>
-    <loc>https://calcyfy.pages.dev/sitemap-en.xml</loc>
-    <lastmod>2026-09-27</lastmod>
+    <loc>https://calcyfy.dpdns.org/sitemap-fr.xml</loc>
+    <lastmod>2026-09-29</lastmod>
   </sitemap>
   <sitemap>
-    <loc>https://calcyfy.pages.dev/sitemap-ar.xml</loc>
-    <lastmod>2026-09-27</lastmod>
-  </sitemap>
-  <sitemap>
-    <loc>https://calcyfy.pages.dev/sitemap-es.xml</loc>
-    <lastmod>2026-09-27</lastmod>
-  </sitemap>
-  <sitemap>
-    <loc>https://calcyfy.pages.dev/sitemap-fr.xml</loc>
-    <lastmod>2026-09-27</lastmod>
-  </sitemap>
-  <sitemap>
-    <loc>https://calcyfy.pages.dev/sitemap-de.xml</loc>
-    <lastmod>2026-09-27</lastmod>
+    <loc>https://calcyfy.dpdns.org/sitemap-de.xml</loc>
+    <lastmod>2026-09-29</lastmod>
   </sitemap>
 </sitemapindex>
