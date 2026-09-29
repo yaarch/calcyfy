@@ -8,7 +8,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Allow configuring via environment variable during build, or default
-const BASE_URL = process.env.SITE_URL || process.env.VITE_SITE_URL || 'https://calcyfy.dpdns.org';
+const BASE_URL = process.env.SITE_URL || process.env.VITE_SITE_URL || 'https://calyfy.dpdns.org';
 const LANGUAGES = ['en', 'ar', 'es', 'fr', 'de'] as const;
 const STATIC_PAGES = ['tools', 'about', 'privacy', 'terms', 'contact', 'sitemap'] as const;
 const TODAY = new Date().toISOString().split('T')[0];

@@ -155,8 +155,8 @@ const sampleJson = { test: true, count: 22 };
 assertStringEqual('json-minify', 'JSON Minify Stringify', JSON.stringify(sampleJson), '{"test":true,"count":22}');
 
 // 21. URL Parser: Hostname check
-const urlSample = new URL('https://calcyfy.dpdns.org/tool/json-minify?utm=1');
-assertStringEqual('url-parser', 'URL Hostname Parsing', urlSample.hostname, 'calcyfy.dpdns.org');
+const urlSample = new URL('https://calyfy.dpdns.org/tool/json-minify?utm=1');
+assertStringEqual('url-parser', 'URL Hostname Parsing', urlSample.hostname, 'calyfy.dpdns.org');
 
 console.log(`\n=======================================================`);
 if (missingInDataset === 0 && missingRouting === 0 && mathFailures === 0) {

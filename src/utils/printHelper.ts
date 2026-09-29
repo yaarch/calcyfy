@@ -240,7 +240,7 @@ const buildPrintHtml = (
     </div>
     <div class="print-meta">
       <div><strong>Date:</strong> ${formattedDate}</div>
-      <div><strong>URL:</strong> ${typeof window !== 'undefined' ? window.location.href : 'calcyfy.dpdns.org'}</div>
+      <div><strong>URL:</strong> ${typeof window !== 'undefined' ? window.location.href : 'calyfy.dpdns.org'}</div>
     </div>
   </div>
 
@@ -255,7 +255,7 @@ const buildPrintHtml = (
 
   <div class="print-footer">
     <span>CALCYFY — Privacy-first, client-side calculations.</span>
-    <span>calcyfy.dpdns.org</span>
+    <span>calyfy.dpdns.org</span>
   </div>
 </body>
 </html>

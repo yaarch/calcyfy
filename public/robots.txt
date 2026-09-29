@@ -3,12 +3,12 @@ Allow: /
 
 # Sitemaps
 
-Sitemap: https://calcyfy.dpdns.org/sitemap.xml
-Sitemap: https://calcyfy.dpdns.org/sitemap-pages.xml
-Sitemap: https://calcyfy.dpdns.org/sitemap-tools.xml
-Sitemap: https://calcyfy.dpdns.org/sitemap-categories.xml
-Sitemap: https://calcyfy.dpdns.org/sitemap-en.xml
-Sitemap: https://calcyfy.dpdns.org/sitemap-ar.xml
-Sitemap: https://calcyfy.dpdns.org/sitemap-es.xml
-Sitemap: https://calcyfy.dpdns.org/sitemap-fr.xml
-Sitemap: https://calcyfy.dpdns.org/sitemap-de.xml
+Sitemap: https://calyfy.dpdns.org/sitemap.xml
+Sitemap: https://calyfy.dpdns.org/sitemap-pages.xml
+Sitemap: https://calyfy.dpdns.org/sitemap-tools.xml
+Sitemap: https://calyfy.dpdns.org/sitemap-categories.xml
+Sitemap: https://calyfy.dpdns.org/sitemap-en.xml
+Sitemap: https://calyfy.dpdns.org/sitemap-ar.xml
+Sitemap: https://calyfy.dpdns.org/sitemap-es.xml
+Sitemap: https://calyfy.dpdns.org/sitemap-fr.xml
+Sitemap: https://calyfy.dpdns.org/sitemap-de.xml
